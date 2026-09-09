@@ -20,11 +20,35 @@ import 'dart:io';
 
 // Reescrevendo o programa
 
-void main() {
+// void main() {
   
-  print("Olá, me chamo Dart. Qual o seu nome?");
-  var entrada = stdin.readLineSync();
-  // Usando interpolação
-  print("Muito prazer, $entrada. Vamos fazer vários programas juntos!");
+//   print("Olá, me chamo Dart. Qual o seu nome?");
+//   var entrada = stdin.readLineSync();
+//   // Usando interpolação
+//   print("Muito prazer, $entrada. Vamos fazer vários programas juntos!");
 
+// }
+
+// stdin - "standard input", é a entrada padrão do dart.
+// readLineSync() x readLine() - o Sync serve para dizer que antes do programa prosseguir, a linha precisa ser escrita. 
+
+// EXERCÍCIOS
+
+// 1
+// void main() {
+//   print("Olá, me chamo Dart. Qual o seu nome?");
+//   var nome = stdin.readLineSync();
+//   print("Muito prazer, nome. Vamos fazer vários programas juntos.");
+
+// }
+
+// 2
+
+void main(){
+  print("Olá! Qual o seu nome?");
+  var nome = stdin.readLineSync();
+  print("Olá! Qual a sua idade?");
+  var idade = stdin.readLineSync();
+
+  print("Olá, $nome, você tem $idade anos!");
 }
