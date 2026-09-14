@@ -23,15 +23,15 @@ O que muda é a **densidade diária**:
 | Exercícios opcionais | os marcados ⭐ | **livre** | pular |
 | Revisão | dias 5, 10, 15 | **dias 7, 14, 21, 28** | semanal |
 
-> ⭐ **O ritmo Intensivo recomendado (30 dias) é a opção principal deste curso — foi a escolhida
-> por você.** Toda referência a "Dia N" no restante do material aponta para o cronograma de 30
-> dias da seção 4 deste arquivo.
+> ⚡ **O Ritmo A — Muito intensivo (15 dias) é o ritmo escolhido por você.** A referência a
+> "Dia N" do seu plano pessoal aponta para a seção 2 deste arquivo. O Ritmo B continua como
+> opção recomendada para quem preferir distribuir a mesma carga em 30 dias.
 
 ### Como escolher, se ainda estiver em dúvida
 
 | Escolha | Se... |
 |---|---|
-| Muito intensivo (15 d) | Você está em período integral livre, sem trabalho nem faculdade, e aguenta 8 h de foco |
+| Muito intensivo (15 d) | Você consegue reservar 8 h/dia e tem espaço para aplicar parte do estudo em trabalho real |
 | **Intensivo recomendado (30 d)** | Você tem meio período livre e quer resultado rápido sem quebrar |
 | Moderado (60 d) | Você trabalha ou estuda em período integral e tem 2 h por dia |
 
@@ -83,8 +83,20 @@ seção 7 ("Se você atrasar").
 - [ ] Você consegue explicar em voz alta o 📌 Resumo de cada aula do dia.
 
 > ⚠️ **Aviso honesto sobre este ritmo.** Oito horas diárias de conteúdo novo têm alta taxa de
-> abandono e de esquecimento. Só escolha o ritmo A se você **não** tiver outra ocupação no
-> período e conseguir dormir bem. Na dúvida, use o ritmo B.
+> abandono e esquecimento. O ritmo funciona melhor quando parte da prática resolve um problema
+> real do trabalho, mas isso não substitui as pausas, o sono e os critérios de avanço.
+
+### 2.3 Sua divisão diária: trabalho + prática intermitente
+
+| Faixa | Duração | Uso no seu contexto |
+|---|---:|---|
+| Bloco aplicado | 4 h | Estudar e aplicar o conteúdo do dia em uma necessidade real do trabalho; registrar decisões, código e dúvidas |
+| Blocos intermitentes | 4 h no total | Ler aulas, digitar exemplos, fazer exercícios obrigatórios, conferir o gabarito e executar a avaliação |
+
+Não conte como estudo as horas em que apenas esteve disponível para o trabalho. Registre no
+termômetro as horas em que houve leitura ativa, implementação, teste, revisão ou correção.
+Se uma demanda urgente consumir o bloco aplicado, mova o conteúdo daquele dia inteiro para a
+data seguinte: não pule exercícios nem avaliação para manter o número do calendário.
 
 ---
 
@@ -145,7 +157,7 @@ seção 4 vira dois dias aqui.
 
 ---
 
-## 4. ⭐ Ritmo B — INTENSIVO RECOMENDADO (30 dias · 4 h/dia) — **opção principal escolhida**
+## 4. ⭐ Ritmo B — Intensivo recomendado (30 dias · 4 h/dia)
 
 | Item | Valor |
 |---|---|

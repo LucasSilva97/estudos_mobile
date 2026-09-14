@@ -83,7 +83,8 @@ Objetivo da fase: sair de "tenho o Flutter meio instalado" para "consigo rodar c
 versionar código sem medo".
 
 - [ ] Li [00-como-usar-o-curso.md](00-como-usar-o-curso.md) inteiro
-- [ ] Escolhi o ritmo em [01-plano-intensivo.md](01-plano-intensivo.md) (intensivo, 30 dias, 4 h/dia)
+- [x] Escolhi o [Ritmo A — Muito intensivo](01-plano-intensivo.md#2-ritmo-a--muito-intensivo-15-dias--8-hdia) (15 dias, 8 h/dia)
+- [ ] Registrei 4 h aplicadas ao trabalho e 4 h intermitentes de estudo no meu primeiro dia
 - [ ] 🪟 Movi o Flutter SDK para um caminho **sem acentos e sem espaços** (`C:\src\flutter`)
 - [ ] 🪟 Atualizei a variável de ambiente `PATH` e abri um terminal novo
 - [ ] 🪟 Ativei o **Modo de Desenvolvedor** do Windows (`start ms-settings:developers`)
@@ -308,10 +309,10 @@ Use esta lista quando quiser ver, em uma tela só, quanto do conteúdo já foi c
 
 ---
 
-## Calendário: data prevista × data concluída (ritmo intensivo, 30 dias)
+## Calendário: data prevista × data concluída (Ritmo A, 15 dias)
 
 **Como preencher.** Escolha a data do seu Dia 1 e escreva-a na primeira linha. Some um dia
-por linha (os dias 7, 14, 21 e 28 já são dias de revisão, então não precisam de folga extra).
+por linha. Os dias 5, 10 e 15 já incluem revisão; não precisam de folga extra.
 Se um dia atrasar, **não apague a data prevista**: escreva a data real em "Data concluída".
 A diferença entre as duas colunas é o seu termômetro de ritmo.
 
@@ -319,46 +320,30 @@ Na coluna "Status" use: `🟢` no prazo · `🟡` atrasou 1 dia · `🔴` atraso
 
 | Dia | Conteúdo previsto | Data prevista | Data concluída | Status |
 |---|---|---|---|---|
-| 1 | [Configuração do ambiente](02-configuracao-do-ambiente.md) + [Módulo 00](modulos/00-git-e-terminal/README.md) | ____/____ | ____/____ | |
-| 2 | Módulo 01 (aulas 1–5) | ____/____ | ____/____ | |
-| 3 | Módulo 01 (aulas 6–10) + [exercícios](exercicios/01-logica-e-fundamentos.md) | ____/____ | ____/____ | |
-| 4 | Módulo 02 (aulas 1–5) | ____/____ | ____/____ | |
-| 5 | Módulo 02 (aulas 6–10) + [exercícios](exercicios/02-dart-basico.md) | ____/____ | ____/____ | |
-| 6 | Módulo 03 (aulas 1–5) | ____/____ | ____/____ | |
-| 7 | **Revisão** + Módulo 03 (aulas 6–10) | ____/____ | ____/____ | |
-| 8 | [Módulo 04](modulos/04-dart-avancado/README.md) completo | ____/____ | ____/____ | |
-| 9 | [Cumulativa 01](avaliacoes/cumulativa-01-dart.md) + Módulo 05 (aulas 1–5) | ____/____ | ____/____ | |
-| 10 | Módulo 05 (aulas 6–9) + [Projeto 1](projetos/01-projeto-iniciante/README.md) | ____/____ | ____/____ | |
-| 11 | Módulo 06 (aulas 1–6) | ____/____ | ____/____ | |
-| 12 | Módulo 06 (aulas 7–12) | ____/____ | ____/____ | |
-| 13 | Módulo 07 (aulas 1–5) | ____/____ | ____/____ | |
-| 14 | **Revisão** + Módulo 07 (aulas 6–9) | ____/____ | ____/____ | |
-| 15 | [Cumulativa 02](avaliacoes/cumulativa-02-flutter-ui.md) + [Projeto 2](projetos/02-projeto-intermediario/README.md) (parte 1) | ____/____ | ____/____ | |
-| 16 | [Projeto 2](projetos/02-projeto-intermediario/README.md) (parte 2) | ____/____ | ____/____ | |
-| 17 | Módulo 08 (aulas 1–5) | ____/____ | ____/____ | |
-| 18 | Módulo 08 (aulas 6–10) | ____/____ | ____/____ | |
-| 19 | Módulo 09 (aulas 1–5) | ____/____ | ____/____ | |
-| 20 | Módulo 09 (aulas 6–9) | ____/____ | ____/____ | |
-| 21 | **Revisão** + [Módulo 10](modulos/10-persistencia-de-dados/README.md) | ____/____ | ____/____ | |
-| 22 | [Cumulativa 03](avaliacoes/cumulativa-03-estado-e-dados.md) + [Módulo 11](modulos/11-recursos-nativos/README.md) | ____/____ | ____/____ | |
-| 23 | [Módulo 12](modulos/12-testes-e-debug/README.md) | ____/____ | ____/____ | |
-| 24 | [Módulo 13](modulos/13-desempenho-e-seguranca/README.md) + [Cumulativa 04](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | ____/____ | ____/____ | |
-| 25 | **Projeto Final** etapas 1–3 | ____/____ | ____/____ | |
-| 26 | **Projeto Final** etapas 4–5 | ____/____ | ____/____ | |
-| 27 | **Projeto Final** etapas 6–8 | ____/____ | ____/____ | |
-| 28 | **Revisão** + [Módulo 14](modulos/14-build-android/README.md) → **APK + AAB gerados** | ____/____ | ____/____ | |
-| 29 | 🍎 [Módulo 15](modulos/15-build-ios/README.md) + [Módulo 16](modulos/16-publicacao-e-proximos-passos/README.md) | ____/____ | ____/____ | |
-| 30 | [Cumulativa 05](avaliacoes/cumulativa-05-build-e-distribuicao.md) + [Avaliação final](avaliacoes/avaliacao-final.md) + checklists | ____/____ | ____/____ | |
+| 1 | Ambiente + M00 completo + M01 aulas 1–5 | ____/____ | ____/____ | |
+| 2 | M01 aulas 6–10 + exercícios + avaliação | ____/____ | ____/____ | |
+| 3 | M02 completo + exercícios + avaliação | ____/____ | ____/____ | |
+| 4 | M03 completo + exercícios + avaliação | ____/____ | ____/____ | |
+| 5 | **Revisão** + M04 + cumulativa 01 | ____/____ | ____/____ | |
+| 6 | M05 completo + exercícios + avaliação | ____/____ | ____/____ | |
+| 7 | Projeto 1 + M06 aulas 1–6 | ____/____ | ____/____ | |
+| 8 | M06 aulas 7–12 + exercícios + avaliação | ____/____ | ____/____ | |
+| 9 | M07 + cumulativa 02 | ____/____ | ____/____ | |
+| 10 | **Revisão** + Projeto 2 | ____/____ | ____/____ | |
+| 11 | M08 + avaliação | ____/____ | ____/____ | |
+| 12 | M09 + M10 + cumulativa 03 | ____/____ | ____/____ | |
+| 13 | M11 + M12 + M13 + cumulativa 04 | ____/____ | ____/____ | |
+| 14 | Projeto final, etapas 1–8 | ____/____ | ____/____ | |
+| 15 | **Revisão** + M14, M15, M16 + cumulativa 05 + avaliação final | ____/____ | ____/____ | |
 
 ### Dias de revisão
 
-O ritmo intensivo prevê revisão nos dias **7, 14, 21 e 28**. Revisão aqui não é reler tudo:
+O Ritmo A prevê revisão nos dias **5, 10 e 15**. Revisão aqui não é reler tudo:
 é refazer, sem consultar, dois exercícios que você errou e reexecutar um projeto do zero.
 
-- [ ] Revisão do dia 7 feita
-- [ ] Revisão do dia 14 feita
-- [ ] Revisão do dia 21 feita
-- [ ] Revisão do dia 28 feita
+- [ ] Revisão do dia 5 feita
+- [ ] Revisão do dia 10 feita
+- [ ] Revisão do dia 15 feita
 
 ---
 
@@ -368,15 +353,13 @@ Preencha ao fim de cada semana. É o sinal mais honesto de que o ritmo está sus
 
 | Semana | Dias | Marcos concluídos | Horas reais estudadas | Como me senti (1–5) | O que travou |
 |---|---|---|---|---|---|
-| 1 | 1–7 | ___ / 22 | ___ h | ___ | |
-| 2 | 8–14 | ___ / 22 | ___ h | ___ | |
-| 3 | 15–21 | ___ / 22 | ___ h | ___ | |
-| 4 | 22–30 | ___ / 22 | ___ h | ___ | |
+| 1 | 1–5 | ___ / 22 | ___ h | ___ | |
+| 2 | 6–10 | ___ / 22 | ___ h | ___ | |
+| 3 | 11–15 | ___ / 22 | ___ h | ___ | |
 
-**Regra de segurança do ritmo:** se ao fim de uma semana você concluiu menos de 60% do
-previsto, **não acelere** — troque para o ritmo moderado descrito em
-[01-plano-intensivo.md](01-plano-intensivo.md). Terminar em 60 dias entendendo vale mais do
-que terminar em 30 copiando.
+**Regra de segurança do ritmo:** se ao fim de um bloco de cinco dias você concluiu menos de 60%
+do previsto, recalcule as datas antes de avançar. Preserve a sequência e os critérios de avanço;
+o curso pode levar mais de 15 dias se a prática no trabalho exigir investigação adicional.
 
 ---
 

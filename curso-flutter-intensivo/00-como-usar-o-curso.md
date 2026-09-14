@@ -541,14 +541,14 @@ A lista completa de comandos, com explicação de cada um, está em
 
 ## 14. Antes de seguir adiante
 
-- [ ] Li este arquivo inteiro.
-- [ ] Sei quais são as 17 seções de uma aula e para que serve cada uma.
-- [ ] Sei que devo tentar 20 minutos antes de abrir o gabarito.
-- [ ] Sei o que significam 🤖 🍎 🪟 🐧 🖥️.
-- [ ] Conheço os 5 passos do método de depuração.
-- [ ] Sei o que nunca pode entrar em um repositório.
-- [ ] Sei que gerar IPA exige macOS, e por quê.
-- [ ] Sei onde marcar meu progresso.
+- [x] Li este arquivo inteiro.
+- [x] Sei quais são as 17 seções de uma aula e para que serve cada uma.
+- [x] Sei que devo tentar 20 minutos antes de abrir o gabarito.
+- [x] Sei o que significam 🤖 🍎 🪟 🐧 🖥️.
+- [x] Conheço os 5 passos do método de depuração.
+- [x] Sei o que nunca pode entrar em um repositório.
+- [x] Sei que gerar IPA exige macOS, e por quê.
+- [x] Sei onde marcar meu progresso.
 
 Marcou todas? Então vá para **[01-plano-intensivo.md](01-plano-intensivo.md)** e escolha
 seu ritmo.
