@@ -52,8 +52,9 @@ def verificar() -> dict:
             if erro:
                 problemas.append({"origem": arquivo.relative_to(ROOT).as_posix(),
                                   "destino": link, "erro": erro})
+    chaves_unicas = {(p["destino"], p["erro"]) for p in problemas}
     return {"arquivos_markdown": len(arquivos), "links_locais": total,
-            "problemas": problemas}
+            "problemas": problemas, "problemas_unicos": len(chaves_unicas)}
 
 
 if __name__ == "__main__":
@@ -65,7 +66,8 @@ if __name__ == "__main__":
         print(json.dumps(resultado, ensure_ascii=True, indent=2))
     else:
         print(f"Markdown: {resultado['arquivos_markdown']}; links locais: {resultado['links_locais']}; "
-              f"problemas: {len(resultado['problemas'])}")
+              f"ocorrências com problema: {len(resultado['problemas'])}; "
+              f"destinos problemáticos únicos: {resultado['problemas_unicos']}")
         for problema in resultado["problemas"]:
             print(f"{problema['origem']}: {problema['destino']} ({problema['erro']})")
     raise SystemExit(bool(resultado["problemas"]))

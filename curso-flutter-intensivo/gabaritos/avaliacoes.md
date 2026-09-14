@@ -89,3 +89,77 @@ editor e outras mensagens claras são aceitos.
 de ignore, revertendo a mudança errada; omitir `--staged`; tratar um `.env` rastreado como ignorado.
 
 Use os pesos e os critérios obrigatórios da [avaliação](../avaliacoes/modulo-00-git-e-terminal.md).
+
+<a id="modulo-01"></a>
+## Módulo 01 — Lógica e fundamentos
+
+[Voltar à avaliação](../avaliacoes/modulo-01-logica-e-fundamentos.md)
+
+### Questionário
+
+| Questão | Resposta | Justificativa / divisão do ponto |
+|---|---|---|
+| 1 | B | Receber é entrada; calcular é processamento; mostrar é saída |
+| 2 | C | `DateTime.now()` acontece em execução e `final` impede reatribuição |
+| 3 | C | `7 ~/ 2` é 3 e `7 % 2` é 1 |
+| 4 | C | `continue` pula somente o restante da passagem atual |
+| 5 | B | O tipo `int` e `return` disponibilizam o valor à chamada |
+| 6 | A | A falha acontece depois que a execução começou |
+| 7 | Parâmetro é declarado; argumento é fornecido | 0,5 pela distinção e 0,5 por exemplo coerente |
+| 8 | 50 → 25 → 0 | 0,5 pelo rastreamento; 0,25 pela condição falsa em zero; 0,25 por identificar laço infinito sem mudança |
+| 9 | `parse` lança; `tryParse` devolve `null` | 0,5 pela diferença e 0,5 por conferir `null` antes de usar `abc` |
+| 10 | Três categorias corretas | Aproximadamente 0,33 por definição e exemplo de cada categoria |
+
+### Solução prática de referência
+
+```dart
+int? converterPositivo(String texto) {
+  final valor = int.tryParse(texto.trim());
+  if (valor == null || valor <= 0) return null;
+  return valor;
+}
+
+void gerarRelatorio(List<String> entradas, int meta) {
+  var quantidade = 0;
+  var total = 0;
+
+  for (final entrada in entradas) {
+    final valor = converterPositivo(entrada);
+    if (valor == null) {
+      print('Rejeitada: "$entrada"');
+      continue;
+    }
+    quantidade++;
+    total += valor;
+  }
+
+  print('Válidas: $quantidade');
+  print('Total: $total min');
+  if (quantidade == 0) {
+    print('Média: indisponível');
+  } else {
+    print('Média: ${(total / quantidade).toStringAsFixed(1)} min');
+  }
+  print(total >= meta ? 'Meta atingida' : 'Faltam ${meta - total} min');
+}
+
+void main() {
+  gerarRelatorio(<String>['25', 'abc', '0', '40', '-5', ' 30 '], 120);
+  print('---');
+  gerarRelatorio(<String>['abc', '0', '-5'], 120);
+  print('---');
+  gerarRelatorio(<String>['60', '60'], 120);
+}
+```
+
+No primeiro cenário, as rejeitadas são `abc`, `0` e `-5`; há três válidas, total 95, média
+31.7 e falta 25. No segundo, a média fica indisponível e não há divisão por zero. No terceiro,
+a meta é atingida exatamente. A função não modifica a lista recebida.
+
+**Alternativas válidas:** retornar um pequeno objeto/record com quantidade e total separa ainda
+melhor regra e apresentação, mas records serão ensinados no módulo 04. Usar duas funções para
+somar e contar também é correto, embora percorra as entradas duas vezes. Não aceite uma solução
+que converta entrada inválida em zero e depois conte zero como sessão válida.
+
+**Erros frequentes:** dividir por `entradas.length`; usar `int.parse`; calcular falta negativa;
+declarar acumuladores dentro do laço; arredondar 31.666… sem `toStringAsFixed(1)`.

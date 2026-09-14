@@ -16,7 +16,8 @@ orienta sua revisão; não substitui demonstrar o resultado.
 | Avaliação disponível | Respostas |
 |---|---|
 | [Módulo 00 — Git e terminal](modulo-00-git-e-terminal.md) | [Gabarito M00](../gabaritos/avaliacoes.md#modulo-00) |
+| [Módulo 01 — Lógica e fundamentos](modulo-01-logica-e-fundamentos.md) | [Gabarito M01](../gabaritos/avaliacoes.md#modulo-01) |
 
-As avaliações dos outros módulos, as cinco cumulativas e a final ainda estão em elaboração.
+As avaliações dos módulos 02 a 16, as cinco cumulativas e a final ainda estão em elaboração.
 
 [Curso](../README.md) · [Trilha de progresso](../03-trilha-de-progresso.md)

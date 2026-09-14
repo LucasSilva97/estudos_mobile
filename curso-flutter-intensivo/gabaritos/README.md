@@ -11,7 +11,8 @@ Não marque o progresso do curso apenas por ter lido este material.
 | Disponível | Respostas |
 |---|---|
 | [Módulo 00 — Git e terminal](00-git-e-terminal.md) | M00-E01 a M00-E12 |
+| [Módulo 01 — Lógica e fundamentos](01-logica-e-fundamentos.md) | M01-E01 a M01-E12 |
 
-Os demais módulos e os desafios dos projetos ainda aguardam elaboração.
+Os módulos 02 a 16 e os desafios dos projetos ainda aguardam elaboração.
 
 [Exercícios](../exercicios/README.md) · [Respostas das avaliações](avaliacoes.md)

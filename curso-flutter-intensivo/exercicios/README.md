@@ -11,8 +11,9 @@ e desafio prático. Concluir um exercício significa conferir seus critérios, n
 | Lista disponível | Obrigatórios | Opcionais |
 |---|---|---|
 | [Módulo 00 — Git e terminal](00-git-e-terminal.md) | E01 a E08 | E09 a E12 |
+| [Módulo 01 — Lógica e fundamentos](01-logica-e-fundamentos.md) | E01 a E08 | E09 a E12 |
 
-As listas dos módulos 01 a 16 ainda estão em elaboração. Acompanhe o
+As listas dos módulos 02 a 16 ainda estão em elaboração. Acompanhe o
 [relatório de validação](../06-relatorio-de-validacao.md).
 
 [Curso](../README.md) · [Como usar os gabaritos](../gabaritos/README.md)
