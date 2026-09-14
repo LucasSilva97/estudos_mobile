@@ -25,7 +25,7 @@ Características:
 | Pré-requisito de programação | Dart básico de terminal (`print`, variáveis, interpolação) |
 | Pré-requisito de mobile | **Nenhum** |
 | Carga total | 120 horas |
-| Ritmo principal | 30 dias · 4 h/dia (ver [01-plano-intensivo.md](01-plano-intensivo.md)) |
+| Ritmo ativo | 15 dias · 8 h/dia, com 4 h aplicadas ao trabalho e 4 h intermitentes (ver [01-plano-intensivo.md](01-plano-intensivo.md)) |
 | Módulos | 17 (de `00` a `16`) |
 | Aulas | 148 aulas em formato fixo |
 | Projetos práticos | 3 (iniciante, intermediário, final) |
@@ -48,7 +48,7 @@ Este curso foi escrito para você se:
   entende o que é uma variável e um `if`.
 - Você usa **Windows 11** e **não tem um Mac**, mas quer aprender o caminho do iOS mesmo assim.
 - Você quer **entender**, não copiar e colar. O curso explica cada linha não óbvia.
-- Você tem pressa e aguenta um ritmo de 4 horas por dia por 30 dias.
+- Você tem pressa e consegue reservar 8 horas por dia durante 15 dias, aplicando 4 horas em demandas reais do trabalho e distribuindo as outras 4 horas ao longo do dia.
 
 Este curso **não** é para você se procura um tutorial de 20 minutos, ou se quer apenas
 receber código pronto sem explicação.
@@ -215,7 +215,7 @@ O porquê de cada escolha está em [05-decisoes-tecnicas.md](05-decisoes-tecnica
 |---|---|
 | [README.md](README.md) | Este arquivo: visão geral e índice |
 | [00-como-usar-o-curso.md](00-como-usar-o-curso.md) | **Comece aqui.** Método de estudo, emojis, glossário, segurança |
-| [01-plano-intensivo.md](01-plano-intensivo.md) | Os 3 ritmos e o cronograma dia a dia de 30 dias |
+| [01-plano-intensivo.md](01-plano-intensivo.md) | Seu plano ativo de 15 dias, mais as alternativas de 30 e 60 dias |
 | [02-configuracao-do-ambiente.md](02-configuracao-do-ambiente.md) | Instalar e corrigir tudo nesta máquina |
 | [03-trilha-de-progresso.md](03-trilha-de-progresso.md) | Checklist geral para marcar o que você concluiu |
 | [04-mapa-de-aprendizagem.md](04-mapa-de-aprendizagem.md) | Dependências entre assuntos: o que vem antes do quê |
@@ -667,12 +667,12 @@ implementação, revisão cumulativa e desafio prático.
 
 | Avaliação | Quando | Cobre |
 |---|---|---|
-| [Cumulativa 01 — Dart](avaliacoes/cumulativa-01-dart.md) | Dia 9 | Módulos 00 a 04 |
-| [Cumulativa 02 — Flutter UI](avaliacoes/cumulativa-02-flutter-ui.md) | Dia 15 | Módulos 05 a 07 |
-| [Cumulativa 03 — Estado e dados](avaliacoes/cumulativa-03-estado-e-dados.md) | Dia 22 | Módulos 08 a 10 |
-| [Cumulativa 04 — Qualidade e plataforma](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | Dia 24 | Módulos 11 a 13 |
-| [Cumulativa 05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | Dia 30 | Módulos 14 a 16 |
-| [Avaliação final](avaliacoes/avaliacao-final.md) | Dia 30 | Curso inteiro + projeto final |
+| [Cumulativa 01 — Dart](avaliacoes/cumulativa-01-dart.md) | Dia 5 | Módulos 00 a 04 |
+| [Cumulativa 02 — Flutter UI](avaliacoes/cumulativa-02-flutter-ui.md) | Dia 9 | Módulos 05 a 07 |
+| [Cumulativa 03 — Estado e dados](avaliacoes/cumulativa-03-estado-e-dados.md) | Dia 12 | Módulos 08 a 10 |
+| [Cumulativa 04 — Qualidade e plataforma](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | Dia 13 | Módulos 11 a 13 |
+| [Cumulativa 05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | Dia 15 | Módulos 14 a 16 |
+| [Avaliação final](avaliacoes/avaliacao-final.md) | Dia 15 | Curso inteiro + projeto final |
 
 ---
 
@@ -706,7 +706,7 @@ Use como conferência antes de considerar uma etapa concluída.
 ## 🚦 Por onde começar, na ordem
 
 1. **[00-como-usar-o-curso.md](00-como-usar-o-curso.md)** — leia inteiro. É o manual do curso.
-2. **[01-plano-intensivo.md](01-plano-intensivo.md)** — escolha seu ritmo (o recomendado é 30 dias).
+2. **[01-plano-intensivo.md](01-plano-intensivo.md)** — siga seu Ritmo A ativo: 15 dias de 8 horas.
 3. **[02-configuracao-do-ambiente.md](02-configuracao-do-ambiente.md)** — conserte os três
    problemas desta máquina e deixe o `flutter doctor` limpo.
 4. **[03-trilha-de-progresso.md](03-trilha-de-progresso.md)** — abra e deixe aberto; é onde

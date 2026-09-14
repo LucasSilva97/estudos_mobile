@@ -7,8 +7,8 @@ o arquivo foi criado.
 ## Plano de continuação
 
 - Estrutura: 17 módulos, aulas individuais, exercícios, gabaritos, avaliações, três projetos e referências.
-- Ritmo principal: intensivo, inicialmente planejado para 30 dias de 4 horas; conferir a soma das
-  aulas e da prática antes de publicar o cronograma final.
+- Ritmo ativo do aluno: muito intensivo, 15 dias de 8 horas, com 4 horas aplicadas ao trabalho e
+  4 horas intermitentes; conferir a soma das aulas e da prática antes de publicar o cronograma final.
 - Projeto final: **Foco**, organizador de matérias, sessões de estudo, meta semanal e trilhas.
 - Estado: Riverpod, sem geração de código.
 - Arquitetura: funcionalidades com domínio, dados e apresentação; dependências fornecidas por providers.

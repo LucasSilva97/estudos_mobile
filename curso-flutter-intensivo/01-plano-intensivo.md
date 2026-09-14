@@ -1,4 +1,4 @@
-# 01 — Plano intensivo: os três ritmos
+# 01 — Plano de estudo: Ritmo A ativo (15 dias)
 
 > Este arquivo define **quanto** estudar por dia, **o que** estudar em cada dia e **como saber**
 > que você pode avançar. Leia [00-como-usar-o-curso.md](00-como-usar-o-curso.md) antes deste.
@@ -8,24 +8,24 @@
 
 ---
 
-## 1. A regra que vale para os três ritmos
+## 1. Visão dos três ritmos
 
 A carga total do curso é **120 horas**, sempre. Nenhum ritmo corta conteúdo obrigatório.
 O que muda é a **densidade diária**:
 
-| | Muito intensivo | **Intensivo recomendado** ⭐ | Moderado |
+| | **Ritmo A — ativo** | Ritmo B | Ritmo C |
 |---|---|---|---|
-| Duração | 15 dias | **30 dias** | 60 dias |
-| Carga total | 120 h | **120 h** | 120 h |
-| Horas/dia | 8 h | **4 h** | 2 h |
-| Divisão diária | 5 h conteúdo + 3 h prática | **3 h conteúdo + 1 h prática** | 1 h 30 conteúdo + 30 min prática |
-| Exercícios obrigatórios | todos | **todos** | todos |
-| Exercícios opcionais | os marcados ⭐ | **livre** | pular |
-| Revisão | dias 5, 10, 15 | **dias 7, 14, 21, 28** | semanal |
+| Duração | **15 dias** | 30 dias | 60 dias |
+| Carga total | **120 h** | 120 h | 120 h |
+| Horas/dia | **8 h** | 4 h | 2 h |
+| Divisão diária | **4 h aplicadas ao trabalho + 4 h intermitentes** | 3 h conteúdo + 1 h prática | 1 h 30 conteúdo + 30 min prática |
+| Exercícios obrigatórios | **todos** | todos | todos |
+| Exercícios opcionais | **os marcados ⭐** | livre | pular |
+| Revisão | **dias 5, 10, 15** | dias 7, 14, 21, 28 | semanal |
 
-> ⚡ **O Ritmo A — Muito intensivo (15 dias) é o ritmo escolhido por você.** A referência a
-> "Dia N" do seu plano pessoal aponta para a seção 2 deste arquivo. O Ritmo B continua como
-> opção recomendada para quem preferir distribuir a mesma carga em 30 dias.
+> ⚡ **Seu plano ativo é o Ritmo A — Muito intensivo (15 dias).** Toda referência a “Dia N”
+> para o seu estudo aponta para a seção 2. Os ritmos B e C ficam documentados como alternativas
+> caso a carga de 8 horas diárias deixe de caber na rotina.
 
 ### Como escolher, se ainda estiver em dúvida
 
@@ -47,13 +47,13 @@ seção 7 ("Se você atrasar").
 | **Duração total** | 15 dias corridos |
 | **Carga horária total** | 120 horas |
 | **Horas diárias** | 8 h |
-| **Divisão diária** | 5 h de conteúdo + 3 h de prática |
+| **Divisão diária** | 4 h aplicadas ao trabalho + 4 h intermitentes de estudo e prática |
 | **Exercícios obrigatórios** | Todos (os marcados "Obrigatório? Sim") |
 | **Exercícios opcionais** | Somente os marcados com ⭐ nas listas |
 | **Momentos de revisão** | Dias 5, 10 e 15 |
 | **Avaliações de módulo** | Todas as 17, no mesmo dia em que o módulo termina |
-| **Avaliações cumulativas** | Dias 5, 8, 11, 12 e 15 |
-| **Projetos** | Projeto 1 no dia 5 · Projeto 2 no dia 8 · Projeto Final nos dias 13 e 14 |
+| **Avaliações cumulativas** | Dias 5, 9, 12, 13 e 15 |
+| **Projetos** | Projeto 1 no dia 7 · Projeto 2 no dia 10 · Projeto Final no dia 14 |
 
 ### 2.1 Conteúdo por dia
 
@@ -157,7 +157,7 @@ seção 4 vira dois dias aqui.
 
 ---
 
-## 4. ⭐ Ritmo B — Intensivo recomendado (30 dias · 4 h/dia)
+## 4. Ritmo B — Intensivo de 30 dias (alternativa)
 
 | Item | Valor |
 |---|---|
@@ -187,7 +187,7 @@ seção 4 vira dois dias aqui.
 | 4 | 50 min | 📝 Exercícios independentes obrigatórios + conferência no gabarito |
 | fecho | 10 min | Reler os 📌 Resumos, marcar [03-trilha-de-progresso.md](03-trilha-de-progresso.md), commit do dia |
 
-### 4.2 Visão geral dos 30 dias
+### 4.2 Visão geral dos 30 dias (alternativa)
 
 | Dia | Conteúdo |
 |---|---|
@@ -224,7 +224,7 @@ seção 4 vira dois dias aqui.
 
 ---
 
-## 5. Cronograma detalhado dos 30 dias, com todos os links
+## 5. Cronograma detalhado do Ritmo B (30 dias · alternativa)
 
 ### Dia 1 — Ambiente + Git e terminal
 
@@ -725,13 +725,13 @@ O APK precisa estar **instalado e funcionando em um celular Android de verdade**
 
 ### 6.3 Para avançar de **bloco** (avaliações cumulativas)
 
-| Cumulativa | Dia | Cobre | Nota mínima | Se reprovar |
-|---|---|---|---|---|
-| [01 — Dart](avaliacoes/cumulativa-01-dart.md) | 9 | Módulos 00–04 | 70 % | Refaça módulos 02 e 03 antes de seguir |
-| [02 — Flutter UI](avaliacoes/cumulativa-02-flutter-ui.md) | 15 | Módulos 05–07 | 70 % | Refaça o Projeto 1 do zero |
-| [03 — Estado e dados](avaliacoes/cumulativa-03-estado-e-dados.md) | 22 | Módulos 08–10 | 70 % | Refaça o módulo 08 inteiro |
-| [04 — Qualidade e plataforma](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | 24 | Módulos 11–13 | 70 % | Refaça os exercícios do módulo 12 |
-| [05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | 30 | Módulos 14–16 | 70 % | Refaça o módulo 14 e gere o APK de novo |
+| Cumulativa | Dia no Ritmo A | Dia no Ritmo B | Cobre | Nota mínima | Se reprovar |
+|---|---:|---:|---|---|---|
+| [01 — Dart](avaliacoes/cumulativa-01-dart.md) | **5** | 9 | Módulos 00–04 | 70 % | Refaça módulos 02 e 03 antes de seguir |
+| [02 — Flutter UI](avaliacoes/cumulativa-02-flutter-ui.md) | **9** | 15 | Módulos 05–07 | 70 % | Refaça o Projeto 1 do zero |
+| [03 — Estado e dados](avaliacoes/cumulativa-03-estado-e-dados.md) | **12** | 22 | Módulos 08–10 | 70 % | Refaça o módulo 08 inteiro |
+| [04 — Qualidade e plataforma](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | **13** | 24 | Módulos 11–13 | 70 % | Refaça os exercícios do módulo 12 |
+| [05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | **15** | 30 | Módulos 14–16 | 70 % | Refaça o módulo 14 e gere o APK de novo |
 
 ### 6.4 Para considerar o **curso concluído**
 
@@ -752,18 +752,18 @@ Atrasar é normal. Improvisar é o que estraga o plano. Use estas regras:
 | Situação | O que fazer |
 |---|---|
 | Atrasou 1 dia | Não compense dobrando o dia seguinte. Empurre o cronograma em 1 dia |
-| Atrasou 3 dias ou mais | Migre do ritmo B (30 d) para o ritmo C (60 d). Refaça a conta com a seção 3.1 |
+| Atrasou 3 dias ou mais | Recalcule o Ritmo A a partir do dia pendente. Se 8 h/dia não forem mais sustentáveis, migre para o Ritmo B (30 d) ou C (60 d) antes de continuar |
 | Faltou 1 semana inteira | Volte um módulo e refaça os exercícios antes de continuar |
 | Está adiantado | **Não** pule dias de revisão. Use o tempo extra nos exercícios opcionais e nos 🏆 desafios |
 | Travou num módulo específico | Aplique o método de depuração em 5 passos de [00-como-usar-o-curso.md](00-como-usar-o-curso.md) e consulte [referencias/erros-comuns.md](referencias/erros-comuns.md) |
 
 **O que nunca cortar, em nenhum ritmo:**
 
-1. Os dias de revisão (7, 14, 21, 28 no ritmo B).
+1. Os dias de revisão (5, 10 e 15 no seu Ritmo A).
 2. Os exercícios obrigatórios.
 3. As 5 avaliações cumulativas e a final.
 4. Os 3 projetos.
-5. O dia 28 — é o dia em que o APK e o AAB nascem.
+5. O dia 15 — é o dia em que o APK e o AAB nascem no seu plano.
 
 ---
 

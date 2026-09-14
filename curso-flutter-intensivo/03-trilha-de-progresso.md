@@ -206,7 +206,7 @@ Objetivo da fase: juntar tudo em um app real, com 5 telas, banco local e API.
 
 ---
 
-## Fase 6 — Build e distribuição (Dias 28 e 29)
+## Fase 6 — Build e distribuição (Dia 15)
 
 Objetivo da fase: transformar código em arquivo instalável, primeiro no Android, depois no iOS.
 
@@ -237,7 +237,7 @@ Objetivo da fase: transformar código em arquivo instalável, primeiro no Androi
 
 ---
 
-## Fase 7 — Publicação e fechamento (Dia 30)
+## Fase 7 — Publicação e fechamento (Dia 15)
 
 - [ ] Módulo 16 — [Publicação e próximos passos](modulos/16-publicacao-e-proximos-passos/README.md)
 - [ ] Exercícios do módulo 16 — [exercicios/16-publicacao-e-proximos-passos.md](exercicios/16-publicacao-e-proximos-passos.md)
