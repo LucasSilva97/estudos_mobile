@@ -44,11 +44,15 @@ import 'dart:io';
 
 // 2
 
-void main(){
-  print("Olá! Qual o seu nome?");
-  var nome = stdin.readLineSync();
-  print("Olá! Qual a sua idade?");
-  var idade = stdin.readLineSync();
+// void main(){
+//   print("Olá! Qual o seu nome?");
+//   var nome = stdin.readLineSync();
+//   print("Olá! Qual a sua idade?");
+//   var idade = stdin.readLineSync();
 
-  print("Olá, $nome, você tem $idade anos!");
-}
+//   print("Olá, $nome, você tem $idade anos!");
+// }
+
+
+// FUNÇÕES
+
