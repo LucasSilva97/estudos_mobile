@@ -27,7 +27,7 @@ Características:
 | Carga total | 120 horas |
 | Ritmo ativo | 15 dias · 8 h/dia, com 4 h aplicadas ao trabalho e 4 h intermitentes (ver [01-plano-intensivo.md](01-plano-intensivo.md)) |
 | Módulos | 17 (de `00` a `16`) |
-| Aulas | 148 aulas em formato fixo |
+| Aulas | 152 aulas em formato fixo |
 | Projetos práticos | 3 (iniciante, intermediário, final) |
 | Listas de exercícios | 17 módulos + README |
 | Gabaritos | 1 por lista + 3 de desafios de projeto |

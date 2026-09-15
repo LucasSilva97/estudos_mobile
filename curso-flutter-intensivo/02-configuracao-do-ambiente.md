@@ -1768,6 +1768,7 @@ flutter run -d windows
 
 ---
 
+<a id="parte-6--ambiente-ios--só-no-mac"></a>
 # PARTE 6 — 🍎 Ambiente iOS (SÓ NO MAC)
 
 > ## ⛔ LEIA ISTO ANTES DE COMEÇAR ESTA PARTE
