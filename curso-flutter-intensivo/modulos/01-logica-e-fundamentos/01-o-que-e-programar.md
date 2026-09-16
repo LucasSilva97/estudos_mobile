@@ -471,16 +471,16 @@ corrija o arquivo — nunca o contrário.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Explico o que é código-fonte sem usar a palavra "código".
-- [ ] Digo em uma frase a diferença entre compilador e interpretador.
-- [ ] Digo qual modo (JIT ou AOT) o Flutter usa em `flutter run` e qual usa em
+- [x] Explico o que é código-fonte sem usar a palavra "código".
+- [x] Digo em uma frase a diferença entre compilador e interpretador.
+- [x] Digo qual modo (JIT ou AOT) o Flutter usa em `flutter run` e qual usa em
       `flutter build apk --release`, e por quê.
-- [ ] Explico o que é bytecode e dou um exemplo de tecnologia que o usa.
-- [ ] Diferencio programa, execução e processo.
-- [ ] Digo o que é SDK, IDE e terminal, e aponto qual eu uso para cada coisa.
-- [ ] Explico por que não existe simulador de iPhone no Windows.
-- [ ] Criei, executei e alterei `bin/aula01_ola.dart` com sucesso.
-- [ ] Provoquei um erro de propósito, li a mensagem e corrigi sozinho.
+- [x] Explico o que é bytecode e dou um exemplo de tecnologia que o usa.
+- [x] Diferencio programa, execução e processo.
+- [x] Digo o que é SDK, IDE e terminal, e aponto qual eu uso para cada coisa.
+- [x] Explico por que não existe simulador de iPhone no Windows.
+- [x] Criei, executei e alterei `bin/aula01_ola.dart` com sucesso.
+- [x] Provoquei um erro de propósito, li a mensagem e corrigi sozinho.
 
 ---
 
