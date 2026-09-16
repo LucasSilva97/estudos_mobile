@@ -99,14 +99,25 @@ flutter doctor -v
 - **Saída esperada:** uma lista com `[✓]` (tudo certo), `[!]` (aviso, dá para seguir) e `[X]` (bloqueio).
 - **Observação:** 🪟 Se o SDK estiver num caminho com acento, este comando **quebra** com `FileSystemException: Cannot resolve symbolic links`. A correção é mover o SDK para `C:\src\flutter`. Veja [Erros comuns](erros-comuns.md).
 
-#### ✅ `flutter doctor --android-licenses` 🤖
+#### ⚠️ `flutter doctor --android-licenses` 🤖
 ```powershell
 flutter doctor --android-licenses
 ```
-- **O que faz:** exibe uma a uma as licenças do Android SDK para você aceitar.
-- **Quando usar:** logo depois de instalar o Android Studio e os componentes do SDK; e sempre que o build reclamar de licença não aceita.
-- **Saída esperada:** vários textos de licença, cada um perguntando `Accept? (y/N):` — responda `y` e tecle Enter. No fim: `All SDK package licenses accepted.`
-- **Observação:** só funciona com o Android SDK instalado e o `ANDROID_HOME` configurado. Se aparecer `Unable to locate Android SDK`, instale o SDK antes.
+- **O que faz:** exibe uma a uma as licenças do Android SDK para você aceitar. **Em SDKs recentes não faz mais nada** — veja a observação.
+- **Quando usar:** apenas em Android SDKs antigos, quando o `flutter doctor` acusar `Some Android licenses not accepted`.
+- **Saída esperada (SDK antigo):** vários textos de licença, cada um perguntando `Accept? (y/N):` — responda `y` e tecle Enter. No fim: `All SDK package licenses accepted.`
+- **Saída esperada (SDK recente):** um aviso de depreciação, `The --licenses option is no longer needed`. Isso **não é erro**: o Google trocou o `sdkmanager` pelo **Android CLI** (`android`) e o aceite de licenças passou a acontecer junto com o `android sdk install`.
+- **Observação:** para saber se as licenças estão de fato aceitas, o comando certo hoje é `flutter doctor -v` — procure a linha `All Android licenses accepted.` Se aparecer `Unable to locate Android SDK`, instale o SDK antes.
+
+#### ✅ `android sdk list` / `android sdk install` 🤖
+```powershell
+android sdk list
+android sdk install "platforms;android-36"
+```
+- **O que faz:** lista e instala pacotes do Android SDK. É o substituto oficial do `sdkmanager`, aposentado pelo Google.
+- **Quando usar:** para instalar uma *platform*, *build-tools* ou imagem de emulador sem abrir o Android Studio. A instalação já aceita as licenças dos pacotes baixados.
+- **Saída esperada:** a lista de pacotes instalados e disponíveis; no `install`, o progresso do download.
+- **Observação:** o binário `android.exe` fica em `%LOCALAPPDATA%\Android\Sdk\cmdline-tools\latest\bin`. Adicione essa pasta ao `Path` para chamá-lo de qualquer lugar.
 
 #### ✅ `flutter create meu_app`
 ```powershell
@@ -748,7 +759,7 @@ sudo xcodebuild -license accept
 - **O que faz:** aceita o contrato de licença do Xcode pela linha de comando.
 - **Quando usar:** quando qualquer build iOS falha dizendo que a licença não foi aceita.
 - **Saída esperada:** nenhuma saída em caso de sucesso.
-- **Observação:** é o equivalente iOS do `flutter doctor --android-licenses`.
+- **Observação:** é o equivalente iOS do aceite de licenças do Android — com a diferença de que no iOS o passo continua existindo.
 
 ---
 
@@ -963,11 +974,10 @@ nativos e o Gradle pode reaproveitar cache antigo.
 ```powershell
 flutter --version
 flutter doctor -v
-flutter doctor --android-licenses
 flutter devices
 ```
-Confirma a versão, examina o ambiente, aceita as licenças do Android e lista o que está
-conectado. O passo a passo completo está em
+Confirma a versão, examina o ambiente — inclusive o estado das licenças do Android, na linha
+`All Android licenses accepted.` — e lista o que está conectado. O passo a passo completo está em
 [02-configuracao-do-ambiente.md](../02-configuracao-do-ambiente.md).
 
 ---

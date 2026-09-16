@@ -86,7 +86,30 @@ Please enable Developer Mode in your system settings.
     ! Some Android licenses not accepted.
 ```
 
-**Correção:** `flutter doctor --android-licenses` e aceite tudo com `y`.
+**Correção:** depende da idade do seu Android SDK.
+
+- **SDK recente** (existe `cmdline-tools\latest\bin\android.exe`): não há comando de licença.
+  Reinstale o componente pelo SDK Manager ou com `android sdk install "platforms;android-36"` —
+  o aceite vem junto.
+- **SDK antigo:** `flutter doctor --android-licenses` e aceite tudo com `y`.
+
+Confirme com `flutter doctor -v`, procurando `All Android licenses accepted.`
+
+---
+
+### `The --licenses option is no longer needed`
+
+```text
+WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+Warning: The --licenses option is no longer needed.
+```
+
+**Causa:** não é um erro. O Google aposentou o `sdkmanager` e o substituiu pelo **Android CLI**
+(`android`), onde o aceite de licenças deixou de ser um passo separado — ele acontece junto com
+o `android sdk install`.
+
+**Correção:** nenhuma. Rode `flutter doctor -v` e confirme a linha
+`All Android licenses accepted.` → [§ 2.7](../02-configuracao-do-ambiente.md#27-aceitação-de-licenças)
 
 ---
 

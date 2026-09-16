@@ -365,8 +365,8 @@ funcionando", "aplicativo executado em Android" e todos os do módulo 14 depende
 
 **Quando resolver:** no **Dia 1**, junto com
 [02-configuracao-do-ambiente.md](02-configuracao-do-ambiente.md). O passo a passo termina com
-`flutter doctor --android-licenses` e o checklist de verificação está em
-[checklists/ambiente-android.md](checklists/ambiente-android.md).
+`flutter doctor -v` mostrando `All Android licenses accepted.` e o checklist de verificação está
+em [checklists/ambiente-android.md](checklists/ambiente-android.md).
 
 ### 6.3 🪟 Acento no caminho do Flutter SDK
 

@@ -126,7 +126,7 @@ em [referencias/erros-comuns.md](referencias/erros-comuns.md).
 |---|---|---|---|
 | 1 | Acento no caminho do Flutter SDK | `FileSystemException: Cannot resolve symbolic links, path = 'C:\Users\Usu rio\...'` e `ShaderCompilerException` | Mover o SDK para `C:\src\flutter` (sem acento, sem espaço) e ajustar o PATH |
 | 2 | Modo de Desenvolvedor do Windows desligado | `Building with plugins requires symlink support. Please enable Developer Mode` | Ativar em Configurações → Sistema → Para desenvolvedores |
-| 3 | Android SDK ausente | `[X] Android toolchain — Unable to locate Android SDK.` | Instalar Android Studio, usar o SDK Manager e rodar `flutter doctor --android-licenses` |
+| 3 | Android SDK ausente | `[X] Android toolchain — Unable to locate Android SDK.` | Instalar Android Studio, usar o SDK Manager e confirmar as licenças com `flutter doctor -v` |
 
 > 🪟 Os três problemas são **específicos do Windows**. Você resolve todos no **Dia 1** do plano
 > intensivo, antes de escrever a primeira linha de código Flutter.

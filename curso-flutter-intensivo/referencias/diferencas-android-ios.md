@@ -55,7 +55,7 @@ você instala para conseguir programar para uma plataforma).
 | Testar sem aparelho físico | **Emulador** — simula um aparelho Android inteiro, incluindo o sistema operacional, em uma máquina virtual | **Simulador** — roda uma versão do iOS compilada para o processador do Mac; não é uma máquina virtual completa |
 | Testar em aparelho físico | Cabo USB + **Depuração USB** ligada nas Opções do Desenvolvedor | Cabo USB + o Mac precisa "confiar" no aparelho; exige conta Apple |
 | Ferramenta de linha de comando para falar com o aparelho | `adb` (*Android Debug Bridge*) | `xcrun`, `xcodebuild`, `simctl` |
-| Licenças a aceitar | `flutter doctor --android-licenses` | Licença do Xcode: `xcodebuild -license accept` |
+| Licenças a aceitar | Normalmente já aceitas na instalação do SDK; confira com `flutter doctor -v` | Licença do Xcode: `xcodebuild -license accept` |
 
 ### Emulador × Simulador — a diferença que importa na prática
 

@@ -299,13 +299,16 @@ ferramentas de linha de comando.
   - Aula: [modulos/14-build-android/01-debug-profile-release.md](../modulos/14-build-android/01-debug-profile-release.md)
 
 - [ ] **Android SDK Command-line Tools instalado.**
-  Sem ele, `flutter doctor --android-licenses` não roda.
+  É onde moram as ferramentas de linha de comando do SDK: o `android` (**Android CLI**) nas
+  versões recentes e o `sdkmanager` nas antigas. Sem ele, os comandos de licença e de
+  gerenciamento de pacotes não rodam.
   SDK Manager → aba *SDK Tools* → marque **Android SDK Command-line Tools (latest)** → *Apply*.
   - Como verificar:
     ```powershell
-    Test-Path "$env:LOCALAPPDATA\Android\Sdk\cmdline-tools\latest\bin\sdkmanager.bat"
+    Test-Path "$env:LOCALAPPDATA\Android\Sdk\cmdline-tools\latest\bin\android.exe"
     ```
-    Esperado: `True`.
+    Esperado: `True`. Em SDKs mais antigos o binário é `sdkmanager.bat` — qualquer um dos dois
+    presente significa que o componente está instalado.
   - Aula: [02-configuracao-do-ambiente.md](../02-configuracao-do-ambiente.md)
 
 - [ ] **Android SDK Platform-Tools instalado** (é onde mora o `adb`).
@@ -360,16 +363,16 @@ O Google exige aceite explícito das licenças dos componentes do SDK. Sem isso 
 compilar, com uma mensagem sobre "licenses not accepted".
 
 - [ ] **Todas as licenças aceitas.**
-  - Como fazer (responda `y` a cada pergunta):
+  - Como verificar (faça isto **primeiro** — muitas vezes já está resolvido):
     ```powershell
-    flutter doctor --android-licenses
+    flutter doctor -v
     ```
-  - Como verificar:
-    ```powershell
-    flutter doctor
-    ```
-    Esperado: a linha do Android toolchain **sem** o aviso
-    `Some Android licenses not accepted`.
+    Esperado: a linha `• All Android licenses accepted.` dentro do bloco do Android toolchain,
+    e nenhum aviso `Some Android licenses not accepted`.
+  - Se já estiver aceito, **não há nada a fazer aqui**. Instalar os componentes pelo SDK Manager
+    do Android Studio costuma aceitar as licenças junto com o download.
+  - Se estiver pendente, o comando depende da idade do seu Android SDK — os dois casos estão em
+    [02-configuracao-do-ambiente.md § 2.7](../02-configuracao-do-ambiente.md#27-aceitação-de-licenças).
   - Aula: [02-configuracao-do-ambiente.md](../02-configuracao-do-ambiente.md)
 
 ---

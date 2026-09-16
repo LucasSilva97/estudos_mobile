@@ -625,12 +625,9 @@ do Google.
 1. Instalar o **Android Studio** (é ele quem instala e gerencia o Android SDK).
 2. Abrir o **SDK Manager** e instalar: *Android SDK Platform*, *Android SDK Command-line Tools*,
    *Android SDK Build-Tools*, *Android SDK Platform-Tools* e *Android Emulator*.
-3. Aceitar as licenças:
-
-   **🪟 Windows (PowerShell)**
-   ```powershell
-   flutter doctor --android-licenses
-   ```
+3. Conferir as licenças — nos SDKs recentes elas já são aceitas durante a própria instalação
+   dos componentes. Só há trabalho a fazer se o `flutter doctor` reclamar, e aí o comando
+   correto depende da versão do SDK: veja [2.7](#27-aceitação-de-licenças).
 
 4. Conferir com `flutter doctor`.
 
@@ -1022,7 +1019,7 @@ Marque **Show Package Details** e selecione:
 |---|---|
 | **Android SDK Build-Tools** | Compiladores e empacotadores que transformam seu código e recursos em APK/AAB (`aapt2`, `d8`, `zipalign`, `apksigner`) |
 | **Android SDK Platform-Tools** | Os utilitários que conversam com o aparelho — principalmente o **`adb`** (*Android Debug Bridge*, a ponte de depuração do Android) |
-| **Android SDK Command-line Tools (latest)** | Ferramentas de linha de comando, entre elas o `sdkmanager`. **O `flutter doctor --android-licenses` depende deste componente** — se faltar, ele falha |
+| **Android SDK Command-line Tools (latest)** | Ferramentas de linha de comando do SDK: o `android` (**Android CLI**) nas versões recentes, o `sdkmanager` nas antigas. **Os comandos de licença e de gerenciamento de pacotes dependem deste componente** — se faltar, eles falham |
 | **Android Emulator** | O emulador em si |
 | **Android Emulator hypervisor driver** (🪟 apenas em processadores Intel) | Aceleração por hardware do emulador. Em máquinas AMD ou com Hyper-V ativo, use o WHPX (veja [3.2](#32-virtualização-bios-hyper-v-e-whpx)) |
 
@@ -1100,13 +1097,76 @@ E o `flutter doctor` deve deixar de exibir `Unable to locate Android SDK.`
 ## 2.7 Aceitação de licenças
 
 O Google exige que você aceite, uma vez por máquina, as licenças de cada componente do SDK.
-Enquanto não aceitar, o `flutter doctor` mostra:
+Enquanto não aceitar, o Gradle recusa compilar e o `flutter doctor` mostra:
 
 ```text
 [!] Android toolchain - develop for Android devices
     ! Some Android licenses not accepted. To resolve this, run:
       flutter doctor --android-licenses
 ```
+
+### Passo 1 — confira antes de rodar qualquer coisa
+
+Na maioria das instalações feitas pelo Android Studio as licenças **já são aceitas durante o
+download dos componentes**. Então comece verificando:
+
+```powershell
+flutter doctor -v
+```
+
+Se esta linha aparecer dentro do bloco do Android toolchain, está tudo pronto e **não há nada a
+fazer nesta seção**:
+
+```text
+• All Android licenses accepted.
+```
+
+### Passo 2 — se estiver pendente, o comando depende da idade do seu SDK
+
+O Google aposentou o `sdkmanager` e o substituiu pelo **Android CLI** — o binário `android`, na
+mesma pasta `cmdline-tools`. Isso mudou este passo, e o curso cobre os dois cenários.
+
+Para descobrir em qual você está:
+
+```powershell
+Test-Path "$env:LOCALAPPDATA\Android\Sdk\cmdline-tools\latest\bin\android.exe"
+```
+
+`True` → cenário 🆕. `False` → cenário 🕰️.
+
+#### 🆕 Android SDK recente (com o Android CLI)
+
+**Não existe mais um comando separado de licenças.** O aceite acontece junto com a instalação
+dos pacotes. Se você rodar o comando antigo, recebe um **aviso, não um erro**:
+
+```text
+WARNING: The SDK Manager CLI tool (sdkmanager) is deprecated. Android CLI will be used instead.
+The 'android' binary can also be found in the cmdline-tools directory, and 'android sdk' is the
+replacement for 'sdkmanager'.
+
+Warning: The --licenses option is no longer needed.
+```
+
+Isso **não é falha** — é o SDK avisando que o passo deixou de existir. Para resolver licenças
+realmente pendentes, (re)instale o componente pelo SDK Manager do Android Studio ou pela linha
+de comando:
+
+```powershell
+android sdk install "platforms;android-36"
+```
+
+Equivalências úteis do CLI novo:
+
+| Comando antigo | Comando novo |
+|---|---|
+| `sdkmanager --list` | `android sdk list` |
+| `sdkmanager "platforms;android-36"` | `android sdk install "platforms;android-36"` |
+| `sdkmanager --update` | `android sdk update` |
+| `flutter doctor --android-licenses` | não existe mais — o aceite vem no `android sdk install` |
+
+#### 🕰️ Android SDK antigo (ainda com o `sdkmanager`)
+
+O comando clássico continua valendo:
 
 **🪟 Windows (PowerShell)**
 ```powershell
@@ -1118,7 +1178,7 @@ flutter doctor --android-licenses
 flutter doctor --android-licenses
 ```
 
-O comando apresenta os termos um a um e pergunta:
+Ele apresenta os termos um a um e pergunta:
 
 ```text
 Accept? (y/N):
@@ -1130,7 +1190,7 @@ Digite **`y`** e pressione <kbd>Enter</kbd> para cada um. Ao final:
 All SDK package licenses accepted.
 ```
 
-**Teste objetivo:** rodar `flutter doctor` e ver a linha
+**Teste objetivo (vale para os dois cenários):** rodar `flutter doctor` e ver a linha
 `[✓] Android toolchain - develop for Android devices`.
 
 > ⚠️ Se o comando falhar dizendo que não encontra o `sdkmanager`, você não instalou
@@ -1508,7 +1568,8 @@ Use essa saída para responder perguntas como:
 | `flutter analyze` encerra com código 255 | Mesma causa acima | [1.2](#12--problema-1--acento-no-caminho-do-flutter-sdk) |
 | `Building with plugins requires symlink support` | Modo de Desenvolvedor do Windows desligado | `start ms-settings:developers` — [1.3](#13--problema-2--modo-de-desenvolvedor-do-windows-desligado) |
 | `[X] Unable to locate Android SDK.` | Android SDK não instalado ou `ANDROID_HOME` errado | [2.6](#26-android-sdk-platform-tools-build-tools-e-emulador) |
-| `Some Android licenses not accepted.` | Licenças pendentes | `flutter doctor --android-licenses` — [2.7](#27-aceitação-de-licenças) |
+| `Some Android licenses not accepted.` | Licenças pendentes | O comando depende da versão do SDK — [2.7](#27-aceitação-de-licenças) |
+| `WARNING: ... sdkmanager is deprecated` + `The --licenses option is no longer needed` | **Não é erro.** SDK novo: o `sdkmanager` virou `android` e o aceite deixou de ser um passo separado | Conferir com `flutter doctor -v` — [2.7](#27-aceitação-de-licenças) |
 | `cmdline-tools component is missing` | Faltou *Android SDK Command-line Tools (latest)* | SDK Manager → aba **SDK Tools** — [2.6](#26-android-sdk-platform-tools-build-tools-e-emulador) |
 | `Unsupported class file major version` no build Android | JDK incompatível com o Gradle/AGP | Usar **JDK 17** — [2.8](#28-jdk-17--e-por-que-a-versão-importa) |
 | `adb devices` mostra `unauthorized` | Falta autorizar o computador no celular | Desbloquear a tela e aceitar o diálogo — [3.3](#33-aparelho-físico-android-opções-do-desenvolvedor-e-depuração-usb) |
@@ -2232,7 +2293,7 @@ marcados.**
 - [ ] VS Code aberto com as extensões **Flutter** e **Dart** instaladas
 - [ ] Android Studio abre e o **SDK Manager** existe
 - [ ] `adb --version` responde
-- [ ] `flutter doctor --android-licenses` terminou com `All SDK package licenses accepted.`
+- [ ] `flutter doctor -v` mostra `All Android licenses accepted.`
 
 ## 8.4 Dispositivos (Parte 3)
 
