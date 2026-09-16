@@ -21,7 +21,7 @@ o arquivo foi criado.
 - [x] Ler os arquivos existentes e preservar o exercício pessoal em `meu_app/`.
 - [x] Ler o prompt original do aluno.
 - [x] Acrescentar a aula 05, exercícios, gabaritos e avaliação do módulo 00.
-- [ ] Revisar os materiais do módulo 00 conforme todos os critérios do prompt original.
+- [x] Revisar os materiais do módulo 00 conforme todos os critérios do prompt original.
 - [x] Completar as aulas ausentes de lógica do módulo 01.
 - [x] Completar as aulas ausentes de Dart básico.
 - [x] Completar as práticas e a avaliação do módulo 01.
@@ -32,9 +32,9 @@ o arquivo foi criado.
 - [x] Completar build, assinatura e distribuição (14 a 16).
 - [x] Implementar e explicar os três projetos, mantendo desafios separados das soluções.
 - [x] Completar avaliações cumulativas e final.
-- [ ] Corrigir dependências pedagógicas e conferir a carga horária dos três ritmos.
+- [x] Corrigir dependências pedagógicas e conferir a carga horária dos três ritmos.
 - [x] Verificar links, âncoras e correspondência de exercícios obrigatórios.
-- [ ] Verificar o **código dos exemplos** compilando num projeto real.
+- [x] Verificar o **código dos exemplos** compilando num projeto real.
 - [x] Registrar validações executadas e limitações no relatório final.
 
 > ⚠️ **As três caixas abertas são reais, não esquecimento.** A revisão do módulo 00 contra o
