@@ -17,13 +17,13 @@
 
 **Legenda de plataforma** (a mesma usada no curso inteiro):
 
-| Emoji | Significado |
-|---|---|
-| 🤖 | Específico do Android |
-| 🍎 | Específico do iOS — **exige um Mac** (macOS + Xcode) |
-| 🪟 | Específico do Windows |
-| 🖥️ | Específico do macOS |
-| ⭐ | Item opcional, mas muito recomendado |
+| Emoji | Significado                                                 |
+| ----- | ----------------------------------------------------------- |
+| 🤖    | Específico do Android                                      |
+| 🍎    | Específico do iOS —**exige um Mac** (macOS + Xcode) |
+| 🪟    | Específico do Windows                                      |
+| 🖥️  | Específico do macOS                                        |
+| ⭐    | Item opcional, mas muito recomendado                        |
 
 > 🍎 **SÓ NO MAC.** Você está no Windows 11 e não tem Mac. Todos os itens marcados com 🍎
 > continuam na trilha de propósito: você vai **ler, entender e saber executar** o processo
@@ -38,30 +38,30 @@
 Estes são os 22 pontos de verificação do curso inteiro. Eles se repetem, no lugar certo,
 dentro das fases mais abaixo — aqui estão juntos para você ver a jornada completa de uma vez.
 
-| # | Marco | Exige Mac? | Onde acontece |
-|---|---|---|---|
-| 01 | ambiente Flutter configurado | Não | [02-configuracao-do-ambiente.md](02-configuracao-do-ambiente.md) |
-| 02 | flutter doctor validado | Não | [02-configuracao-do-ambiente.md](02-configuracao-do-ambiente.md) |
-| 03 | emulador Android funcionando | Não | [checklists/ambiente-android.md](checklists/ambiente-android.md) |
-| 04 | simulador iOS funcionando (quando houver acesso a macOS) | 🍎 Sim | [checklists/ambiente-ios.md](checklists/ambiente-ios.md) |
-| 05 | fundamentos de Dart dominados | Não | [avaliacoes/cumulativa-01-dart.md](avaliacoes/cumulativa-01-dart.md) |
-| 06 | primeiro aplicativo executado | Não | [modulos/05-introducao-ao-flutter/README.md](modulos/05-introducao-ao-flutter/README.md) |
-| 07 | aplicativo executado em Android | Não | [modulos/05-introducao-ao-flutter/README.md](modulos/05-introducao-ao-flutter/README.md) |
-| 08 | aplicativo executado em iOS | 🍎 Sim | [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](modulos/15-build-ios/03-simulador-e-iphone-fisico.md) |
-| 09 | navegação implementada | Não | [modulos/07-navegacao-e-formularios/README.md](modulos/07-navegacao-e-formularios/README.md) |
-| 10 | formulário validado | Não | [modulos/07-navegacao-e-formularios/06-formularios.md](modulos/07-navegacao-e-formularios/06-formularios.md) |
-| 11 | API consumida | Não | [modulos/09-consumo-de-api/README.md](modulos/09-consumo-de-api/README.md) |
-| 12 | dados persistidos | Não | [modulos/10-persistencia-de-dados/README.md](modulos/10-persistencia-de-dados/README.md) |
-| 13 | testes criados | Não | [modulos/12-testes-e-debug/README.md](modulos/12-testes-e-debug/README.md) |
-| 14 | APK debug gerado | Não | [modulos/14-build-android/01-debug-profile-release.md](modulos/14-build-android/01-debug-profile-release.md) |
-| 15 | APK release assinado e instalado | Não | [modulos/14-build-android/08-gerando-apk-e-aab.md](modulos/14-build-android/08-gerando-apk-e-aab.md) |
-| 16 | AAB gerado | Não | [modulos/14-build-android/08-gerando-apk-e-aab.md](modulos/14-build-android/08-gerando-apk-e-aab.md) |
-| 17 | build iOS release gerado | 🍎 Sim | [modulos/15-build-ios/08-build-ipa-e-archive.md](modulos/15-build-ios/08-build-ipa-e-archive.md) |
-| 18 | aplicativo executado em iPhone físico | 🍎 Sim | [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](modulos/15-build-ios/03-simulador-e-iphone-fisico.md) |
-| 19 | archive do iOS criado | 🍎 Sim | [modulos/15-build-ios/08-build-ipa-e-archive.md](modulos/15-build-ios/08-build-ipa-e-archive.md) |
-| 20 | IPA exportado (quando aplicável) | 🍎 Sim | [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 21 | versão preparada para TestFlight | 🍎 Sim | [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 22 | projeto final concluído | Não | [projetos/03-projeto-final-multiplataforma/13-checklist.md](projetos/03-projeto-final-multiplataforma/13-checklist.md) |
+| #  | Marco                                                    | Exige Mac? | Onde acontece                                                                                                         |
+| -- | -------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------- |
+| 01 | ambiente Flutter configurado                             | Não       | [02-configuracao-do-ambiente.md](02-configuracao-do-ambiente.md)                                                       |
+| 02 | flutter doctor validado                                  | Não       | [02-configuracao-do-ambiente.md](02-configuracao-do-ambiente.md)                                                       |
+| 03 | emulador Android funcionando                             | Não       | [checklists/ambiente-android.md](checklists/ambiente-android.md)                                                       |
+| 04 | simulador iOS funcionando (quando houver acesso a macOS) | 🍎 Sim     | [checklists/ambiente-ios.md](checklists/ambiente-ios.md)                                                               |
+| 05 | fundamentos de Dart dominados                            | Não       | [avaliacoes/cumulativa-01-dart.md](avaliacoes/cumulativa-01-dart.md)                                                   |
+| 06 | primeiro aplicativo executado                            | Não       | [modulos/05-introducao-ao-flutter/README.md](modulos/05-introducao-ao-flutter/README.md)                               |
+| 07 | aplicativo executado em Android                          | Não       | [modulos/05-introducao-ao-flutter/README.md](modulos/05-introducao-ao-flutter/README.md)                               |
+| 08 | aplicativo executado em iOS                              | 🍎 Sim     | [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](modulos/15-build-ios/03-simulador-e-iphone-fisico.md)           |
+| 09 | navegação implementada                                 | Não       | [modulos/07-navegacao-e-formularios/README.md](modulos/07-navegacao-e-formularios/README.md)                           |
+| 10 | formulário validado                                     | Não       | [modulos/07-navegacao-e-formularios/06-formularios.md](modulos/07-navegacao-e-formularios/06-formularios.md)           |
+| 11 | API consumida                                            | Não       | [modulos/09-consumo-de-api/README.md](modulos/09-consumo-de-api/README.md)                                             |
+| 12 | dados persistidos                                        | Não       | [modulos/10-persistencia-de-dados/README.md](modulos/10-persistencia-de-dados/README.md)                               |
+| 13 | testes criados                                           | Não       | [modulos/12-testes-e-debug/README.md](modulos/12-testes-e-debug/README.md)                                             |
+| 14 | APK debug gerado                                         | Não       | [modulos/14-build-android/01-debug-profile-release.md](modulos/14-build-android/01-debug-profile-release.md)           |
+| 15 | APK release assinado e instalado                         | Não       | [modulos/14-build-android/08-gerando-apk-e-aab.md](modulos/14-build-android/08-gerando-apk-e-aab.md)                   |
+| 16 | AAB gerado                                               | Não       | [modulos/14-build-android/08-gerando-apk-e-aab.md](modulos/14-build-android/08-gerando-apk-e-aab.md)                   |
+| 17 | build iOS release gerado                                 | 🍎 Sim     | [modulos/15-build-ios/08-build-ipa-e-archive.md](modulos/15-build-ios/08-build-ipa-e-archive.md)                       |
+| 18 | aplicativo executado em iPhone físico                   | 🍎 Sim     | [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](modulos/15-build-ios/03-simulador-e-iphone-fisico.md)           |
+| 19 | archive do iOS criado                                    | 🍎 Sim     | [modulos/15-build-ios/08-build-ipa-e-archive.md](modulos/15-build-ios/08-build-ipa-e-archive.md)                       |
+| 20 | IPA exportado (quando aplicável)                        | 🍎 Sim     | [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](modulos/15-build-ios/09-exportando-ipa-e-testflight.md)       |
+| 21 | versão preparada para TestFlight                        | 🍎 Sim     | [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](modulos/15-build-ios/09-exportando-ipa-e-testflight.md)       |
+| 22 | projeto final concluído                                 | Não       | [projetos/03-projeto-final-multiplataforma/13-checklist.md](projetos/03-projeto-final-multiplataforma/13-checklist.md) |
 
 Glossário rápido dos nomes que aparecem acima (todos explicados em detalhe em
 [referencias/glossario.md](referencias/glossario.md)):
@@ -82,19 +82,19 @@ Glossário rápido dos nomes que aparecem acima (todos explicados em detalhe em
 Objetivo da fase: sair de "tenho o Flutter meio instalado" para "consigo rodar comandos e
 versionar código sem medo".
 
-- [ ] Li [00-como-usar-o-curso.md](00-como-usar-o-curso.md) inteiro
-- [x] Escolhi o [Ritmo A — Muito intensivo](01-plano-intensivo.md#2-ritmo-a--muito-intensivo-15-dias--8-hdia) (15 dias, 8 h/dia)
-- [ ] Registrei 4 h aplicadas ao trabalho e 4 h intermitentes de estudo no meu primeiro dia
+- [X] Li [00-como-usar-o-curso.md](00-como-usar-o-curso.md) inteiro
+- [X] Escolhi o [Ritmo A — Muito intensivo](01-plano-intensivo.md#2-ritmo-a--muito-intensivo-15-dias--8-hdia) (15 dias, 8 h/dia)
+- [X] Registrei 4 h aplicadas ao trabalho e 4 h intermitentes de estudo no meu primeiro dia
 - [ ] 🪟 Movi o Flutter SDK para um caminho **sem acentos e sem espaços** (`C:\src\flutter`)
 - [ ] 🪟 Atualizei a variável de ambiente `PATH` e abri um terminal novo
 - [ ] 🪟 Ativei o **Modo de Desenvolvedor** do Windows (`start ms-settings:developers`)
-- [ ] **ambiente Flutter configurado**
-- [ ] **flutter doctor validado**
+- [X] **ambiente Flutter configurado**
+- [X] **flutter doctor validado**
 - [ ] Módulo 00 — [Git e terminal](modulos/00-git-e-terminal/README.md)
 - [ ] Exercícios do módulo 00 — [exercicios/00-git-e-terminal.md](exercicios/00-git-e-terminal.md)
 - [ ] Avaliação do módulo 00 — [avaliacoes/modulo-00-git-e-terminal.md](avaliacoes/modulo-00-git-e-terminal.md)
 - [ ] Instalei o Android Studio e o **Android SDK** (*Software Development Kit* — o pacote de
-      ferramentas necessário para compilar apps de uma plataforma)
+  ferramentas necessário para compilar apps de uma plataforma)
 - [ ] Aceitei as licenças com `flutter doctor --android-licenses`
 - [ ] **emulador Android funcionando**
 - [ ] Checklist completo — [checklists/ambiente-android.md](checklists/ambiente-android.md)
@@ -318,23 +318,23 @@ A diferença entre as duas colunas é o seu termômetro de ritmo.
 
 Na coluna "Status" use: `🟢` no prazo · `🟡` atrasou 1 dia · `🔴` atrasou 2 dias ou mais.
 
-| Dia | Conteúdo previsto | Data prevista | Data concluída | Status |
-|---|---|---|---|---|
-| 1 | Ambiente + M00 completo + M01 aulas 1–5 | ____/____ | ____/____ | |
-| 2 | M01 aulas 6–10 + exercícios + avaliação | ____/____ | ____/____ | |
-| 3 | M02 completo + exercícios + avaliação | ____/____ | ____/____ | |
-| 4 | M03 completo + exercícios + avaliação | ____/____ | ____/____ | |
-| 5 | **Revisão** + M04 + cumulativa 01 | ____/____ | ____/____ | |
-| 6 | M05 completo + exercícios + avaliação | ____/____ | ____/____ | |
-| 7 | Projeto 1 + M06 aulas 1–6 | ____/____ | ____/____ | |
-| 8 | M06 aulas 7–12 + exercícios + avaliação | ____/____ | ____/____ | |
-| 9 | M07 + cumulativa 02 | ____/____ | ____/____ | |
-| 10 | **Revisão** + Projeto 2 | ____/____ | ____/____ | |
-| 11 | M08 + avaliação | ____/____ | ____/____ | |
-| 12 | M09 + M10 + cumulativa 03 | ____/____ | ____/____ | |
-| 13 | M11 + M12 + M13 + cumulativa 04 | ____/____ | ____/____ | |
-| 14 | Projeto final, etapas 1–8 | ____/____ | ____/____ | |
-| 15 | **Revisão** + M14, M15, M16 + cumulativa 05 + avaliação final | ____/____ | ____/____ | |
+| Dia | Conteúdo previsto                                                     | Data prevista         | Data concluída       | Status |
+| --- | ---------------------------------------------------------------------- | --------------------- | --------------------- | ------ |
+| 1   | Ambiente + M00 completo + M01 aulas 1–5                               | ____/____ | ____/____ |        |
+| 2   | M01 aulas 6–10 + exercícios + avaliação                            | ____/____ | ____/____ |        |
+| 3   | M02 completo + exercícios + avaliação                               | ____/____ | ____/____ |        |
+| 4   | M03 completo + exercícios + avaliação                               | ____/____ | ____/____ |        |
+| 5   | **Revisão** + M04 + cumulativa 01                               | ____/____ | ____/____ |        |
+| 6   | M05 completo + exercícios + avaliação                               | ____/____ | ____/____ |        |
+| 7   | Projeto 1 + M06 aulas 1–6                                             | ____/____ | ____/____ |        |
+| 8   | M06 aulas 7–12 + exercícios + avaliação                            | ____/____ | ____/____ |        |
+| 9   | M07 + cumulativa 02                                                    | ____/____ | ____/____ |        |
+| 10  | **Revisão** + Projeto 2                                         | ____/____ | ____/____ |        |
+| 11  | M08 + avaliação                                                      | ____/____ | ____/____ |        |
+| 12  | M09 + M10 + cumulativa 03                                              | ____/____ | ____/____ |        |
+| 13  | M11 + M12 + M13 + cumulativa 04                                        | ____/____ | ____/____ |        |
+| 14  | Projeto final, etapas 1–8                                             | ____/____ | ____/____ |        |
+| 15  | **Revisão** + M14, M15, M16 + cumulativa 05 + avaliação final | ____/____ | ____/____ |        |
 
 ### Dias de revisão
 
@@ -351,11 +351,11 @@ O Ritmo A prevê revisão nos dias **5, 10 e 15**. Revisão aqui não é reler t
 
 Preencha ao fim de cada semana. É o sinal mais honesto de que o ritmo está sustentável.
 
-| Semana | Dias | Marcos concluídos | Horas reais estudadas | Como me senti (1–5) | O que travou |
-|---|---|---|---|---|---|
-| 1 | 1–5 | ___ / 22 | ___ h | ___ | |
-| 2 | 6–10 | ___ / 22 | ___ h | ___ | |
-| 3 | 11–15 | ___ / 22 | ___ h | ___ | |
+| Semana | Dias   | Marcos concluídos | Horas reais estudadas | Como me senti (1–5) | O que travou |
+| ------ | ------ | ------------------ | --------------------- | -------------------- | ------------ |
+| 1      | 1–5   | ___ / 22           | ___ h                 | ___                  |              |
+| 2      | 6–10  | ___ / 22           | ___ h                 | ___                  |              |
+| 3      | 11–15 | ___ / 22           | ___ h                 | ___                  |              |
 
 **Regra de segurança do ritmo:** se ao fim de um bloco de cinco dias você concluiu menos de 60%
 do previsto, recalcule as datas antes de avançar. Preserve a sequência e os critérios de avanço;
@@ -365,19 +365,19 @@ o curso pode levar mais de 15 dias se a prática no trabalho exigir investigaç�
 
 ## Quando algo der errado
 
-| Sintoma | Onde procurar |
-|---|---|
-| Um comando falhou com uma mensagem estranha | [referencias/erros-comuns.md](referencias/erros-comuns.md) |
-| Esqueci a sintaxe de um comando | [referencias/comandos-uteis.md](referencias/comandos-uteis.md) |
-| Não lembro o que uma palavra significa | [referencias/glossario.md](referencias/glossario.md) |
-| "Isso funciona diferente no iPhone?" | [referencias/diferencas-android-ios.md](referencias/diferencas-android-ios.md) |
-| Quero a fonte oficial | [referencias/referencias-oficiais.md](referencias/referencias-oficiais.md) |
-| Não sei qual aula cobre determinado assunto | [04-mapa-de-aprendizagem.md](04-mapa-de-aprendizagem.md) |
-| Quero saber por que o curso escolheu tal ferramenta | [05-decisoes-tecnicas.md](05-decisoes-tecnicas.md) |
-| Quero conferir se o ambiente está mesmo válido | [06-relatorio-de-validacao.md](06-relatorio-de-validacao.md) |
+| Sintoma                                             | Onde procurar                                                                 |
+| --------------------------------------------------- | ----------------------------------------------------------------------------- |
+| Um comando falhou com uma mensagem estranha         | [referencias/erros-comuns.md](referencias/erros-comuns.md)                     |
+| Esqueci a sintaxe de um comando                     | [referencias/comandos-uteis.md](referencias/comandos-uteis.md)                 |
+| Não lembro o que uma palavra significa             | [referencias/glossario.md](referencias/glossario.md)                           |
+| "Isso funciona diferente no iPhone?"                | [referencias/diferencas-android-ios.md](referencias/diferencas-android-ios.md) |
+| Quero a fonte oficial                               | [referencias/referencias-oficiais.md](referencias/referencias-oficiais.md)     |
+| Não sei qual aula cobre determinado assunto        | [04-mapa-de-aprendizagem.md](04-mapa-de-aprendizagem.md)                       |
+| Quero saber por que o curso escolheu tal ferramenta | [05-decisoes-tecnicas.md](05-decisoes-tecnicas.md)                             |
+| Quero conferir se o ambiente está mesmo válido    | [06-relatorio-de-validacao.md](06-relatorio-de-validacao.md)                   |
 
 ---
 
-| ⬅️ Anterior | 🏠 Início | ➡️ Próximo |
-|---|---|---|
+| ⬅️ Anterior                                                     | 🏠 Início         | ➡️ Próximo                                           |
+| ----------------------------------------------------------------- | ------------------ | ------------------------------------------------------- |
 | [02 — Configuração do ambiente](02-configuracao-do-ambiente.md) | [README](README.md) | [04 — Mapa de aprendizagem](04-mapa-de-aprendizagem.md) |
