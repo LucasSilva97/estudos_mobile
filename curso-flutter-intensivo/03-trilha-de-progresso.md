@@ -85,17 +85,17 @@ versionar código sem medo".
 - [X] Li [00-como-usar-o-curso.md](00-como-usar-o-curso.md) inteiro
 - [X] Escolhi o [Ritmo A — Muito intensivo](01-plano-intensivo.md#2-ritmo-a--muito-intensivo-15-dias--8-hdia) (15 dias, 8 h/dia)
 - [X] Registrei 4 h aplicadas ao trabalho e 4 h intermitentes de estudo no meu primeiro dia
-- [ ] 🪟 Movi o Flutter SDK para um caminho **sem acentos e sem espaços** (`C:\src\flutter`)
-- [ ] 🪟 Atualizei a variável de ambiente `PATH` e abri um terminal novo
-- [ ] 🪟 Ativei o **Modo de Desenvolvedor** do Windows (`start ms-settings:developers`)
+- [X] 🪟 Movi o Flutter SDK para um caminho **sem acentos e sem espaços** (`C:\src\flutter`)
+- [X] 🪟 Atualizei a variável de ambiente `PATH` e abri um terminal novo
+- [X] 🪟 Ativei o **Modo de Desenvolvedor** do Windows (`start ms-settings:developers`)
 - [X] **ambiente Flutter configurado**
 - [X] **flutter doctor validado**
-- [ ] Módulo 00 — [Git e terminal](modulos/00-git-e-terminal/README.md)
-- [ ] Exercícios do módulo 00 — [exercicios/00-git-e-terminal.md](exercicios/00-git-e-terminal.md)
-- [ ] Avaliação do módulo 00 — [avaliacoes/modulo-00-git-e-terminal.md](avaliacoes/modulo-00-git-e-terminal.md)
-- [ ] Instalei o Android Studio e o **Android SDK** (*Software Development Kit* — o pacote de
+- [X] Módulo 00 — [Git e terminal](modulos/00-git-e-terminal/README.md)
+- [X] Exercícios do módulo 00 — [exercicios/00-git-e-terminal.md](exercicios/00-git-e-terminal.md)
+- [X] Avaliação do módulo 00 — [avaliacoes/modulo-00-git-e-terminal.md](avaliacoes/modulo-00-git-e-terminal.md)
+- [X] Instalei o Android Studio e o **Android SDK** (*Software Development Kit* — o pacote de
   ferramentas necessário para compilar apps de uma plataforma)
-- [ ] Aceitei as licenças com `flutter doctor --android-licenses`
+- [x] Aceitei as licenças com `flutter doctor --android-licenses`
 - [ ] **emulador Android funcionando**
 - [ ] Checklist completo — [checklists/ambiente-android.md](checklists/ambiente-android.md)
 - [ ] 🍎 **simulador iOS funcionando (quando houver acesso a macOS)**
