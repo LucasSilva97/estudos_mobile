@@ -84,12 +84,12 @@ versionar código sem medo".
 
 - [X] Li [00-como-usar-o-curso.md](00-como-usar-o-curso.md) inteiro
 - [X] Escolhi o [Ritmo A — Muito intensivo](01-plano-intensivo.md#2-ritmo-a--muito-intensivo-15-dias--8-hdia) (15 dias, 8 h/dia)
-- [ ] Registrei 4 h aplicadas ao trabalho e 4 h intermitentes de estudo no meu primeiro dia
+- [X] Registrei 4 h aplicadas ao trabalho e 4 h intermitentes de estudo no meu primeiro dia
 - [ ] 🪟 Movi o Flutter SDK para um caminho **sem acentos e sem espaços** (`C:\src\flutter`)
 - [ ] 🪟 Atualizei a variável de ambiente `PATH` e abri um terminal novo
 - [ ] 🪟 Ativei o **Modo de Desenvolvedor** do Windows (`start ms-settings:developers`)
-- [ ] **ambiente Flutter configurado**
-- [ ] **flutter doctor validado**
+- [X] **ambiente Flutter configurado**
+- [X] **flutter doctor validado**
 - [ ] Módulo 00 — [Git e terminal](modulos/00-git-e-terminal/README.md)
 - [ ] Exercícios do módulo 00 — [exercicios/00-git-e-terminal.md](exercicios/00-git-e-terminal.md)
 - [ ] Avaliação do módulo 00 — [avaliacoes/modulo-00-git-e-terminal.md](avaliacoes/modulo-00-git-e-terminal.md)
