@@ -574,15 +574,15 @@ ele reaparece quase inteiro no
 
 ## ☑️ Checklist de domínio
 
-- [ ] Explico a diferença entre `int`, `double` e `num`, e por que não se guarda dinheiro em
+- [x] Explico a diferença entre `int`, `double` e `num`, e por que não se guarda dinheiro em
       `double`.
-- [ ] Explico a diferença entre `Object` e `dynamic`, e entre `var` e `dynamic`.
-- [ ] Digo a diferença entre tipagem estática e dinâmica e uma vantagem de cada.
-- [ ] Uso `tryParse` em toda entrada externa e sei por quê.
-- [ ] Sei que `toStringAsFixed` arredonda e `toInt` trunca.
-- [ ] Converto `int` para `double` e vice-versa sem erro de compilação.
-- [ ] Trato a vírgula decimal brasileira antes de converter.
-- [ ] Executei `bin/aula05_tipos.dart` e a saída bateu com a esperada.
+- [x] Explico a diferença entre `Object` e `dynamic`, e entre `var` e `dynamic`.
+- [x] Digo a diferença entre tipagem estática e dinâmica e uma vantagem de cada.
+- [x] Uso `tryParse` em toda entrada externa e sei por quê.
+- [x] Sei que `toStringAsFixed` arredonda e `toInt` trunca.
+- [x] Converto `int` para `double` e vice-versa sem erro de compilação.
+- [x] Trato a vírgula decimal brasileira antes de converter.
+- [x] Executei `bin/aula05_tipos.dart` e a saída bateu com a esperada.
 
 ---
 
