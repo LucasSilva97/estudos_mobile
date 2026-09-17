@@ -49,4 +49,16 @@ void main() {
   print('Windows 11: $estouNoWindows  ->  APK e AAB: sim.');
   print('Tenho Mac : $tenhoMac  ->  IPA: nao, exige macOS + Xcode.');
   print('Ler e entender o processo iOS: sempre possivel.');
+  
+  const String rendererPadrao = 'Impeller';
+  const String rendererAnterior = 'Skia';
+  print('Renderizador padrão em Android e iOS: $rendererPadrao');
+  print('Renderizador histórico, ainda usado em outros alvos: $rendererAnterior');
+
+  // Justificativa de usar Flutter e não WebView: o curso é de Flutter! Mas, além disso:
+  // Flutter vai possibilitar fazer algo multiplataforma, quase que nativo, para mobile.
+  // o WebView é um site com cara de aplicativo, então ele vai esbarrar em algumas limitações, como utilizar recursos do 
+  // smarthphone.
+
+  
 }
