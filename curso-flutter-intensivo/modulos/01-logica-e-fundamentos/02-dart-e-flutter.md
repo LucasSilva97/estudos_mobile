@@ -54,11 +54,11 @@ segundo; o framework escreve, e chama sua função `build` quando precisa saber 
 
 O **Flutter** é um *kit* completo para construir interfaces. Ele tem três camadas:
 
-| Camada | Escrita em | O que faz |
-|---|---|---|
-| **Framework** (o que você usa) | Dart | Widgets, layout, animação, gestos, Material 3, Cupertino |
-| **Engine** (motor) | C++ | Desenha pixels, gerencia texto, rede, arquivos, executa o Dart |
-| **Embedder** (incorporador) | Kotlin/Java 🤖, Swift/Objective-C 🍎, C++ 🪟 | Conversa com o sistema operacional: cria a janela, recebe toques, ciclo de vida |
+| Camada                                | Escrita em                                   | O que faz                                                                       |
+| ------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------------------- |
+| **Framework** (o que você usa) | Dart                                         | Widgets, layout, animação, gestos, Material 3, Cupertino                      |
+| **Engine** (motor)              | C++                                          | Desenha pixels, gerencia texto, rede, arquivos, executa o Dart                  |
+| **Embedder** (incorporador)     | Kotlin/Java 🤖, Swift/Objective-C 🍎, C++ 🪟 | Conversa com o sistema operacional: cria a janela, recebe toques, ciclo de vida |
 
 **Widget** é a unidade de construção da interface no Flutter: um botão é um widget, um texto é um
 widget, um espaçamento é um widget, a tela inteira é um widget feito de outros widgets. Você começa
@@ -80,7 +80,7 @@ texto 'Salvar' centralizado") em pixels de verdade na tela.
   aparecia. O Impeller pré-compila esses *shaders* na hora do build, deixando a animação estável
   desde o primeiro quadro.
 
-Nas versões atuais do Flutter — incluindo a **3.47.1** deste curso — o Impeller é o renderizador
+Nas versões atuais do Flutter — incluindo a **3.47.1** deste curso — o 0 é o renderizador
 padrão em 🍎 iOS e 🤖 Android. O Skia continua presente em outros alvos, como a web. Você não
 precisa escolher nem configurar nada para começar: o padrão já é o recomendado.
 
@@ -120,14 +120,14 @@ endereço.
 - ❌ A interface é uma página web: rolagem, animação e teclado costumam "denunciar" isso.
 - ❌ Desempenho limitado pelo motor web e pela ponte com o sistema.
 
-| Critério | 🧱 Nativo | 🎯 Flutter (compilado) | 🌐 Híbrido/WebView |
-|---|---|---|---|
-| Bases de código | 2 | 1 | 1 |
-| Linguagem | Kotlin / Swift | Dart | JS/TS |
-| Como desenha a tela | componentes do sistema | desenha os próprios pixels (Impeller/Skia) | motor web |
-| Desempenho de interface | máximo | alto | variável |
-| Acesso a recurso novo do SO | imediato | via plugin ou código nativo | via plugin, mais indireto |
-| Aparência nativa | automática | precisa ser escolhida (Material/Cupertino) | difícil |
+| Critério                   | 🧱 Nativo              | 🎯 Flutter (compilado)                      | 🌐 Híbrido/WebView       |
+| --------------------------- | ---------------------- | ------------------------------------------- | ------------------------- |
+| Bases de código            | 2                      | 1                                           | 1                         |
+| Linguagem                   | Kotlin / Swift         | Dart                                        | JS/TS                     |
+| Como desenha a tela         | componentes do sistema | desenha os próprios pixels (Impeller/Skia) | motor web                 |
+| Desempenho de interface     | máximo                | alto                                        | variável                 |
+| Acesso a recurso novo do SO | imediato               | via plugin ou código nativo                | via plugin, mais indireto |
+| Aparência nativa           | automática            | precisa ser escolhida (Material/Cupertino)  | difícil                  |
 
 ### 5. Os artefatos: o que sai no fim
 
@@ -168,12 +168,12 @@ flutter build appbundle
 
 Saída: `build/app/outputs/bundle/release/app-release.aab`
 
-| | APK | AAB |
-|---|---|---|
-| Instala direto no celular | ✅ sim | ❌ não |
-| Aceito na Google Play | ❌ não (para apps novos) | ✅ obrigatório |
-| Bom para testar com amigos | ✅ | ❌ |
-| Tamanho para o usuário | maior | menor (a loja otimiza) |
+|                            | APK                       | AAB                    |
+| -------------------------- | ------------------------- | ---------------------- |
+| Instala direto no celular  | ✅ sim                    | ❌ não                |
+| Aceito na Google Play      | ❌ não (para apps novos) | ✅ obrigatório        |
+| Bom para testar com amigos | ✅                        | ❌                     |
+| Tamanho para o usuário    | maior                     | menor (a loja otimiza) |
 
 #### 🍎 Archive e IPA
 
@@ -394,14 +394,14 @@ Ler e entender o processo iOS: sempre possivel.
 
 ## 🔍 Explicando o código
 
-| Trecho | O que é |
-|---|---|
-| `const String versaoFlutter = '3.47.1';` | Constante de texto. `const` porque o valor já é conhecido quando o programa é compilado. |
-| `const String camadas = '''...''';` | **String de várias linhas**: três aspas simples abrem e fecham. Tudo entre elas, inclusive as quebras de linha, faz parte do texto. |
-| `print('');` | Imprime uma linha vazia. Serve para dar respiro visual na saída. |
-| `const bool estouNoWindows = true;` | **`bool`** é o tipo lógico: só aceita `true` ou `false`. É a base de toda decisão (Aula 7). |
-| `print('Windows 11: $estouNoWindows ...')` | A interpolação converte o `bool` em texto automaticamente: aparece `true`. |
-| `'build/ios/ipa/<nome>.ipa'` | `<nome>` é um marcador de posição **no texto**, porque o nome real depende do seu app. O curso nunca inventa um caminho fixo aqui. |
+| Trecho                                       | O que é                                                                                                                                      |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `const String versaoFlutter = '3.47.1';`   | Constante de texto.`const` porque o valor já é conhecido quando o programa é compilado.                                                  |
+| `const String camadas = '''...''';`        | **String de várias linhas**: três aspas simples abrem e fecham. Tudo entre elas, inclusive as quebras de linha, faz parte do texto.   |
+| `print('');`                               | Imprime uma linha vazia. Serve para dar respiro visual na saída.                                                                             |
+| `const bool estouNoWindows = true;`        | **`bool`** é o tipo lógico: só aceita `true` ou `false`. É a base de toda decisão (Aula 7).                                  |
+| `print('Windows 11: $estouNoWindows ...')` | A interpolação converte o`bool` em texto automaticamente: aparece `true`.                                                               |
+| `'build/ios/ipa/<nome>.ipa'`               | `<nome>` é um marcador de posição **no texto**, porque o nome real depende do seu app. O curso nunca inventa um caminho fixo aqui. |
 
 ### Por que usar `const` e não `var` aqui?
 
@@ -421,17 +421,17 @@ para a leitura, mantive o acento.
 
 ## 🤖🍎 Android × iOS
 
-| Tema | 🤖 Android | 🍎 iOS |
-|---|---|---|
-| Identificador do app | `applicationId` em `android/app/build.gradle.kts` | *Bundle Identifier* no Xcode |
-| Valor no projeto final | `br.com.estudos.foco` | `br.com.estudos.foco` (o mesmo) |
-| Artefato de teste | `.apk` | app rodando no simulador/dispositivo |
-| Artefato de loja | `.aab` | `.ipa` |
-| Loja | Google Play | App Store |
-| Assinatura | *keystore* `.jks` que **você** cria e guarda | certificado + *provisioning profile* emitidos pela Apple |
-| Custo para publicar | taxa única de registro de desenvolvedor | assinatura anual do Apple Developer Program |
-| Dá para fazer no Windows 11 | ✅ tudo | ❌ o build final, não |
-| Linguagem do *embedder* | Kotlin/Java | Swift/Objective-C |
+| Tema                         | 🤖 Android                                              | 🍎 iOS                                                    |
+| ---------------------------- | ------------------------------------------------------- | --------------------------------------------------------- |
+| Identificador do app         | `applicationId` em `android/app/build.gradle.kts`   | *Bundle Identifier* no Xcode                            |
+| Valor no projeto final       | `br.com.estudos.foco`                                 | `br.com.estudos.foco` (o mesmo)                         |
+| Artefato de teste            | `.apk`                                                | app rodando no simulador/dispositivo                      |
+| Artefato de loja             | `.aab`                                                | `.ipa`                                                  |
+| Loja                         | Google Play                                             | App Store                                                 |
+| Assinatura                   | *keystore* `.jks` que **você** cria e guarda | certificado +*provisioning profile* emitidos pela Apple |
+| Custo para publicar          | taxa única de registro de desenvolvedor                | assinatura anual do Apple Developer Program               |
+| Dá para fazer no Windows 11 | ✅ tudo                                                 | ❌ o build final, não                                    |
+| Linguagem do*embedder*     | Kotlin/Java                                             | Swift/Objective-C                                         |
 
 > 🍎 **SÓ NO MAC.** Assinar e exportar o IPA exige macOS + Xcode. Alternativas honestas (Mac
 > emprestado, serviço de build na nuvem, adiar o iOS) estão discutidas em
@@ -560,15 +560,15 @@ melhor propaganda possível de estruturas de dados.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Explico a diferença entre a linguagem Dart e o framework Flutter.
-- [ ] Cito as três camadas do Flutter e o que cada uma faz.
-- [ ] Explico o que é renderizar e o que Impeller e Skia fazem.
-- [ ] Dou um argumento técnico para o Flutter não ser um app WebView.
-- [ ] Digo o que é APK, quando usá-lo e onde o arquivo é gerado.
-- [ ] Digo o que é AAB, por que a Play o exige e por que ele não instala no celular.
-- [ ] Explico a diferença entre archive e IPA.
-- [ ] Digo com honestidade o que consigo e o que não consigo fazer no Windows 11.
-- [ ] Executei `bin/aula02_ecossistema.dart` e entendi cada linha da saída.
+- [X] Explico a diferença entre a linguagem Dart e o framework Flutter.
+- [X] Cito as três camadas do Flutter e o que cada uma faz.
+- [X] Explico o que é renderizar e o que Impeller e Skia fazem.
+- [X] Dou um argumento técnico para o Flutter não ser um app WebView.
+- [X] Digo o que é APK, quando usá-lo e onde o arquivo é gerado.
+- [X] Digo o que é AAB, por que a Play o exige e por que ele não instala no celular.
+- [X] Explico a diferença entre archive e IPA.
+- [X] Digo com honestidade o que consigo e o que não consigo fazer no Windows 11.
+- [X] Executei `bin/aula02_ecossistema.dart` e entendi cada linha da saída.
 
 ---
 
@@ -583,6 +583,6 @@ melhor propaganda possível de estruturas de dados.
 
 ---
 
-| ⬅️ Anterior | 🏠 Módulo | ➡️ Próxima |
-|---|---|---|
+| ⬅️ Anterior                                          | 🏠 Módulo         | ➡️ Próxima                                                           |
+| ------------------------------------------------------ | ------------------ | ----------------------------------------------------------------------- |
 | [Aula 1 — O que é programar](01-o-que-e-programar.md) | [README](README.md) | [Aula 3 — Algoritmos e decomposição](03-algoritmos-e-decomposicao.md) |
