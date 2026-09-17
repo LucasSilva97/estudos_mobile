@@ -571,15 +571,15 @@ o reflexo de usar sempre a declaração mais restritiva possível.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Explico o que é memória e o que acontece quando o programa termina.
-- [ ] Leio `x = x + 1` corretamente ("x recebe x mais 1") e sei em que ordem o Dart avalia.
-- [ ] Digo três regras obrigatórias de nomes de variáveis em Dart.
-- [ ] Escrevo variáveis e constantes em `lowerCamelCase` sem hesitar.
-- [ ] Explico a diferença entre `final` e `const` com um exemplo de cada.
-- [ ] Digo por que `const DateTime agora = DateTime.now();` não compila.
-- [ ] Aplico a ordem `const → final → var` ao escrever código novo.
-- [ ] Executei `bin/aula04_variaveis.dart` e previ a saída antes de rodar.
-- [ ] Provoquei os três erros comentados no fim do arquivo e li cada mensagem.
+- [x] Explico o que é memória e o que acontece quando o programa termina.
+- [x] Leio `x = x + 1` corretamente ("x recebe x mais 1") e sei em que ordem o Dart avalia.
+- [x] Digo três regras obrigatórias de nomes de variáveis em Dart.
+- [x] Escrevo variáveis e constantes em `lowerCamelCase` sem hesitar.
+- [x] Explico a diferença entre `final` e `const` com um exemplo de cada.
+- [x] Digo por que `const DateTime agora = DateTime.now();` não compila.
+- [x] Aplico a ordem `const → final → var` ao escrever código novo.
+- [x] Executei `bin/aula04_variaveis.dart` e previ a saída antes de rodar.
+- [x] Provoquei os três erros comentados no fim do arquivo e li cada mensagem.
 
 ---
 
