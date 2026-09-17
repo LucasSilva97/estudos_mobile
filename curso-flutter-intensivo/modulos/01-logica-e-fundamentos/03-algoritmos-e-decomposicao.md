@@ -549,14 +549,14 @@ Regras:
 
 ## ☑️ Checklist de domínio
 
-- [ ] Defino algoritmo usando as três palavras: finito, ordenado, não ambíguo.
-- [ ] Dou um exemplo de algoritmo que não é programa de computador.
-- [ ] Escrevo ENTRADA / PROCESSAMENTO / SAÍDA para um problema novo em menos de 2 minutos.
-- [ ] Escrevo pseudocódigo com `<-`, `RECEBER` e `ESCREVER`.
-- [ ] Decomponho um problema grande em subproblemas e sei dizer quando parar de decompor.
-- [ ] Faço teste de mesa em tabela e acerto a saída antes de executar.
-- [ ] Explico por que `690 / 5` não pode ser guardado em uma variável `int`.
-- [ ] Executei `bin/aula03_media_estudo.dart` e o resultado bateu com o meu papel.
+- [x] Defino algoritmo usando as três palavras: finito, ordenado, não ambíguo.
+- [x] Dou um exemplo de algoritmo que não é programa de computador.
+- [x] Escrevo ENTRADA / PROCESSAMENTO / SAÍDA para um problema novo em menos de 2 minutos.
+- [x] Escrevo pseudocódigo com `<-`, `RECEBER` e `ESCREVER`.
+- [x] Decomponho um problema grande em subproblemas e sei dizer quando parar de decompor.
+- [x] Faço teste de mesa em tabela e acerto a saída antes de executar.
+- [x] Explico por que `690 / 5` não pode ser guardado em uma variável `int`.
+- [x] Executei `bin/aula03_media_estudo.dart` e o resultado bateu com o meu papel.
 
 ---
 
