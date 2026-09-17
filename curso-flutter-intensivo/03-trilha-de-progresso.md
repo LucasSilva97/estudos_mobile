@@ -95,9 +95,9 @@ versionar código sem medo".
 - [X] Avaliação do módulo 00 — [avaliacoes/modulo-00-git-e-terminal.md](avaliacoes/modulo-00-git-e-terminal.md)
 - [X] Instalei o Android Studio e o **Android SDK** (*Software Development Kit* — o pacote de
   ferramentas necessário para compilar apps de uma plataforma)
-- [x] Licenças do Android aceitas (`flutter doctor -v` → `All Android licenses accepted.`)
-- [ ] **emulador Android funcionando**
-- [ ] Checklist completo — [checklists/ambiente-android.md](checklists/ambiente-android.md)
+- [X] Licenças do Android aceitas (`flutter doctor -v` → `All Android licenses accepted.`)
+- [X] **emulador Android funcionando**
+- [X] Checklist completo — [checklists/ambiente-android.md](checklists/ambiente-android.md)
 - [ ] 🍎 **simulador iOS funcionando (quando houver acesso a macOS)**
 - [ ] 🍎 Checklist completo — [checklists/ambiente-ios.md](checklists/ambiente-ios.md)
 
