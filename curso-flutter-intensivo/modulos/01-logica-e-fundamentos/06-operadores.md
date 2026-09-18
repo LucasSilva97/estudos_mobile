@@ -575,15 +575,15 @@ ou não — e note como o programa fica mais útil quando sabe decidir.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Converto minutos em horas e minutos com `~/` e `%` sem consultar, e testo paridade com `%`.
-- [ ] Explico por que `690 / 60` não cabe em um `int`.
-- [ ] Monto a tabela-verdade de `&&`, `||` e `!` de memória.
-- [ ] Explico o que é curto-circuito e dou um exemplo em que ele protege o código.
-- [ ] Uso atribuição composta e sei o equivalente longo de cada forma.
-- [ ] Digo a diferença entre `c++` e `++c` mostrando a saída de cada um.
-- [ ] Uso `??`, `??=` e `?.` no lugar certo.
-- [ ] Sei que `* / ~/ %` vêm antes de `+ -` e uso parênteses no resto.
-- [ ] Executei `bin/aula06_operadores.dart` e a saída bateu com a esperada.
+- [x] Converto minutos em horas e minutos com `~/` e `%` sem consultar, e testo paridade com `%`.
+- [x] Explico por que `690 / 60` não cabe em um `int`.
+- [x] Monto a tabela-verdade de `&&`, `||` e `!` de memória.
+- [x] Explico o que é curto-circuito e dou um exemplo em que ele protege o código.
+- [x] Uso atribuição composta e sei o equivalente longo de cada forma.
+- [x] Digo a diferença entre `c++` e `++c` mostrando a saída de cada um.
+- [x] Uso `??`, `??=` e `?.` no lugar certo.
+- [x] Sei que `* / ~/ %` vêm antes de `+ -` e uso parênteses no resto.
+- [x] Executei `bin/aula06_operadores.dart` e a saída bateu com a esperada.
 
 ---
 
