@@ -4,7 +4,7 @@ void main() {
   const String origem3 = '1,5';        // horas com vírgula
   const String origem4 = 'duas horas'; // impossível de converter
 
-  final int? numLimpo = int.parse(origem1);
+  final int numLimpo = int.parse(origem1);
   final int? semEspacos = int.tryParse(origem2.trim());
   final double? horasSemVirgula = double.tryParse(origem3.replaceAll(',', '.'));
 
