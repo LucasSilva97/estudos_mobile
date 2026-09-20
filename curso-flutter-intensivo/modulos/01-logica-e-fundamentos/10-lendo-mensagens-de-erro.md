@@ -93,13 +93,13 @@ local para representar entrada rejeitada, possível porque zero não é sessão 
 
 ## ⚠️ Erros comuns
 
-| Situação | Diagnóstico |
-|---|---|
-| `Undefined name` | Confira digitação e escopo; o nome pode existir só dentro de outra função |
-| `Expected ';'` | Confira também a linha anterior à posição indicada |
-| `FormatException` | Registre a entrada fictícia que chegou ao conversor |
-| Total errado sem exceção | Faça teste de mesa e compare cada parcela |
-| Muitas mensagens após uma edição | Corrija a primeira causa e analise novamente |
+| Situação                          | Diagnóstico                                                                   |
+| ----------------------------------- | ------------------------------------------------------------------------------ |
+| `Undefined name`                  | Confira digitação e escopo; o nome pode existir só dentro de outra função |
+| `Expected ';'`                    | Confira também a linha anterior à posição indicada                         |
+| `FormatException`                 | Registre a entrada fictícia que chegou ao conversor                           |
+| Total errado sem exceção          | Faça teste de mesa e compare cada parcela                                     |
+| Muitas mensagens após uma edição | Corrija a primeira causa e analise novamente                                   |
 
 Não cole tokens ou dados pessoais em logs ao reproduzir problemas.
 
@@ -129,10 +129,10 @@ só fica comprovada quando a entrada que falhava passa e as entradas válidas co
 
 ## ☑️ Checklist de domínio
 
-- [ ] Classifico um erro como compilação, execução ou lógica.
-- [ ] Encontro meu arquivo em uma stack trace.
-- [ ] Registro esperado e observado antes de alterar o código.
-- [ ] Trato texto inválido sem encerrar o programa.
+- [X] Classifico um erro como compilação, execução ou lógica.
+- [X] Encontro meu arquivo em uma stack trace.
+- [X] Registro esperado e observado antes de alterar o código.
+- [X] Trato texto inválido sem encerrar o programa.
 
 ## 📚 Referências oficiais
 
@@ -140,6 +140,6 @@ só fica comprovada quando a entrada que falhava passa e as entradas válidas co
 - [Dart — Exceptions](https://dart.dev/language/error-handling)
 - [int.tryParse](https://api.dart.dev/dart-core/int/tryParse.html)
 
-| Anterior | Módulo | Próxima etapa |
-|---|---|---|
+| Anterior                  | Módulo            | Próxima etapa                                            |
+| ------------------------- | ------------------ | --------------------------------------------------------- |
 | [Funções](09-funcoes.md) | [README](README.md) | [Exercícios](../../exercicios/01-logica-e-fundamentos.md) |
