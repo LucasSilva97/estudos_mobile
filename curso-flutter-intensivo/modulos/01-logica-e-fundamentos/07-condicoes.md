@@ -118,11 +118,11 @@ onde um **valor** é esperado: dentro de uma interpolação, como argumento, na 
 
 Quando usar cada um:
 
-| Use `if/else` | Use ternário |
-|---|---|
-| quando os ramos **executam ações** | quando os ramos **produzem um valor** |
-| quando há mais de dois caminhos | quando há exatamente dois |
-| quando cada ramo tem várias linhas | quando cada ramo é curto |
+| Use`if/else`                            | Use ternário                              |
+| ----------------------------------------- | ------------------------------------------ |
+| quando os ramos**executam ações** | quando os ramos**produzem um valor** |
+| quando há mais de dois caminhos          | quando há exatamente dois                 |
+| quando cada ramo tem várias linhas       | quando cada ramo é curto                  |
 
 > ⚠️ Ternários aninhados (`a ? b : c ? d : e`) compilam e são quase sempre ilegíveis. Se você
 > precisa de dois níveis, use `if/else` ou `switch`.
@@ -162,6 +162,7 @@ case 'qua':
 - `default` trata tudo o que não casou. Coloque-o por último.
 
 > 🔭 **Prévia:** o Dart 3 também tem a **expressão** `switch`, que devolve um valor:
+>
 > ```dart
 > final String sigla = switch (classificacao) {
 >   'Excelente' => 'A',
@@ -169,6 +170,7 @@ case 'qua':
 >   _ => 'C',
 > };
 > ```
+>
 > Ela vem junto com *patterns* e é estudada em
 > [`04-dart-avancado/05-patterns-e-switch.md`](../04-dart-avancado/05-patterns-e-switch.md). Neste
 > módulo usamos apenas o `switch` em forma de comando.
@@ -628,16 +630,16 @@ mesa de três cenários diferentes **antes** de executar.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Escrevo `if/else` e sei dizer por que exatamente um dos blocos executa.
-- [ ] Ordeno uma cadeia `else if` corretamente e explico por que a ordem importa.
-- [ ] Explico o erro `Non-nullable variable ... must be assigned before it can be used`.
-- [ ] Converto um `if/else` curto em ternário e vice-versa.
-- [ ] Escrevo um `switch` com casos agrupados e `default`, sem esquecer `break`.
-- [ ] Uso `&&` para proteger um acesso que poderia falhar.
-- [ ] Reconheço uma condição impossível e uma comparação encadeada inválida.
-- [ ] Sei por que não se compara `double` com `==`.
-- [ ] Testei o programa nos **limites** (valores de fronteira), não só no caso feliz.
-- [ ] Executei `bin/aula07_condicoes.dart` e a saída bateu com a esperada.
+- [X] Escrevo `if/else` e sei dizer por que exatamente um dos blocos executa.
+- [X] Ordeno uma cadeia `else if` corretamente e explico por que a ordem importa.
+- [X] Explico o erro `Non-nullable variable ... must be assigned before it can be used`.
+- [X] Converto um `if/else` curto em ternário e vice-versa.
+- [X] Escrevo um `switch` com casos agrupados e `default`, sem esquecer `break`.
+- [X] Uso `&&` para proteger um acesso que poderia falhar.
+- [X] Reconheço uma condição impossível e uma comparação encadeada inválida.
+- [X] Sei por que não se compara `double` com `==`.
+- [X] Testei o programa nos **limites** (valores de fronteira), não só no caso feliz.
+- [X] Executei `bin/aula07_condicoes.dart` e a saída bateu com a esperada.
 
 ---
 
@@ -650,6 +652,6 @@ mesa de três cenários diferentes **antes** de executar.
 
 ---
 
-| ⬅️ Anterior | 🏠 Módulo | ➡️ Próxima |
-|---|---|---|
+| ⬅️ Anterior                           | 🏠 Módulo         | ➡️ Próxima                             |
+| --------------------------------------- | ------------------ | ----------------------------------------- |
 | [Aula 6 — Operadores](06-operadores.md) | [README](README.md) | [Aula 8 — Repetições](08-repeticoes.md) |
