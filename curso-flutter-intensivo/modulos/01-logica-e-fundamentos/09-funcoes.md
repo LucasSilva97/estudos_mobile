@@ -134,15 +134,15 @@ uma função separada. Variáveis locais ajudam a entender o que cada operação
 
 ## ☑️ Checklist de domínio
 
-- [ ] Aponto parâmetro e argumento em um exemplo meu.
-- [ ] Explico a diferença entre imprimir e retornar.
-- [ ] Testo zero, limite exato e valor acima do limite.
-- [ ] Divido um problema em cálculo e apresentação.
+- [X] Aponto parâmetro e argumento em um exemplo meu.
+- [X] Explico a diferença entre imprimir e retornar.
+- [X] Testo zero, limite exato e valor acima do limite.
+- [X] Divido um problema em cálculo e apresentação.
 
 ## 📚 Referências oficiais
 
 [Dart — Functions](https://dart.dev/language/functions)
 
-| Anterior | Módulo | Próxima |
-|---|---|---|
+| Anterior                        | Módulo            | Próxima                                          |
+| ------------------------------- | ------------------ | ------------------------------------------------- |
 | [Repetições](08-repeticoes.md) | [README](README.md) | [Mensagens de erro](10-lendo-mensagens-de-erro.md) |
