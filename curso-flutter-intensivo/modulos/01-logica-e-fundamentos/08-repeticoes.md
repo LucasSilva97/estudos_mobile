@@ -143,15 +143,15 @@ valores. Demonstre os casos zero, um e vários para reconhecer erros de limite.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Explico a ordem das três partes do `for`.
-- [ ] Consigo mostrar por que meu `while` termina.
-- [ ] Diferencio `break` de `continue` com uma saída concreta.
-- [ ] Testo o caso em que nenhuma repetição deve ocorrer.
+- [X] Explico a ordem das três partes do `for`.
+- [X] Consigo mostrar por que meu `while` termina.
+- [X] Diferencio `break` de `continue` com uma saída concreta.
+- [X] Testo o caso em que nenhuma repetição deve ocorrer.
 
 ## 📚 Referências oficiais
 
 [Dart — Loops](https://dart.dev/language/loops)
 
-| Anterior | Módulo | Próxima |
-|---|---|---|
+| Anterior                      | Módulo            | Próxima                  |
+| ----------------------------- | ------------------ | ------------------------- |
 | [Condições](07-condicoes.md) | [README](README.md) | [Funções](09-funcoes.md) |
