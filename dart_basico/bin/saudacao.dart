@@ -28,12 +28,11 @@ void main(List<String> argumentos) {
   print('');
   print('$cumprimento, $nome');
   print('Este programa rodou a partir da função main de bin/saudacao.dart.');
-  
+
   // Mostra todos os argumentos numerados, um por linha
   print('');
   print('Argumentos, um a um:');
-  for (int i = 0; i < argumentos.length; i++){
+  for (int i = 0; i < argumentos.length; i++) {
     print('  [$i] ${argumentos[i]}');
   }
 }
-
