@@ -575,14 +575,14 @@ programa, a escolha original estava frouxa. E a função do item 5 deve imprimir
 
 ## ☑️ Checklist de domínio
 
-- [ ] Sei explicar a diferença entre `final` e `const` em uma frase.
-- [ ] Sei dizer por que `final lista = [...]; lista.add(x);` compila e roda.
-- [ ] Já vi, no meu terminal, `identical` devolver `true` para `const` e `false` para `final`.
-- [ ] Já provoquei e li um `LateInitializationError`.
-- [ ] Já provoquei e li o erro `Cannot add to an unmodifiable list`.
-- [ ] Consigo justificar por que `const DateTime.now()` não compila.
-- [ ] Entendi por que `const` importa para o desempenho do Flutter.
-- [ ] Meu `bin/variaveis.dart` passa em `dart analyze` sem avisos.
+- [x] Sei explicar a diferença entre `final` e `const` em uma frase.
+- [x] Sei dizer por que `final lista = [...]; lista.add(x);` compila e roda.
+- [x] Já vi, no meu terminal, `identical` devolver `true` para `const` e `false` para `final`.
+- [x] Já provoquei e li um `LateInitializationError`.
+- [x] Já provoquei e li o erro `Cannot add to an unmodifiable list`.
+- [x] Consigo justificar por que `const DateTime.now()` não compila.
+- [x] Entendi por que `const` importa para o desempenho do Flutter.
+- [x] Meu `bin/variaveis.dart` passa em `dart analyze` sem avisos.
 
 ## 📚 Referências oficiais
 
