@@ -541,14 +541,14 @@ público. Rode `dart format` e `dart analyze` no final.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Escrevo um `if` com chaves sem pensar.
-- [ ] Sei dizer qual padrão de nome usar para uma classe, uma variável e um arquivo.
-- [ ] Sei a diferença prática entre `//` e `///`.
-- [ ] Escrevi pelo menos uma função documentada com `///` e vi o balão no VS Code.
-- [ ] Rodei `dart doc .` e abri o HTML gerado.
-- [ ] `dart format .` não altera mais nada no meu projeto.
-- [ ] `dart analyze` devolve `No issues found!`.
-- [ ] Ativei Format on Save no VS Code.
+- [x] Escrevo um `if` com chaves sem pensar.
+- [x] Sei dizer qual padrão de nome usar para uma classe, uma variável e um arquivo.
+- [x] Sei a diferença prática entre `//` e `///`.
+- [x] Escrevi pelo menos uma função documentada com `///` e vi o balão no VS Code.
+- [x] Rodei `dart doc .` e abri o HTML gerado.
+- [x] `dart format .` não altera mais nada no meu projeto.
+- [x] `dart analyze` devolve `No issues found!`.
+- [x] Ativei Format on Save no VS Code.
 
 ## 📚 Referências oficiais
 
