@@ -510,14 +510,14 @@ Dica: os argumentos chegam como **texto**, não como número. Você vai precisar
 
 ## ☑️ Checklist de domínio
 
-- [ ] Criei o projeto `dart_basico` com `dart create` e ele roda.
-- [ ] Sei dizer, sem consultar, o que vai em `bin/`, em `lib/` e em `test/`.
-- [ ] Sei abrir o `pubspec.yaml` e apontar a linha que define a versão do Dart exigida.
-- [ ] Escrevi um `main` que lê argumentos e trata o caso de lista vazia.
-- [ ] Rodei o programa com `dart run` passando argumentos.
-- [ ] Gerei um `.exe` com `dart compile exe` e executei.
-- [ ] Consigo explicar a diferença entre JIT e AOT em uma frase.
-- [ ] Adicionei `*.exe` ao `.gitignore`.
+- [x] Criei o projeto `dart_basico` com `dart create` e ele roda.
+- [x] Sei dizer, sem consultar, o que vai em `bin/`, em `lib/` e em `test/`.
+- [x] Sei abrir o `pubspec.yaml` e apontar a linha que define a versão do Dart exigida.
+- [x] Escrevi um `main` que lê argumentos e trata o caso de lista vazia.
+- [x] Rodei o programa com `dart run` passando argumentos.
+- [x] Gerei um `.exe` com `dart compile exe` e executei.
+- [x] Consigo explicar a diferença entre JIT e AOT em uma frase.
+- [x] Adicionei `*.exe` ao `.gitignore`.
 
 ## 📚 Referências oficiais
 
