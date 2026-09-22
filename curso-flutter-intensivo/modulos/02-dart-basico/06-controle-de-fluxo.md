@@ -691,14 +691,14 @@ Use `int.tryParse` com `??` para tratar argumento inválido como 0.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Escrevo um `switch` expression correto sem consultar a sintaxe.
-- [ ] Sei dizer a diferença entre `case < 25:` e `< 25 =>`.
-- [ ] Já vi o erro de exaustividade no meu terminal.
-- [ ] Sei por que a ordem dos padrões relacionais importa.
-- [ ] Uso `.indexed` em vez de `for (int i = 0; ...)` quando faz sentido.
-- [ ] Sei usar `continue` e `break` com label em laços aninhados.
-- [ ] Rodei o programa com e sem `--enable-asserts` e entendi a diferença.
-- [ ] Sei por que `assert` não substitui validação de entrada.
+- [x] Escrevo um `switch` expression correto sem consultar a sintaxe.
+- [x] Sei dizer a diferença entre `case < 25:` e `< 25 =>`.
+- [x] Já vi o erro de exaustividade no meu terminal.
+- [x] Sei por que a ordem dos padrões relacionais importa.
+- [x] Uso `.indexed` em vez de `for (int i = 0; ...)` quando faz sentido.
+- [x] Sei usar `continue` e `break` com label em laços aninhados.
+- [x] Rodei o programa com e sem `--enable-asserts` e entendi a diferença.
+- [x] Sei por que `assert` não substitui validação de entrada.
 
 ## 📚 Referências oficiais
 
