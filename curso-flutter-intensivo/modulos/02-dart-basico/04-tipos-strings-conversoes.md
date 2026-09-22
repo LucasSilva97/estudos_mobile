@@ -104,19 +104,19 @@ Uma diferença em relação a Java: em Dart, `==` compara **conteúdo**, não en
 
 ### Métodos de `String` que você vai usar sempre
 
-| Método | O que faz | Exemplo → resultado |
-|---|---|---|
-| `.length` | quantidade de unidades de código | `'Dart'.length` → `4` |
-| `.isEmpty` / `.isNotEmpty` | vazia ou não | `''.isEmpty` → `true` |
-| `.trim()` | remove espaços das pontas | `'  oi  '.trim()` → `'oi'` |
-| `.toUpperCase()` / `.toLowerCase()` | troca a caixa | `'dart'.toUpperCase()` → `'DART'` |
-| `.contains(x)` / `.startsWith(x)` / `.endsWith(x)` | contém, começa ou termina com | `'main.dart'.endsWith('.dart')` → `true` |
-| `.indexOf(x)` | posição da primeira ocorrência, ou `-1` | `'Dart'.indexOf('r')` → `2` |
-| `.substring(i, j)` | pedaço de `i` até `j-1` | `'Flutter'.substring(0, 4)` → `'Flut'` |
-| `.replaceAll(a, b)` | troca todas as ocorrências | `'a-b-c'.replaceAll('-', '/')` → `'a/b/c'` |
-| `.split(x)` | quebra em lista | `'a,b,c'.split(',')` → `['a','b','c']` |
-| `.padLeft(n, c)` / `.padRight(n, c)` | completa até `n` caracteres | `'5'.padLeft(2, '0')` → `'05'` |
-| `.compareTo(outra)` | ordem alfabética: negativo, zero ou positivo | `'a'.compareTo('b')` → `-1` |
+| Método                                                  | O que faz                                     | Exemplo → resultado                            |
+| -------------------------------------------------------- | --------------------------------------------- | ----------------------------------------------- |
+| `.length`                                              | quantidade de unidades de código             | `'Dart'.length` → `4`                      |
+| `.isEmpty` / `.isNotEmpty`                           | vazia ou não                                 | `''.isEmpty` → `true`                      |
+| `.trim()`                                              | remove espaços das pontas                    | `'  oi  '.trim()` → `'oi'`                 |
+| `.toUpperCase()` / `.toLowerCase()`                  | troca a caixa                                 | `'dart'.toUpperCase()` → `'DART'`          |
+| `.contains(x)` / `.startsWith(x)` / `.endsWith(x)` | contém, começa ou termina com               | `'main.dart'.endsWith('.dart')` → `true`   |
+| `.indexOf(x)`                                          | posição da primeira ocorrência, ou`-1`   | `'Dart'.indexOf('r')` → `2`                |
+| `.substring(i, j)`                                     | pedaço de`i` até `j-1`                  | `'Flutter'.substring(0, 4)` → `'Flut'`     |
+| `.replaceAll(a, b)`                                    | troca todas as ocorrências                   | `'a-b-c'.replaceAll('-', '/')` → `'a/b/c'` |
+| `.split(x)`                                            | quebra em lista                               | `'a,b,c'.split(',')` → `['a','b','c']`     |
+| `.padLeft(n, c)` / `.padRight(n, c)`                 | completa até`n` caracteres                 | `'5'.padLeft(2, '0')` → `'05'`             |
+| `.compareTo(outra)`                                    | ordem alfabética: negativo, zero ou positivo | `'a'.compareTo('b')` → `-1`                |
 
 ### Conversões: texto ⇄ número
 
@@ -131,12 +131,12 @@ int.parse('abc');        // LANÇA FormatException e derruba o programa
 int.tryParse('abc');     // null — não lança nada
 ```
 
-| Função | Quando falha | Use quando |
-|---|---|---|
-| `int.parse(texto)` | lança `FormatException` | o texto vem do **seu próprio código** e você tem certeza |
-| `int.tryParse(texto)` | devolve `null` | o texto vem de **fora**: teclado, arquivo, API |
-| `double.parse` / `double.tryParse` | idem, para decimais | idem |
-| `num.parse` / `num.tryParse` | idem, aceita ambos | quando tanto faz inteiro ou decimal |
+| Função                               | Quando falha              | Use quando                                                       |
+| -------------------------------------- | ------------------------- | ---------------------------------------------------------------- |
+| `int.parse(texto)`                   | lança`FormatException` | o texto vem do**seu próprio código** e você tem certeza |
+| `int.tryParse(texto)`                | devolve`null`           | o texto vem de**fora**: teclado, arquivo, API              |
+| `double.parse` / `double.tryParse` | idem, para decimais       | idem                                                             |
+| `num.parse` / `num.tryParse`       | idem, aceita ambos        | quando tanto faz inteiro ou decimal                              |
 
 Regra do curso: **todo texto digitado por uma pessoa passa por `tryParse`.** Sem exceção.
 
@@ -596,14 +596,14 @@ o resultado de cada uma, marcando as inválidas. Dica para o item 5:
 
 ## ☑️ Checklist de domínio
 
-- [ ] Sei dizer o resultado de `7 / 2` e de `7 ~/ 2` sem rodar.
-- [ ] Uso interpolação em vez de `+`, e sei quando `${...}` é obrigatório.
-- [ ] Escrevo caminhos do Windows com *raw string*.
-- [ ] Uso `trim()` antes de qualquer `tryParse`.
-- [ ] Sei explicar por que `int.tryParse` é melhor que `int.parse` para entrada do usuário.
-- [ ] Já vi, no meu terminal, `'😀'.length` devolver `2`.
-- [ ] Sei formatar um `double` com duas casas usando `toStringAsFixed(2)`.
-- [ ] `bin/textos.dart` roda e passa em `dart analyze`.
+- [X] Sei dizer o resultado de `7 / 2` e de `7 ~/ 2` sem rodar.
+- [X] Uso interpolação em vez de `+`, e sei quando `${...}` é obrigatório.
+- [X] Escrevo caminhos do Windows com *raw string*.
+- [X] Uso `trim()` antes de qualquer `tryParse`.
+- [X] Sei explicar por que `int.tryParse` é melhor que `int.parse` para entrada do usuário.
+- [X] Já vi, no meu terminal, `'😀'.length` devolver `2`.
+- [X] Sei formatar um `double` com duas casas usando `toStringAsFixed(2)`.
+- [X] `bin/textos.dart` roda e passa em `dart analyze`.
 
 ## 📚 Referências oficiais
 
@@ -615,6 +615,6 @@ o resultado de cada uma, marcando as inválidas. Dica para o item 5:
 
 ---
 
-| ⬅️ Anterior | 🏠 Módulo | ➡️ Próxima |
-|---|---|---|
+| ⬅️ Anterior                                                    | 🏠 Módulo         | ➡️ Próxima                   |
+| ---------------------------------------------------------------- | ------------------ | ------------------------------- |
 | [`var`, `final`, `const` e `late`](03-var-final-const.md) | [README](README.md) | [Null safety](05-null-safety.md) |
