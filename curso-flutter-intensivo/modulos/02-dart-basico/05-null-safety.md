@@ -734,14 +734,14 @@ os dois com `final favoritas = p.materiasFavoritas ?? const <String>[];` seguido
 
 ## ☑️ Checklist de domínio
 
-- [ ] Sei explicar a diferença entre `int` e `int?`.
-- [ ] Já vi, no meu terminal, o erro de compilação de acessar membro em tipo anulável.
-- [ ] Já vi, no meu terminal, `Null check operator used on a null value`.
-- [ ] Sei usar `?.`, `??` e `??=` sem consultar material.
-- [ ] Escrevo `if (x != null)` e uso `x` sem `!` dentro do bloco.
-- [ ] Sei por que copiar um campo para variável local destrava a promoção.
-- [ ] Consigo justificar quando usar `T?` e quando usar `late`.
-- [ ] Meu `bin/null_safety.dart` roda e passa em `dart analyze`.
+- [x] Sei explicar a diferença entre `int` e `int?`.
+- [x] Já vi, no meu terminal, o erro de compilação de acessar membro em tipo anulável.
+- [x] Já vi, no meu terminal, `Null check operator used on a null value`.
+- [x] Sei usar `?.`, `??` e `??=` sem consultar material.
+- [x] Escrevo `if (x != null)` e uso `x` sem `!` dentro do bloco.
+- [x] Sei por que copiar um campo para variável local destrava a promoção.
+- [x] Consigo justificar quando usar `T?` e quando usar `late`.
+- [x] Meu `bin/null_safety.dart` roda e passa em `dart analyze`.
 
 ## 📚 Referências oficiais
 
