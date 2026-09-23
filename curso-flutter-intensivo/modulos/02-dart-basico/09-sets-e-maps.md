@@ -180,11 +180,11 @@ tratamento de chave ausente. `update` com `ifAbsent` resolve contagens e somas a
 
 ## ☑️ Checklist de domínio
 
-- [ ] Escolho List, Set ou Map pela regra dos dados.
-- [ ] Crio Set e Map vazios sem ambiguidade.
-- [ ] Trato o retorno anulável de uma consulta ao Map.
-- [ ] Agrupo durações com `update` e `ifAbsent`.
-- [ ] Percorro `entries` sem modificar o Map durante a iteração.
+- [x] Escolho List, Set ou Map pela regra dos dados.
+- [x] Crio Set e Map vazios sem ambiguidade.
+- [x] Trato o retorno anulável de uma consulta ao Map.
+- [x] Agrupo durações com `update` e `ifAbsent`.
+- [x] Percorro `entries` sem modificar o Map durante a iteração.
 
 ## 📚 Referências oficiais
 
