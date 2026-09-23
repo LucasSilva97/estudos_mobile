@@ -274,14 +274,14 @@ rm Podfile.lock && pod install   # ⚠️ só se souber o que está fazendo
 | `platform :ios, '12.0' too low` | Plugin exige mais | Suba no `Podfile` |
 | `module 'X' not found` | Abriu o `.xcodeproj` | Abra o `.xcworkspace` |
 
-**Assinatura** — o assunto do Módulo 15:
+**Assinatura** — o assunto do Módulo 16:
 
 ```text
 Signing for "Runner" requires a development team.
 ```
 
 Xcode → **Runner** → **Signing & Capabilities** → marque *Automatically manage signing* e escolha
-o Team. Com conta Apple gratuita, funciona em **aparelho físico por 7 dias** (Módulo 15, aula 6).
+o Team. Com conta Apple gratuita, funciona em **aparelho físico por 7 dias** (Módulo 16, aula 6).
 
 **Logs do iOS:**
 
@@ -313,12 +313,12 @@ O que **dá** para fazer pelo iOS a partir do Windows:
 2. **Editar `Info.plist`, `Podfile`, `project.pbxproj`** — são arquivos de texto, versionados.
 3. **Rodar testes** — unitário, widget e integração em `-d windows`.
 4. **Usar CI com runner macOS** — GitHub Actions oferece `macos-latest`; é assim que times sem Mac
-   geram IPA (Módulo 16, aula 4).
+   geram IPA (Módulo 17, aula 4).
 5. **Codemagic / Bitrise** — serviços com Mac na nuvem, com plano gratuito limitado.
 
 > 💡 **A recomendação prática do curso:** desenvolva em Windows, valide em Android, e use **CI com
 > runner macOS** para gerar e validar o build iOS. Não é o mesmo que ter um Mac, mas cobre o
-> essencial — e é exatamente o que o Módulo 15 vai detalhar.
+> essencial — e é exatamente o que o Módulo 16 vai detalhar.
 
 ### O método de 6 passos para erro de build
 
@@ -585,7 +585,7 @@ Write-Host "linha que mencione $Pacote." -ForegroundColor Gray
 | Gerenciador nativo | Gradle | CocoaPods / SPM |
 | Arquivo de config | `build.gradle.kts` | `project.pbxproj`, `Podfile` |
 | Crash nativo | `FATAL EXCEPTION` | Crash report em Devices |
-| Assinatura | Keystore (Módulo 14) | Certificado + provisioning (Módulo 15) |
+| Assinatura | Keystore (Módulo 15) | Certificado + provisioning (Módulo 16) |
 | Dá para fazer no Windows | ✅ Tudo | ❌ Nada |
 
 > ⚠️ **A diferença cultural entre as duas:** o Gradle **diz** o que deu errado, ainda que sob dez
@@ -662,7 +662,7 @@ A causa real está na última linha `>`.
 
 Não é limitação do Flutter: a Apple exige macOS.
 
-**Correção:** CI com runner macOS (Módulo 16, aula 4).
+**Correção:** CI com runner macOS (Módulo 17, aula 4).
 
 ### 12. Não isolar num projeto novo
 

@@ -187,7 +187,7 @@ celular, para você não se confundir.
 | `SnackBar`, diálogo e *bottom sheet* | [07 — UX de formulários](../07-navegacao-e-formularios/08-ux-de-formularios.md) |
 | `semanticsLabel` e contraste | [13 — Acessibilidade](../13-desempenho-e-seguranca/05-acessibilidade.md) |
 | Imagens e `cacheWidth` | [13 — Listas grandes e imagens](../13-desempenho-e-seguranca/02-listas-grandes-e-imagens.md) |
-| Ícone do app e splash | [14 — Ícone](../14-build-android/03-icone.md) e [14 — Splash screen](../14-build-android/04-splash-screen.md) |
+| Ícone do app e splash | [14 — Ícone](../15-build-android/03-icone.md) e [15 — Splash screen](../15-build-android/04-splash-screen.md) |
 | Testes de widget nesta interface | [12 — Testes de widget](../12-testes-e-debug/06-testes-de-widget.md) |
 
 O módulo seguinte, [07 — Navegação e Formulários](../07-navegacao-e-formularios/README.md), pega

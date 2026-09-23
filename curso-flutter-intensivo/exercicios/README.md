@@ -26,9 +26,10 @@ e desafio prático. Concluir um exercício significa conferir seus critérios, n
 | [Módulo 11 — Recursos nativos](11-recursos-nativos.md) | 14 | E01 a E08 | E09 a E14 |
 | [Módulo 12 — Testes e debug](12-testes-e-debug.md) | 14 | E01 a E08 | E09 a E14 |
 | [Módulo 13 — Desempenho e segurança](13-desempenho-e-seguranca.md) | 14 | E01 a E08 | E09 a E14 |
-| [Módulo 14 — Build Android](14-build-android.md) | 14 | E01 a E08 | E09 a E14 |
-| [Módulo 15 — Build iOS](15-build-ios.md) | 14 | E01 a E08 | E09 a E14 |
-| [Módulo 16 — Publicação e próximos passos](16-publicacao-e-proximos-passos.md) | 14 | E01 a E08 | E09 a E14 |
+| [Módulo 14 — Build Web (PWA)](14-build-web-pwa.md) | 14 | E01 a E08 | E09 a E14 |
+| [Módulo 15 — Build Android](15-build-android.md) | 14 | E01 a E08 | E09 a E14 |
+| [Módulo 16 — Build iOS](16-build-ios.md) | 14 | E01 a E08 | E09 a E14 |
+| [Módulo 17 — Publicação e próximos passos](17-publicacao-e-proximos-passos.md) | 14 | E01 a E08 | E09 a E14 |
 
 **Total: 228 exercícios**, dos quais 136 são obrigatórios.
 
@@ -53,7 +54,7 @@ exercício de **Reflexão** que você "resolve" escrevendo código não foi reso
 ## 🪟 Sobre o ambiente
 
 Os exercícios assumem **Windows 11**, que é o ambiente do curso. Onde algo exige um Mac — parte
-dos módulos 15 e 16 — o enunciado diz isso explicitamente e oferece o que dá para fazer no
+dos módulos 16 e 17 — o enunciado diz isso explicitamente e oferece o que dá para fazer no
 Windows: editar os arquivos de configuração, rodar os verificadores e preparar o CI com runner
 macOS.
 

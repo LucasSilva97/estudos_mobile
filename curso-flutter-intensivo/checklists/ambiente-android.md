@@ -268,7 +268,7 @@ mensagens sobre "Unsupported class file major version".
     flutter config --jdk-dir "C:\Program Files\Eclipse Adoptium\jdk-17"
     ```
     (troque pelo caminho real da sua instalação)
-  - Aula: [modulos/14-build-android/10-diagnostico-de-build.md](../modulos/14-build-android/10-diagnostico-de-build.md)
+  - Aula: [modulos/15-build-android/10-diagnostico-de-build.md](../modulos/15-build-android/10-diagnostico-de-build.md)
 
 ---
 
@@ -296,7 +296,7 @@ ferramentas de linha de comando.
     Get-ChildItem "$env:LOCALAPPDATA\Android\Sdk\platforms"
     ```
     Esperado: uma pasta `android-36`.
-  - Aula: [modulos/14-build-android/01-debug-profile-release.md](../modulos/14-build-android/01-debug-profile-release.md)
+  - Aula: [modulos/15-build-android/01-debug-profile-release.md](../modulos/15-build-android/01-debug-profile-release.md)
 
 - [ ] **Android SDK Command-line Tools instalado.**
   É onde moram as ferramentas de linha de comando do SDK: o `android` (**Android CLI**) nas
@@ -326,7 +326,7 @@ ferramentas de linha de comando.
     ```powershell
     Get-ChildItem "$env:LOCALAPPDATA\Android\Sdk\build-tools"
     ```
-  - Aula: [modulos/14-build-android/08-gerando-apk-e-aab.md](../modulos/14-build-android/08-gerando-apk-e-aab.md)
+  - Aula: [modulos/15-build-android/08-gerando-apk-e-aab.md](../modulos/15-build-android/08-gerando-apk-e-aab.md)
 
 - [ ] **`platform-tools` adicionado ao PATH** (para digitar `adb` de qualquer pasta).
   Acrescente `%LOCALAPPDATA%\Android\Sdk\platform-tools` ao `Path` do usuário, feche e reabra o
@@ -598,7 +598,7 @@ câmera nem comportamento de bateria do mundo real.
     ```
     Esperado: `✓ Built build\app\outputs\flutter-apk\app-debug.apk`.
     A **primeira** execução baixa o Gradle e demora vários minutos. ⏱️
-  - Aula: [modulos/14-build-android/01-debug-profile-release.md](../modulos/14-build-android/01-debug-profile-release.md)
+  - Aula: [modulos/15-build-android/01-debug-profile-release.md](../modulos/15-build-android/01-debug-profile-release.md)
 
 ---
 
@@ -682,8 +682,8 @@ flutter build apk --debug
 | `Some Android licenses not accepted` | licenças não aceitas | Item 8 |
 | Emulador não abre / lentidão extrema | virtualização desligada na BIOS | Item 10 |
 | `adb devices` mostra `unauthorized` | diálogo de autorização não confirmado no telefone | Item 11 |
-| `Unsupported class file major version` | Java diferente do 17 | Item 6 · [modulos/14-build-android/10-diagnostico-de-build.md](../modulos/14-build-android/10-diagnostico-de-build.md) |
-| Build Gradle falha sem mensagem clara | cache do Gradle sujo | `flutter clean` · [modulos/14-build-android/10-diagnostico-de-build.md](../modulos/14-build-android/10-diagnostico-de-build.md) |
+| `Unsupported class file major version` | Java diferente do 17 | Item 6 · [modulos/15-build-android/10-diagnostico-de-build.md](../modulos/15-build-android/10-diagnostico-de-build.md) |
+| Build Gradle falha sem mensagem clara | cache do Gradle sujo | `flutter clean` · [modulos/15-build-android/10-diagnostico-de-build.md](../modulos/15-build-android/10-diagnostico-de-build.md) |
 
 ---
 
@@ -692,10 +692,10 @@ flutter build apk --debug
 - **Build iOS.** Você está no Windows. Nada de iOS é executável aqui.
   O processo completo, e o que dá para adiantar no Windows, está em
   [checklists/ambiente-ios.md](ambiente-ios.md) e no
-  [módulo 15](../modulos/15-build-ios/README.md).
+  [módulo 16](../modulos/16-build-ios/README.md).
 - **Assinatura de release, keystore e publicação.** Isso vem depois, no
   [checklists/build-android.md](build-android.md) e no
-  [módulo 14](../modulos/14-build-android/README.md).
+  [módulo 15](../modulos/15-build-android/README.md).
 
 ---
 

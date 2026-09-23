@@ -85,7 +85,7 @@ final certo3 = 'C:/src/novo';      // barra normal: funciona no Windows também
 ```
 
 É por isso que o arquivo `android/key.properties`, que você vai escrever no
-[Módulo 14](../14-build-android/07-assinatura-no-gradle.md), usa barras duplas:
+[Módulo 15](../15-build-android/07-assinatura-no-gradle.md), usa barras duplas:
 
 ```properties
 storeFile=C:\\Users\\SEU_USUARIO\\upload-keystore.jks
@@ -245,7 +245,7 @@ Caminhos não são um detalhe do terminal: eles atravessam o Flutter inteiro.
   privada, cujo caminho **muda** entre Android e iOS. O pacote `path_provider ^2.1.6` devolve esse
   caminho em tempo de execução —
   [Módulo 10](../10-persistencia-de-dados/03-arquivos-e-path-provider.md).
-- **Saídas de build.** Em [Módulo 14](../14-build-android/08-gerando-apk-e-aab.md), o instalador
+- **Saídas de build.** Em [Módulo 15](../15-build-android/08-gerando-apk-e-aab.md), o instalador
   final aparece em `build/app/outputs/flutter-apk/app-release.apk`. Ler esse caminho relativo é como
   você encontra o arquivo para instalar no celular.
 - **E os erros desta aula reaparecem literalmente.** O `ShaderCompilerException` acontece durante um

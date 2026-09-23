@@ -451,8 +451,8 @@ na desinstalação nas duas plataformas.
 Ele é controlado por atributos do `<application>` no `AndroidManifest.xml`
 (`android:allowBackup`, `android:dataExtractionRules` no Android 12+ e
 `android:fullBackupContent` nas versões anteriores). Se o seu app guarda algo que não deve sair do
-aparelho, é ali que você exclui. O módulo 14 detalha o manifesto em
-[14 — Permissões Android](../14-build-android/05-permissoes-android.md).
+aparelho, é ali que você exclui. O módulo 15 detalha o manifesto em
+[15 — Permissões Android](../15-build-android/05-permissoes-android.md).
 
 🍎 No iOS, tudo dentro de `Documents` e `Library/Application Support` entra no backup do iCloud.
 Isso tem um efeito prático: se você jogar um cache de 300 MB em `Documents`, você está consumindo
@@ -465,7 +465,7 @@ para cada caso.
 > o processo, mas não executá-lo. O caminho para 🤖 Android, esse sim, está ao seu alcance: com o
 > Android SDK instalado, `adb shell run-as <applicationId> ls -l` lista o sandbox do seu próprio
 > app em um aparelho de depuração. Veja o contexto completo em
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 ---
 

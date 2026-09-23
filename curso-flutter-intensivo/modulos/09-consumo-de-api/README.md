@@ -224,8 +224,8 @@ No [plano intensivo de 30 dias](../../01-plano-intensivo.md), este módulo ocupa
 | `mocktail`, mocks e fakes a fundo | [12 — Mocks e fakes](../12-testes-e-debug/07-mocks-e-fakes.md) |
 | Não travar a tela durante a rede | [13 — Assíncrono sem travar](../13-desempenho-e-seguranca/03-assincrono-sem-travar.md) |
 | Segurança de rede no app publicado | [13 — Segurança mobile](../13-desempenho-e-seguranca/06-seguranca-mobile.md) |
-| Permissão `INTERNET` no build de release 🤖 | [14 — Permissões Android](../14-build-android/05-permissoes-android.md) |
-| Chaves de `Info.plist` no iOS 🍎 | [15 — Ícone, splash, versão e Info.plist](../15-build-ios/05-icone-splash-versao-infoplist.md) |
+| Permissão `INTERNET` no build de release 🤖 | [15 — Permissões Android](../15-build-android/05-permissoes-android.md) |
+| Chaves de `Info.plist` no iOS 🍎 | [15 — Ícone, splash, versão e Info.plist](../16-build-ios/05-icone-splash-versao-infoplist.md) |
 | A aba Trilhas dentro do app Foco | [Projeto final — etapa 5](../../projetos/03-projeto-final-multiplataforma/07-etapa-5-api-e-trilhas.md) |
 
 ---

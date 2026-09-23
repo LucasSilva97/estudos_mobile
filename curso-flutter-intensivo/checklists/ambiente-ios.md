@@ -20,7 +20,7 @@
 >    tempo tentando.
 >
 > Entenda o porquê em
-> [modulos/15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md).
+> [modulos/16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md).
 
 ---
 
@@ -75,7 +75,7 @@
     sw_vers
     ```
     Esperado: `ProductName: macOS` e um `ProductVersion`.
-  - Aula: [modulos/15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md)
+  - Aula: [modulos/16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md)
 
 - [ ] **A versão do macOS é compatível com a versão do Xcode que você vai instalar.**
   Cada Xcode exige um macOS mínimo; a App Store simplesmente não deixa instalar se não bater.
@@ -84,7 +84,7 @@
     ```bash
     sw_vers -productVersion
     ```
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 - [ ] **Espaço em disco suficiente: reserve ~40 GB.** ⏱️
   Xcode ocupa por volta de 15 GB depois de instalado, e cada *runtime* de simulador extra pesa
@@ -95,7 +95,7 @@
     ```bash
     df -h /
     ```
-  - Aula: [modulos/15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md)
+  - Aula: [modulos/16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md)
 
 ---
 
@@ -108,12 +108,12 @@
     xcodebuild -version
     ```
     Esperado: `Xcode <versão>` + `Build version ...`
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 - [ ] **Xcode aberto pelo menos uma vez** (a primeira abertura instala componentes adicionais).
   - 🪟 **Dá para fazer no Windows? Não.**
   - Como verificar: o Xcode chega na tela de boas-vindas sem pedir instalação.
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 - [ ] **Command Line Tools instaladas.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -125,7 +125,7 @@
     ```bash
     xcode-select -p
     ```
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 - [ ] 🔴 **`xcode-select` apontando para o Xcode completo, não só para as Command Line Tools.**
   Este é o erro nº 1 de quem instalou as ferramentas antes do Xcode: o `flutter doctor`
@@ -141,7 +141,7 @@
     ```
     Esperado: `/Applications/Xcode.app/Contents/Developer`
     (e **não** `/Library/Developer/CommandLineTools`).
-  - Aula: [modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
+  - Aula: [modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
 
 - [ ] **Primeira execução do Xcode concluída pela linha de comando.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -150,7 +150,7 @@
     sudo xcodebuild -runFirstLaunch
     ```
   - Como verificar: o comando termina sem erro; repetir não pede mais nada.
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 - [ ] **Licença do Xcode aceita.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -159,7 +159,7 @@
     sudo xcodebuild -license accept
     ```
   - Como verificar: `xcodebuild -version` roda sem exibir o texto da licença.
-  - Aula: [modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
+  - Aula: [modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
 
 ---
 
@@ -204,7 +204,7 @@
     ```bash
     open ios/Runner.xcworkspace
     ```
-  - Aula: [modulos/15-build-ios/04-bundle-id-e-xcode.md](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+  - Aula: [modulos/16-build-ios/04-bundle-id-e-xcode.md](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 ---
 
@@ -246,7 +246,7 @@
       config:
         enable-swift-package-manager: false
     ```
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 - [ ] **CocoaPods instalado no Mac** (necessário se qualquer plugin do projeto ainda não
   suportar SPM).
@@ -259,7 +259,7 @@
     ```bash
     pod --version
     ```
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 - [ ] **Dependências nativas resolvidas** (só quando o projeto usar CocoaPods).
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -272,7 +272,7 @@
     pod repo update
     ```
   - Como verificar: existe `ios/Podfile.lock` e a pasta `ios/Pods/`.
-  - Aula: [modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
+  - Aula: [modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
 
 - [ ] **(Opcional, quando todos os plugins já suportarem SPM) CocoaPods removido do projeto.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -280,7 +280,7 @@
     ```bash
     pod deintegrate
     ```
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 ---
 
@@ -293,7 +293,7 @@ com o projeto já configurado.
   Android, por coerência).
   - 🪟 **Dá para fazer no Windows? Sim** (definir e revisar o valor no projeto; **registrar** o
     ID no portal da Apple exige conta Apple, mas é pelo navegador — veja a seção 7).
-  - Aula: [modulos/15-build-ios/04-bundle-id-e-xcode.md](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+  - Aula: [modulos/16-build-ios/04-bundle-id-e-xcode.md](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 - [ ] **`version: 1.0.0+1` definido no `pubspec.yaml`.**
   O Flutter usa esse único campo para as duas plataformas:
@@ -304,8 +304,8 @@ com o projeto já configurado.
     ```powershell
     Select-String -Path .\pubspec.yaml -Pattern '^version:'
     ```
-  - Aula: [modulos/14-build-android/02-identidade-do-app.md](../modulos/14-build-android/02-identidade-do-app.md) ·
-    [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/15-build-android/02-identidade-do-app.md](../modulos/15-build-android/02-identidade-do-app.md) ·
+    [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] **`CFBundleDisplayName` conferido no `ios/Runner/Info.plist`** (é o nome que aparece sob o
   ícone na tela inicial do iPhone).
@@ -314,7 +314,7 @@ com o projeto já configurado.
     ```powershell
     Select-String -Path .\ios\Runner\Info.plist -Pattern 'CFBundleDisplayName' -Context 0,1
     ```
-  - Aula: [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] 🔴 **Textos de permissão escritos em português e ESPECÍFICOS.**
   A Apple **rejeita** o app quando o texto é genérico ("precisamos de acesso"). Escreva o
@@ -344,7 +344,7 @@ com o projeto já configurado.
     Test-Path .\ios\Runner\SceneDelegate.swift
     Select-String -Path .\ios\Runner\Info.plist -Pattern 'UIApplicationSceneManifest'
     ```
-  - Aula: [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] 🔴 **Ícone gerado sem canal alfa** (a Apple rejeita ícone com transparência).
   No `pubspec.yaml`, o bloco do gerador precisa de `remove_alpha_ios: true`:
@@ -370,8 +370,8 @@ com o projeto já configurado.
     ```
     Esperado: `Contents.json` + `Icon-App-1024x1024@1x.png` e os demais tamanhos
     (`20x20`, `29x29`, `40x40`, `50x50`… em `@1x`, `@2x`, `@3x`).
-  - Aula: [modulos/14-build-android/03-icone.md](../modulos/14-build-android/03-icone.md) ·
-    [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/15-build-android/03-icone.md](../modulos/15-build-android/03-icone.md) ·
+    [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] **Splash gerada** (a tela de abertura; no iOS ela é a
   `ios/Runner/Base.lproj/LaunchScreen.storyboard`).
@@ -384,7 +384,7 @@ com o projeto já configurado.
     ```powershell
     Test-Path .\ios\Runner\Base.lproj\LaunchScreen.storyboard
     ```
-  - Aula: [modulos/14-build-android/04-splash-screen.md](../modulos/14-build-android/04-splash-screen.md)
+  - Aula: [modulos/15-build-android/04-splash-screen.md](../modulos/15-build-android/04-splash-screen.md)
 
 ---
 
@@ -401,7 +401,7 @@ com o projeto já configurado.
     flutter devices
     ```
     Esperado: uma linha com `iPhone ... (mobile) • ... • ios`.
-  - Aula: [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md)
+  - Aula: [modulos/16-build-ios/03-simulador-e-iphone-fisico.md](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md)
 
 - [ ] **App rodando no simulador.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -410,7 +410,7 @@ com o projeto já configurado.
     flutter run -d <id-do-simulador>
     ```
   - Como verificar: o app abre na janela do Simulator e o *hot reload* (`r`) funciona.
-  - Aula: [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md)
+  - Aula: [modulos/16-build-ios/03-simulador-e-iphone-fisico.md](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md)
 
 > **Limite importante do simulador:** ele **não** testa câmera real, sensores, desempenho real
 > nem assinatura de código. Recursos nativos precisam de aparelho físico.
@@ -423,41 +423,41 @@ com o projeto já configurado.
 - [ ] **Apple ID criado.**
   - 🪟 **Dá para fazer no Windows? Sim** — a criação da conta é pelo navegador
     (<https://appleid.apple.com>).
-  - Aula: [modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md)
+  - Aula: [modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md)
 
 - [ ] **Você entendeu a diferença entre a conta gratuita e o Apple Developer Program (pago).**
   Resumo: com a conta **gratuita** você instala o app no **seu próprio** iPhone, e o app
   **expira em poucos dias**. Para TestFlight e App Store é obrigatório o programa **pago**.
   - 🪟 **Dá para fazer no Windows? Sim** (estudar e decidir).
-  - Aula: [modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md)
+  - Aula: [modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md)
 
 - [ ] **Apple ID adicionado ao Xcode.**
   Xcode → *Settings…* → aba **Accounts** → `+` → *Apple ID* → entre com o seu login.
   - 🪟 **Dá para fazer no Windows? Não.**
   - Como verificar: a conta aparece na lista com o Team associado.
-  - Aula: [modulos/15-build-ios/07-certificados-e-provisioning.md](../modulos/15-build-ios/07-certificados-e-provisioning.md)
+  - Aula: [modulos/16-build-ios/07-certificados-e-provisioning.md](../modulos/16-build-ios/07-certificados-e-provisioning.md)
 
 - [ ] **Team selecionado no alvo `Runner`.**
   Xcode → selecione o projeto `Runner` → alvo `Runner` → aba **Signing & Capabilities** →
   campo **Team** → escolha o seu (o curso escreve esse identificador sempre como `SEU_TEAM_ID`,
   nunca um valor real).
   - 🪟 **Dá para fazer no Windows? Não.**
-  - Aula: [modulos/15-build-ios/04-bundle-id-e-xcode.md](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+  - Aula: [modulos/16-build-ios/04-bundle-id-e-xcode.md](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 - [ ] **`Automatically manage signing` marcado.**
   Com isso o Xcode cria e renova sozinho o certificado e o *provisioning profile*.
   - 🪟 **Dá para fazer no Windows? Não.**
   - Como verificar: na aba *Signing & Capabilities* não há nenhum triângulo amarelo nem texto
     em vermelho.
-  - Aula: [modulos/15-build-ios/07-certificados-e-provisioning.md](../modulos/15-build-ios/07-certificados-e-provisioning.md)
+  - Aula: [modulos/16-build-ios/07-certificados-e-provisioning.md](../modulos/16-build-ios/07-certificados-e-provisioning.md)
 
 - [ ] **Bundle ID do Xcode igual ao definido no projeto** (`br.com.estudos.foco`).
   - 🪟 **Dá para fazer no Windows? Não** (a edição no Xcode).
-  - Aula: [modulos/15-build-ios/04-bundle-id-e-xcode.md](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+  - Aula: [modulos/16-build-ios/04-bundle-id-e-xcode.md](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 - [ ] **Deployment Target conferido: mínimo iOS 13 no Flutter 3.47.**
   - 🪟 **Dá para fazer no Windows? Não** (o campo fica no Xcode).
-  - Aula: [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 ---
 
@@ -465,14 +465,14 @@ com o projeto já configurado.
 
 - [ ] **iPhone conectado por cabo e desbloqueado.**
   - 🪟 **Dá para fazer no Windows? Não.**
-  - Aula: [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md)
+  - Aula: [modulos/16-build-ios/03-simulador-e-iphone-fisico.md](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md)
 
 - [ ] **Computador "confiado" pelo iPhone.**
   Ao conectar, o iPhone pergunta *Confiar neste computador?* → toque em **Confiar** e digite a
   senha do aparelho.
   - 🪟 **Dá para fazer no Windows? Não.**
   - Como verificar (no Mac): o aparelho aparece na barra de dispositivos do Xcode sem aviso.
-  - Aula: [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md)
+  - Aula: [modulos/16-build-ios/03-simulador-e-iphone-fisico.md](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md)
 
 - [ ] 🔴 **Modo de Desenvolvedor do iOS ativado no aparelho** (iOS 16 ou mais recente).
   No iPhone: *Ajustes* → *Privacidade e Segurança* → **Modo de Desenvolvedor** → ligue →
@@ -480,13 +480,13 @@ com o projeto já configurado.
   Sem isso o app instalado pelo Xcode **não abre**.
   - 🪟 **Dá para fazer no Windows? Não** (a opção só aparece depois que um Mac com Xcode
     conecta no aparelho pela primeira vez).
-  - Aula: [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md)
+  - Aula: [modulos/16-build-ios/03-simulador-e-iphone-fisico.md](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md)
 
 - [ ] **Perfil do desenvolvedor confiado no aparelho** (necessário com conta gratuita).
   iPhone → *Ajustes* → *Geral* → *VPN e Gerenciamento de Dispositivo* → toque no seu perfil →
   **Confiar**.
   - 🪟 **Dá para fazer no Windows? Não.**
-  - Aula: [modulos/15-build-ios/07-certificados-e-provisioning.md](../modulos/15-build-ios/07-certificados-e-provisioning.md)
+  - Aula: [modulos/16-build-ios/07-certificados-e-provisioning.md](../modulos/16-build-ios/07-certificados-e-provisioning.md)
 
 - [ ] **App rodando no iPhone físico.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -495,7 +495,7 @@ com o projeto já configurado.
     flutter devices
     flutter run -d <id-do-iphone>
     ```
-  - Aula: [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md)
+  - Aula: [modulos/16-build-ios/03-simulador-e-iphone-fisico.md](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md)
 
 ---
 
@@ -509,7 +509,7 @@ com o projeto já configurado.
     ```bash
     flutter doctor -v
     ```
-  - Aula: [modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
+  - Aula: [modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
 
 - [ ] **`flutter analyze` e `flutter test` passam** — e isso **você faz no Windows**, porque
   são Dart puro, sem nada de nativo.
@@ -563,35 +563,35 @@ flutter run -d <id-do-iphone>
 
 | # | Item | Dá para fazer no Windows? | Verificação | Aula |
 |---|---|---|---|---|
-| 1 | Acesso a um Mac | **Não** | `sw_vers` | [15/01](../modulos/15-build-ios/01-por-que-exige-macos.md) |
-| 2 | macOS compatível | **Não** | `sw_vers -productVersion` | [15/02](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 3 | ~40 GB livres | **Não** | `df -h /` | [15/01](../modulos/15-build-ios/01-por-que-exige-macos.md) |
-| 4 | Xcode instalado | **Não** | `xcodebuild -version` | [15/02](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 5 | Command Line Tools | **Não** | `xcode-select -p` | [15/02](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 6 | `xcode-select --switch` | **Não** | `xcode-select -p` | [15/10](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
-| 7 | `xcodebuild -runFirstLaunch` | **Não** | comando sem erro | [15/02](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 8 | Licença aceita | **Não** | `xcodebuild -license accept` | [15/10](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| 1 | Acesso a um Mac | **Não** | `sw_vers` | [16/01](../modulos/16-build-ios/01-por-que-exige-macos.md) |
+| 2 | macOS compatível | **Não** | `sw_vers -productVersion` | [16/02](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 3 | ~40 GB livres | **Não** | `df -h /` | [16/01](../modulos/16-build-ios/01-por-que-exige-macos.md) |
+| 4 | Xcode instalado | **Não** | `xcodebuild -version` | [16/02](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 5 | Command Line Tools | **Não** | `xcode-select -p` | [16/02](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 6 | `xcode-select --switch` | **Não** | `xcode-select -p` | [16/10](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| 7 | `xcodebuild -runFirstLaunch` | **Não** | comando sem erro | [16/02](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 8 | Licença aceita | **Não** | `xcodebuild -license accept` | [16/10](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
 | 9 | Pasta `ios/` presente | **Sim** | `Test-Path .\ios\Runner.xcworkspace` | [11/07](../modulos/11-recursos-nativos/07-pastas-android-e-ios.md) |
-| 10 | SPM habilitado (padrão desde 3.44) | **Sim** | `flutter config --list` | [15/02](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 11 | CocoaPods instalado | **Não** | `pod --version` | [15/02](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 12 | `pod install` executado | **Não** | existe `ios/Podfile.lock` | [15/10](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
-| 13 | Bundle ID definido | **Sim** (definir) / **Não** (no Xcode) | revisão do projeto | [15/04](../modulos/15-build-ios/04-bundle-id-e-xcode.md) |
-| 14 | `version: 1.0.0+1` | **Sim** | `Select-String -Path .\pubspec.yaml -Pattern '^version:'` | [15/05](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
+| 10 | SPM habilitado (padrão desde 3.44) | **Sim** | `flutter config --list` | [16/02](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 11 | CocoaPods instalado | **Não** | `pod --version` | [16/02](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 12 | `pod install` executado | **Não** | existe `ios/Podfile.lock` | [16/10](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| 13 | Bundle ID definido | **Sim** (definir) / **Não** (no Xcode) | revisão do projeto | [16/04](../modulos/16-build-ios/04-bundle-id-e-xcode.md) |
+| 14 | `version: 1.0.0+1` | **Sim** | `Select-String -Path .\pubspec.yaml -Pattern '^version:'` | [16/05](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
 | 15 | Textos de permissão em português | **Sim** | `Select-String ... 'UsageDescription'` | [11/01](../modulos/11-recursos-nativos/01-permissoes.md) |
-| 16 | `SceneDelegate.swift` preservado | **Sim** | `Test-Path .\ios\Runner\SceneDelegate.swift` | [15/05](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| 17 | Ícone sem canal alfa | **Sim** | `dart run flutter_launcher_icons` | [14/03](../modulos/14-build-android/03-icone.md) |
-| 18 | Splash gerada | **Sim** | `dart run flutter_native_splash:create` | [14/04](../modulos/14-build-android/04-splash-screen.md) |
-| 19 | Simulador aberto | **Não** | `open -a Simulator` | [15/03](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md) |
-| 20 | App no simulador | **Não** | `flutter run -d <id>` | [15/03](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md) |
-| 21 | Apple ID criado | **Sim** (navegador) | login em appleid.apple.com | [15/06](../modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md) |
-| 22 | Apple ID no Xcode | **Não** | Xcode → Settings → Accounts | [15/07](../modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| 23 | Team selecionado | **Não** | Signing & Capabilities | [15/04](../modulos/15-build-ios/04-bundle-id-e-xcode.md) |
-| 24 | Automatic signing | **Não** | sem aviso amarelo no Xcode | [15/07](../modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| 25 | Deployment Target ≥ iOS 13 | **Não** | campo no Xcode | [15/05](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| 26 | iPhone confiado | **Não** | diálogo no aparelho | [15/03](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md) |
-| 27 | Modo de Desenvolvedor do iOS | **Não** | Ajustes → Privacidade e Segurança | [15/03](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md) |
-| 28 | App no iPhone físico | **Não** | `flutter run -d <id>` | [15/03](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md) |
-| 29 | `flutter doctor` limpo (iOS) | **Não** | `flutter doctor -v` | [15/10](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| 16 | `SceneDelegate.swift` preservado | **Sim** | `Test-Path .\ios\Runner\SceneDelegate.swift` | [16/05](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| 17 | Ícone sem canal alfa | **Sim** | `dart run flutter_launcher_icons` | [15/03](../modulos/15-build-android/03-icone.md) |
+| 18 | Splash gerada | **Sim** | `dart run flutter_native_splash:create` | [15/04](../modulos/15-build-android/04-splash-screen.md) |
+| 19 | Simulador aberto | **Não** | `open -a Simulator` | [16/03](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md) |
+| 20 | App no simulador | **Não** | `flutter run -d <id>` | [16/03](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md) |
+| 21 | Apple ID criado | **Sim** (navegador) | login em appleid.apple.com | [16/06](../modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md) |
+| 22 | Apple ID no Xcode | **Não** | Xcode → Settings → Accounts | [16/07](../modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| 23 | Team selecionado | **Não** | Signing & Capabilities | [16/04](../modulos/16-build-ios/04-bundle-id-e-xcode.md) |
+| 24 | Automatic signing | **Não** | sem aviso amarelo no Xcode | [16/07](../modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| 25 | Deployment Target ≥ iOS 13 | **Não** | campo no Xcode | [16/05](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| 26 | iPhone confiado | **Não** | diálogo no aparelho | [16/03](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md) |
+| 27 | Modo de Desenvolvedor do iOS | **Não** | Ajustes → Privacidade e Segurança | [16/03](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md) |
+| 28 | App no iPhone físico | **Não** | `flutter run -d <id>` | [16/03](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md) |
+| 29 | `flutter doctor` limpo (iOS) | **Não** | `flutter doctor -v` | [16/10](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
 | 30 | `flutter analyze` + `flutter test` | **Sim** | os dois comandos | [12/05](../modulos/12-testes-e-debug/05-testes-unitarios.md) |
 
 **Contagem:** 11 itens você faz **hoje, no Windows**. 19 ficam para o dia do Mac.
@@ -630,7 +630,7 @@ Opções honestas, com as respectivas limitações:
 |---|---|---|
 | Mac emprestado por algumas horas | build, assinatura, upload | você precisa da conta Apple no Mac |
 | Mac alugado na nuvem (serviços de "Mac em nuvem") | tudo, remotamente | custo por hora/mês |
-| CI/CD com runner macOS | build e upload automatizados | exige configuração prévia; veja [modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](../modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
+| CI/CD com runner macOS | build e upload automatizados | exige configuração prévia; veja [modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](../modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
 | Publicar só na Google Play por enquanto | entrega real, hoje | nenhum usuário iPhone |
 
 O código Flutter que você escreve neste curso é **o mesmo** nas duas plataformas. Nenhuma linha

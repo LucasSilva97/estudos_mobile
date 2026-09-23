@@ -2,8 +2,8 @@
 
 > **O que é este arquivo.** Um comparativo prático, tema por tema, entre as duas plataformas
 > que o seu app Flutter vai rodar. Use como consulta rápida enquanto estuda os módulos
-> [14 — Build Android](../modulos/14-build-android/README.md) e
-> [15 — Build iOS](../modulos/15-build-ios/README.md), e sempre que uma aula disser
+> [15 — Build Android](../modulos/15-build-android/README.md) e
+> [16 — Build iOS](../modulos/16-build-ios/README.md), e sempre que uma aula disser
 > "isso muda entre Android e iOS".
 
 ---
@@ -19,7 +19,7 @@ executar agora:
 | Rodar no Chrome, no Windows desktop e no emulador Android | Abrir o simulador de iPhone |
 | Gerar **APK** e **AAB** de release, assinados | Gerar `.app`, `.xcarchive` e **IPA** |
 | Editar `ios/Runner/Info.plist` como texto | Abrir `ios/Runner.xcworkspace` no Xcode |
-| Entender todo o processo iOS (é o que o módulo 15 faz) | Enviar para TestFlight / App Store |
+| Entender todo o processo iOS (é o que o módulo 16 faz) | Enviar para TestFlight / App Store |
 
 > 🍎 **Nunca** existirá um caminho oficial para gerar um IPA (o instalador do iOS) no Windows.
 > O compilador e o assinador de código da Apple rodam **apenas no macOS**. Este curso ensina
@@ -107,7 +107,7 @@ flutter build ipa --export-method app-store-connect
 
 > 🍎 **SÓ NO MAC.** `flutter build ipa` falha no Windows porque depende do `xcodebuild`.
 > Veja o porquê em
-> [15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md).
 
 ---
 
@@ -266,7 +266,7 @@ buildTypes {
 > ⚠️ **Entenda o que isso significa.** Enquanto esse `TODO` estiver ali, o seu build "release"
 > está assinado com a **chave de depuração** — uma chave genérica, igual na máquina de todo
 > mundo. Esse APK **roda no seu celular**, mas a Google Play **recusa**. Esse comentário é um
-> aviso, não decoração. O módulo 14 manda você substituir esse bloco pelo código abaixo.
+> aviso, não decoração. O módulo 15 manda você substituir esse bloco pelo código abaixo.
 
 ```kotlin
 import java.util.Properties
@@ -690,9 +690,9 @@ iPhone, o app precisa ser assinado com um perfil ligado àquele aparelho.
 > Para qualquer distribuição real, é o **Apple Developer Program** pago.
 
 As faixas de teste, o preenchimento da ficha da loja e o processo de envio estão em
-[16-publicacao-e-proximos-passos/01-google-play.md](../modulos/16-publicacao-e-proximos-passos/01-google-play.md)
+[17-publicacao-e-proximos-passos/01-google-play.md](../modulos/17-publicacao-e-proximos-passos/01-google-play.md)
 e
-[16-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md).
+[17-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md).
 
 ---
 
@@ -710,7 +710,7 @@ e
 
 > 💡 Consequência prática para você, hoje: **comece pelo Android.** Você paga uma vez, publica,
 > recebe feedback real e só depois decide se o iOS compensa. Este curso é montado nessa ordem
-> justamente por isso — o módulo 14 (Android) vem antes do 15 (iOS).
+> justamente por isso — o módulo 15 (Android) vem antes do 15 (iOS).
 
 Valores de US$ 25 e US$ 99 são os praticados publicamente pelas duas empresas; confirme na
 página oficial antes de pagar, porque políticas e impostos mudam.
@@ -742,7 +742,7 @@ página oficial antes de pagar, porque políticas e impostos mudam.
 > 🍎 **SÓ NO MAC.** Os itens marcados com ❌ na coluna Windows não têm alternativa oficial.
 > Existem serviços de integração contínua que alugam máquinas macOS na nuvem para rodar o
 > build — isso é apresentado, como caminho possível, em
-> [16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](../modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
+> [17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](../modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
 > Mas o build continua acontecendo **num macOS**; o que muda é quem é dono da máquina.
 
 ### O que fazer hoje para não travar quando o Mac aparecer
@@ -831,16 +831,16 @@ A lista completa, com o texto literal dos erros reproduzidos nesta máquina, est
 
 | Tema | Aula |
 |---|---|
-| Por que o iOS exige Mac | [15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md) |
-| Xcode e CocoaPods | [15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| Bundle ID no Xcode | [15-build-ios/04-bundle-id-e-xcode.md](../modulos/15-build-ios/04-bundle-id-e-xcode.md) |
-| Ícone, splash e versão no `Info.plist` | [15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| Conta Apple gratuita × paga | [15-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md) |
-| Certificados e provisioning | [15-build-ios/07-certificados-e-provisioning.md](../modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| Identidade do app (Android) | [14-build-android/02-identidade-do-app.md](../modulos/14-build-android/02-identidade-do-app.md) |
-| Keystore | [14-build-android/06-keystore.md](../modulos/14-build-android/06-keystore.md) |
-| Assinatura no Gradle | [14-build-android/07-assinatura-no-gradle.md](../modulos/14-build-android/07-assinatura-no-gradle.md) |
-| APK e AAB | [14-build-android/08-gerando-apk-e-aab.md](../modulos/14-build-android/08-gerando-apk-e-aab.md) |
+| Por que o iOS exige Mac | [16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md) |
+| Xcode e CocoaPods | [16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| Bundle ID no Xcode | [16-build-ios/04-bundle-id-e-xcode.md](../modulos/16-build-ios/04-bundle-id-e-xcode.md) |
+| Ícone, splash e versão no `Info.plist` | [16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| Conta Apple gratuita × paga | [16-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md) |
+| Certificados e provisioning | [16-build-ios/07-certificados-e-provisioning.md](../modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| Identidade do app (Android) | [15-build-android/02-identidade-do-app.md](../modulos/15-build-android/02-identidade-do-app.md) |
+| Keystore | [15-build-android/06-keystore.md](../modulos/15-build-android/06-keystore.md) |
+| Assinatura no Gradle | [15-build-android/07-assinatura-no-gradle.md](../modulos/15-build-android/07-assinatura-no-gradle.md) |
+| APK e AAB | [15-build-android/08-gerando-apk-e-aab.md](../modulos/15-build-android/08-gerando-apk-e-aab.md) |
 | Permissões (as duas plataformas) | [11-recursos-nativos/01-permissoes.md](../modulos/11-recursos-nativos/01-permissoes.md) |
 | Pastas `android/` e `ios/` | [11-recursos-nativos/07-pastas-android-e-ios.md](../modulos/11-recursos-nativos/07-pastas-android-e-ios.md) |
 | Botão voltar e gestos | [11-recursos-nativos/08-botao-voltar-e-gestos.md](../modulos/11-recursos-nativos/08-botao-voltar-e-gestos.md) |
@@ -848,7 +848,7 @@ A lista completa, com o texto literal dos erros reproduzidos nesta máquina, est
 | Navegação Android × iOS | [07-navegacao-e-formularios/05-navegacao-android-x-ios.md](../modulos/07-navegacao-e-formularios/05-navegacao-android-x-ios.md) |
 | Qual armazenamento usar | [10-persistencia-de-dados/01-qual-armazenamento-usar.md](../modulos/10-persistencia-de-dados/01-qual-armazenamento-usar.md) |
 | Depurando Android e iOS | [12-testes-e-debug/09-depurando-android-e-ios.md](../modulos/12-testes-e-debug/09-depurando-android-e-ios.md) |
-| Versionamento e releases | [16-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md) |
+| Versionamento e releases | [17-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md) |
 
 Checklists prontas para imprimir:
 [checklists/build-android.md](../checklists/build-android.md) ·

@@ -8,7 +8,7 @@
 > **Especificação completa do app:**
 > [projetos/03-projeto-final-multiplataforma/01-especificacao.md](../projetos/03-projeto-final-multiplataforma/01-especificacao.md)
 > **Critérios de aceite formais:**
-> [projetos/03-projeto-final-multiplataforma/11-criterios-de-aceite.md](../projetos/03-projeto-final-multiplataforma/11-criterios-de-aceite.md)
+> [projetos/03-projeto-final-multiplataforma/12-criterios-de-aceite.md](../projetos/03-projeto-final-multiplataforma/12-criterios-de-aceite.md)
 
 ---
 
@@ -122,7 +122,7 @@
   - Aula: [projetos/03-projeto-final-multiplataforma/06-etapa-4-telas-e-navegacao.md](../projetos/03-projeto-final-multiplataforma/06-etapa-4-telas-e-navegacao.md)
 
 - [ ] **Progresso da meta semanal exibido junto.**
-  - Aula: [projetos/03-projeto-final-multiplataforma/11-criterios-de-aceite.md](../projetos/03-projeto-final-multiplataforma/11-criterios-de-aceite.md)
+  - Aula: [projetos/03-projeto-final-multiplataforma/12-criterios-de-aceite.md](../projetos/03-projeto-final-multiplataforma/12-criterios-de-aceite.md)
 
 - [ ] **A tela trata o caso "nenhuma sessão registrada"** com um estado vazio explicativo, e não
   com um gráfico em branco.
@@ -569,7 +569,7 @@
     ```powershell
     Select-String -Path .\android\app\build.gradle.kts -Pattern 'applicationId'
     ```
-  - Aula: [modulos/14-build-android/02-identidade-do-app.md](../modulos/14-build-android/02-identidade-do-app.md)
+  - Aula: [modulos/15-build-android/02-identidade-do-app.md](../modulos/15-build-android/02-identidade-do-app.md)
 
 - [ ] **Nome exibido "Foco"** (`android:label` no `AndroidManifest.xml` e
   `CFBundleDisplayName` no `Info.plist`).
@@ -577,14 +577,14 @@
     ```powershell
     Select-String -Path .\android\app\src\main\AndroidManifest.xml -Pattern 'android:label'
     ```
-  - Aula: [modulos/14-build-android/02-identidade-do-app.md](../modulos/14-build-android/02-identidade-do-app.md)
+  - Aula: [modulos/15-build-android/02-identidade-do-app.md](../modulos/15-build-android/02-identidade-do-app.md)
 
 - [ ] **`version: 1.0.0+1` no `pubspec.yaml`** (vale para as duas plataformas).
   - Verificar:
     ```powershell
     Select-String -Path .\pubspec.yaml -Pattern '^version:'
     ```
-  - Aula: [modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
 
 - [ ] **Ícone gerado** para Android e iOS.
   - Verificar:
@@ -592,7 +592,7 @@
     dart run flutter_launcher_icons
     Get-ChildItem .\android\app\src\main\res\mipmap-xxxhdpi
     ```
-  - Aula: [modulos/14-build-android/03-icone.md](../modulos/14-build-android/03-icone.md)
+  - Aula: [modulos/15-build-android/03-icone.md](../modulos/15-build-android/03-icone.md)
 
 - [ ] **Splash gerada**, inclusive no modo escuro e no formato do Android 12+.
   - Verificar:
@@ -600,14 +600,14 @@
     dart run flutter_native_splash:create
     Test-Path .\android\app\src\main\res\values-v31\styles.xml
     ```
-  - Aula: [modulos/14-build-android/04-splash-screen.md](../modulos/14-build-android/04-splash-screen.md)
+  - Aula: [modulos/15-build-android/04-splash-screen.md](../modulos/15-build-android/04-splash-screen.md)
 
 - [ ] **Permissões declaradas conferem com o que o app realmente usa** (nada a mais).
   - Verificar:
     ```powershell
     Select-String -Path .\android\app\src\main\AndroidManifest.xml -Pattern 'uses-permission'
     ```
-  - Aula: [modulos/14-build-android/05-permissoes-android.md](../modulos/14-build-android/05-permissoes-android.md)
+  - Aula: [modulos/15-build-android/05-permissoes-android.md](../modulos/15-build-android/05-permissoes-android.md)
 
 ---
 
@@ -724,12 +724,12 @@ Qualquer "Não" indica uma aula para revisar — use o
 1. **Gerar o release Android**: [checklists/build-android.md](build-android.md)
 2. **Preparar o iOS** (a parte que dá para fazer no Windows):
    [checklists/ambiente-ios.md](ambiente-ios.md) e [checklists/build-ios.md](build-ios.md)
-3. **Publicar**: [modulos/16-publicacao-e-proximos-passos/01-google-play.md](../modulos/16-publicacao-e-proximos-passos/01-google-play.md)
+3. **Publicar**: [modulos/17-publicacao-e-proximos-passos/01-google-play.md](../modulos/17-publicacao-e-proximos-passos/01-google-play.md)
 4. **Desafios extras do projeto**:
-   [projetos/03-projeto-final-multiplataforma/12-desafios.md](../projetos/03-projeto-final-multiplataforma/12-desafios.md)
+   [projetos/03-projeto-final-multiplataforma/13-desafios.md](../projetos/03-projeto-final-multiplataforma/13-desafios.md)
 
 ---
 
 | ⬅️ Anterior | 🏠 Curso | ➡️ Próxima |
 |---|---|---|
-| [Checklist — Ambiente iOS](ambiente-ios.md) | [Índice geral](../README.md) | [Checklist — Build Android](build-android.md) |
+| [Checklist — Ambiente iOS](ambiente-ios.md) | [Índice geral](../README.md) | [Checklist — Build Web (PWA)](build-web.md) |

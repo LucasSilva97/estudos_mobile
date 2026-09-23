@@ -74,14 +74,14 @@ ordena e reencontra tudo na próxima abertura — mesmo depois de fechar o app.
 | Fotos, permissões, notificações | [M11](../../modulos/11-recursos-nativos/README.md) |
 | `mocktail`, fakes, testes de integração | [M12 · 7 e 8](../../modulos/12-testes-e-debug/07-mocks-e-fakes.md) |
 | `go_router` | [M07 · 9](../../modulos/07-navegacao-e-formularios/09-go-router-opcional.md) |
-| Ícone, splash, assinatura, build de release | [M14](../../modulos/14-build-android/README.md) e [M15](../../modulos/15-build-ios/README.md) |
+| Ícone, splash, assinatura, build de release | [M15](../../modulos/15-build-android/README.md) e [M16](../../modulos/16-build-ios/README.md) |
 
 > ⚠️ Guardar uma **lista que cresce** em `shared_preferences` é o abuso descrito na
 > [aula 2 do M10](../../modulos/10-persistencia-de-dados/02-shared-preferences.md), e é proposital:
 > você sente o custo de reescrever o arquivo inteiro a cada nota. Daí o RF23.
 
 > 🪟 Tudo roda no Windows 11 (`flutter run -d chrome` ou emulador Android). **Nada aqui exige Mac.**
-> Gerar `.ipa` exige macOS — máquina física ou *runner* macOS em CI — e isso é o módulo 15.
+> Gerar `.ipa` exige macOS — máquina física ou *runner* macOS em CI — e isso é o módulo 16.
 
 ---
 

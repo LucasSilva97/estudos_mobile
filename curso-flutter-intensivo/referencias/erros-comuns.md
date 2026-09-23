@@ -25,6 +25,7 @@
 [🌐 Rede](#-rede) ·
 [🗄️ Banco de dados](#-banco-de-dados) ·
 [🧪 Testes](#-testes) ·
+[🌐 Build Web / PWA](#-build-web--pwa) ·
 [🤖 Build Android](#-build-android) ·
 [🍎 Build iOS](#-build-ios) ·
 [📢 Publicação](#-publicação)
@@ -434,6 +435,188 @@ Se for um `Future` do próprio teste, deixe-o completar com `await tester.pump(d
 
 ---
 
+## 🌐 Build Web / PWA
+
+### Tela branca, com `404` em `main.dart.js`
+
+```text
+GET https://usuario.github.io/main.dart.js  404 (Not Found)
+GET https://usuario.github.io/flutter_bootstrap.js  404 (Not Found)
+```
+
+**Causa:** o `--base-href` está errado ou ausente. O `index.html` carregou, mas manda o
+navegador procurar todo o resto na **raiz** do domínio, e o app mora numa subpasta. Repare que
+falta `/foco/` no caminho dos 404.
+
+**Correção:** `flutter build web --release --base-href /foco/` — começando **e** terminando com
+barra — e recarregue com **Ctrl+Shift+R**, não F5: o service worker antigo serve o cache
+quebrado e faz parecer que a correção não funcionou.
+→ [14.08 — Gerando o build web](../modulos/14-build-web-pwa/08-gerando-o-build-web.md)
+
+---
+
+### Tela branca, com o Console **vazio**
+
+**Causa:** não é caminho nem código — é **cache**. O service worker registrado numa tentativa
+anterior está servindo um build quebrado. Na aba Network, a coluna *Size* mostra
+`(ServiceWorker)` em vez do tamanho.
+
+**Correção:** Ctrl+Shift+R, ou `Application → Service workers → Unregister`. Para confirmar o
+diagnóstico antes de mexer em qualquer coisa: abra em **janela anônima** — se funcionar lá, é
+cache.
+→ [14.10 — Diagnóstico web](../modulos/14-build-web-pwa/10-diagnostico-web.md)
+
+---
+
+### `Unsupported operation: Platform._operatingSystem`
+
+```text
+Unsupported operation: Platform._operatingSystem
+    at Object.wrapException (main.dart.js:1234)
+```
+
+**Causa:** `Platform.isAndroid`/`isIOS` na web. O `dart2js` fornece uma casca de `dart:io` em
+que as operações lançam — então o código **compila**, publica, e só quebra quando a linha
+executa, no navegador do usuário.
+
+**Correção:** use `Plataforma.ehApple(context)`, baseada em `Theme.of(context).platform`.
+E ponha `flutter test --platform chrome` no CI: é o único portão que pega isso antes do deploy.
+→ [14.03 — O que não funciona na web](../modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md)
+
+---
+
+### `MissingPluginException` na web
+
+```text
+MissingPluginException(No implementation found for method
+getApplicationDocumentsDirectory on channel plugins.flutter.io/path_provider)
+```
+
+**Causa:** o plugin não tem implementação web. O nome do canal identifica qual é.
+
+**Correção:** isole a chamada num arquivo `_io.dart` com importação condicional, ou confira o
+selo `Web` do pacote no pub.dev antes de adotá-lo.
+→ [14.03 — O que não funciona na web](../modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md)
+
+---
+
+### `ClientException: Failed to fetch` (só no navegador)
+
+```text
+Access to XMLHttpRequest at 'https://api.exemplo/dados' from origin
+'https://usuario.github.io' has been blocked by CORS policy
+```
+
+**Causa:** **CORS**. Regra do navegador, que não existe no Android nem no iOS — por isso o
+mesmo código funciona no celular e falha no Chrome. Um `200` na aba Network **não** descarta:
+o servidor respondeu e o navegador descartou a resposta.
+
+**Correção:** o servidor precisa mandar `Access-Control-Allow-Origin`, ou você usa um proxy na
+mesma origem. **Não existe** flag no `package:http` que desative isso. Confirme no **Console**,
+nunca na Network.
+→ [14.03 — O que não funciona na web](../modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md)
+
+---
+
+### `Failed to load sqlite3.wasm`
+
+**Causa:** ou o `dart run sqflite_common_ffi_web:setup` nunca rodou, ou `web/sqlite3.wasm` e
+`web/sqflite_sw.js` não foram commitados. O segundo caso é o cruel: funciona na sua máquina e
+quebra só no deploy, porque o CI compila a partir do repositório.
+
+**Correção:** rode o setup e `git add web/sqlite3.wasm web/sqflite_sw.js`. Acrescente
+`test -f build/web/sqlite3.wasm` às conferências do workflow.
+→ [14.04 — Banco de dados na web](../modulos/14-build-web-pwa/04-banco-de-dados-na-web.md)
+
+---
+
+### O app não abre em modo avião
+
+**Causa:** o CanvasKit está vindo do CDN do Google. O service worker do Flutter só faz cache de
+recursos da **mesma origem**, então o engine nunca entra no cache offline.
+
+**Correção:** compile com `--no-web-resources-cdn`. Em um PWA que promete offline, essa flag
+não é opcional.
+→ [14.08 — Gerando o build web](../modulos/14-build-web-pwa/08-gerando-o-build-web.md)
+
+---
+
+### O botão de instalar não aparece
+
+**Causa:** um dos 8 critérios de instalabilidade falhou. Os três mais comuns: aberto por
+`http://192.168…` (IP de rede local **não** é origem segura), build feito com
+`--pwa-strategy=none` (sem service worker), ou o app **já está instalado**.
+
+**Correção:** `Application → Manifest → Installability` diz exatamente qual critério falhou.
+Só o caso "já instalado" não aparece lá — o navegador simplesmente para de oferecer.
+→ [14.07 — Instalabilidade](../modulos/14-build-web-pwa/07-instalabilidade.md)
+
+---
+
+### Barra de navegador aparecendo dentro do app instalado
+
+**Causa:** o `scope` do `manifest.json` não corresponde ao `--base-href`. O navegador entende
+que a navegação saiu do app.
+
+**Correção:** os dois iguais, com barra final. Esse defeito não quebra o build nem o deploy —
+só aparece para quem instala, que é justamente o que ninguém testa antes de publicar.
+→ [14.05 — Manifest e ícones](../modulos/14-build-web-pwa/05-manifest-e-icones.md)
+
+---
+
+### 🍎 O ícone no iPhone é um print da página
+
+**Causa:** o Safari ignora os `icons` do manifest e procura `apple-touch-icon`.
+
+**Correção:** as quatro meta tags `apple-*` no `web/index.html`.
+→ [14.05 — Manifest e ícones](../modulos/14-build-web-pwa/05-manifest-e-icones.md)
+
+---
+
+### O usuário continua vendo a versão antiga depois do deploy
+
+**Causa:** não é bug. O service worker serve o cache para abrir instantâneo e baixa a versão
+nova em paralelo — que passa a valer na **abertura seguinte**.
+
+**Correção:** implemente o aviso de atualização com `controllerchange` (com guarda de primeira
+visita, senão todo usuário novo recebe o aviso). Desligar o service worker "resolveria" e
+custaria o offline e a instalabilidade.
+→ [14.06 — Service worker e offline](../modulos/14-build-web-pwa/06-service-worker-e-offline.md)
+
+---
+
+### Link direto para uma tela interna dá 404
+
+**Causa:** hospedagem estática não tem *rewrite*. Com `usePathUrlStrategy()`, abrir
+`/foco/sessoes` faz o servidor procurar um arquivo com esse nome.
+
+**Correção:** publique um `404.html` que é uma **cópia** do `index.html` — assim o Flutter
+carrega e o `onGenerateRoute` resolve a rota.
+→ [14.09 — Publicando no GitHub Pages](../modulos/14-build-web-pwa/09-publicando-no-github-pages.md)
+
+---
+
+### Os dados dos usuários sumiram depois de publicar
+
+**Causa:** a **URL mudou**. O IndexedDB é por origem — renomear o repositório ou migrar para
+domínio próprio cria um armazenamento novo e vazio, e o antigo fica inacessível.
+
+**Correção:** não tem, depois do fato. Decida a URL definitiva **antes** de ter usuários; é o
+equivalente web ao `applicationId` do Android.
+→ [14.04 — Banco de dados na web](../modulos/14-build-web-pwa/04-banco-de-dados-na-web.md)
+
+---
+
+### A URL publicada mostra o `README.md`
+
+**Causa:** em `Settings → Pages`, o *Source* está como "Deploy from a branch" — o GitHub está
+servindo o repositório como está, não o build.
+
+**Correção:** *Source* = **GitHub Actions**.
+→ [14.09 — Publicando no GitHub Pages](../modulos/14-build-web-pwa/09-publicando-no-github-pages.md)
+
+---
+
 ## 🤖 Build Android
 
 ### `Keystore file not found`
@@ -442,7 +625,7 @@ Se for um `Future` do próprio teste, deixe-o completar com `await tester.pump(d
 `.properties`, `\` é caractere de escape — e a mensagem não menciona isso.
 
 **Correção:** use barras normais, mesmo no Windows: `C:/Users/.../chave.jks`.
-→ [Módulo 14, aula 7](../modulos/14-build-android/07-assinatura-no-gradle.md)
+→ [Módulo 15, aula 7](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 ---
 
@@ -494,7 +677,7 @@ conseguiria atualizar** — investigue por que a chave mudou.
 **Causa:** o R8 removeu uma classe que só é usada por reflexão. Debug não roda o R8.
 
 **Correção:** regra `-keep` em `proguard-rules.pro`.
-→ [Módulo 14, aula 7](../modulos/14-build-android/07-assinatura-no-gradle.md)
+→ [Módulo 15, aula 7](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 ---
 
@@ -517,7 +700,7 @@ conseguiria atualizar** — investigue por que a chave mudou.
 As duas produzem a **mesma** mensagem.
 
 **Correção:** `open ios/Runner.xcworkspace` e `cd ios && pod install`.
-→ [Módulo 15, aula 4](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+→ [Módulo 16, aula 4](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 ---
 
@@ -528,7 +711,7 @@ As duas produzem a **mesma** mensagem.
 **Correção:** o erro real está no **Report Navigator (⌘9)** → última build → etapa vermelha →
 ícone de expandir transcrição. Procurar essa mensagem na internet devolve centenas de causas
 diferentes, todas verdadeiras para alguém.
-→ [Módulo 15, aula 10](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
+→ [Módulo 16, aula 10](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
 
 ---
 
@@ -564,7 +747,7 @@ The app store icon can't be transparent nor contain an alpha channel.
 **Causa:** ícone com canal alfa. Descoberto **no upload**, depois de todo o build.
 
 **Correção:** `remove_alpha_ios: true` no `flutter_launcher_icons`.
-→ [Módulo 15, aula 5](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+→ [Módulo 16, aula 5](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 ---
 

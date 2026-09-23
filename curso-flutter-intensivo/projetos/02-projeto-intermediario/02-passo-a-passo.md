@@ -5,7 +5,7 @@
 > bater, nunca para colar 17 arquivos de uma vez.
 
 > 🪟 Tudo roda no Windows 11: `flutter run -d chrome`, `-d windows` ou um emulador Android. Nada
-> aqui exige Mac — o `.ipa` é o [módulo 15](../../modulos/15-build-ios/README.md).
+> aqui exige Mac — o `.ipa` é o [módulo 16](../../modulos/16-build-ios/README.md).
 
 São oito etapas e **ao fim de cada uma o app roda**. Se não roda, conserte antes de avançar.
 

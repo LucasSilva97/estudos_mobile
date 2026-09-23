@@ -263,11 +263,11 @@ do `git merge`, reaparece. É o ponteiro da branch mudando o que está no disco.
   [Módulo 06](../06-widgets-e-layouts/04-row-column-expanded.md) você vai testar três arranjos de
   tela: uma branch por tentativa permite comparar e descartar sem medo.
 - **`.gitignore` é o que protege sua chave de assinatura.** Em
-  [Módulo 14 — Keystore](../14-build-android/06-keystore.md) você gera um arquivo `.jks` e um
+  [Módulo 15 — Keystore](../15-build-android/06-keystore.md) você gera um arquivo `.jks` e um
   `key.properties` com senhas. Se eles vazarem, outra pessoa pode publicar um app se passando pelo
   seu. As regras `*.jks` e `/android/key.properties` acima existem exatamente para isso.
 - **Mensagens de commit viram o changelog da release** em
-  [Módulo 16](../16-publicacao-e-proximos-passos/03-versionamento-e-releases.md).
+  [Módulo 17](../17-publicacao-e-proximos-passos/03-versionamento-e-releases.md).
 
 ---
 
@@ -430,7 +430,7 @@ de outra pessoa. 🍎 A pasta `Pods/` é baixada pelo CocoaPods a partir do `Pod
 
 > 🍎 **SÓ NO MAC.** Você não gera `*.mobileprovision` nem `*.p12` no Windows: eles vêm da conta de
 > desenvolvedor da Apple e do Xcode. Deixe as regras no `.gitignore` desde já — o custo é zero. Veja
-> [15-build-ios/07-certificados-e-provisioning.md](../15-build-ios/07-certificados-e-provisioning.md).
+> [16-build-ios/07-certificados-e-provisioning.md](../16-build-ios/07-certificados-e-provisioning.md).
 
 ---
 

@@ -213,7 +213,7 @@ Então para onde vai o *stack trace*? Para o **log**:
 `debugPrint` e `debugPrintStack` são **removidos automaticamente** do build de release pelo
 Flutter — o que é exatamente o comportamento desejado. Num app de verdade, você trocaria isso por
 uma ferramenta de monitoramento, assunto de
-[16/05 — Monitoramento e feedback](../16-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md).
+[16/05 — Monitoramento e feedback](../17-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md).
 
 ### Como escrever uma boa mensagem de erro
 

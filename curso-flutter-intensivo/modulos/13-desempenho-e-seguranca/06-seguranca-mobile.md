@@ -671,12 +671,12 @@ config/*.json
 .env*
 !.env.example
 
-# ── Assinatura Android (Módulo 14) ────────────────────────────
+# ── Assinatura Android (Módulo 15) ────────────────────────────
 android/key.properties
 *.jks
 *.keystore
 
-# ── Assinatura iOS (Módulo 15) ────────────────────────────────
+# ── Assinatura iOS (Módulo 16) ────────────────────────────────
 ios/Runner/GoogleService-Info.plist
 *.mobileprovision
 *.p12

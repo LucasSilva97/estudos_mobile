@@ -660,7 +660,7 @@ banco antes — copiar só o `.db` pode trazer uma versão sem as últimas escri
 > exige macOS + Xcode. No Windows você pode ler e entender o processo, mas não executá-lo — e,
 > mais importante, **não precisa dele para este módulo**: seus testes com `sqflite_common_ffi`
 > exercitam exatamente o mesmo SQL. Veja
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 ---
 

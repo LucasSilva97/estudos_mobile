@@ -73,7 +73,7 @@ seção 7 ("Se você atrasar").
 | 12 | [Módulo 09](modulos/09-consumo-de-api/README.md) + [módulo 10](modulos/10-persistencia-de-dados/README.md) + [cumulativa 03](avaliacoes/cumulativa-03-estado-e-dados.md) | API e banco local funcionando |
 | 13 | [Módulo 11](modulos/11-recursos-nativos/README.md) + [módulo 12](modulos/12-testes-e-debug/README.md) + [módulo 13](modulos/13-desempenho-e-seguranca/README.md) + [cumulativa 04](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | Testes passando |
 | 14 | [Projeto Final](projetos/03-projeto-final-multiplataforma/README.md) etapas 1–8 | App "Foco" completo |
-| 15 | **Revisão** + [módulo 14](modulos/14-build-android/README.md) + [módulo 15](modulos/15-build-ios/README.md) + [módulo 16](modulos/16-publicacao-e-proximos-passos/README.md) + [cumulativa 05](avaliacoes/cumulativa-05-build-e-distribuicao.md) + [avaliação final](avaliacoes/avaliacao-final.md) | **APK + AAB assinados** |
+| 15 | **Revisão** + [módulo 14](modulos/14-build-web-pwa/README.md) + [módulo 15](modulos/15-build-android/README.md) + [módulo 16](modulos/16-build-ios/README.md) + [módulo 17](modulos/17-publicacao-e-proximos-passos/README.md) + [cumulativa 05](avaliacoes/cumulativa-05-build-e-distribuicao.md) + [avaliação final](avaliacoes/avaliacao-final.md) | **PWA no ar + APK e AAB assinados** |
 
 ### 2.2 Critérios objetivos para avançar de dia (ritmo A)
 
@@ -143,7 +143,7 @@ seção 4 vira dois dias aqui.
 | 6 | 36–42 | [Módulo 06](modulos/06-widgets-e-layouts/README.md) completo |
 | 7 | 43–49 | [Módulo 07](modulos/07-navegacao-e-formularios/README.md) + [cumulativa 02](avaliacoes/cumulativa-02-flutter-ui.md) + [Projeto 2](projetos/02-projeto-intermediario/README.md) |
 | 8 | 50–56 | [Módulo 08](modulos/08-estado-e-arquitetura/README.md) + [módulo 09](modulos/09-consumo-de-api/README.md) |
-| 9 | 57–60 | [Módulo 10](modulos/10-persistencia-de-dados/README.md) a [módulo 16](modulos/16-publicacao-e-proximos-passos/README.md) + [Projeto Final](projetos/03-projeto-final-multiplataforma/README.md) + [avaliação final](avaliacoes/avaliacao-final.md) |
+| 9 | 57–60 | [Módulo 10](modulos/10-persistencia-de-dados/README.md) a [módulo 17](modulos/17-publicacao-e-proximos-passos/README.md) + [Projeto Final](projetos/03-projeto-final-multiplataforma/README.md) + [avaliação final](avaliacoes/avaliacao-final.md) |
 
 > No ritmo C a semana 9 concentra muito conteúdo. Se você escolher este ritmo, é normal
 > estendê-lo para 70 dias. **Estender é melhor do que pular conteúdo obrigatório.**
@@ -172,7 +172,7 @@ seção 4 vira dois dias aqui.
 | **Avaliações cumulativas** | Dias 9, 15, 22, 24 e 30 |
 | **Avaliação final** | Dia 30 |
 | **Projetos** | Projeto 1 no dia 10 · Projeto 2 nos dias 15–16 · Projeto Final nos dias 25–27 |
-| **Entregas principais** | Dia 10: app com estado · Dia 16: app com várias telas e persistência · Dia 27: app "Foco" completo · Dia 28: **APK + AAB assinados** · Dia 29: projeto iOS preparado · Dia 30: curso concluído |
+| **Entregas principais** | Dia 10: app com estado · Dia 16: app com várias telas e persistência · Dia 27: app "Foco" completo · Dia 28: **PWA publicado, instalável e offline** · Dia 29: **APK + AAB assinados** · Dia 30: projeto iOS preparado e curso concluído |
 
 ### 4.1 Como é cada dia de 4 horas
 
@@ -218,8 +218,8 @@ seção 4 vira dois dias aqui.
 | 25 | **Projeto Final** etapas 1–3 |
 | 26 | **Projeto Final** etapas 4–5 |
 | 27 | **Projeto Final** etapas 6–8 |
-| 28 | **Revisão** + Módulo 14 (build Android) → **APK + AAB gerados** |
-| 29 | Módulo 15 (build iOS) + Módulo 16 |
+| 28 | **Revisão** + Módulo 15 (build Android) → **APK + AAB gerados** |
+| 29 | Módulo 16 (build iOS) + Módulo 17 |
 | 30 | Avaliação cumulativa 05 + Avaliação final + checklists |
 
 ---
@@ -617,38 +617,74 @@ respondendo.
 - [08 — Etapa 6: Responsividade e acessibilidade](projetos/03-projeto-final-multiplataforma/08-etapa-6-responsividade-e-acessibilidade.md)
 - [09 — Etapa 7: Testes](projetos/03-projeto-final-multiplataforma/09-etapa-7-testes.md)
 - [10 — Etapa 8: Ícone, splash e versão](projetos/03-projeto-final-multiplataforma/10-etapa-8-icone-splash-e-versao.md)
-- [11 — Critérios de aceite](projetos/03-projeto-final-multiplataforma/11-criterios-de-aceite.md)
-- [13 — Checklist](projetos/03-projeto-final-multiplataforma/13-checklist.md)
+- [11 — Critérios de aceite](projetos/03-projeto-final-multiplataforma/12-criterios-de-aceite.md)
+- [13 — Checklist](projetos/03-projeto-final-multiplataforma/14-checklist.md)
 - [checklists/projeto-final.md](checklists/projeto-final.md)
 
 **🎁 ENTREGA DO DIA 27:** app "Foco" completo, testado, com ícone e splash próprios.
-Desafios opcionais em [12-desafios.md](projetos/03-projeto-final-multiplataforma/12-desafios.md) ·
+Desafios opcionais em [13-desafios.md](projetos/03-projeto-final-multiplataforma/13-desafios.md) ·
 [gabarito](gabaritos/projeto-03-desafios.md).
 
-### Dia 28 — 🔁 REVISÃO + Build Android 🤖
+### Dia 28 — 🔁 REVISÃO + Build Web/PWA 🌐 — **o canal principal**
 
 **Revisão (45 min)** — rode o [checklist do projeto final](checklists/projeto-final.md)
 inteiro e corrija o que estiver aberto.
 
 **Conteúdo (2 h 15)**
-- [14-build-android · README](modulos/14-build-android/README.md)
-- [01 — Debug, profile e release](modulos/14-build-android/01-debug-profile-release.md)
-- [02 — Identidade do app](modulos/14-build-android/02-identidade-do-app.md)
-- [03 — Ícone](modulos/14-build-android/03-icone.md)
-- [04 — Splash screen](modulos/14-build-android/04-splash-screen.md)
-- [05 — Permissões no Android](modulos/14-build-android/05-permissoes-android.md)
-- [06 — Keystore](modulos/14-build-android/06-keystore.md)
-- [07 — Assinatura no Gradle](modulos/14-build-android/07-assinatura-no-gradle.md)
-- [08 — Gerando APK e AAB](modulos/14-build-android/08-gerando-apk-e-aab.md)
-- [09 — Instalando e validando](modulos/14-build-android/09-instalando-e-validando.md)
-- [10 — Diagnóstico de build](modulos/14-build-android/10-diagnostico-de-build.md)
+- [14-build-web-pwa · README](modulos/14-build-web-pwa/README.md)
+- [01 — Por que PWA é o canal principal](modulos/14-build-web-pwa/01-por-que-pwa.md)
+- [02 — Como o Flutter compila para web](modulos/14-build-web-pwa/02-como-o-flutter-compila-para-web.md)
+- [03 — O que não funciona na web](modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md)
+- [04 — Banco de dados na web](modulos/14-build-web-pwa/04-banco-de-dados-na-web.md)
+- [05 — Manifest e ícones](modulos/14-build-web-pwa/05-manifest-e-icones.md)
+- [06 — Service worker e offline](modulos/14-build-web-pwa/06-service-worker-e-offline.md)
+- [07 — Instalabilidade](modulos/14-build-web-pwa/07-instalabilidade.md)
+- [08 — Gerando o build web](modulos/14-build-web-pwa/08-gerando-o-build-web.md)
+- [09 — Publicando no GitHub Pages](modulos/14-build-web-pwa/09-publicando-no-github-pages.md)
+- [10 — Diagnóstico web](modulos/14-build-web-pwa/10-diagnostico-web.md)
 
-**Prática (1 h)** — [lista M14](exercicios/14-build-android.md) ·
-[gabarito](gabaritos/14-build-android.md) ·
-[avaliação do módulo 14](avaliacoes/modulo-14-build-android.md) ·
-[checklist de build Android](checklists/build-android.md)
+**Prática (1 h)** — [Etapa 9 do projeto final](projetos/03-projeto-final-multiplataforma/11-etapa-9-pwa-e-publicacao.md) ·
+[lista M14](exercicios/14-build-web-pwa.md) ·
+[gabarito](gabaritos/14-build-web-pwa.md) ·
+[avaliação do módulo 14](avaliacoes/modulo-14-build-web-pwa.md) ·
+[checklist de build web](checklists/build-web.md)
+
+> 🌐 **Tudo deste dia roda no Windows 11**, sem emulador, sem SDK nativo e sem cabo USB. É o
+> único dia de build do curso do qual isso é verdade — e o único que não custa nada.
 
 **🎁 ENTREGA DO DIA 28 — a mais importante do curso:**
+
+| Resultado | Como comprovar |
+|---|---|
+| O Foco em uma **URL pública** | Abre em outro aparelho, por HTTPS |
+| **Instalado** na tela inicial de um celular | Abre pelo ícone, **sem barra de endereços** |
+| Funcionando **offline** | Modo avião: abre, lista matérias e grava sessão nova |
+| Deploy **automatizado** | `git push` na `main` publica em ~2 min |
+
+Ao fim deste dia o Foco existe para outras pessoas — sem loja, sem conta paga, sem Mac e sem
+revisão. Os dias 29 e 30 acrescentam canais; nenhum deles substitui este.
+
+### Dia 29 — Build Android 🤖 — canal adicional
+
+**Conteúdo (3 h)**
+- [15-build-android · README](modulos/15-build-android/README.md)
+- [01 — Debug, profile e release](modulos/15-build-android/01-debug-profile-release.md)
+- [02 — Identidade do app](modulos/15-build-android/02-identidade-do-app.md)
+- [03 — Ícone](modulos/15-build-android/03-icone.md)
+- [04 — Splash screen](modulos/15-build-android/04-splash-screen.md)
+- [05 — Permissões no Android](modulos/15-build-android/05-permissoes-android.md)
+- [06 — Keystore](modulos/15-build-android/06-keystore.md)
+- [07 — Assinatura no Gradle](modulos/15-build-android/07-assinatura-no-gradle.md)
+- [08 — Gerando APK e AAB](modulos/15-build-android/08-gerando-apk-e-aab.md)
+- [09 — Instalando e validando](modulos/15-build-android/09-instalando-e-validando.md)
+- [10 — Diagnóstico de build](modulos/15-build-android/10-diagnostico-de-build.md)
+
+**Prática (1 h)** — [lista M15](exercicios/15-build-android.md) ·
+[gabarito](gabaritos/15-build-android.md) ·
+[avaliação do módulo 15](avaliacoes/modulo-15-build-android.md) ·
+[checklist de build Android](checklists/build-android.md)
+
+**🎁 ENTREGA DO DIA 29:**
 
 | Artefato | Caminho gerado |
 |---|---|
@@ -658,41 +694,45 @@ inteiro e corrija o que estiver aberto.
 
 O APK precisa estar **instalado e funcionando em um celular Android de verdade** ao fim do dia.
 
-### Dia 29 — Build iOS 🍎 + Publicação
+### Dia 30 — Build iOS 🍎 + Publicação + fechamento
+
+> ⏱️ **Este é o dia mais longo do plano (~6 h).** Ele concentra o módulo iOS — que no Windows é
+> **leitura e preparação**, e por isso anda rápido —, o módulo de publicação e o fechamento do
+> curso. Se você quiser manter as 4 h/dia, **divida este dia em dois** e o plano vira 31 dias:
+> Dia 30 com os módulos 16 e 17, Dia 31 com as avaliações e os checklists. Os ritmos de 45 e 60
+> dias já absorvem isso sem ajuste.
 
 **Conteúdo iOS (2 h)**
-- [15-build-ios · README](modulos/15-build-ios/README.md)
-- [01 — Por que exige macOS](modulos/15-build-ios/01-por-que-exige-macos.md)
-- [02 — Xcode e CocoaPods](modulos/15-build-ios/02-xcode-e-cocoapods.md)
-- [03 — Simulador e iPhone físico](modulos/15-build-ios/03-simulador-e-iphone-fisico.md)
-- [04 — Bundle ID e Xcode](modulos/15-build-ios/04-bundle-id-e-xcode.md)
-- [05 — Ícone, splash, versão e Info.plist](modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
-- [06 — Conta Apple gratuita × paga](modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md)
-- [07 — Certificados e provisioning](modulos/15-build-ios/07-certificados-e-provisioning.md)
-- [08 — Build IPA e archive](modulos/15-build-ios/08-build-ipa-e-archive.md)
-- [09 — Exportando IPA e TestFlight](modulos/15-build-ios/09-exportando-ipa-e-testflight.md)
-- [10 — Diagnóstico de CocoaPods e assinatura](modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
-- [lista M15](exercicios/15-build-ios.md) · [gabarito](gabaritos/15-build-ios.md) · [avaliação](avaliacoes/modulo-15-build-ios.md) · [checklist](checklists/build-ios.md) · [checklist de ambiente iOS](checklists/ambiente-ios.md)
+- [16-build-ios · README](modulos/16-build-ios/README.md)
+- [01 — Por que exige macOS](modulos/16-build-ios/01-por-que-exige-macos.md)
+- [02 — Xcode e CocoaPods](modulos/16-build-ios/02-xcode-e-cocoapods.md)
+- [03 — Simulador e iPhone físico](modulos/16-build-ios/03-simulador-e-iphone-fisico.md)
+- [04 — Bundle ID e Xcode](modulos/16-build-ios/04-bundle-id-e-xcode.md)
+- [05 — Ícone, splash, versão e Info.plist](modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
+- [06 — Conta Apple gratuita × paga](modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md)
+- [07 — Certificados e provisioning](modulos/16-build-ios/07-certificados-e-provisioning.md)
+- [08 — Build IPA e archive](modulos/16-build-ios/08-build-ipa-e-archive.md)
+- [09 — Exportando IPA e TestFlight](modulos/16-build-ios/09-exportando-ipa-e-testflight.md)
+- [10 — Diagnóstico de CocoaPods e assinatura](modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
+- [lista M16](exercicios/16-build-ios.md) · [gabarito](gabaritos/16-build-ios.md) · [avaliação](avaliacoes/modulo-16-build-ios.md) · [checklist](checklists/build-ios.md) · [checklist de ambiente iOS](checklists/ambiente-ios.md)
 
 > 🍎 **SÓ NO MAC.** Gerar o `.ipa`, abrir o Xcode e subir ao TestFlight exigem macOS + Xcode.
 > No Windows você **lê, entende e deixa o projeto preparado** (Bundle ID, ícone, `Info.plist`,
 > versões). Entenda o porquê técnico em
-> [15-build-ios/01-por-que-exige-macos.md](modulos/15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](modulos/16-build-ios/01-por-que-exige-macos.md).
 
 **Conteúdo publicação (2 h)**
-- [16-publicacao-e-proximos-passos · README](modulos/16-publicacao-e-proximos-passos/README.md)
-- [01 — Google Play](modulos/16-publicacao-e-proximos-passos/01-google-play.md)
-- [02 — App Store Connect](modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md) 🍎
-- [03 — Versionamento e releases](modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
-- [04 — CI/CD introdutório](modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md)
-- [05 — Monitoramento e feedback](modulos/16-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md)
-- [06 — Próximos passos](modulos/16-publicacao-e-proximos-passos/06-proximos-passos.md)
-- [lista M16](exercicios/16-publicacao-e-proximos-passos.md) · [gabarito](gabaritos/16-publicacao-e-proximos-passos.md) · [avaliação](avaliacoes/modulo-16-publicacao-e-proximos-passos.md)
-
-### Dia 30 — Cumulativa 05 + Avaliação final + checklists
+- [17-publicacao-e-proximos-passos · README](modulos/17-publicacao-e-proximos-passos/README.md)
+- [01 — Google Play](modulos/17-publicacao-e-proximos-passos/01-google-play.md)
+- [02 — App Store Connect](modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md) 🍎
+- [03 — Versionamento e releases](modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
+- [04 — CI/CD introdutório](modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md)
+- [05 — Monitoramento e feedback](modulos/17-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md)
+- [06 — Próximos passos](modulos/17-publicacao-e-proximos-passos/06-proximos-passos.md)
+- [lista M17](exercicios/17-publicacao-e-proximos-passos.md) · [gabarito](gabaritos/17-publicacao-e-proximos-passos.md) · [avaliação](avaliacoes/modulo-17-publicacao-e-proximos-passos.md)
 
 **Avaliações (2 h 30)**
-- [Cumulativa 05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) (módulos 14 a 16)
+- [Cumulativa 05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) (módulos 14 a 17)
 - [Avaliação final](avaliacoes/avaliacao-final.md) (curso inteiro + projeto "Foco")
 - Respostas: [gabarito-das-avaliacoes.md](gabaritos/avaliacoes.md)
 
@@ -700,6 +740,7 @@ O APK precisa estar **instalado e funcionando em um celular Android de verdade**
 - [checklists/ambiente-android.md](checklists/ambiente-android.md)
 - [checklists/ambiente-ios.md](checklists/ambiente-ios.md) 🍎
 - [checklists/projeto-final.md](checklists/projeto-final.md)
+- [checklists/build-web.md](checklists/build-web.md) 🌐
 - [checklists/build-android.md](checklists/build-android.md)
 - [checklists/build-ios.md](checklists/build-ios.md) 🍎
 - [03-trilha-de-progresso.md](03-trilha-de-progresso.md) — marcar tudo
@@ -731,11 +772,11 @@ O APK precisa estar **instalado e funcionando em um celular Android de verdade**
 | [02 — Flutter UI](avaliacoes/cumulativa-02-flutter-ui.md) | **9** | 15 | Módulos 05–07 | 70 % | Refaça o Projeto 1 do zero |
 | [03 — Estado e dados](avaliacoes/cumulativa-03-estado-e-dados.md) | **12** | 22 | Módulos 08–10 | 70 % | Refaça o módulo 08 inteiro |
 | [04 — Qualidade e plataforma](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | **13** | 24 | Módulos 11–13 | 70 % | Refaça os exercícios do módulo 12 |
-| [05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | **15** | 30 | Módulos 14–16 | 70 % | Refaça o módulo 14 e gere o APK de novo |
+| [05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | **15** | 30 | Módulos 14–16 | 70 % | Refaça o módulo 15 e gere o APK de novo |
 
 ### 6.4 Para considerar o **curso concluído**
 
-- [ ] Os 17 módulos marcados na trilha.
+- [ ] Os 18 módulos marcados na trilha.
 - [ ] Os 3 projetos funcionando.
 - [ ] APK **e** AAB de release assinados, gerados e instalados em um Android real.
 - [ ] Projeto iOS preparado (Bundle ID `br.com.estudos.foco`, ícone, `Info.plist`, versões).
@@ -763,7 +804,7 @@ Atrasar é normal. Improvisar é o que estraga o plano. Use estas regras:
 2. Os exercícios obrigatórios.
 3. As 5 avaliações cumulativas e a final.
 4. Os 3 projetos.
-5. O dia 15 — é o dia em que o APK e o AAB nascem no seu plano.
+5. O dia 15 — é o dia em que o PWA vai ao ar e o APK e o AAB nascem no seu plano.
 
 ---
 

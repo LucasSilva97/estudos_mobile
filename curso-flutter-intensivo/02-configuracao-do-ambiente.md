@@ -149,7 +149,7 @@ app para vários sistemas. É o caso do Flutter.
 ## 0.6 APK, AAB, build iOS e IPA
 
 Esses quatro nomes são os **formatos de entrega** do seu app. Você vai gerá-los nos módulos
-[14](modulos/14-build-android/README.md) e [15](modulos/15-build-ios/README.md), mas precisa
+[14](modulos/15-build-android/README.md) e [15](modulos/16-build-ios/README.md), mas precisa
 saber o que são desde já, porque eles aparecem em mensagens de erro.
 
 ### 🤖 APK — *Android Package*
@@ -252,7 +252,7 @@ Regras de convivência com essa árvore:
 
 1. **Você escreve quase 100% do tempo dentro de `lib/` e `test/`.**
 2. As pastas `android/` e `ios/` você só toca quando for mexer em permissões, ícone, nome do app
-   ou assinatura — módulos 14 e 15.
+   ou assinatura — módulos 15 e 16.
 3. A pasta `build/` **não aparece acima porque ela só nasce depois do primeiro build**. Ela é
    descartável: `flutter clean` apaga tudo dela. Ela já vem no `.gitignore` e **nunca** deve ser
    versionada.
@@ -1514,7 +1514,7 @@ E cada categoria significa:
 | `Flutter` | Versão, canal, revisão e se o SDK está íntegro | ✅ **Sim, sempre** |
 | `Windows Version` | Se a sua versão do Windows é suportada | ✅ Sim |
 | `Android toolchain` | Android SDK, Platform-Tools, JDK e licenças | ✅ **Sim**, para gerar APK/AAB |
-| `Chrome - develop for the web` | Se o Chrome existe, para rodar `flutter run -d chrome` | ⚠️ Útil no curso (permite estudar sem emulador) |
+| `Chrome - develop for the web` | Se o Chrome existe, para rodar `flutter run -d chrome` | ✅ **Sim** — é o alvo do [Módulo 14](modulos/14-build-web-pwa/README.md), o canal principal de distribuição, e permite estudar sem emulador |
 | `Visual Studio - develop Windows apps` | Se o Visual Studio com o pacote **Desktop development with C++** existe | ⚠️ Só para `flutter run -d windows` |
 | `Android Studio` | Se o Android Studio e os plugins Flutter/Dart estão instalados | ✅ Sim (é ele que gerencia SDK e emulador) |
 | `VS Code` | Se o VS Code e a extensão Flutter estão instalados | ⚠️ Recomendado |
@@ -1649,7 +1649,7 @@ ls -a
 | `analysis_options.yaml` | Regras de lint. Já vem com `package:flutter_lints/flutter.yaml` | ⚠️ Só para ajustar regras |
 | `test/widget_test.dart` | Teste de widget de exemplo | ✅ A partir do módulo 12 |
 | `.metadata` | Versão do Flutter usada na criação. Uso interno | ❌ Nunca |
-| `.gitignore` | O que o Git ignora (inclui `build/` e `.dart_tool/`) | ⚠️ Você acrescenta segredos aqui (módulo 14) |
+| `.gitignore` | O que o Git ignora (inclui `build/` e `.dart_tool/`) | ⚠️ Você acrescenta segredos aqui (módulo 15) |
 | `android/` | Projeto Android nativo | ⚠️ Módulos 11 e 14 |
 | `ios/` | Projeto iOS nativo | ⚠️ Módulos 11 e 15 |
 | `web/`, `windows/`, `linux/`, `macos/` | Projetos nativos das demais plataformas | ❌ Raramente |
@@ -1769,7 +1769,7 @@ Com o `flutter run` em execução, o terminal aceita teclas:
 
 - **Hot reload só existe em modo *debug*.** Nos modos *profile* e *release* o código é compilado
   de forma diferente e não aceita injeção. Isso é explicado em
-  [modulos/14-build-android/01-debug-profile-release.md](modulos/14-build-android/01-debug-profile-release.md).
+  [modulos/15-build-android/01-debug-profile-release.md](modulos/15-build-android/01-debug-profile-release.md).
 - **No VS Code** o hot reload dispara **automaticamente ao salvar** o arquivo
   (<kbd>Ctrl</kbd>+<kbd>S</kbd>). O hot restart tem o atalho
   <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F5</kbd>.
@@ -1862,8 +1862,8 @@ Enquanto não tem um Mac, faça isto — em ordem:
 6. **Estude as diferenças de plataforma** em
    [referencias/diferencas-android-ios.md](referencias/diferencas-android-ios.md).
 7. **Quando conseguir acesso a um Mac**, siga o módulo
-   [15-build-ios](modulos/15-build-ios/README.md) do início ao fim, começando por
-   [01-por-que-exige-macos.md](modulos/15-build-ios/01-por-que-exige-macos.md).
+   [16-build-ios](modulos/16-build-ios/README.md) do início ao fim, começando por
+   [01-por-que-exige-macos.md](modulos/16-build-ios/01-por-que-exige-macos.md).
 
 ## 6.1 Por que a compilação iOS exige macOS
 
@@ -1898,7 +1898,7 @@ para compilar apps comerciais é violação contratual. **Este curso não ensina
 |---|---|---|
 | Mac emprestado / de um colega | Você leva o projeto no Git e compila lá | Mais simples para fazer o primeiro build |
 | Mac na nuvem (*Mac as a service*) | Você aluga por hora um Mac real e acessa remotamente | Custo por hora; funciona bem para builds pontuais |
-| CI/CD com runner macOS | Um serviço de integração contínua roda o build em um Mac real a cada commit | É o caminho profissional. Introduzido em [modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
+| CI/CD com runner macOS | Um serviço de integração contínua roda o build em um Mac real a cada commit | É o caminho profissional. Introduzido em [modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
 | Comprar um Mac | Qualquer Mac com Apple Silicon dá conta | Investimento real |
 
 > ❌ **Não existe** a alternativa "gerar IPA no Windows". Desconfie de qualquer conteúdo que
@@ -1908,7 +1908,7 @@ para compilar apps comerciais é violação contratual. **Este curso não ensina
 
 > 🍎 **SÓ NO MAC.** Este passo exige macOS. No Windows você pode ler e entender o processo, mas
 > não executá-lo. Veja o que fazer enquanto isso em
-> [modulos/15-build-ios/01-por-que-exige-macos.md](modulos/15-build-ios/01-por-que-exige-macos.md).
+> [modulos/16-build-ios/01-por-que-exige-macos.md](modulos/16-build-ios/01-por-que-exige-macos.md).
 
 **O Xcode é a IDE oficial da Apple.** Ele traz o iOS SDK, o simulador, o compilador e as
 ferramentas de assinatura.
@@ -2171,7 +2171,7 @@ Esta é a diferença que mais frustra quem está começando. Entenda antes de in
 > mandar um APK por WhatsApp — no iOS, não existe equivalente disso.
 
 Detalhado em
-[modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md](modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md).
+[modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md](modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md).
 
 ## 6.11 `flutter doctor` no macOS: como ler
 
@@ -2214,7 +2214,7 @@ Avisos típicos do macOS e o que fazem você rodar:
 | Pods quebrados depois de trocar plugins | Cache inconsistente | `flutter clean` → `cd ios` → `pod install` → `flutter run` |
 
 Catálogo completo em
-[modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md](modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md).
+[modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md](modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md).
 
 ---
 
@@ -2240,7 +2240,7 @@ você consegue concluir sozinho.
 | Usar o DevTools | ✅ | ✅ | |
 | Gerar **APK** (`flutter build apk`) | ✅ | ✅ | |
 | Gerar **AAB** (`flutter build appbundle`) | ✅ | ✅ | |
-| Assinar app Android (keystore) | ✅ | ✅ | Módulo 14 |
+| Assinar app Android (keystore) | ✅ | ✅ | Módulo 15 |
 | Publicar na **Google Play** | ✅ | ✅ | É só enviar o AAB pelo navegador |
 | Instalar Xcode | ❌ | ✅ | App Store, só macOS |
 | Instalar CocoaPods | ❌ | ✅ | |
@@ -2250,7 +2250,7 @@ você consegue concluir sozinho.
 | Criar certificados e *provisioning profiles* | ❌ | ✅ | Exige Keychain do macOS |
 | Enviar para **TestFlight** | ❌ | ✅ | Requer Developer Program |
 | Publicar na **App Store** | ❌ | ✅ | |
-| Estudar todo o processo iOS | ✅ | ✅ | É o que a [Parte 6](#parte-6--ambiente-ios--só-no-mac) e o módulo 15 fazem |
+| Estudar todo o processo iOS | ✅ | ✅ | É o que a [Parte 6](#parte-6--ambiente-ios--só-no-mac) e o módulo 16 fazem |
 
 ### Resumo em uma frase
 

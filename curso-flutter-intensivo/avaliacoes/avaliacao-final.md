@@ -67,14 +67,14 @@ abre, e fecha sozinho ao entrar na aba Trilhas — sem caixa vermelha e sem nada
 Entregue o app **Foco** (`br.com.estudos.foco`, `version: 1.0.0+1`) como se fosse para a loja
 amanhã: matérias e sessões em `sqflite`, meta semanal em `shared_preferences`, trilhas vindas da
 API, cinco telas navegadas por `onGenerateRoute` e estado em Riverpod 3 sem *code generation*.
-Feche com a suíte de testes verde, o release Android assinado e um `docs/release-1.0.0.md`
-com os comandos usados e as saídas que comprovam cada item da tabela.
+Feche com a suíte de testes verde, **o Foco publicado como PWA**, o release Android assinado e um
+`docs/release-1.0.0.md` com os comandos usados e as saídas que comprovam cada item da tabela.
 
 > 🍎 **O que exige Mac.** Archive, assinatura e IPA do iOS **não rodam no Windows**. Entregue a
 > preparação (Bundle ID nas três configurações, ícone sem canal alfa, `Info.plist` ligado a
 > `$(FLUTTER_BUILD_NAME)`) e descreva o roteiro do Mac. A alternativa aceita, e a única que
 > automatiza isso sem comprar hardware, é um **runner macOS na CI** —
-> [Aula 16/04](../modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
+> [Aula 17/04](../modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
 
 | Critério | Pontos |
 |---|---:|
@@ -86,6 +86,7 @@ com os comandos usados e as saídas que comprovam cada item da tabela.
 | Acessibilidade: rótulo semântico nos ícones, alvo de toque de 48 dp, contraste do tema e fonte a 200% sem overflow | 4 |
 | Testes: unitários, de widget e um de integração, com mocktail e `overrides`; `flutter analyze --fatal-infos` e `dart format` sem apontamentos | 4 |
 | Feature-first respeitado: `presentation` nunca importa `data` direto, sempre pelo contrato em `domain` | 3 |
+| 🌐 **PWA publicado**: URL pública com HTTPS, `scope` = `--base-href`, ícone `maskable`, instalado na tela inicial de um celular e **abrindo em modo avião** com os dados intactos | 4 |
 | Release Android assinado: `key.properties` fora do Git, AAB e APK `arm64-v8a` gerados, `apksigner verify --print-certs` colado no relatório | 3 |
 | Ofuscação com `--split-debug-info=simbolos/1.0.0` e os símbolos arquivados por versão, fora do build | 2 |
 
@@ -95,19 +96,22 @@ com os comandos usados e as saídas que comprovam cada item da tabela.
 
 Não há aprovação sem estes quatro, independentemente da nota:
 
-- `flutter analyze --fatal-infos` limpo e `flutter test` verde, sem nenhum `skip`.
+- `flutter analyze --fatal-infos` limpo, `flutter test` verde e `flutter test --platform chrome`
+  passando, sem nenhum `skip`.
+- 🌐 O Foco acessível em uma URL pública e abrindo offline depois de instalado.
 - `flutter build appbundle --release` concluindo com assinatura própria.
 - `git status` sem `key.properties`, `*.jks`, `*.keystore` ou `.env`.
-- [Checklist do projeto final](../checklists/projeto-final.md) preenchido com evidência, não de memória.
+- [Checklist do projeto final](../checklists/projeto-final.md) e
+  [checklist de build web](../checklists/build-web.md) preenchidos com evidência, não de memória.
 
 ### O que fazer conforme a faixa
 
 | Faixa | O que isso significa | O que fazer antes de tentar de novo |
 |---|---|---|
-| **55–64** | Você entrega. O que falta é repetição, não conteúdo. | Siga para [16/06 — Próximos passos](../modulos/16-publicacao-e-proximos-passos/06-proximos-passos.md) e comece o segundo app do zero, sem consultar o Foco. |
-| **45–54** | Aprovado com dívida. Costuma ser teste ou build frágil. | Refaça os exercícios de [M12](../exercicios/12-testes-e-debug.md) (E05–E08) e [M14](../exercicios/14-build-android.md) (E06–E08); repita só as partes 2 e 3. |
-| **32–44** | O app existe, mas a arquitetura não se sustenta: estado espalhado, `data` importada na tela, falha engolida. | Releia [08/09 — Feature-first](../modulos/08-estado-e-arquitetura/09-arquitetura-feature-first.md) e [09/04 — Modelando respostas e erros](../modulos/09-consumo-de-api/04-modelando-respostas-e-erros.md); refaça [M08](../exercicios/08-estado-e-arquitetura.md) E06–E10 e reescreva **uma** feature inteira antes de voltar. |
-| **0–31** | A base assíncrona e de dados não fechou. Continuar daqui só acumula retrabalho. | Volte a [04/02](../modulos/04-dart-avancado/02-futures-e-async-await.md), [04/06](../modulos/04-dart-avancado/06-sealed-classes.md) e [10/06 — Migrações](../modulos/10-persistencia-de-dados/06-migracoes.md); refaça [M04](../exercicios/04-dart-avancado.md) e [M10](../exercicios/10-persistencia-de-dados.md) inteiros e repita a avaliação completa. |
+| **58–68** | Você entrega. O que falta é repetição, não conteúdo. | Siga para [17/06 — Próximos passos](../modulos/17-publicacao-e-proximos-passos/06-proximos-passos.md) e comece o segundo app do zero, sem consultar o Foco. |
+| **48–57** | Aprovado com dívida. Costuma ser teste ou build frágil. | Refaça os exercícios de [M12](../exercicios/12-testes-e-debug.md) (E05–E08) e [M15](../exercicios/15-build-android.md) (E06–E08); repita só as partes 2 e 3. |
+| **34–47** | O app existe, mas a arquitetura não se sustenta: estado espalhado, `data` importada na tela, falha engolida. | Releia [08/09 — Feature-first](../modulos/08-estado-e-arquitetura/09-arquitetura-feature-first.md) e [09/04 — Modelando respostas e erros](../modulos/09-consumo-de-api/04-modelando-respostas-e-erros.md); refaça [M08](../exercicios/08-estado-e-arquitetura.md) E06–E10 e reescreva **uma** feature inteira antes de voltar. |
+| **0–33** | A base assíncrona e de dados não fechou. Continuar daqui só acumula retrabalho. | Volte a [04/02](../modulos/04-dart-avancado/02-futures-e-async-await.md), [04/06](../modulos/04-dart-avancado/06-sealed-classes.md) e [10/06 — Migrações](../modulos/10-persistencia-de-dados/06-migracoes.md); refaça [M04](../exercicios/04-dart-avancado.md) e [M10](../exercicios/10-persistencia-de-dados.md) inteiros e repita a avaliação completa. |
 
 **Se você errou o diagnóstico mas passou no resto:** o problema é rotina de investigação, não
 conhecimento. Releia [12/01 — Lendo stack traces](../modulos/12-testes-e-debug/01-lendo-stack-traces.md),

@@ -190,7 +190,7 @@ Você ainda não sabe Flutter, e tudo bem. Mesmo assim, vale saber **onde** isto
   gavetas. O diagnóstico completo está em
   [referencias/erros-comuns.md](../../referencias/erros-comuns.md).
 - **Código de saída é o que faz a automação funcionar.** Quando você montar uma esteira de build em
-  [Módulo 16 — Publicação](../16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md), o servidor
+  [Módulo 17 — Publicação](../17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md), o servidor
   decide "passou / não passou" olhando **só** esse número: `flutter test` devolve `0` se todos os
   testes passam e um valor diferente de `0` se algum falha.
 - **stdout × stderr aparecem no console do Flutter.** Em
@@ -357,11 +357,11 @@ Ainda não estamos programando para celular, mas o terminal já muda conforme a 
 > 🍎 **SÓ NO MAC.** Tudo que envolve compilar, assinar ou publicar para iPhone exige macOS + Xcode.
 > No Windows você consegue **ler, entender e planejar** o processo, mas não executá-lo. O porquê
 > técnico completo está em
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 > 🪟 **Nesta máquina, hoje:** `ANDROID_HOME` está **vazio** porque o Android Studio ainda não foi
 > instalado. Isso é esperado neste ponto do curso e será resolvido em
-> [Módulo 14 — Build Android](../14-build-android/README.md).
+> [Módulo 15 — Build Android](../15-build-android/README.md).
 
 ---
 

@@ -455,7 +455,7 @@ diferente nas duas plataformas.
 > iOS trocando o tema (é a [aula 5](05-navegacao-android-x-ios.md)). Você **não consegue**: rodar no
 > simulador do iPhone nem sentir o gesto de borda real — o simulador iOS só existe no macOS. Nada
 > disso bloqueia o módulo; detalhes em
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 ---
 

@@ -183,7 +183,7 @@ A recomendação do curso, que vale para as duas plataformas:
 > e editar o `ios/Runner/Info.plist` (é um arquivo de texto XML, e o `flutter create` o gerou na
 > sua máquina). O que você **não consegue** é compilar e rodar no simulador ou no iPhone — isso
 > exige macOS com Xcode, e é o assunto de
-> [15/01 — Por que exige macOS](../15-build-ios/01-por-que-exige-macos.md). A boa notícia desta
+> [15/01 — Por que exige macOS](../16-build-ios/01-por-que-exige-macos.md). A boa notícia desta
 > aula específica: **não há nada a configurar no iOS**, porque a API é HTTPS. Então o seu código
 > já está correto para iOS, e você pode provar isso lendo o `Info.plist` e confirmando que não há
 > bloco `NSAppTransportSecurity`.

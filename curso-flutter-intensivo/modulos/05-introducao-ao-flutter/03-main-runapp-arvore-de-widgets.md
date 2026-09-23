@@ -652,7 +652,7 @@ O Flutter faz isso sozinho porque o `ThemeData` consulta `defaultTargetPlatform`
 > 2. estudar as diferenças documentadas em
 >    [referencias/diferencas-android-ios.md](../../referencias/diferencas-android-ios.md).
 >
-> O processo completo do iOS está em [15 — Build iOS](../15-build-ios/README.md).
+> O processo completo do iOS está em [16 — Build iOS](../16-build-ios/README.md).
 
 ---
 

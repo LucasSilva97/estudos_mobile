@@ -2735,9 +2735,71 @@ O avaliador procura três coisas no código do aluno: a key saindo do dado (`Val
 ---
 
 <a id="modulo-14"></a>
-## Módulo 14 — Build e distribuição Android
+## Módulo 14 — Build e distribuição Web (PWA)
 
-> Confira depois de fazer a [avaliação](../avaliacoes/modulo-14-build-android.md).
+> Confira depois de fazer a [avaliação](../avaliacoes/modulo-14-build-web-pwa.md).
+
+### Questionário
+
+1. **B** — HTTPS, `manifest.json` válido e service worker com handler de `fetch`. Não existe loja nem aprovação: o navegador confere os três sozinho. Domínio próprio e `--wasm` não têm relação com instalabilidade.
+2. **B** — um `ElevatedButton` não vira `<button>`: o Flutter desenha tudo num único `<canvas>` com o Skia compilado para WASM (CanvasKit). É o que garante fidelidade visual idêntica nos três alvos, e o que custa ~1,5 MB de engine baixado, SEO limitado e acessibilidade via árvore semântica.
+3. **B** — o `dart2js` fornece uma casca de `dart:io` em que as operações lançam. O import resolve, a análise passa, o build imprime `√ Built build\web` — e a exceção só acontece quando a linha **executa**, no navegador do usuário. É o modelo de falha de todo o módulo.
+4. **B** — o `<base href>` ficou em `/` e o navegador procura tudo na raiz do domínio. A) daria Console limpo e Network servida pelo service worker; C) impediria instalação, não carregamento; D) o CanvasKit não é pré-requisito do `index.html`.
+5. **B** — o service worker entrega o cache para abrir instantâneo e baixa a versão nova em paralelo, que passa a valer na abertura seguinte. Não é bug: é o preço do carregamento instantâneo, e se resolve com aviso de atualização por `controllerchange`, não desligando o service worker.
+6. **B** — por padrão o CanvasKit vem de `gstatic.com`, e o service worker do Flutter só faz cache de recursos da **mesma origem**. Sem a flag, o app instalado pode não abrir em modo avião — quebrando justamente a promessa de offline.
+
+7. O `sqflite` é um **plugin**: código Dart de um lado, SQLite nativo do outro, por platform channel. O navegador não tem SQLite, então a chamada estoura. O `sqflite_common_ffi_web` carrega o **SQLite compilado para WebAssembly** (`sqlite3.wasm`) e o executa num web worker (`sqflite_sw.js`), persistindo os blocos do arquivo em **IndexedDB**, por origem. O SQL, as migrações e o `PRAGMA foreign_keys` não mudam. O banco desaparece: em **aba anônima** ao fechar; quando o usuário **limpa dados de navegação**; quando o navegador **despeja** por falta de espaço (modo `best-effort`, mitigado por `persist()`); e — o caso mais grave e menos lembrado — quando **a URL do app muda**, porque a origem é a identidade do armazenamento.
+8. `start_url` é **onde abrir** quando o usuário toca no ícone; `scope` é **até onde** o app se considera ele mesmo. Quando o `scope` não corresponde ao `--base-href`, o app instalado passa a exibir uma **barra de navegador** — porque o navegador entende que a navegação saiu do escopo do app. O sintoma é específico e traiçoeiro: não quebra o build, não quebra o deploy, não aparece em aba normal. Só quem instala vê.
+9. CORS é uma regra **do navegador**: numa requisição para outra origem, ele faz a chamada mas **esconde a resposta** do seu código a menos que o servidor devolva `Access-Control-Allow-Origin`. Não existe no Android nem no iOS, por isso o mesmo código funciona no celular e falha no Chrome. Nenhuma flag do `package:http` desativa — a decisão é do navegador, por segurança, e é deliberadamente inescapável; as saídas são o servidor mandar o cabeçalho ou um proxy na mesma origem. O diagnóstico se confirma no **Console**, nunca na aba Network: lá a requisição pode aparecer como `200`, porque o servidor respondeu e foi o navegador que descartou.
+10. **Caminho** (`--base-href` errado): Console e Network mostram `404` nos arquivos; quebra igual em janela anônima. **Código** (exceção antes do `runApp`): Console mostra exceção Dart, Network toda `200`; quebra igual em anônima. **Cache** (service worker com build quebrado): Console **vazio**, Network `200` com `(ServiceWorker)` na coluna Size, e **funciona em janela anônima** — que é justamente o que o separa dos outros dois. A ordem importa: limpar o cache primeiro mascara os três e ensina nada.
+
+### Solução prática de referência
+
+```yaml
+# .github/workflows/publicar-web.yml — trecho central
+permissions:
+  contents: read
+  pages: write
+  id-token: write        # OIDC: é o que dispensa guardar qualquer segredo
+
+env:
+  BASE_HREF: /foco/      # igual ao "scope" de web/manifest.json
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - run: flutter analyze
+      - run: flutter test
+      - run: flutter test --platform chrome     # o portão que pega os erros só-web
+      - run: >
+          flutter build web --release
+          --base-href "$BASE_HREF"
+          --no-web-resources-cdn
+          --source-maps
+      - run: cp build/web/index.html build/web/404.html
+      - run: |
+          set -e
+          grep -q "<base href=\"$BASE_HREF\"" build/web/index.html
+          test -f build/web/sqlite3.wasm
+```
+
+```powershell
+# Comprovação local antes do push
+dart run sqflite_common_ffi_web:setup
+git add web/sqlite3.wasm web/sqflite_sw.js
+git diff --stat            # domain/ e presentation/ NÃO podem aparecer
+flutter test --platform chrome
+```
+
+O avaliador procura quatro coisas no `docs/release-web-1.0.0.md`. Primeira: o `git diff --stat` da troca de banco **sem nenhum arquivo de `domain/` ou `presentation/`** — se aparecer, a camada de dados vazava para o domínio e o problema é anterior ao módulo. Segunda: o `scope` do manifest **idêntico** ao `--base-href` do workflow; divergência aqui é o defeito que só se manifesta depois de instalar. Terceira: `flutter test --platform chrome` entre os portões do CI — sem ele o pipeline dá falso verde para exatamente a classe de erro que a web introduz. Quarta, e a que não se automatiza: o relato da validação **em modo avião, no celular, com o app aberto pelo ícone**, criando uma sessão que sobrevive ao fechar e reabrir. Sem esse último item, a prática não vale os 2 pontos de offline — abrir no DevTools com "Offline" marcado não é a mesma coisa.
+
+---
+
+<a id="modulo-15"></a>
+## Módulo 15 — Build e distribuição Android
+
+> Confira depois de fazer a [avaliação](../avaliacoes/modulo-15-build-android.md).
 
 ### Questionário
 
@@ -2820,10 +2882,10 @@ O avaliador deve procurar, no `docs/release-1.0.0.md`, a saída do `apksigner ve
 
 ---
 
-<a id="modulo-15"></a>
-## Módulo 15 — Build e distribuição iOS
+<a id="modulo-16"></a>
+## Módulo 16 — Build e distribuição iOS
 
-> Confira depois de fazer a [avaliação](../avaliacoes/modulo-15-build-ios.md).
+> Confira depois de fazer a [avaliação](../avaliacoes/modulo-16-build-ios.md).
 
 ### Questionário
 
@@ -2880,10 +2942,10 @@ O avaliador deve procurar: as **três** ocorrências de `PRODUCT_BUNDLE_IDENTIFI
 
 ---
 
-<a id="modulo-16"></a>
-## Módulo 16 — Publicação e próximos passos
+<a id="modulo-17"></a>
+## Módulo 17 — Publicação e próximos passos
 
-> Confira depois de fazer a [avaliação](../avaliacoes/modulo-16-publicacao-e-proximos-passos.md).
+> Confira depois de fazer a [avaliação](../avaliacoes/modulo-17-publicacao-e-proximos-passos.md).
 
 ### Questionário
 
@@ -6829,6 +6891,21 @@ O avaliador deve procurar, em ordem: (1) que `SessaoEmAndamento` não importa na
 10. O Foco deixa de ser "não coleta". Na **Segurança dos Dados** da Play você passa a declarar "Informações de diagnóstico / registros de falha", com finalidade e se é opcional; na **Nutrition Label** da Apple entra "Diagnóstico", marcado como não vinculado à identidade se o identificador for aleatório. Nunca entram no log: conteúdo digitado pelo usuário (anotação da sessão), token, e-mail ou CPF — é o princípio da **minimização** da LGPD, somado a finalidade e consentimento. No lugar, contexto sem conteúdo: `log('Salvando anotação (${texto.length} chars)')` e `setCustomKey('tela', 'detalhe_materia')`.
 11. No 🤖 Android a `<uses-permission>` faltando falha **em execução e em silêncio**: o recurso simplesmente não funciona no artefato de release, como no caso clássico do `INTERNET` declarado só no `debug/AndroidManifest.xml`, que passa no `flutter run` e quebra no APK. No 🍎 iOS a chave `NS…UsageDescription` ausente derruba o app no primeiro acesso ao recurso e, antes disso, é **rejeição na revisão humana** — e texto genérico reprova igual. Consequência prática: o iOS empurra a revisão dos textos para antes do envio, porque é bloqueio de loja; o Android empurra a conferência do manifest fundido e um teste do artefato de release no aparelho, porque o debug esconde o erro.
 12. Automatize `analyze`, `test` e `dart format --set-exit-if-changed` a cada push (Ubuntu, 1× a cota), build Android em tag, envio ao TestFlight interno e arquivamento dos símbolos. Deixe manual a decisão de publicar, o texto de "Novidades", o rollout gradual e a promoção para produção — o padrão é "CI completo, CD até a porta da loja". O build iOS fica só em tag porque o minuto de macOS custa 10×: quatro builds de 12 min já consomem 480 min do mês. E o que ele pega não é erro de código (isso o Ubuntu já pegou), é erro de assinatura e de pods, que só importa quando se vai gerar artefato de verdade.
+13.
+
+| | 🌐 Web (PWA) | 🤖 Android | 🍎 iOS |
+|---|---|---|---|
+| Identidade | **A URL** (origem: protocolo + domínio + caminho) | `applicationId` | *Bundle ID* |
+| Se a identidade mudar | O navegador trata como **outro app**: quem instalou fica com o atalho antigo e **o banco IndexedDB não vai junto** — todos começam do zero | Vira outro app na loja; não há atualização a partir do antigo | Idem |
+| Correção alcança todo mundo em | **~2 abertura(s)**, ou seja, ~48 h | Dias a **nunca** | Dias a **nunca** |
+
+O pior caso de "usuário preso em versão antiga" é o das **lojas**, não o da web — e isso costuma surpreender. Na web o service worker baixa a versão nova sozinho e a serve na abertura seguinte: o atraso é de **uma abertura**, e o aviso por `controllerchange` reduz até isso. Nas lojas, a atualização depende de o usuário aceitar; meses depois de um hotfix ainda chega stack trace da versão com o bug, e o número de versões simultâneas em campo é indefinido. A web tem **duas** versões em campo, no máximo. O que a web tem de pior é outra coisa: a identidade é mais fácil de mudar por acidente — renomear um repositório ou migrar para domínio próprio parece inofensivo e apaga o banco de todos.
+
+14. O pipeline web não tem segredo porque **não há assinatura**: qualquer pessoa pode servir aqueles arquivos, e a confiança vem do **HTTPS do domínio**, não de uma chave que prova autoria. O `deploy-pages` ainda usa OIDC — um token de curta duração emitido para aquela execução —, então nem o token de deploy fica guardado. O da Play precisa da keystore porque o Android exige que toda atualização seja assinada **pela mesma chave** da versão anterior.
+
+Em risco operacional: o pipeline web **não tem o que vazar**. O da Play guarda um segredo de valor máximo e irreversível — vazada a keystore, um terceiro pode assinar artefatos como você; perdida, você nunca mais atualiza aquele `applicationId`. Um `echo` numa variável derivada, um log de debug, um fork mal configurado, e o dano não tem desfazer.
+
+E isso não torna a web mais segura, porque o risco migra de lugar. No Android o **artefato** é opaco: extrair um `--dart-define` do `libapp.so` exige desempacotar e vasculhar um binário. Na web o artefato é **texto**: o `main.dart.js` abre no DevTools e um Ctrl+F acha qualquer string. Não existe `--obfuscate`, só minificação, que não é segurança. Por isso "segredo mora no servidor" deixa de ser recomendação e vira restrição: no mobile é uma boa prática com custo de ataque alto; na web o custo de ataque é **uma tecla**. Chave no cliente só se for pública e restrita por domínio — e aí o que protege é a restrição, não o sigilo.
 
 ### Solução prática de referência
 

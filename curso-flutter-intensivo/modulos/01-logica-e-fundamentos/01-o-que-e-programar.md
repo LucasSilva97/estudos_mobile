@@ -139,14 +139,14 @@ PowerShell.
 
 **Emulador** é um programa que **imita um aparelho Android inteiro** dentro do seu computador,
 inclusive o processador ARM. Como ele traduz instruções de um processador para outro, é mais
-pesado. É o que você usará no módulo 14 para testar o app Android.
+pesado. É o que você usará no módulo 15 para testar o app Android.
 
 **Simulador** é o termo da Apple para o programa que **roda o iOS no próprio processador do Mac**,
 sem imitar o hardware do iPhone. É mais leve, mas só existe no macOS.
 
 > 🪟 **Atenção, Windows.** Emulador Android: sim, você vai usar. Simulador iOS: **não existe para
 > Windows**. Isso é limitação da Apple, não do Flutter, e está explicado em
-> [`15-build-ios/01-por-que-exige-macos.md`](../15-build-ios/01-por-que-exige-macos.md).
+> [`16-build-ios/01-por-que-exige-macos.md`](../16-build-ios/01-por-que-exige-macos.md).
 
 ---
 
@@ -209,8 +209,8 @@ Nada do que você leu aqui é teoria descartável — cada item volta em forma c
   você vai ver que *hot reload* só existe porque o app em desenvolvimento roda em JIT, e que ele
   **desaparece** no build de release, que é AOT.
 - **Compilação AOT** é o que produz o arquivo que vai para a loja, em
-  [`14-build-android/08-gerando-apk-e-aab.md`](../14-build-android/08-gerando-apk-e-aab.md) e em
-  [`15-build-ios/08-build-ipa-e-archive.md`](../15-build-ios/08-build-ipa-e-archive.md).
+  [`15-build-android/08-gerando-apk-e-aab.md`](../15-build-android/08-gerando-apk-e-aab.md) e em
+  [`16-build-ios/08-build-ipa-e-archive.md`](../16-build-ios/08-build-ipa-e-archive.md).
 - **`void main()`** não muda: o `main` de um app Flutter é a mesma função, só que em vez de
   `print` ela chama `runApp()`. Você verá isso em
   [`05-introducao-ao-flutter/03-main-runapp-arvore-de-widgets.md`](../05-introducao-ao-flutter/03-main-runapp-arvore-de-widgets.md).
@@ -313,7 +313,7 @@ vale registrar desde já a diferença que mais afeta você:
 
 > 🍎 **SÓ NO MAC.** Gerar um app iOS instalável exige macOS + Xcode. No Windows você pode ler e
 > entender o processo inteiro, mas não executá-lo. O curso trata disso com honestidade em
-> [`15-build-ios/01-por-que-exige-macos.md`](../15-build-ios/01-por-que-exige-macos.md).
+> [`16-build-ios/01-por-que-exige-macos.md`](../16-build-ios/01-por-que-exige-macos.md).
 
 ---
 

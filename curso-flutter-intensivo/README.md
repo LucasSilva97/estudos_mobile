@@ -2,7 +2,7 @@
 
 > **Comece por [00-como-usar-o-curso.md](00-como-usar-o-curso.md).**
 > Não pule esse arquivo. Ele explica a ordem de leitura, como usar exercícios, gabaritos e
-> avaliações, e a convenção de emojis usada em todos os 17 módulos.
+> avaliações, e a convenção de emojis usada em todos os 18 módulos.
 
 ---
 
@@ -29,7 +29,7 @@ Características:
 | Módulos | 17 (de `00` a `16`) |
 | Aulas | 152 aulas em formato fixo |
 | Projetos práticos | 3 (iniciante, intermediário, final) |
-| Listas de exercícios | 17 módulos + README |
+| Listas de exercícios | 18 módulos + README |
 | Gabaritos | 1 por lista + 3 de desafios de projeto |
 | Avaliações | 17 por módulo + 5 cumulativas + 1 final |
 | Plataforma-alvo | 🤖 Android (executável aqui) e 🍎 iOS (processo completo, execução exige Mac) |
@@ -57,23 +57,25 @@ receber código pronto sem explicação.
 
 ## 🏁 O que você vai conseguir fazer ao final
 
-Ao terminar os 17 módulos e os 3 projetos, você será capaz de:
+Ao terminar os 18 módulos e os 3 projetos, você será capaz de:
 
 | Entrega | O que é | Onde você aprende |
 |---|---|---|
-| **APK instalável** | Arquivo `.apk` (*Android Package* — o instalador de um app Android) que você copia para um celular Android e instala | [modulos/14-build-android/08-gerando-apk-e-aab.md](modulos/14-build-android/08-gerando-apk-e-aab.md) |
-| **AAB para a Google Play** | Arquivo `.aab` (*Android App Bundle* — formato que a Google Play exige para publicação) | [modulos/14-build-android/08-gerando-apk-e-aab.md](modulos/14-build-android/08-gerando-apk-e-aab.md) |
-| **Keystore de assinatura** | Arquivo `.jks` com a chave criptográfica que prova que o app é seu | [modulos/14-build-android/06-keystore.md](modulos/14-build-android/06-keystore.md) |
-| **Build iOS assinado** | Projeto iOS com *Bundle Identifier*, certificado e *provisioning profile* configurados | [modulos/15-build-ios/07-certificados-e-provisioning.md](modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| **IPA (quando houver Mac)** | Arquivo `.ipa` (*iOS App Store Package* — o instalador de um app iOS) | [modulos/15-build-ios/08-build-ipa-e-archive.md](modulos/15-build-ios/08-build-ipa-e-archive.md) |
-| **Versão no TestFlight** | App distribuído para testadores pela Apple | [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
+| **PWA publicado** 🌐 | O app em uma **URL pública com HTTPS**, instalável na tela inicial e funcionando offline — sem loja, sem conta paga e sem Mac. **É o canal principal do curso** | [modulos/14-build-web-pwa/09-publicando-no-github-pages.md](modulos/14-build-web-pwa/09-publicando-no-github-pages.md) |
+| **APK instalável** | Arquivo `.apk` (*Android Package* — o instalador de um app Android) que você copia para um celular Android e instala | [modulos/15-build-android/08-gerando-apk-e-aab.md](modulos/15-build-android/08-gerando-apk-e-aab.md) |
+| **AAB para a Google Play** | Arquivo `.aab` (*Android App Bundle* — formato que a Google Play exige para publicação) | [modulos/15-build-android/08-gerando-apk-e-aab.md](modulos/15-build-android/08-gerando-apk-e-aab.md) |
+| **Keystore de assinatura** | Arquivo `.jks` com a chave criptográfica que prova que o app é seu | [modulos/15-build-android/06-keystore.md](modulos/15-build-android/06-keystore.md) |
+| **Build iOS assinado** | Projeto iOS com *Bundle Identifier*, certificado e *provisioning profile* configurados | [modulos/16-build-ios/07-certificados-e-provisioning.md](modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| **IPA (quando houver Mac)** | Arquivo `.ipa` (*iOS App Store Package* — o instalador de um app iOS) | [modulos/16-build-ios/08-build-ipa-e-archive.md](modulos/16-build-ios/08-build-ipa-e-archive.md) |
+| **Versão no TestFlight** | App distribuído para testadores pela Apple | [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
 | **App completo "Foco"** | Organizador de estudos com banco local, API, estado e testes | [projetos/03-projeto-final-multiplataforma/README.md](projetos/03-projeto-final-multiplataforma/README.md) |
 
 E, no caminho, você vai dominar: Dart moderno (*null safety*, `async`/`await`, `sealed class`,
 *records*, *patterns*), widgets e layouts do Flutter, navegação, formulários, gerenciamento de
 estado com Riverpod, consumo de API REST, persistência com `sqflite` e `shared_preferences`,
 recursos nativos (câmera, permissões, conectividade), testes automatizados, desempenho,
-acessibilidade e segurança.
+acessibilidade, segurança e **distribuição web como PWA** (service worker, manifest, offline e
+deploy automatizado).
 
 ---
 
@@ -88,10 +90,10 @@ O que este curso faz a respeito:
 | Situação | O que o curso entrega |
 |---|---|
 | Você está no Windows (seu caso hoje) | Você **lê, entende e prepara** todo o processo iOS: estrutura da pasta `ios/`, `Info.plist`, Bundle Identifier, ícones, certificados, *provisioning profiles*, TestFlight. Você deixa o projeto pronto. |
-| Você consegue um Mac emprestado / alugado na nuvem | Você executa o módulo 15 do início ao fim em poucas horas, porque já entendeu tudo |
+| Você consegue um Mac emprestado / alugado na nuvem | Você executa o módulo 16 do início ao fim em poucas horas, porque já entendeu tudo |
 | Você nunca terá um Mac | Você ainda publica o app inteiro na Google Play sem nenhuma perda |
 
-Comece por [modulos/15-build-ios/01-por-que-exige-macos.md](modulos/15-build-ios/01-por-que-exige-macos.md)
+Comece por [modulos/16-build-ios/01-por-que-exige-macos.md](modulos/16-build-ios/01-por-que-exige-macos.md)
 para entender o porquê técnico e as alternativas reais (Mac na nuvem, CI/CD hospedado).
 
 ---
@@ -162,6 +164,9 @@ diferente destas.
 | `uuid` | ^4.6.0 | Geração de identificadores únicos |
 | `flutter_secure_storage` | ^11.1.1 | Armazenamento criptografado para dados sensíveis |
 | `connectivity_plus` | ^7.3.1 | Detecção de conexão de rede |
+| `sqflite_common` | ^2.5.5 | Os tipos de banco (`Database`) comuns ao plugin nativo e à web |
+| `sqflite_common_ffi_web` | ^1.0.0 | 🌐 SQLite em WebAssembly, persistido em IndexedDB |
+| `web` | ^1.1.1 | 🌐 Acesso tipado às APIs do navegador |
 
 ### Dependências de desenvolvimento (`dev_dependencies`)
 
@@ -199,6 +204,8 @@ environment:
 | Arquitetura | Feature-first, 3 camadas (`presentation` / `domain` / `data`) |
 | Rede | `package:http` |
 | Banco | `sqflite` + `shared_preferences` + `flutter_secure_storage` |
+| Banco na web | `sqflite_common_ffi_web` (SQLite em WASM sobre IndexedDB) — mesmos DAOs e SQL |
+| **Distribuição** | **PWA como canal principal** (GitHub Pages); APK/AAB e IPA como canais adicionais |
 | Testes | `flutter_test` + `mocktail` + `integration_test` |
 | Design | Material 3 |
 | API de exemplo | `https://jsonplaceholder.typicode.com` (pública, sem token) |
@@ -488,63 +495,84 @@ O porquê de cada escolha está em [05-decisoes-tecnicas.md](05-decisoes-tecnica
 | 06 | [Segurança mobile](modulos/13-desempenho-e-seguranca/06-seguranca-mobile.md) |
 | 07 | [Ofuscação e o que evitar](modulos/13-desempenho-e-seguranca/07-ofuscacao-e-o-que-evitar.md) |
 
-### Módulo 14 — Build Android 🤖
+### Módulo 14 — Build Web (PWA) 🌐 — **canal principal de distribuição**
 
-[📁 README do módulo](modulos/14-build-android/README.md) ·
-[📝 Exercícios](exercicios/14-build-android.md) ·
-[🔑 Gabarito](gabaritos/14-build-android.md) ·
-[🧾 Avaliação](avaliacoes/modulo-14-build-android.md) ·
+[📁 README do módulo](modulos/14-build-web-pwa/README.md) ·
+[📝 Exercícios](exercicios/14-build-web-pwa.md) ·
+[🔑 Gabarito](gabaritos/14-build-web-pwa.md) ·
+[🧾 Avaliação](avaliacoes/modulo-14-build-web-pwa.md) ·
+[☑️ Checklist](checklists/build-web.md)
+
+| # | Aula |
+|---|---|
+| 01 | [Por que PWA é o canal principal](modulos/14-build-web-pwa/01-por-que-pwa.md) |
+| 02 | [Como o Flutter compila para web](modulos/14-build-web-pwa/02-como-o-flutter-compila-para-web.md) |
+| 03 | [O que não funciona na web](modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md) |
+| 04 | [Banco de dados na web](modulos/14-build-web-pwa/04-banco-de-dados-na-web.md) |
+| 05 | [Manifest e ícones](modulos/14-build-web-pwa/05-manifest-e-icones.md) |
+| 06 | [Service worker e offline](modulos/14-build-web-pwa/06-service-worker-e-offline.md) |
+| 07 | [Instalabilidade](modulos/14-build-web-pwa/07-instalabilidade.md) |
+| 08 | [Gerando o build web](modulos/14-build-web-pwa/08-gerando-o-build-web.md) |
+| 09 | [Publicando no GitHub Pages](modulos/14-build-web-pwa/09-publicando-no-github-pages.md) |
+| 10 | [Diagnóstico web](modulos/14-build-web-pwa/10-diagnostico-web.md) |
+
+### Módulo 15 — Build Android 🤖
+
+[📁 README do módulo](modulos/15-build-android/README.md) ·
+[📝 Exercícios](exercicios/15-build-android.md) ·
+[🔑 Gabarito](gabaritos/15-build-android.md) ·
+[🧾 Avaliação](avaliacoes/modulo-15-build-android.md) ·
 [☑️ Checklist](checklists/build-android.md)
 
 | # | Aula |
 |---|---|
-| 01 | [Debug, profile e release](modulos/14-build-android/01-debug-profile-release.md) |
-| 02 | [Identidade do app](modulos/14-build-android/02-identidade-do-app.md) |
-| 03 | [Ícone](modulos/14-build-android/03-icone.md) |
-| 04 | [Splash screen](modulos/14-build-android/04-splash-screen.md) |
-| 05 | [Permissões no Android](modulos/14-build-android/05-permissoes-android.md) |
-| 06 | [Keystore](modulos/14-build-android/06-keystore.md) |
-| 07 | [Assinatura no Gradle](modulos/14-build-android/07-assinatura-no-gradle.md) |
-| 08 | [Gerando APK e AAB](modulos/14-build-android/08-gerando-apk-e-aab.md) |
-| 09 | [Instalando e validando](modulos/14-build-android/09-instalando-e-validando.md) |
-| 10 | [Diagnóstico de build](modulos/14-build-android/10-diagnostico-de-build.md) |
+| 01 | [Debug, profile e release](modulos/15-build-android/01-debug-profile-release.md) |
+| 02 | [Identidade do app](modulos/15-build-android/02-identidade-do-app.md) |
+| 03 | [Ícone](modulos/15-build-android/03-icone.md) |
+| 04 | [Splash screen](modulos/15-build-android/04-splash-screen.md) |
+| 05 | [Permissões no Android](modulos/15-build-android/05-permissoes-android.md) |
+| 06 | [Keystore](modulos/15-build-android/06-keystore.md) |
+| 07 | [Assinatura no Gradle](modulos/15-build-android/07-assinatura-no-gradle.md) |
+| 08 | [Gerando APK e AAB](modulos/15-build-android/08-gerando-apk-e-aab.md) |
+| 09 | [Instalando e validando](modulos/15-build-android/09-instalando-e-validando.md) |
+| 10 | [Diagnóstico de build](modulos/15-build-android/10-diagnostico-de-build.md) |
 
-### Módulo 15 — Build iOS 🍎
+### Módulo 16 — Build iOS 🍎
 
-[📁 README do módulo](modulos/15-build-ios/README.md) ·
-[📝 Exercícios](exercicios/15-build-ios.md) ·
-[🔑 Gabarito](gabaritos/15-build-ios.md) ·
-[🧾 Avaliação](avaliacoes/modulo-15-build-ios.md) ·
+[📁 README do módulo](modulos/16-build-ios/README.md) ·
+[📝 Exercícios](exercicios/16-build-ios.md) ·
+[🔑 Gabarito](gabaritos/16-build-ios.md) ·
+[🧾 Avaliação](avaliacoes/modulo-16-build-ios.md) ·
 [☑️ Checklist](checklists/build-ios.md)
 
 | # | Aula |
 |---|---|
-| 01 | [Por que exige macOS](modulos/15-build-ios/01-por-que-exige-macos.md) |
-| 02 | [Xcode e CocoaPods](modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 03 | [Simulador e iPhone físico](modulos/15-build-ios/03-simulador-e-iphone-fisico.md) |
-| 04 | [Bundle ID e Xcode](modulos/15-build-ios/04-bundle-id-e-xcode.md) |
-| 05 | [Ícone, splash, versão e Info.plist](modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| 06 | [Conta Apple gratuita × paga](modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md) |
-| 07 | [Certificados e provisioning](modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| 08 | [Build IPA e archive](modulos/15-build-ios/08-build-ipa-e-archive.md) |
-| 09 | [Exportando IPA e TestFlight](modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 10 | [Diagnóstico de CocoaPods e assinatura](modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| 01 | [Por que exige macOS](modulos/16-build-ios/01-por-que-exige-macos.md) |
+| 02 | [Xcode e CocoaPods](modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 03 | [Simulador e iPhone físico](modulos/16-build-ios/03-simulador-e-iphone-fisico.md) |
+| 04 | [Bundle ID e Xcode](modulos/16-build-ios/04-bundle-id-e-xcode.md) |
+| 05 | [Ícone, splash, versão e Info.plist](modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| 06 | [Conta Apple gratuita × paga](modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md) |
+| 07 | [Certificados e provisioning](modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| 08 | [Build IPA e archive](modulos/16-build-ios/08-build-ipa-e-archive.md) |
+| 09 | [Exportando IPA e TestFlight](modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
+| 10 | [Diagnóstico de CocoaPods e assinatura](modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
 
-### Módulo 16 — Publicação e próximos passos
+### Módulo 17 — Publicação e próximos passos
 
-[📁 README do módulo](modulos/16-publicacao-e-proximos-passos/README.md) ·
-[📝 Exercícios](exercicios/16-publicacao-e-proximos-passos.md) ·
-[🔑 Gabarito](gabaritos/16-publicacao-e-proximos-passos.md) ·
-[🧾 Avaliação](avaliacoes/modulo-16-publicacao-e-proximos-passos.md)
+[📁 README do módulo](modulos/17-publicacao-e-proximos-passos/README.md) ·
+[📝 Exercícios](exercicios/17-publicacao-e-proximos-passos.md) ·
+[🔑 Gabarito](gabaritos/17-publicacao-e-proximos-passos.md) ·
+[🧾 Avaliação](avaliacoes/modulo-17-publicacao-e-proximos-passos.md)
 
 | # | Aula |
 |---|---|
-| 01 | [Google Play](modulos/16-publicacao-e-proximos-passos/01-google-play.md) |
-| 02 | [App Store Connect](modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md) |
-| 03 | [Versionamento e releases](modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md) |
-| 04 | [CI/CD introdutório](modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
-| 05 | [Monitoramento e feedback](modulos/16-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md) |
-| 06 | [Próximos passos](modulos/16-publicacao-e-proximos-passos/06-proximos-passos.md) |
+| 01 | [Google Play](modulos/17-publicacao-e-proximos-passos/01-google-play.md) |
+| 02 | [App Store Connect](modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md) |
+| 03 | [Versionamento e releases](modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md) |
+| 04 | [CI/CD introdutório](modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
+| 05 | [Monitoramento e feedback](modulos/17-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md) |
+| 06 | [Próximos passos](modulos/17-publicacao-e-proximos-passos/06-proximos-passos.md) |
 
 ---
 
@@ -605,9 +633,9 @@ testes e build assinado para Android e iOS.
 | [08 Etapa 6 — Responsividade e acessibilidade](projetos/03-projeto-final-multiplataforma/08-etapa-6-responsividade-e-acessibilidade.md) | Telas grandes e leitores de tela |
 | [09 Etapa 7 — Testes](projetos/03-projeto-final-multiplataforma/09-etapa-7-testes.md) | Unitários, widget, integração |
 | [10 Etapa 8 — Ícone, splash e versão](projetos/03-projeto-final-multiplataforma/10-etapa-8-icone-splash-e-versao.md) | Identidade visual |
-| [11 Critérios de aceite](projetos/03-projeto-final-multiplataforma/11-criterios-de-aceite.md) | Como saber que está pronto |
-| [12 Desafios](projetos/03-projeto-final-multiplataforma/12-desafios.md) | Extensões opcionais |
-| [13 Checklist](projetos/03-projeto-final-multiplataforma/13-checklist.md) | Verificação final |
+| [11 Critérios de aceite](projetos/03-projeto-final-multiplataforma/12-criterios-de-aceite.md) | Como saber que está pronto |
+| [12 Desafios](projetos/03-projeto-final-multiplataforma/13-desafios.md) | Extensões opcionais |
+| [13 Checklist](projetos/03-projeto-final-multiplataforma/14-checklist.md) | Verificação final |
 | [🔑 Gabarito dos desafios](gabaritos/projeto-03-desafios.md) | Soluções comentadas |
 | [☑️ Checklist do projeto final](checklists/projeto-final.md) | Conferência geral |
 
@@ -638,9 +666,9 @@ implementação, revisão cumulativa e desafio prático.
 | 11 Recursos nativos | [lista](exercicios/11-recursos-nativos.md) | [gabarito](gabaritos/11-recursos-nativos.md) |
 | 12 Testes e debug | [lista](exercicios/12-testes-e-debug.md) | [gabarito](gabaritos/12-testes-e-debug.md) |
 | 13 Desempenho e segurança | [lista](exercicios/13-desempenho-e-seguranca.md) | [gabarito](gabaritos/13-desempenho-e-seguranca.md) |
-| 14 Build Android | [lista](exercicios/14-build-android.md) | [gabarito](gabaritos/14-build-android.md) |
-| 15 Build iOS | [lista](exercicios/15-build-ios.md) | [gabarito](gabaritos/15-build-ios.md) |
-| 16 Publicação | [lista](exercicios/16-publicacao-e-proximos-passos.md) | [gabarito](gabaritos/16-publicacao-e-proximos-passos.md) |
+| 14 Build Android | [lista](exercicios/15-build-android.md) | [gabarito](gabaritos/15-build-android.md) |
+| 15 Build iOS | [lista](exercicios/16-build-ios.md) | [gabarito](gabaritos/16-build-ios.md) |
+| 16 Publicação | [lista](exercicios/17-publicacao-e-proximos-passos.md) | [gabarito](gabaritos/17-publicacao-e-proximos-passos.md) |
 
 ---
 
@@ -658,9 +686,9 @@ implementação, revisão cumulativa e desafio prático.
 | [Módulo 02](avaliacoes/modulo-02-dart-basico.md) | [Módulo 11](avaliacoes/modulo-11-recursos-nativos.md) |
 | [Módulo 03](avaliacoes/modulo-03-dart-intermediario.md) | [Módulo 12](avaliacoes/modulo-12-testes-e-debug.md) |
 | [Módulo 04](avaliacoes/modulo-04-dart-avancado.md) | [Módulo 13](avaliacoes/modulo-13-desempenho-e-seguranca.md) |
-| [Módulo 05](avaliacoes/modulo-05-introducao-ao-flutter.md) | [Módulo 14](avaliacoes/modulo-14-build-android.md) |
-| [Módulo 06](avaliacoes/modulo-06-widgets-e-layouts.md) | [Módulo 15](avaliacoes/modulo-15-build-ios.md) |
-| [Módulo 07](avaliacoes/modulo-07-navegacao-e-formularios.md) | [Módulo 16](avaliacoes/modulo-16-publicacao-e-proximos-passos.md) |
+| [Módulo 05](avaliacoes/modulo-05-introducao-ao-flutter.md) | [Módulo 15](avaliacoes/modulo-15-build-android.md) |
+| [Módulo 06](avaliacoes/modulo-06-widgets-e-layouts.md) | [Módulo 16](avaliacoes/modulo-16-build-ios.md) |
+| [Módulo 07](avaliacoes/modulo-07-navegacao-e-formularios.md) | [Módulo 17](avaliacoes/modulo-17-publicacao-e-proximos-passos.md) |
 | [Módulo 08](avaliacoes/modulo-08-estado-e-arquitetura.md) | |
 
 ### Cumulativas e final
@@ -671,7 +699,7 @@ implementação, revisão cumulativa e desafio prático.
 | [Cumulativa 02 — Flutter UI](avaliacoes/cumulativa-02-flutter-ui.md) | Dia 9 | Módulos 05 a 07 |
 | [Cumulativa 03 — Estado e dados](avaliacoes/cumulativa-03-estado-e-dados.md) | Dia 12 | Módulos 08 a 10 |
 | [Cumulativa 04 — Qualidade e plataforma](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | Dia 13 | Módulos 11 a 13 |
-| [Cumulativa 05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | Dia 15 | Módulos 14 a 16 |
+| [Cumulativa 05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | Dia 15 | Módulos 14 a 17 |
 | [Avaliação final](avaliacoes/avaliacao-final.md) | Dia 15 | Curso inteiro + projeto final |
 
 ---
@@ -698,6 +726,7 @@ Use como conferência antes de considerar uma etapa concluída.
 | [checklists/ambiente-android.md](checklists/ambiente-android.md) | Antes do primeiro `flutter run` em um Android |
 | [checklists/ambiente-ios.md](checklists/ambiente-ios.md) | 🍎 Antes do primeiro build em um Mac |
 | [checklists/projeto-final.md](checklists/projeto-final.md) | Antes de dar o projeto "Foco" por concluído |
+| [checklists/build-web.md](checklists/build-web.md) | 🌐 Antes de publicar o PWA |
 | [checklists/build-android.md](checklists/build-android.md) | Antes de gerar APK/AAB de release |
 | [checklists/build-ios.md](checklists/build-ios.md) | 🍎 Antes de gerar IPA / subir ao TestFlight |
 

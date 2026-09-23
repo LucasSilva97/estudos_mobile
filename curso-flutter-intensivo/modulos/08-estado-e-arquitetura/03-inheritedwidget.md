@@ -565,7 +565,7 @@ entrega as medidas reais do aparelho:
 > tamanhos com o DevTools; e, com o emulador Android instalado, ver o comportamento 🤖 real.
 > **O que não dá:** medir o recorte de um iPhone de verdade. Você **não** consegue rodar o
 > simulador iOS sem um Mac — isso está detalhado em
-> [15 — Por que exige macOS](../15-build-ios/01-por-que-exige-macos.md). Escreva o layout com
+> [16 — Por que exige macOS](../16-build-ios/01-por-que-exige-macos.md). Escreva o layout com
 > `SafeArea` e confie nela: é justamente para isso que ela existe.
 
 Prefira `MediaQuery.sizeOf(context)`, `MediaQuery.paddingOf(context)` e

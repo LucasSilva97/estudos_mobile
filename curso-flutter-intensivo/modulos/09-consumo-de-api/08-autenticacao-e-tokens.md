@@ -238,7 +238,7 @@ Este é o ponto que separa segurança real de teatro:
 > **Qualquer coisa que está no aplicativo instalado pode ser extraída.**
 
 Um APK pode ser descompilado. Um IPA pode ser inspecionado. A ofuscação
-([Módulo 14](../14-build-android/README.md)) atrasa, mas não impede.
+([Módulo 15](../15-build-android/README.md)) atrasa, mas não impede.
 
 | Ideia | Funciona? |
 |---|---|
@@ -599,7 +599,7 @@ dart_defines/*.json
 .env
 .env.*
 
-# Assinatura Android (Módulo 14)
+# Assinatura Android (Módulo 15)
 *.jks
 *.keystore
 android/key.properties
@@ -608,7 +608,7 @@ android/key.properties
 android/app/google-services.json
 ios/Runner/GoogleService-Info.plist
 
-# Perfis de provisionamento iOS (Módulo 15)
+# Perfis de provisionamento iOS (Módulo 16)
 *.mobileprovision
 *.p12
 ```

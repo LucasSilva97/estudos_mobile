@@ -981,8 +981,8 @@ flutter run -d chrome
 > desenvolvimento roda em `http://192.168.0.10:3000`, a requisição falha **silenciosamente** —
 > ou com um erro genérico de conexão que parece "sem internet". As liberações acima são **só para
 > desenvolvimento**; nunca as deixe numa build de produção. O
-> [Módulo 14, aula 5](../14-build-android/05-permissoes-android.md) e o
-> [Módulo 15, aula 5](../15-build-ios/05-icone-splash-versao-infoplist.md) tratam disso.
+> [Módulo 15, aula 5](../15-build-android/05-permissoes-android.md) e o
+> [Módulo 16, aula 5](../16-build-ios/05-icone-splash-versao-infoplist.md) tratam disso.
 
 ---
 

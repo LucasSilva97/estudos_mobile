@@ -617,8 +617,8 @@ O **Auto Backup** copia por padrão os arquivos do app (incluindo `app_flutter` 
 Google Drive do usuário, e **exclui** a pasta `cache`. O comportamento é controlado no
 `AndroidManifest.xml` pelos atributos do `<application>`: `android:allowBackup`,
 `android:dataExtractionRules` (Android 12+) e `android:fullBackupContent` (versões anteriores). O
-módulo 14 trata do manifesto em
-[14 — Permissões Android](../14-build-android/05-permissoes-android.md).
+módulo 15 trata do manifesto em
+[15 — Permissões Android](../15-build-android/05-permissoes-android.md).
 
 Android também tem armazenamento **externo** (a área acessível por outros apps e pelo gerenciador
 de arquivos), com `getExternalStorageDirectory()`. Duas advertências:
@@ -641,7 +641,7 @@ de arquivos), com `getExternalStorageDirectory()`. Duas advertências:
 > 🍎 **SÓ NO MAC.** Inspecionar o sandbox de um iPhone (Xcode → Window → Devices and Simulators →
 > selecionar o app → *Download Container*) exige macOS + Xcode. No Windows você pode ler e
 > entender o processo, mas não executá-lo. Veja
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 ---
 

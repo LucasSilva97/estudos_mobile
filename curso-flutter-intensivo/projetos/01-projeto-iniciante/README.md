@@ -103,7 +103,7 @@ Cada omissão é proposital: o recurso existe, você é que ainda não o viu.
 | API, JSON, rede | [M09](../../modulos/09-consumo-de-api/README.md) |
 | Salvar no aparelho — fechou o app, perdeu tudo | [M10](../../modulos/10-persistencia-de-dados/README.md) |
 | `AlertDialog`, bottom sheet, `Dismissible`, desfazer | [M06 · 10 — Gestos](../../modulos/06-widgets-e-layouts/10-gestos-e-feedback.md) |
-| Ícone do app, splash, APK assinado | [M14](../../modulos/14-build-android/README.md) |
+| Ícone do app, splash, APK assinado | [M15](../../modulos/15-build-android/README.md) |
 
 > ⚠️ Puxar algo desta lista não é adiantar matéria, é trocar o objetivo: provar que você monta uma
 > tela inteira com o que já tem na mão.

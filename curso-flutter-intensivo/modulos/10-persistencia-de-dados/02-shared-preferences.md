@@ -549,7 +549,7 @@ O formato é binário, mas o Xcode e o comando `plutil` mostram em texto. Como e
 > 🍎 **SÓ NO MAC.** Abrir o `.plist` de um iPhone exige macOS + Xcode (Devices and Simulators →
 > selecionar o app → *Download Container*). No Windows você pode ler e entender o processo, mas
 > não executá-lo. Entenda o contexto completo em
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 ### O que é igual nas duas
 

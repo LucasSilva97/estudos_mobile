@@ -209,7 +209,7 @@ android/
 > (**sem** `.kts`) e usar sintaxe Groovy (`applicationId "com.exemplo"`). Esse arquivo
 > **não existe** no seu projeto. A sintaxe correta agora é Kotlin: `applicationId = "com.exemplo"`,
 > com sinal de igual e aspas duplas. Detalhes no módulo
-> [14 — Build Android](../14-build-android/README.md).
+> [15 — Build Android](../15-build-android/README.md).
 
 Valores reais gerados pelo Flutter 3.47.1 nesta máquina:
 
@@ -239,7 +239,7 @@ buildTypes {
 Leia esse comentário com atenção: **enquanto ele estiver ali, o seu build "release" está assinado
 com a chave de depuração** e a Google Play vai recusar o envio. Esse `TODO` é um aviso, não
 decoração. Você o substitui no módulo
-[14 — Assinatura no Gradle](../14-build-android/07-assinatura-no-gradle.md).
+[15 — Assinatura no Gradle](../15-build-android/07-assinatura-no-gradle.md).
 
 #### `ios/` — 🍎 o projeto nativo do iPhone
 
@@ -276,14 +276,14 @@ Duas novidades do Flutter 3.47 que os tutoriais antigos não mencionam:
 > Xcode. 🪟 No Windows a pasta `ios/` **é criada e versionada normalmente** — você pode editar o
 > `Info.plist` em um editor de texto, revisar o `Podfile` e entender tudo. O que você não consegue é
 > **compilar**. O caminho completo, incluindo alternativas de nuvem, está em
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 #### `web/` — 🌐 a casca do navegador
 
 ```text
 web/
 ├── index.html         ← página que carrega o app; você pode editar título e cor de fundo
-├── manifest.json      ← nome e ícones do app quando instalado como PWA
+├── manifest.json      ← nome e ícones do app quando instalado como PWA (módulo 14)
 ├── favicon.png
 └── icons/
     ├── Icon-192.png   Icon-512.png
@@ -453,7 +453,7 @@ app.*.map.json
 
 > 🔐 Os cinco últimos **não** estão no `.gitignore` gerado pelo `flutter create`. Você precisa
 > adicioná-los à mão antes do primeiro commit do projeto de verdade. Isso é feito no módulo
-> [14 — Keystore](../14-build-android/06-keystore.md), e o raciocínio por trás está em
+> [15 — Keystore](../15-build-android/06-keystore.md), e o raciocínio por trás está em
 > [00 — Desfazendo erros e segredos](../00-git-e-terminal/05-desfazendo-erros-e-segredos.md).
 
 ---

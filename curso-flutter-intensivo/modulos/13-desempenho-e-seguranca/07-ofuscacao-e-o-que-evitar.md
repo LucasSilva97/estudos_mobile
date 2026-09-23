@@ -218,7 +218,7 @@ flutter build appbundle --analyze-size
 | `--obfuscate` | 1–3 % |
 
 > 💡 **O AAB sozinho rende mais que todo o resto junto.** É uma mudança de comando, sem alteração
-> no código. Módulo 14, aula 8.
+> no código. Módulo 15, aula 8.
 
 ---
 
@@ -563,7 +563,7 @@ if ($problemas.Count -gt 0) { exit 1 }
 
 > 🍎 **O iOS tem dois conjuntos de símbolos**: os do Dart (`--split-debug-info`) e os **dSYM** do
 > Xcode, para o código nativo. Os dois precisam ser guardados. O Xcode Organizer arquiva os dSYM
-> automaticamente a cada *archive*, e é de lá que você os envia para o Crashlytics. Módulo 15.
+> automaticamente a cada *archive*, e é de lá que você os envia para o Crashlytics. Módulo 16.
 
 🪟 **No Windows**, você faz todo o ciclo Android: ofuscar, arquivar, decifrar. Para iOS, o build é
 no CI com runner macOS — e o passo de arquivar os símbolos precisa estar **no script do CI**, senão
@@ -746,4 +746,4 @@ fica na loja? E o que acontece se um usuário com a versão 1.0.0 relatar um cra
 
 | ⬅️ Anterior | 🏠 Módulo | ➡️ Próximo módulo |
 |---|---|---|
-| [Aula 6 — Segurança mobile](06-seguranca-mobile.md) | [README](README.md) | [Módulo 14 — Build Android](../14-build-android/README.md) |
+| [Aula 6 — Segurança mobile](06-seguranca-mobile.md) | [README](README.md) | [Módulo 15 — Build Android](../15-build-android/README.md) |

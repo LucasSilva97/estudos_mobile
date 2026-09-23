@@ -570,7 +570,7 @@ android {
             // ⚠️ Assinado com a chave de DEBUG por enquanto.
             // Isto permite `flutter run --release` no seu aparelho,
             // e NÃO serve para publicar.
-            // O Módulo 14 substitui isto pela assinatura de verdade.
+            // O Módulo 15 substitui isto pela assinatura de verdade.
             signingConfig = signingConfigs.getByName("debug")
 
             // isMinifyEnabled / isShrinkResources: reduzem o APK.
@@ -660,7 +660,7 @@ flutter {
             android:hardwareAccelerated="true">
 
             <!-- Tema da tela de abertura, antes de o Flutter carregar.
-                 Sem ele, há um flash branco. Módulo 14, aula 4. -->
+                 Sem ele, há um flash branco. Módulo 15, aula 4. -->
             <meta-data
                 android:name="io.flutter.embedding.android.NormalTheme"
                 android:resource="@style/NormalTheme" />
@@ -930,7 +930,7 @@ android/.cxx/
 
 # ⚠️ CHAVES DE ASSINATURA. Perder é ruim; vazar é pior:
 # qualquer um pode publicar uma atualização falsa do seu app.
-# Módulo 14.
+# Módulo 15.
 android/key.properties
 **/*.jks
 **/*.keystore
@@ -957,7 +957,7 @@ ios/Runner.xcworkspace/xcuserdata/
 ios/Runner.xcodeproj/xcuserdata/
 ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
 
-# Certificados e perfis. Módulo 15.
+# Certificados e perfis. Módulo 16.
 **/*.mobileprovision
 **/*.p12
 **/*.cer
@@ -991,7 +991,7 @@ precisa ser removido do índice com `git rm --cached`.
 | `applicationId` | Identificador único na Play Store. **Nunca muda** depois de publicado. |
 | `minSdk = 23` | Mínimo do `flutter_secure_storage`. Subir exclui aparelhos; descer pode quebrar plugins. |
 | `targetSdk` | Diz "fui testado com as regras da versão X". **Não** limita onde roda. A Play Store exige valor recente. |
-| `signingConfig = signingConfigs.getByName("debug")` no release | Permite `--release` no seu aparelho. **Não serve para publicar** — Módulo 14. |
+| `signingConfig = signingConfigs.getByName("debug")` no release | Permite `--release` no seu aparelho. **Não serve para publicar** — Módulo 15. |
 | `android:name="${applicationName}"` | O Flutter substitui. Remover produz **tela preta**. |
 | `android:exported="true"` | **Obrigatório** no Android 12+. Sem isso o app não abre. |
 | `android:windowSoftInputMode="adjustResize"` | O teclado **encolhe** a tela. Sem isso, cobre os campos. |
@@ -1026,7 +1026,7 @@ precisa ser removido do índice com `git rm --cached`.
 | Build sem a outra plataforma | ✅ no Windows | ❌ **exige macOS** |
 
 > ⚠️ **A última linha é a restrição prática do curso.** Você não consegue compilar para iOS no
-> Windows — nem com máquina virtual, legalmente. O Módulo 15 explica o processo inteiro para quando
+> Windows — nem com máquina virtual, legalmente. O Módulo 16 explica o processo inteiro para quando
 > você tiver acesso a um Mac; até lá, `ios/` é uma pasta que você **entende** e configura, mas não
 > compila.
 
@@ -1203,7 +1203,7 @@ Requisitos — o script verifica e reporta:
 - `minSdk` é compatível com todos os plugins do `pubspec.yaml`.
 
 Saída: uma lista de ✅ e ❌, com o **motivo** de cada falha, e código de saída 1 se houver erro —
-para rodar em CI (Módulo 16).
+para rodar em CI (Módulo 17).
 
 Dica: `Process.runSync('git', ['ls-files'])` lista os arquivos versionados. Para o `Info.plist`, uma
 `RegExp` sobre o texto basta; não é preciso um parser de plist.

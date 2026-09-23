@@ -40,14 +40,15 @@
 6. [Emulador e dispositivos](#5-emulador-e-dispositivos)
 7. [Ícone e splash](#6-ícone-e-splash)
 8. [Testes](#7-testes)
-9. [Build Android 🤖](#8-build-android-)
-10. [keytool — chaves e keystore 🤖](#9-keytool--chaves-e-keystore-)
-11. [Gradle 🤖](#10-gradle-)
-12. [adb — falando com o aparelho 🤖](#11-adb--falando-com-o-aparelho-)
-13. [Build iOS 🍎](#12-build-ios-)
-14. [Xcode e CocoaPods 🍎](#13-xcode-e-cocoapods-)
-15. [Git](#14-git)
-16. [Windows — comandos do sistema 🪟](#15-windows--comandos-do-sistema-)
+9. [Build Web 🌐 (PWA)](#8-build-web--pwa)
+10. [Build Android 🤖](#9-build-android-)
+11. [keytool — chaves e keystore 🤖](#10-keytool--chaves-e-keystore-)
+12. [Gradle 🤖](#11-gradle-)
+13. [adb — falando com o aparelho 🤖](#12-adb--falando-com-o-aparelho-)
+14. [Build iOS 🍎](#13-build-ios-)
+15. [Xcode e CocoaPods 🍎](#14-xcode-e-cocoapods-)
+16. [Git](#15-git)
+17. [Windows — comandos do sistema 🪟](#16-windows--comandos-do-sistema-)
 
 ---
 
@@ -421,10 +422,73 @@ flutter test integration_test
 
 ---
 
-## 8. Build Android 🤖
+## 8. Build Web 🌐 (PWA)
+
+> É o **canal principal de distribuição** do curso. O passo a passo está em
+> [14.08 — Gerando o build web](../modulos/14-build-web-pwa/08-gerando-o-build-web.md).
+
+#### ✅ `flutter build web --release`
+```powershell
+flutter build web --release
+```
+- **O que faz:** compila o app para a pasta `build/web/`, pronta para ser servida por qualquer servidor HTTPS.
+- **Quando usar:** quando o app fica na **raiz** do domínio.
+- **Saída esperada:** `√ Built build\web`.
+- **Observação:** não há assinatura nem `versionCode` — publicar é copiar arquivos.
+
+#### ✅ `flutter build web --release --base-href /foco/`
+```powershell
+flutter build web --release --base-href /foco/
+```
+- **O que faz:** o mesmo, dizendo ao `index.html` que o app mora numa **subpasta**.
+- **Quando usar:** sempre que a URL não for a raiz — é o caso do GitHub Pages de projeto.
+- **Saída esperada:** `<base href="/foco/">` dentro de `build/web/index.html`.
+- **Observação:** ⚠️ **A pegadinha nº 1 da web.** Precisa começar e terminar com `/`, e ser **igual ao `scope`** do `web/manifest.json`. Errado, a página abre **branca** com 404 em `main.dart.js`.
+
+#### ✅ `flutter build web --release --no-web-resources-cdn`
+```powershell
+flutter build web --release --base-href /foco/ --no-web-resources-cdn --source-maps
+```
+- **O que faz:** serve o CanvasKit do **seu** servidor em vez do CDN do Google, e gera os source maps.
+- **Quando usar:** **sempre**, em PWA que promete funcionar offline.
+- **Saída esperada:** `build/web/canvaskit/canvaskit.wasm` presente.
+- **Observação:** ⚠️ sem essa flag o service worker **não** guarda o engine (é de outra origem) e o app instalado pode não abrir em modo avião.
+
+#### ✅ `flutter test --platform chrome`
+```powershell
+flutter test --platform chrome
+```
+- **O que faz:** roda a suíte de testes dentro de um Chrome headless.
+- **Quando usar:** antes de todo build web, e como portão no CI.
+- **Saída esperada:** `All tests passed!`.
+- **Observação:** ⭐ É o **único** portão automatizado que pega `dart:io`, `Platform.isX` e plugins sem implementação web. `flutter test` sozinho roda na Dart VM e dá **falso verde**.
+
+#### ✅ `dart run sqflite_common_ffi_web:setup`
+```powershell
+dart run sqflite_common_ffi_web:setup
+```
+- **O que faz:** baixa `sqlite3.wasm` e `sqflite_sw.js` para a pasta `web/`.
+- **Quando usar:** uma vez, ao habilitar o banco na web.
+- **Saída esperada:** os dois arquivos em `web/`.
+- **Observação:** ⚠️ **commite os dois.** Sem eles no Git, o app publicado abre e o **banco não** — e funciona perfeitamente na sua máquina.
+
+#### ✅ Servir o build localmente, em subpasta
+```powershell
+dart pub global activate dhttpd
+New-Item -ItemType Directory -Force -Path .\publicadooco | Out-Null
+Copy-Item -Recurse -Force .uild\web\* .\publicadoocodart pub global run dhttpd --path publicado --port 8080
+```
+- **O que faz:** serve os arquivos como um servidor comum, imitando o GitHub Pages.
+- **Quando usar:** **antes de publicar**, sempre.
+- **Saída esperada:** o app abre em `http://localhost:8080/foco/`.
+- **Observação:** ⚠️ `flutter run -d chrome` serve na **raiz** e por isso **não reproduz** o problema de `--base-href`. E recarregue com **Ctrl+Shift+R**: um F5 recebe o cache do service worker antigo.
+
+---
+
+## 9. Build Android 🤖
 
 > Antes de qualquer build de release, confira o passo a passo de
-> [14.08 — Gerando APK e AAB](../modulos/14-build-android/08-gerando-apk-e-aab.md).
+> [15.08 — Gerando APK e AAB](../modulos/15-build-android/08-gerando-apk-e-aab.md).
 
 #### ✅ `flutter build apk --debug`
 ```powershell
@@ -470,7 +534,7 @@ flutter build appbundle
 
 ---
 
-## 9. keytool — chaves e keystore 🤖
+## 10. keytool — chaves e keystore 🤖
 
 #### ✅ `keytool -genkey ...` — criar o keystore
 **🪟 Windows (PowerShell)** — a crase `` ` `` no fim da linha é a continuação de linha do PowerShell:
@@ -507,7 +571,7 @@ keytool -list -v -keystore ~/upload-keystore.jks -alias SEU_ALIAS
 
 ---
 
-## 10. Gradle 🤖
+## 11. Gradle 🤖
 
 > No dia a dia você **não chama o Gradle direto**: o `flutter build` faz isso por você. Os
 > comandos abaixo servem para diagnóstico, quando a mensagem de erro vem do Gradle e você
@@ -563,7 +627,7 @@ cd android
 
 ---
 
-## 11. adb — falando com o aparelho 🤖
+## 12. adb — falando com o aparelho 🤖
 
 > O `adb` fica em `platform-tools`, dentro do Android SDK. Se o comando não for reconhecido,
 > adicione essa pasta ao PATH.
@@ -628,12 +692,12 @@ adb start-server
 
 ---
 
-## 12. Build iOS 🍎
+## 13. Build iOS 🍎
 
 > 🍎 **SÓ NO MAC.** Todos os comandos desta seção e da próxima exigem **macOS + Xcode**.
 > No Windows você pode ler, entender e até editar os arquivos da pasta `ios/` — mas
 > **não** executar estes comandos e **não** gerar um `.ipa`. O que fazer enquanto isso está
-> em [15.01 — Por que exige macOS](../modulos/15-build-ios/01-por-que-exige-macos.md).
+> em [16.01 — Por que exige macOS](../modulos/16-build-ios/01-por-que-exige-macos.md).
 
 #### ✅ `flutter build ipa` 🖥️
 ```bash
@@ -683,7 +747,7 @@ xcrun altool --upload-app --type ios -f build/ios/ipa/*.ipa \
 
 ---
 
-## 13. Xcode e CocoaPods 🍎
+## 14. Xcode e CocoaPods 🍎
 
 > 🍎 **SÓ NO MAC.** Toda esta seção exige macOS.
 
@@ -763,7 +827,7 @@ sudo xcodebuild -license accept
 
 ---
 
-## 14. Git
+## 15. Git
 
 > 📘 Todos os comandos desta seção vêm da documentação oficial do Git. Eles não dependem de
 > Flutter e funcionam igual nos três sistemas — o que muda é apenas o terminal onde você digita.
@@ -898,7 +962,7 @@ git clone https://github.com/<seu-usuario>/<seu-repositorio>.git
 
 ---
 
-## 15. Windows — comandos do sistema 🪟
+## 16. Windows — comandos do sistema 🪟
 
 #### ✅ `start ms-settings:developers`
 ```powershell

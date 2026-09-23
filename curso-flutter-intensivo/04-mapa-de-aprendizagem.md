@@ -157,32 +157,42 @@
 | Tornar o app utilizável por leitores de tela e com fonte ampliada | 13 | [05 — Acessibilidade](modulos/13-desempenho-e-seguranca/05-acessibilidade.md) | [M13](exercicios/13-desempenho-e-seguranca.md) | [Av. M13](avaliacoes/modulo-13-desempenho-e-seguranca.md) | P3 · etapa 6 |
 | Aplicar as regras básicas de segurança em apps móveis | 13 | [06 — Segurança mobile](modulos/13-desempenho-e-seguranca/06-seguranca-mobile.md) | [M13](exercicios/13-desempenho-e-seguranca.md) | [Av. M13](avaliacoes/modulo-13-desempenho-e-seguranca.md) | P3 · segredos fora do Git |
 | Entender ofuscação, seus limites e o que nunca colocar no app | 13 | [07 — Ofuscação e o que evitar](modulos/13-desempenho-e-seguranca/07-ofuscacao-e-o-que-evitar.md) | [M13](exercicios/13-desempenho-e-seguranca.md) | [Av. M13](avaliacoes/modulo-13-desempenho-e-seguranca.md) | P3 · build release |
-| Diferenciar os modos debug, profile e release | 14 | [01 — Debug, profile e release](modulos/14-build-android/01-debug-profile-release.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · marco "APK debug gerado" |
-| Definir nome, `applicationId` e versão do app | 14 | [02 — Identidade do app](modulos/14-build-android/02-identidade-do-app.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · `br.com.estudos.foco` |
-| Gerar os ícones com `flutter_launcher_icons` | 14 | [03 — Ícone](modulos/14-build-android/03-icone.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · etapa 8 |
-| Configurar a tela de abertura com `flutter_native_splash` | 14 | [04 — Splash screen](modulos/14-build-android/04-splash-screen.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · etapa 8 |
-| Declarar permissões no `AndroidManifest.xml` sem exagerar | 14 | [05 — Permissões Android](modulos/14-build-android/05-permissoes-android.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · `INTERNET` |
-| Criar o keystore de upload com `keytool` e protegê-lo | 14 | [06 — Keystore](modulos/14-build-android/06-keystore.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · release |
-| Configurar a assinatura em `build.gradle.kts` e `key.properties` | 14 | [07 — Assinatura no Gradle](modulos/14-build-android/07-assinatura-no-gradle.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · release |
-| Gerar APK e AAB de release pelo terminal | 14 | [08 — Gerando APK e AAB](modulos/14-build-android/08-gerando-apk-e-aab.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · marcos 15 e 16 |
-| Instalar o APK em um aparelho real e validar o funcionamento | 14 | [09 — Instalando e validando](modulos/14-build-android/09-instalando-e-validando.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · [checklist](checklists/build-android.md) |
-| Diagnosticar falhas de build do Gradle e do AGP | 14 | [10 — Diagnóstico de build](modulos/14-build-android/10-diagnostico-de-build.md) | [M14](exercicios/14-build-android.md) | [Av. M14](avaliacoes/modulo-14-build-android.md) | P3 · solução de problemas |
-| 🍎 Explicar tecnicamente por que iOS exige macOS | 15 | [01 — Por que exige macOS](modulos/15-build-ios/01-por-que-exige-macos.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · planejamento iOS |
-| 🍎 Instalar Xcode e CocoaPods e entender o papel de cada um | 15 | [02 — Xcode e CocoaPods](modulos/15-build-ios/02-xcode-e-cocoapods.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · `ios/Podfile` |
-| 🍎 Rodar o app no simulador e em um iPhone físico | 15 | [03 — Simulador e iPhone físico](modulos/15-build-ios/03-simulador-e-iphone-fisico.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · marcos 8 e 18 |
-| 🍎 Configurar Bundle Identifier, time e alvo mínimo (iOS 13) | 15 | [04 — Bundle ID e Xcode](modulos/15-build-ios/04-bundle-id-e-xcode.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · `br.com.estudos.foco` |
-| 🍎 Ajustar ícone, splash, versão e chaves do `Info.plist` | 15 | [05 — Ícone, splash, versão e Info.plist](modulos/15-build-ios/05-icone-splash-versao-infoplist.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · etapa 8 |
-| 🍎 Decidir entre conta Apple gratuita e paga conhecendo os limites | 15 | [06 — Conta Apple gratuita × paga](modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · planejamento |
-| 🍎 Entender certificados, perfis de provisionamento e assinatura | 15 | [07 — Certificados e provisioning](modulos/15-build-ios/07-certificados-e-provisioning.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · release iOS |
-| 🍎 Gerar o archive e o IPA com `flutter build ipa` | 15 | [08 — Build IPA e archive](modulos/15-build-ios/08-build-ipa-e-archive.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · marcos 17, 19 e 20 |
-| 🍎 Exportar o IPA e enviar uma versão para o TestFlight | 15 | [09 — Exportando IPA e TestFlight](modulos/15-build-ios/09-exportando-ipa-e-testflight.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · marco 21 |
-| 🍎 Diagnosticar erros de CocoaPods e de assinatura | 15 | [10 — Diagnóstico CocoaPods e assinatura](modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) | [M15](exercicios/15-build-ios.md) | [Av. M15](avaliacoes/modulo-15-build-ios.md) | P3 · solução de problemas |
-| 🤖 Preparar uma ficha de app e um lançamento na Google Play | 16 | [01 — Google Play](modulos/16-publicacao-e-proximos-passos/01-google-play.md) | [M16](exercicios/16-publicacao-e-proximos-passos.md) | [Av. M16](avaliacoes/modulo-16-publicacao-e-proximos-passos.md) | P3 · AAB |
-| 🍎 Entender o App Store Connect e o processo de revisão | 16 | [02 — App Store Connect](modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md) | [M16](exercicios/16-publicacao-e-proximos-passos.md) | [Av. M16](avaliacoes/modulo-16-publicacao-e-proximos-passos.md) | P3 · IPA |
-| Versionar releases com `build-name` e `build-number` | 16 | [03 — Versionamento e releases](modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md) | [M16](exercicios/16-publicacao-e-proximos-passos.md) | [Av. M16](avaliacoes/modulo-16-publicacao-e-proximos-passos.md) | P3 · `pubspec.yaml` |
-| Automatizar análise, teste e build com integração contínua | 16 | [04 — CI/CD introdutório](modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) | [M16](exercicios/16-publicacao-e-proximos-passos.md) | [Av. M16](avaliacoes/modulo-16-publicacao-e-proximos-passos.md) | P3 · repositório |
-| Monitorar erros e coletar retorno das pessoas usuárias | 16 | [05 — Monitoramento e feedback](modulos/16-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md) | [M16](exercicios/16-publicacao-e-proximos-passos.md) | [Av. M16](avaliacoes/modulo-16-publicacao-e-proximos-passos.md) | P3 · pós-lançamento |
-| Definir seu próximo objetivo de estudo com um plano concreto | 16 | [06 — Próximos passos](modulos/16-publicacao-e-proximos-passos/06-proximos-passos.md) | [M16](exercicios/16-publicacao-e-proximos-passos.md) | [Av. M16](avaliacoes/modulo-16-publicacao-e-proximos-passos.md) | [referencias/proximos-passos.md](referencias/proximos-passos.md) |
+| Escolher o canal de distribuição por critério, e não por hábito | 14 | [01 — Por que PWA é o canal principal](modulos/14-build-web-pwa/01-por-que-pwa.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · decisão de canal |
+| Explicar como o Dart vira JavaScript ou WebAssembly e o que é o CanvasKit | 14 | [02 — Como o Flutter compila para web](modulos/14-build-web-pwa/02-como-o-flutter-compila-para-web.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · peso do 1º carregamento |
+| Escrever código que roda nos três alvos com `kIsWeb` e importações condicionais | 14 | [03 — O que não funciona na web](modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · etapa 9 |
+| Fazer o banco `sqflite` funcionar no navegador sem reescrever os DAOs | 14 | [04 — Banco de dados na web](modulos/14-build-web-pwa/04-banco-de-dados-na-web.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · etapa 9 |
+| Definir a identidade do app na web: manifest, `scope` e ícones maskable | 14 | [05 — Manifest e ícones](modulos/14-build-web-pwa/05-manifest-e-icones.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · etapa 9 |
+| Entender o service worker, o cache e por que o usuário vê a versão antiga | 14 | [06 — Service worker e offline](modulos/14-build-web-pwa/06-service-worker-e-offline.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · offline |
+| Cumprir os critérios de instalabilidade e convidar o usuário na hora certa | 14 | [07 — Instalabilidade](modulos/14-build-web-pwa/07-instalabilidade.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · marco 15 |
+| Gerar o build web dominando `--base-href` e o que não é segredo na web | 14 | [08 — Gerando o build web](modulos/14-build-web-pwa/08-gerando-o-build-web.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · etapa 9 |
+| Publicar por GitHub Actions, com deploy automático a cada push | 14 | [09 — Publicando no GitHub Pages](modulos/14-build-web-pwa/09-publicando-no-github-pages.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · marco 14 |
+| Diagnosticar tela branca, cache preso, CORS e cota de armazenamento | 14 | [10 — Diagnóstico web](modulos/14-build-web-pwa/10-diagnostico-web.md) | [M14](exercicios/14-build-web-pwa.md) | [Av. M14](avaliacoes/modulo-14-build-web-pwa.md) | P3 · solução de problemas |
+| Diferenciar os modos debug, profile e release | 15 | [01 — Debug, profile e release](modulos/15-build-android/01-debug-profile-release.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · marco "APK debug gerado" |
+| Definir nome, `applicationId` e versão do app | 15 | [02 — Identidade do app](modulos/15-build-android/02-identidade-do-app.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · `br.com.estudos.foco` |
+| Gerar os ícones com `flutter_launcher_icons` | 15 | [03 — Ícone](modulos/15-build-android/03-icone.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · etapa 8 |
+| Configurar a tela de abertura com `flutter_native_splash` | 15 | [04 — Splash screen](modulos/15-build-android/04-splash-screen.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · etapa 8 |
+| Declarar permissões no `AndroidManifest.xml` sem exagerar | 15 | [05 — Permissões Android](modulos/15-build-android/05-permissoes-android.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · `INTERNET` |
+| Criar o keystore de upload com `keytool` e protegê-lo | 15 | [06 — Keystore](modulos/15-build-android/06-keystore.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · release |
+| Configurar a assinatura em `build.gradle.kts` e `key.properties` | 15 | [07 — Assinatura no Gradle](modulos/15-build-android/07-assinatura-no-gradle.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · release |
+| Gerar APK e AAB de release pelo terminal | 15 | [08 — Gerando APK e AAB](modulos/15-build-android/08-gerando-apk-e-aab.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · marcos 17 e 18 |
+| Instalar o APK em um aparelho real e validar o funcionamento | 15 | [09 — Instalando e validando](modulos/15-build-android/09-instalando-e-validando.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · [checklist](checklists/build-android.md) |
+| Diagnosticar falhas de build do Gradle e do AGP | 15 | [10 — Diagnóstico de build](modulos/15-build-android/10-diagnostico-de-build.md) | [M15](exercicios/15-build-android.md) | [Av. M15](avaliacoes/modulo-15-build-android.md) | P3 · solução de problemas |
+| 🍎 Explicar tecnicamente por que iOS exige macOS | 16 | [01 — Por que exige macOS](modulos/16-build-ios/01-por-que-exige-macos.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · planejamento iOS |
+| 🍎 Instalar Xcode e CocoaPods e entender o papel de cada um | 16 | [02 — Xcode e CocoaPods](modulos/16-build-ios/02-xcode-e-cocoapods.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · `ios/Podfile` |
+| 🍎 Rodar o app no simulador e em um iPhone físico | 16 | [03 — Simulador e iPhone físico](modulos/16-build-ios/03-simulador-e-iphone-fisico.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · marcos 8 e 20 |
+| 🍎 Configurar Bundle Identifier, time e alvo mínimo (iOS 13) | 16 | [04 — Bundle ID e Xcode](modulos/16-build-ios/04-bundle-id-e-xcode.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · `br.com.estudos.foco` |
+| 🍎 Ajustar ícone, splash, versão e chaves do `Info.plist` | 16 | [05 — Ícone, splash, versão e Info.plist](modulos/16-build-ios/05-icone-splash-versao-infoplist.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · etapa 8 |
+| 🍎 Decidir entre conta Apple gratuita e paga conhecendo os limites | 16 | [06 — Conta Apple gratuita × paga](modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · planejamento |
+| 🍎 Entender certificados, perfis de provisionamento e assinatura | 16 | [07 — Certificados e provisioning](modulos/16-build-ios/07-certificados-e-provisioning.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · release iOS |
+| 🍎 Gerar o archive e o IPA com `flutter build ipa` | 16 | [08 — Build IPA e archive](modulos/16-build-ios/08-build-ipa-e-archive.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · marcos 19, 21 e 22 |
+| 🍎 Exportar o IPA e enviar uma versão para o TestFlight | 16 | [09 — Exportando IPA e TestFlight](modulos/16-build-ios/09-exportando-ipa-e-testflight.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · marco 23 |
+| 🍎 Diagnosticar erros de CocoaPods e de assinatura | 16 | [10 — Diagnóstico CocoaPods e assinatura](modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) | [M16](exercicios/16-build-ios.md) | [Av. M16](avaliacoes/modulo-16-build-ios.md) | P3 · solução de problemas |
+| 🤖 Preparar uma ficha de app e um lançamento na Google Play | 17 | [01 — Google Play](modulos/17-publicacao-e-proximos-passos/01-google-play.md) | [M17](exercicios/17-publicacao-e-proximos-passos.md) | [Av. M17](avaliacoes/modulo-17-publicacao-e-proximos-passos.md) | P3 · AAB |
+| 🍎 Entender o App Store Connect e o processo de revisão | 17 | [02 — App Store Connect](modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md) | [M17](exercicios/17-publicacao-e-proximos-passos.md) | [Av. M17](avaliacoes/modulo-17-publicacao-e-proximos-passos.md) | P3 · IPA |
+| Versionar releases com `build-name` e `build-number` | 17 | [03 — Versionamento e releases](modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md) | [M17](exercicios/17-publicacao-e-proximos-passos.md) | [Av. M17](avaliacoes/modulo-17-publicacao-e-proximos-passos.md) | P3 · `pubspec.yaml` |
+| Automatizar análise, teste e build com integração contínua | 17 | [04 — CI/CD introdutório](modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) | [M17](exercicios/17-publicacao-e-proximos-passos.md) | [Av. M17](avaliacoes/modulo-17-publicacao-e-proximos-passos.md) | P3 · repositório |
+| Monitorar erros e coletar retorno das pessoas usuárias | 17 | [05 — Monitoramento e feedback](modulos/17-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md) | [M17](exercicios/17-publicacao-e-proximos-passos.md) | [Av. M17](avaliacoes/modulo-17-publicacao-e-proximos-passos.md) | P3 · pós-lançamento |
+| Definir seu próximo objetivo de estudo com um plano concreto | 17 | [06 — Próximos passos](modulos/17-publicacao-e-proximos-passos/06-proximos-passos.md) | [M17](exercicios/17-publicacao-e-proximos-passos.md) | [Av. M17](avaliacoes/modulo-17-publicacao-e-proximos-passos.md) | [referencias/proximos-passos.md](referencias/proximos-passos.md) |
 
 ---
 
@@ -270,31 +280,40 @@ que aqueles módulos podem ser estudados na ordem que você preferir.
                          ┌──────────────────────────┐
                          │ PROJETO FINAL · "Foco"   │
                          └────────────┬─────────────┘
+                                      ▼
+                         ┌──────────────────────────┐
+                         │ M14 · Build Web 🌐       │  ◀── CANAL PRINCIPAL
+                         │       (PWA)              │      o app vai ao ar aqui
+                         └────────────┬─────────────┘
                               ┌───────┴────────┐
                               ▼                ▼
                   ┌────────────────────┐  ┌──────────────────────┐
-                  │ M14 · Build 🤖     │  │ M15 · Build 🍎       │
+                  │ M15 · Build 🤖     │  │ M16 · Build 🍎       │
                   │       Android      │  │       iOS            │
                   └─────────┬──────────┘  └──────────┬───────────┘
                             └────────┬───────────────┘
                                      ▼
                          ┌──────────────────────────┐
-                         │ M16 · Publicação e       │
+                         │ M17 · Publicação e       │
                          │       próximos passos    │
                          └──────────────────────────┘
 ```
 
 **Leitura do diagrama em uma frase:** Dart antes de Flutter; Flutter na tela antes de estado;
 estado antes de dados; dados antes de qualidade; qualidade antes do projeto final; e só então
-build e publicação — Android e iOS em paralelo, porque um não depende do outro.
+build e publicação — **primeiro a web**, que é o canal que coloca o app no ar hoje, e depois
+Android e iOS em paralelo, porque um não depende do outro.
 
 **Caminhos que não são obrigatórios em sequência:**
 
 - **M09 e M10** são irmãos: você pode fazer persistência antes de API se preferir ver o app
   funcionando offline primeiro. O plano de 30 dias faz API antes porque o projeto final
   usa a API só em uma aba.
-- **M14 e M15** são independentes entre si. No Windows, faça M14 na prática e M15 como
+- **M15 e M16** são independentes entre si. No Windows, faça M15 na prática e M16 como
   estudo dirigido.
+- **M14 vem antes dos dois de propósito.** Ele é o único canal que você publica hoje, do
+  Windows, sem pagar nada e sem revisão — e por isso é o canal principal do curso. M15 e M16
+  acrescentam canais; nenhum substitui M14.
 - **M07 aula 09 (`go_router`)** é a única aula explicitamente opcional do curso.
 
 ---
@@ -318,7 +337,7 @@ build e publicação — Android e iOS em paralelo, porque um não depende do ou
 | Consumir APIs REST em back-end | [01 — HTTP e REST](modulos/09-consumo-de-api/01-http-e-rest.md) e [02 — JSON](modulos/09-consumo-de-api/02-json.md) | [06 — Timeout, retry e cancelamento](modulos/09-consumo-de-api/06-timeout-retry-cancelamento.md): rede móvel cai, rede de servidor quase não | [Av. M09](avaliacoes/modulo-09-consumo-de-api.md) |
 | SQL e bancos relacionais | [04 — sqflite: criando o banco](modulos/10-persistencia-de-dados/04-sqflite-criando-o-banco.md) em leitura rápida | [06 — Migrações](modulos/10-persistencia-de-dados/06-migracoes.md): no celular você não tem acesso ao banco para consertar na mão | [Av. M10](avaliacoes/modulo-10-persistencia-de-dados.md) |
 | Testes automatizados em outra stack | [05 — Testes unitários](modulos/12-testes-e-debug/05-testes-unitarios.md) | [06 — Testes de widget](modulos/12-testes-e-debug/06-testes-de-widget.md): `pump` e `pumpAndSettle` não existem fora do Flutter | [Av. M12](avaliacoes/modulo-12-testes-e-debug.md) |
-| Publicar apps Android nativos | [02 — Identidade do app](modulos/14-build-android/02-identidade-do-app.md) e [05 — Permissões Android](modulos/14-build-android/05-permissoes-android.md) | [07 — Assinatura no Gradle](modulos/14-build-android/07-assinatura-no-gradle.md): o Flutter 3.47 usa Kotlin DSL (`build.gradle.kts`) | [Av. M14](avaliacoes/modulo-14-build-android.md) |
+| Publicar apps Android nativos | [02 — Identidade do app](modulos/15-build-android/02-identidade-do-app.md) e [05 — Permissões Android](modulos/15-build-android/05-permissoes-android.md) | [07 — Assinatura no Gradle](modulos/15-build-android/07-assinatura-no-gradle.md): o Flutter 3.47 usa Kotlin DSL (`build.gradle.kts`) | [Av. M15](avaliacoes/modulo-15-build-android.md) |
 
 **O que ninguém pula, em nenhuma hipótese:**
 
@@ -326,7 +345,8 @@ build e publicação — Android e iOS em paralelo, porque um não depende do ou
   problemas reais já reproduzidos (acento no caminho do SDK, Modo de Desenvolvedor desligado,
   Android SDK ausente).
 - [Módulo 08](modulos/08-estado-e-arquitetura/README.md) — é o eixo do projeto final.
-- [Módulo 14](modulos/14-build-android/README.md) — sem ele não existem os marcos de APK e AAB.
+- [Módulo 14](modulos/14-build-web-pwa/README.md) — sem ele o Foco não vai ao ar: são os marcos 14 e 15.
+- [Módulo 15](modulos/15-build-android/README.md) — sem ele não existem os marcos de APK e AAB.
 
 ---
 
@@ -348,15 +368,16 @@ build e publicação — Android e iOS em paralelo, porque um não depende do ou
 | [11 — Recursos nativos](modulos/11-recursos-nativos/README.md) | M09, M10 | 🤖 emulador ou aparelho real · `image_picker ^1.2.3`, `permission_handler ^13.0.2`, `connectivity_plus ^7.3.1` | App que pede permissão e reage à conexão |
 | [12 — Testes e debug](modulos/12-testes-e-debug/README.md) | M08, M09, M10 | `flutter_test`, `integration_test`, `mocktail ^1.0.5`, `sqflite_common_ffi ^2.4.3` | Suíte de testes verde (marco 13) |
 | [13 — Desempenho e segurança](modulos/13-desempenho-e-seguranca/README.md) | M12 | DevTools 2.60.0 · modo profile | App medido e ajustado, sem segredos no código |
-| [14 — Build Android](modulos/14-build-android/README.md) | Projeto final funcionando · JDK 17 Temurin | Android SDK instalado, licenças aceitas, `keytool` | APK debug, APK release assinado e AAB (marcos 14, 15 e 16) |
-| [15 — Build iOS](modulos/15-build-ios/README.md) | Projeto final funcionando | 🍎 macOS + Xcode + CocoaPods + conta Apple | Archive e IPA (marcos 8, 17, 18, 19, 20 e 21) |
-| [16 — Publicação e próximos passos](modulos/16-publicacao-e-proximos-passos/README.md) | M14 (e M15, quando houver Mac) | Conta de desenvolvedor na loja desejada | Plano de publicação e versionamento |
+| [14 — Build Web (PWA)](modulos/14-build-web-pwa/README.md) | Projeto final funcionando · M10 | Chrome ou Edge · conta no GitHub · `sqflite_common_ffi_web ^1.0.0`, `web ^1.1.1` | **PWA no ar, instalável e offline** (marcos 14 e 15) |
+| [15 — Build Android](modulos/15-build-android/README.md) | M14 · Projeto final funcionando · JDK 17 Temurin | Android SDK instalado, licenças aceitas, `keytool` | APK debug, APK release assinado e AAB (marcos 16, 17 e 18) |
+| [16 — Build iOS](modulos/16-build-ios/README.md) | Projeto final funcionando | 🍎 macOS + Xcode + CocoaPods + conta Apple | Archive e IPA (marcos 8, 19, 20, 21, 22 e 23) |
+| [17 — Publicação e próximos passos](modulos/17-publicacao-e-proximos-passos/README.md) | M14, M15 (e M16, quando houver Mac) | Conta de desenvolvedor na loja desejada | Plano de publicação e versionamento |
 
-> 🍎 **SÓ NO MAC.** O módulo 15 é o único cujos pré-requisitos você ainda não consegue atender
+> 🍎 **SÓ NO MAC.** O módulo 16 é o único cujos pré-requisitos você ainda não consegue atender
 > no Windows 11. Leia-o mesmo assim: o conteúdo foi escrito para ser compreendido sem executar,
 > e o marco correspondente fica aberto na [trilha de progresso](03-trilha-de-progresso.md) até
 > você conseguir um Mac. A explicação técnica está em
-> [modulos/15-build-ios/01-por-que-exige-macos.md](modulos/15-build-ios/01-por-que-exige-macos.md).
+> [modulos/16-build-ios/01-por-que-exige-macos.md](modulos/16-build-ios/01-por-que-exige-macos.md).
 
 ---
 
@@ -366,7 +387,7 @@ build e publicação — Android e iOS em paralelo, porque um não depende do ou
 |---|---|---|---|
 | P1 — Meu Primeiro App | M05 · M06 (parcial) | [01-especificacao.md](projetos/01-projeto-iniciante/01-especificacao.md) | [06-checklist.md](projetos/01-projeto-iniciante/06-checklist.md) |
 | P2 — Bloco de Notas de Estudo | M05 · M06 · M07 · M10 (aula 02) · M12 (aulas 05 e 06) | [01-especificacao.md](projetos/02-projeto-intermediario/01-especificacao.md) | [06-checklist.md](projetos/02-projeto-intermediario/06-checklist.md) |
-| P3 — Foco: Organizador de Estudos | M03 a M14 (tudo) | [01-especificacao.md](projetos/03-projeto-final-multiplataforma/01-especificacao.md) | [13-checklist.md](projetos/03-projeto-final-multiplataforma/13-checklist.md) |
+| P3 — Foco: Organizador de Estudos | M03 a M15 (tudo) | [01-especificacao.md](projetos/03-projeto-final-multiplataforma/01-especificacao.md) | [14-checklist.md](projetos/03-projeto-final-multiplataforma/14-checklist.md) |
 
 Os desafios extras de cada projeto têm gabarito próprio:
 [projeto 1](gabaritos/projeto-01-desafios.md) ·

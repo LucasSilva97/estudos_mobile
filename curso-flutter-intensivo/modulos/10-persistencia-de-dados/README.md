@@ -193,7 +193,7 @@ junto com a revisão da terceira semana.
 | *Fakes* para cofre e rede | [12 — Mocks e fakes](../12-testes-e-debug/07-mocks-e-fakes.md) |
 | Lista grande vinda do banco | [13 — Listas grandes e imagens](../13-desempenho-e-seguranca/02-listas-grandes-e-imagens.md) |
 | Dado sensível e superfície de ataque | [13 — Segurança mobile](../13-desempenho-e-seguranca/06-seguranca-mobile.md) |
-| Backup do Android no manifesto | [14 — Permissões Android](../14-build-android/05-permissoes-android.md) |
+| Backup do Android no manifesto | [15 — Permissões Android](../15-build-android/05-permissoes-android.md) |
 | A camada de dados do Foco, completa | [Projeto final — etapa 2](../../projetos/03-projeto-final-multiplataforma/04-etapa-2-dominio-e-dados.md) |
 
 ---

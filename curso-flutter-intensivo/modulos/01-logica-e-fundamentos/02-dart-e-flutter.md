@@ -198,7 +198,7 @@ Sem isso, o iPhone recusa instalar.
 > 🍎 **SÓ NO MAC.** `flutter build ipa` exige macOS + Xcode. No Windows 11 você pode ler e entender
 > todo o processo, mas não executá-lo. Nada de ilusão: **não existe** caminho suportado para gerar
 > um IPA no Windows. O que fazer enquanto isso está em
-> [`15-build-ios/01-por-que-exige-macos.md`](../15-build-ios/01-por-que-exige-macos.md).
+> [`16-build-ios/01-por-que-exige-macos.md`](../16-build-ios/01-por-que-exige-macos.md).
 
 ### 6. Onde o Flutter se encaixa
 
@@ -217,7 +217,7 @@ Você escreve  →  Dart (linguagem)
 ```
 
 Uma base de código Dart, dois artefatos nativos no fim. É essa a proposta, e é ela que o curso
-inteiro vai cumprir até o módulo 16.
+inteiro vai cumprir até o módulo 17.
 
 ---
 
@@ -281,11 +281,11 @@ Este programa está rodando SEM Flutter nenhum.
   e volta com força em
   [`11-recursos-nativos/09-material-x-cupertino.md`](../11-recursos-nativos/09-material-x-cupertino.md).
 - **APK e AAB** deixam de ser sigla e viram tarefa em
-  [`14-build-android/08-gerando-apk-e-aab.md`](../14-build-android/08-gerando-apk-e-aab.md);
+  [`15-build-android/08-gerando-apk-e-aab.md`](../15-build-android/08-gerando-apk-e-aab.md);
   a assinatura que os torna publicáveis está em
-  [`14-build-android/06-keystore.md`](../14-build-android/06-keystore.md).
+  [`15-build-android/06-keystore.md`](../15-build-android/06-keystore.md).
 - **Archive e IPA** viram tarefa (no Mac) em
-  [`15-build-ios/08-build-ipa-e-archive.md`](../15-build-ios/08-build-ipa-e-archive.md).
+  [`16-build-ios/08-build-ipa-e-archive.md`](../16-build-ios/08-build-ipa-e-archive.md).
 - A decisão "um plugin resolve ou preciso de código nativo?" é ensinada em
   [`11-recursos-nativos/10-avaliando-pacotes.md`](../11-recursos-nativos/10-avaliando-pacotes.md).
 
@@ -435,7 +435,7 @@ para a leitura, mantive o acento.
 
 > 🍎 **SÓ NO MAC.** Assinar e exportar o IPA exige macOS + Xcode. Alternativas honestas (Mac
 > emprestado, serviço de build na nuvem, adiar o iOS) estão discutidas em
-> [`15-build-ios/01-por-que-exige-macos.md`](../15-build-ios/01-por-que-exige-macos.md).
+> [`16-build-ios/01-por-que-exige-macos.md`](../16-build-ios/01-por-que-exige-macos.md).
 
 ---
 

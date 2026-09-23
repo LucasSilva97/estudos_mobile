@@ -88,7 +88,7 @@ dos dois acima. Sem `http`, `intl`, `uuid`, `sqflite`, `go_router` ou `flutter_r
 tem um módulo próprio, e antecipá-los esconde o que se ensina aqui.
 
 > 🪟 **Nada aqui exige Mac.** Tudo roda no Windows 11. O `.ipa` exige macOS — máquina física ou
-> *runner* em CI — e isso é o [módulo 15](../../modulos/15-build-ios/README.md).
+> *runner* em CI — e isso é o [módulo 16](../../modulos/16-build-ios/README.md).
 
 ---
 
@@ -102,7 +102,7 @@ tem um módulo próprio, e antecipá-los esconde o que se ensina aqui.
 | Fotos, permissões, notificações | [M11](../../modulos/11-recursos-nativos/README.md) |
 | `mocktail`, fakes, teste de integração | [M12 · 7 e 8](../../modulos/12-testes-e-debug/07-mocks-e-fakes.md) |
 | `go_router` | [M07 · 9](../../modulos/07-navegacao-e-formularios/09-go-router-opcional.md) |
-| Ícone, splash, assinatura, release | [M14](../../modulos/14-build-android/README.md) e M15 |
+| Ícone, splash, assinatura, release | [M15](../../modulos/15-build-android/README.md) e M16 |
 
 > 📌 Guardar uma **lista que cresce** em `shared_preferences` é abuso, e é de propósito: o teto de
 > 200 notas faz você sentir o custo de reescrever o arquivo inteiro a cada gravação — a dor que

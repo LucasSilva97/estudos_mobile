@@ -107,7 +107,7 @@ flutter run -d emulator-5554       # emulador Android
 ```
 
 > 🍎 Nenhum requisito do Projeto 01 depende de iOS. Se você não tem Mac, marque as linhas 🍎 do
-> registro como "não verificado" e siga em frente — isso volta no [Módulo 15](../../modulos/15-build-ios/README.md).
+> registro como "não verificado" e siga em frente — isso volta no [Módulo 16](../../modulos/16-build-ios/README.md).
 
 ---
 

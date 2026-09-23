@@ -5,7 +5,7 @@
 > de verdade, cobrindo o que quebra calado: serialização, arquivo corrompido e validação.
 
 > 🪟 `flutter test` roda no seu Windows, sem emulador e sem Mac. Mac só entra para gerar o `.ipa`,
-> no [módulo 15](../../modulos/15-build-ios/README.md).
+> no [módulo 16](../../modulos/16-build-ios/README.md).
 
 ---
 

@@ -191,12 +191,12 @@ O que costuma inchar:
 |---|---|
 | Imagens PNG grandes | WebP; redimensione para o uso real |
 | Fontes inteiras | Só os pesos usados |
-| APK universal | **AAB** (Módulo 14, aula 8) |
+| APK universal | **AAB** (Módulo 15, aula 8) |
 | Pacote inteiro por uma função | Escreva a função |
 | Assets esquecidos | Limpe a pasta |
 
 > 💡 O **App Bundle** entrega a cada aparelho só a arquitetura e a densidade dele: costuma cortar
-> 30–40 % do download sem você mexer em nada. É o assunto do Módulo 14.
+> 30–40 % do download sem você mexer em nada. É o assunto do Módulo 15.
 
 ### O método de 6 passos
 

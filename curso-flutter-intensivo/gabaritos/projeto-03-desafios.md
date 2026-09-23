@@ -3,7 +3,7 @@
 > Compare depois de tentar. Estes desafios são o fecho do curso: vários exigem combinar módulos
 > diferentes, e é justamente nessa junção que o aprendizado sedimenta.
 
-Enunciados em [12-desafios.md](../projetos/03-projeto-final-multiplataforma/12-desafios.md).
+Enunciados em [13-desafios.md](../projetos/03-projeto-final-multiplataforma/13-desafios.md).
 
 ---
 
@@ -633,7 +633,7 @@ se a rede caiu, a operação seguinte também vai falhar, e tentar as três só 
 
 > **Arquivo:** `.github/workflows/release.yml`
 
-A estrutura completa está no [módulo 16, aula 4](../modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
+A estrutura completa está no [módulo 17, aula 4](../modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
 O que este desafio acrescenta é o **portão dos símbolos**:
 
 ```yaml
@@ -872,6 +872,6 @@ Se o resultado é o mesmo e as regras acima valem, a sua versão serve.
 
 ---
 
-[Desafios](../projetos/03-projeto-final-multiplataforma/12-desafios.md) ·
+[Desafios](../projetos/03-projeto-final-multiplataforma/13-desafios.md) ·
 [Projeto Final](../projetos/03-projeto-final-multiplataforma/README.md) ·
 [Gabaritos](README.md)

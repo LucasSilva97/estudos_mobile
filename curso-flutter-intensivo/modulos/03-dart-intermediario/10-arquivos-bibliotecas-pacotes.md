@@ -436,7 +436,7 @@ Duas consequências práticas:
 
 - 🪟 **No Windows você consegue adicionar e compilar pacotes para Android**, mas **não** consegue
   compilar a parte iOS. O `pubspec.yaml` é o mesmo; a validação em iOS só acontece em um Mac.
-  Veja [`15-build-ios/01-por-que-exige-macos.md`](../15-build-ios/01-por-que-exige-macos.md).
+  Veja [`16-build-ios/01-por-que-exige-macos.md`](../16-build-ios/01-por-que-exige-macos.md).
 - 🤖 Alguns plugins exigem alterações em `android/app/build.gradle.kts` (versão mínima do Android) ou
   em `ios/Podfile` (versão mínima do iOS). O README do pacote avisa — **leia antes de instalar**.
 

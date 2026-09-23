@@ -481,7 +481,7 @@ class _Linha extends StatelessWidget {
 > 📌 O RF02 fala em "3 sessões mais recentes". O contrato de providers expõe sessões **por matéria**
 > (`sessoesDaMateriaProvider`), não uma lista global — então o painel mostra o agregado da semana e
 > a lista de sessões vive na `MateriaDetalheScreen`. Juntar as últimas de todas as matérias é o
-> primeiro item de [12-desafios.md](12-desafios.md).
+> primeiro item de [13-desafios.md](13-desafios.md).
 
 ### lib/features/metas/presentation/widgets/anel_de_meta.dart
 

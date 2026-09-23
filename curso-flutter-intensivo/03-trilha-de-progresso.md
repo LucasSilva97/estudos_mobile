@@ -29,13 +29,13 @@
 > continuam na trilha de propósito: você vai **ler, entender e saber executar** o processo
 > iOS, e vai marcá-los quando conseguir acesso a um Mac (emprestado, alugado na nuvem ou
 > comprado). Entenda o motivo em
-> [modulos/15-build-ios/01-por-que-exige-macos.md](modulos/15-build-ios/01-por-que-exige-macos.md).
+> [modulos/16-build-ios/01-por-que-exige-macos.md](modulos/16-build-ios/01-por-que-exige-macos.md).
 
 ---
 
-## Quadro geral dos 22 marcos
+## Quadro geral dos 24 marcos
 
-Estes são os 22 pontos de verificação do curso inteiro. Eles se repetem, no lugar certo,
+Estes são os 24 pontos de verificação do curso inteiro. Eles se repetem, no lugar certo,
 dentro das fases mais abaixo — aqui estão juntos para você ver a jornada completa de uma vez.
 
 | #  | Marco                                                    | Exige Mac? | Onde acontece                                                                                                         |
@@ -47,21 +47,23 @@ dentro das fases mais abaixo — aqui estão juntos para você ver a jornada com
 | 05 | fundamentos de Dart dominados                            | Não       | [avaliacoes/cumulativa-01-dart.md](avaliacoes/cumulativa-01-dart.md)                                                   |
 | 06 | primeiro aplicativo executado                            | Não       | [modulos/05-introducao-ao-flutter/README.md](modulos/05-introducao-ao-flutter/README.md)                               |
 | 07 | aplicativo executado em Android                          | Não       | [modulos/05-introducao-ao-flutter/README.md](modulos/05-introducao-ao-flutter/README.md)                               |
-| 08 | aplicativo executado em iOS                              | 🍎 Sim     | [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](modulos/15-build-ios/03-simulador-e-iphone-fisico.md)           |
+| 08 | aplicativo executado em iOS                              | 🍎 Sim     | [modulos/16-build-ios/03-simulador-e-iphone-fisico.md](modulos/16-build-ios/03-simulador-e-iphone-fisico.md)           |
 | 09 | navegação implementada                                 | Não       | [modulos/07-navegacao-e-formularios/README.md](modulos/07-navegacao-e-formularios/README.md)                           |
 | 10 | formulário validado                                     | Não       | [modulos/07-navegacao-e-formularios/06-formularios.md](modulos/07-navegacao-e-formularios/06-formularios.md)           |
 | 11 | API consumida                                            | Não       | [modulos/09-consumo-de-api/README.md](modulos/09-consumo-de-api/README.md)                                             |
 | 12 | dados persistidos                                        | Não       | [modulos/10-persistencia-de-dados/README.md](modulos/10-persistencia-de-dados/README.md)                               |
 | 13 | testes criados                                           | Não       | [modulos/12-testes-e-debug/README.md](modulos/12-testes-e-debug/README.md)                                             |
-| 14 | APK debug gerado                                         | Não       | [modulos/14-build-android/01-debug-profile-release.md](modulos/14-build-android/01-debug-profile-release.md)           |
-| 15 | APK release assinado e instalado                         | Não       | [modulos/14-build-android/08-gerando-apk-e-aab.md](modulos/14-build-android/08-gerando-apk-e-aab.md)                   |
-| 16 | AAB gerado                                               | Não       | [modulos/14-build-android/08-gerando-apk-e-aab.md](modulos/14-build-android/08-gerando-apk-e-aab.md)                   |
-| 17 | build iOS release gerado                                 | 🍎 Sim     | [modulos/15-build-ios/08-build-ipa-e-archive.md](modulos/15-build-ios/08-build-ipa-e-archive.md)                       |
-| 18 | aplicativo executado em iPhone físico                   | 🍎 Sim     | [modulos/15-build-ios/03-simulador-e-iphone-fisico.md](modulos/15-build-ios/03-simulador-e-iphone-fisico.md)           |
-| 19 | archive do iOS criado                                    | 🍎 Sim     | [modulos/15-build-ios/08-build-ipa-e-archive.md](modulos/15-build-ios/08-build-ipa-e-archive.md)                       |
-| 20 | IPA exportado (quando aplicável)                        | 🍎 Sim     | [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](modulos/15-build-ios/09-exportando-ipa-e-testflight.md)       |
-| 21 | versão preparada para TestFlight                        | 🍎 Sim     | [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](modulos/15-build-ios/09-exportando-ipa-e-testflight.md)       |
-| 22 | projeto final concluído                                 | Não       | [projetos/03-projeto-final-multiplataforma/13-checklist.md](projetos/03-projeto-final-multiplataforma/13-checklist.md) |
+| 14 | 🌐 **PWA publicado em URL pública**                       | Não       | [modulos/14-build-web-pwa/09-publicando-no-github-pages.md](modulos/14-build-web-pwa/09-publicando-no-github-pages.md) |
+| 15 | 🌐 **PWA instalado e funcionando offline**                | Não       | [modulos/14-build-web-pwa/07-instalabilidade.md](modulos/14-build-web-pwa/07-instalabilidade.md)                       |
+| 16 | APK debug gerado                                         | Não       | [modulos/15-build-android/01-debug-profile-release.md](modulos/15-build-android/01-debug-profile-release.md)           |
+| 17 | APK release assinado e instalado                         | Não       | [modulos/15-build-android/08-gerando-apk-e-aab.md](modulos/15-build-android/08-gerando-apk-e-aab.md)                   |
+| 18 | AAB gerado                                               | Não       | [modulos/15-build-android/08-gerando-apk-e-aab.md](modulos/15-build-android/08-gerando-apk-e-aab.md)                   |
+| 19 | build iOS release gerado                                 | 🍎 Sim     | [modulos/16-build-ios/08-build-ipa-e-archive.md](modulos/16-build-ios/08-build-ipa-e-archive.md)                       |
+| 20 | aplicativo executado em iPhone físico                   | 🍎 Sim     | [modulos/16-build-ios/03-simulador-e-iphone-fisico.md](modulos/16-build-ios/03-simulador-e-iphone-fisico.md)           |
+| 21 | archive do iOS criado                                    | 🍎 Sim     | [modulos/16-build-ios/08-build-ipa-e-archive.md](modulos/16-build-ios/08-build-ipa-e-archive.md)                       |
+| 22 | IPA exportado (quando aplicável)                        | 🍎 Sim     | [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](modulos/16-build-ios/09-exportando-ipa-e-testflight.md)       |
+| 23 | versão preparada para TestFlight                        | 🍎 Sim     | [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](modulos/16-build-ios/09-exportando-ipa-e-testflight.md)       |
+| 24 | projeto final concluído                                 | Não       | [projetos/03-projeto-final-multiplataforma/14-checklist.md](projetos/03-projeto-final-multiplataforma/14-checklist.md) |
 
 Glossário rápido dos nomes que aparecem acima (todos explicados em detalhe em
 [referencias/glossario.md](referencias/glossario.md)):
@@ -199,10 +201,10 @@ Objetivo da fase: juntar tudo em um app real, com 5 telas, banco local e API.
 - [ ] Etapa 6 — Responsividade e acessibilidade
 - [ ] Etapa 7 — Testes
 - [ ] Etapa 8 — Ícone, splash e versão
-- [ ] Critérios de aceite conferidos — [projetos/03-projeto-final-multiplataforma/11-criterios-de-aceite.md](projetos/03-projeto-final-multiplataforma/11-criterios-de-aceite.md)
+- [ ] Critérios de aceite conferidos — [projetos/03-projeto-final-multiplataforma/12-criterios-de-aceite.md](projetos/03-projeto-final-multiplataforma/12-criterios-de-aceite.md)
 - [ ] Projeto 3 — [Projeto final multiplataforma](projetos/03-projeto-final-multiplataforma/README.md)
 - [ ] **projeto final concluído**
-- [ ] ⭐ Desafios extras — [projetos/03-projeto-final-multiplataforma/12-desafios.md](projetos/03-projeto-final-multiplataforma/12-desafios.md)
+- [ ] ⭐ Desafios extras — [projetos/03-projeto-final-multiplataforma/13-desafios.md](projetos/03-projeto-final-multiplataforma/13-desafios.md)
 
 ---
 
@@ -212,9 +214,9 @@ Objetivo da fase: transformar código em arquivo instalável, primeiro no Androi
 
 ### 🤖 Android
 
-- [ ] Módulo 14 — [Build Android](modulos/14-build-android/README.md)
-- [ ] Exercícios do módulo 14 — [exercicios/14-build-android.md](exercicios/14-build-android.md)
-- [ ] Avaliação do módulo 14 — [avaliacoes/modulo-14-build-android.md](avaliacoes/modulo-14-build-android.md)
+- [ ] Módulo 15 — [Build Android](modulos/15-build-android/README.md)
+- [ ] Exercícios do módulo 15 — [exercicios/15-build-android.md](exercicios/15-build-android.md)
+- [ ] Avaliação do módulo 15 — [avaliacoes/modulo-15-build-android.md](avaliacoes/modulo-15-build-android.md)
 - [ ] **APK debug gerado**
 - [ ] Criei o **keystore** (*arquivo com a chave criptográfica que assina o app*) de upload
 - [ ] Configurei `key.properties` e coloquei no `.gitignore`
@@ -224,9 +226,9 @@ Objetivo da fase: transformar código em arquivo instalável, primeiro no Androi
 
 ### 🍎 iOS
 
-- [ ] Módulo 15 — [Build iOS](modulos/15-build-ios/README.md) (leitura possível no Windows)
-- [ ] Exercícios do módulo 15 — [exercicios/15-build-ios.md](exercicios/15-build-ios.md)
-- [ ] Avaliação do módulo 15 — [avaliacoes/modulo-15-build-ios.md](avaliacoes/modulo-15-build-ios.md)
+- [ ] Módulo 16 — [Build iOS](modulos/16-build-ios/README.md) (leitura possível no Windows)
+- [ ] Exercícios do módulo 16 — [exercicios/16-build-ios.md](exercicios/16-build-ios.md)
+- [ ] Avaliação do módulo 16 — [avaliacoes/modulo-16-build-ios.md](avaliacoes/modulo-16-build-ios.md)
 - [ ] 🍎 **aplicativo executado em iOS**
 - [ ] 🍎 **aplicativo executado em iPhone físico**
 - [ ] 🍎 **build iOS release gerado**
@@ -239,9 +241,9 @@ Objetivo da fase: transformar código em arquivo instalável, primeiro no Androi
 
 ## Fase 7 — Publicação e fechamento (Dia 15)
 
-- [ ] Módulo 16 — [Publicação e próximos passos](modulos/16-publicacao-e-proximos-passos/README.md)
-- [ ] Exercícios do módulo 16 — [exercicios/16-publicacao-e-proximos-passos.md](exercicios/16-publicacao-e-proximos-passos.md)
-- [ ] Avaliação do módulo 16 — [avaliacoes/modulo-16-publicacao-e-proximos-passos.md](avaliacoes/modulo-16-publicacao-e-proximos-passos.md)
+- [ ] Módulo 17 — [Publicação e próximos passos](modulos/17-publicacao-e-proximos-passos/README.md)
+- [ ] Exercícios do módulo 17 — [exercicios/17-publicacao-e-proximos-passos.md](exercicios/17-publicacao-e-proximos-passos.md)
+- [ ] Avaliação do módulo 17 — [avaliacoes/modulo-17-publicacao-e-proximos-passos.md](avaliacoes/modulo-17-publicacao-e-proximos-passos.md)
 - [ ] Avaliação cumulativa 05 — [avaliacoes/cumulativa-05-build-e-distribuicao.md](avaliacoes/cumulativa-05-build-e-distribuicao.md)
 - [ ] Avaliação final — [avaliacoes/avaliacao-final.md](avaliacoes/avaliacao-final.md)
 - [ ] Checklist do projeto final — [checklists/projeto-final.md](checklists/projeto-final.md)
@@ -267,9 +269,9 @@ Use esta lista quando quiser ver, em uma tela só, quanto do conteúdo já foi c
 - [ ] Módulo 11 — [Recursos nativos](modulos/11-recursos-nativos/README.md)
 - [ ] Módulo 12 — [Testes e debug](modulos/12-testes-e-debug/README.md)
 - [ ] Módulo 13 — [Desempenho e segurança](modulos/13-desempenho-e-seguranca/README.md)
-- [ ] Módulo 14 — 🤖 [Build Android](modulos/14-build-android/README.md)
-- [ ] Módulo 15 — 🍎 [Build iOS](modulos/15-build-ios/README.md)
-- [ ] Módulo 16 — [Publicação e próximos passos](modulos/16-publicacao-e-proximos-passos/README.md)
+- [ ] Módulo 15 — 🤖 [Build Android](modulos/15-build-android/README.md)
+- [ ] Módulo 16 — 🍎 [Build iOS](modulos/16-build-ios/README.md)
+- [ ] Módulo 17 — [Publicação e próximos passos](modulos/17-publicacao-e-proximos-passos/README.md)
 
 ## Checkboxes por projeto
 
@@ -293,9 +295,10 @@ Use esta lista quando quiser ver, em uma tela só, quanto do conteúdo já foi c
 - [ ] [Módulo 11 — Recursos nativos](avaliacoes/modulo-11-recursos-nativos.md)
 - [ ] [Módulo 12 — Testes e debug](avaliacoes/modulo-12-testes-e-debug.md)
 - [ ] [Módulo 13 — Desempenho e segurança](avaliacoes/modulo-13-desempenho-e-seguranca.md)
-- [ ] [Módulo 14 — Build Android](avaliacoes/modulo-14-build-android.md)
-- [ ] [Módulo 15 — Build iOS](avaliacoes/modulo-15-build-ios.md)
-- [ ] [Módulo 16 — Publicação e próximos passos](avaliacoes/modulo-16-publicacao-e-proximos-passos.md)
+- [ ] [Módulo 14 — Build Web (PWA)](avaliacoes/modulo-14-build-web-pwa.md)
+- [ ] [Módulo 15 — Build Android](avaliacoes/modulo-15-build-android.md)
+- [ ] [Módulo 16 — Build iOS](avaliacoes/modulo-16-build-ios.md)
+- [ ] [Módulo 17 — Publicação e próximos passos](avaliacoes/modulo-17-publicacao-e-proximos-passos.md)
 - [ ] [Cumulativa 01 — Dart](avaliacoes/cumulativa-01-dart.md)
 - [ ] [Cumulativa 02 — Flutter UI](avaliacoes/cumulativa-02-flutter-ui.md)
 - [ ] [Cumulativa 03 — Estado e dados](avaliacoes/cumulativa-03-estado-e-dados.md)
@@ -333,8 +336,8 @@ Na coluna "Status" use: `🟢` no prazo · `🟡` atrasou 1 dia · `🔴` atraso
 | 11  | M08 + avaliação                                                      | ____/____ | ____/____ |        |
 | 12  | M09 + M10 + cumulativa 03                                              | ____/____ | ____/____ |        |
 | 13  | M11 + M12 + M13 + cumulativa 04                                        | ____/____ | ____/____ |        |
-| 14  | Projeto final, etapas 1–8                                             | ____/____ | ____/____ |        |
-| 15  | **Revisão** + M14, M15, M16 + cumulativa 05 + avaliação final | ____/____ | ____/____ |        |
+| 14  | Projeto final, etapas 1–9                                             | ____/____ | ____/____ |        |
+| 15  | **Revisão** + M14, M15, M16, M17 + cumulativa 05 + avaliação final | ____/____ | ____/____ |        |
 
 ### Dias de revisão
 

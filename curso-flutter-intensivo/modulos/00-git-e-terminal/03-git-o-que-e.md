@@ -208,7 +208,7 @@ Esse `a1b2c3d` é o hash curto — o seu será diferente, pois depende de conte�
 - **`git log` explica o passado.** Quando um teste que passava em
   [Módulo 12](../12-testes-e-debug/05-testes-unitarios.md) falhar, é por ele que você acha a causa.
 - **O remoto vira distribuição.** Em
-  [Módulo 16](../16-publicacao-e-proximos-passos/03-versionamento-e-releases.md), cada versão
+  [Módulo 17](../17-publicacao-e-proximos-passos/03-versionamento-e-releases.md), cada versão
   publicada corresponde a um ponto marcado no histórico. Sem Git, "qual código gerou o APK que está
   na loja?" é uma pergunta sem resposta.
 

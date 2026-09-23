@@ -200,7 +200,7 @@ Este módulo é o mais honesto do curso sobre isso, porque desempenho depende de
 > 🍎 **SÓ NO MAC.** Testar VoiceOver, gerar `.ipa` ofuscado e medir desempenho em iPhone exigem
 > macOS + Xcode. No Windows você lê, entende e prepara tudo; a execução fica para quando houver um
 > Mac. O porquê disso está em
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 Se você ainda **não instalou o Android SDK**, as aulas 1, 2, 3, 5 (parte automática), 6 (código) e a
 teoria da 7 rodam inteiras com:
@@ -211,7 +211,7 @@ flutter run -d windows
 
 A instalação do Android SDK está em
 [02-configuracao-do-ambiente.md](../../02-configuracao-do-ambiente.md) e é pré-requisito do
-[Módulo 14 — Build Android](../14-build-android/README.md).
+[Módulo 15 — Build Android](../15-build-android/README.md).
 
 ---
 
@@ -222,23 +222,29 @@ A instalação do Android SDK está em
 | `const` e extração de widget | [Projeto final — Etapa 6](../../projetos/03-projeto-final-multiplataforma/08-etapa-6-responsividade-e-acessibilidade.md) |
 | `ListView.builder` e paginação | [09 — API com Riverpod](../09-consumo-de-api/09-api-com-riverpod.md) |
 | `compute()` e isolates | [04 — Isolates e desempenho](../04-dart-avancado/08-isolates-e-desempenho.md) |
-| Modo profile e release | [14 — Debug, profile e release](../14-build-android/01-debug-profile-release.md) |
+| Modo profile e release | [15 — Debug, profile e release](../15-build-android/01-debug-profile-release.md) |
 | `Semantics` e contraste | [06 — Texto, tipografia e ícones](../06-widgets-e-layouts/02-texto-tipografia-icones.md) |
 | Área de toque de 48 dp | [06 — Gestos e feedback](../06-widgets-e-layouts/10-gestos-e-feedback.md) |
 | `flutter_secure_storage` | [10 — Dados sensíveis](../10-persistencia-de-dados/07-dados-sensiveis.md) |
 | Token e cabeçalho `Authorization` | [09 — Autenticação e tokens](../09-consumo-de-api/08-autenticacao-e-tokens.md) |
 | O que não versionar | [00 — Desfazendo erros e segredos](../00-git-e-terminal/05-desfazendo-erros-e-segredos.md) |
-| `--obfuscate` no build final | [14 — Gerando APK e AAB](../14-build-android/08-gerando-apk-e-aab.md) |
-| Checklist antes de publicar | [checklists/build-android.md](../../checklists/build-android.md) e [checklists/projeto-final.md](../../checklists/projeto-final.md) |
+| `--obfuscate` no build final | [15 — Gerando APK e AAB](../15-build-android/08-gerando-apk-e-aab.md) |
+| Medir antes de otimizar | [14 — Como o Flutter compila para web](../14-build-web-pwa/02-como-o-flutter-compila-para-web.md) |
+| "Segredo mora no servidor" | [14 — Gerando o build web](../14-build-web-pwa/08-gerando-o-build-web.md) — na web vira restrição absoluta |
+| `Semantics` na web | [14 — Como o Flutter compila para web](../14-build-web-pwa/02-como-o-flutter-compila-para-web.md) |
+| Checklist antes de publicar | [checklists/build-web.md](../../checklists/build-web.md), [checklists/build-android.md](../../checklists/build-android.md) e [checklists/projeto-final.md](../../checklists/projeto-final.md) |
 
-O módulo seguinte, [14 — Build Android](../14-build-android/README.md), pega o app já rápido,
-acessível e seguro e o transforma num **APK e num AAB assinados**, prontos para a Google Play.
+O módulo seguinte, [14 — Build Web (PWA)](../14-build-web-pwa/README.md), pega o app já rápido,
+acessível e seguro e o coloca **no ar, numa URL pública, instalável e funcionando offline** — o
+canal principal de distribuição deste curso. Depois dele vêm os canais nativos:
+[15 — Build Android](../15-build-android/README.md), com o **APK e o AAB assinados**, e
+[16 — Build iOS](../16-build-ios/README.md).
 
 ---
 
 ## ☑️ Critérios para considerar o módulo concluído
 
-Marque cada item só quando for verdade de fato. Este é o portão de entrada do módulo 14.
+Marque cada item só quando for verdade de fato. Este é o portão de entrada do módulo 15.
 
 - [ ] Li as **7 aulas** inteiras, na ordem.
 - [ ] Criei o projeto `foco_desempenho` e ele roda sem erro (`flutter run -d windows` ou no Android).
@@ -270,4 +276,4 @@ aula revisar.
 
 | ⬅️ Módulo anterior | 🏠 Curso | ➡️ Próximo módulo |
 |---|---|---|
-| [12 — Testes e Debug](../12-testes-e-debug/README.md) | [README do curso](../../README.md) | [14 — Build Android](../14-build-android/README.md) |
+| [12 — Testes e Debug](../12-testes-e-debug/README.md) | [README do curso](../../README.md) | [14 — Build Web (PWA)](../14-build-web-pwa/README.md) |

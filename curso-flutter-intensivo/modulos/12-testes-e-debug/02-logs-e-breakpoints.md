@@ -474,7 +474,7 @@ class _TelaCronometroState extends State<TelaCronometro> {
   digita `foco.sessoes` na caixa de filtro e o resto some.
 - **`level: 800` × `level: 1000`** — o primeiro é um evento normal; o segundo é uma falha que o
   usuário percebeu. Quando o app crescer e você integrar um serviço de monitoramento
-  ([módulo 16](../16-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md)), só os
+  ([módulo 17](../17-publicacao-e-proximos-passos/05-monitoramento-e-feedback.md)), só os
   `SEVERE` viram alerta.
 - **`error: erro, stackTrace: pilha`** no `catch (erro, pilha)` — passar os dois é o que
   diferencia um log útil de um log inútil. Sem o `stackTrace`, você sabe que falhou, mas não onde.

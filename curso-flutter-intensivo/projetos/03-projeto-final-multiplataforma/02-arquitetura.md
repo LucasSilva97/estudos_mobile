@@ -249,9 +249,9 @@ no teste é uma linha de `overrides`.
 [08 Etapa 6 — Responsividade e acessibilidade](08-etapa-6-responsividade-e-acessibilidade.md) ·
 [09 Etapa 7 — Testes](09-etapa-7-testes.md) ·
 [10 Etapa 8 — Ícone, splash e versão](10-etapa-8-icone-splash-e-versao.md) ·
-[11 Critérios de aceite](11-criterios-de-aceite.md) ·
-[12 Desafios](12-desafios.md) ·
-[13 Checklist](13-checklist.md)
+[11 Critérios de aceite](12-criterios-de-aceite.md) ·
+[12 Desafios](13-desafios.md) ·
+[13 Checklist](14-checklist.md)
 
 | ⬅️ Anterior | 🏠 Início | ➡️ Próximo |
 |---|---|---|

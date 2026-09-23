@@ -16,7 +16,7 @@
 > Cada item traz a linha **🪟 Dá para fazer no Windows? Sim/Não**, e há uma tabela-resumo com
 > essa coluna no fim da página.
 >
-> Por que é assim: [modulos/15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md)
+> Por que é assim: [modulos/16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md)
 > Ambiente iOS passo a passo: [checklists/ambiente-ios.md](ambiente-ios.md)
 
 ---
@@ -61,14 +61,14 @@
     Select-String -Path .\ios\Runner.xcodeproj\project.pbxproj -Pattern 'PRODUCT_BUNDLE_IDENTIFIER'
     ```
     Esperado: nenhuma ocorrência de `com.example`.
-  - Aula: [modulos/15-build-ios/04-bundle-id-e-xcode.md](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+  - Aula: [modulos/16-build-ios/04-bundle-id-e-xcode.md](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 - [ ] **Bundle ID registrado no portal da Apple** (*Certificates, Identifiers & Profiles* →
   *Identifiers*), ou criado automaticamente pelo Xcode com *automatic signing*.
   - 🪟 **Dá para fazer no Windows? Parcialmente** — o registro manual é pelo navegador, e isso
     funciona no Windows; a criação automática acontece dentro do Xcode, que não.
   - Verificar: o identificador aparece na lista do portal.
-  - Aula: [modulos/15-build-ios/07-certificados-e-provisioning.md](../modulos/15-build-ios/07-certificados-e-provisioning.md)
+  - Aula: [modulos/16-build-ios/07-certificados-e-provisioning.md](../modulos/16-build-ios/07-certificados-e-provisioning.md)
 
 - [ ] **`version: 1.0.0+1` no `pubspec.yaml`.**
   No iOS, `1.0.0` alimenta `CFBundleShortVersionString` e `1` alimenta `CFBundleVersion`. É o
@@ -78,7 +78,7 @@
     ```powershell
     Select-String -Path .\pubspec.yaml -Pattern '^version:'
     ```
-  - Aula: [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] **`Info.plist` usa as variáveis do Flutter para versão** (não valores fixos).
   Esperado: `CFBundleShortVersionString` = `$(FLUTTER_BUILD_NAME)` e `CFBundleVersion` =
@@ -89,7 +89,7 @@
     ```powershell
     Select-String -Path .\ios\Runner\Info.plist -Pattern 'FLUTTER_BUILD_NAME|FLUTTER_BUILD_NUMBER'
     ```
-  - Aula: [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] **`CFBundleDisplayName` = `Foco`** (o nome sob o ícone na tela inicial do iPhone).
   - 🪟 **Dá para fazer no Windows? Sim.**
@@ -97,7 +97,7 @@
     ```powershell
     Select-String -Path .\ios\Runner\Info.plist -Pattern 'CFBundleDisplayName' -Context 0,1
     ```
-  - Aula: [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] **`SceneDelegate.swift` e `UIApplicationSceneManifest` intactos.**
   O `flutter create` do 3.47 gera `ios/Runner/SceneDelegate.swift` e o bloco
@@ -109,12 +109,12 @@
     Test-Path .\ios\Runner\SceneDelegate.swift
     Select-String -Path .\ios\Runner\Info.plist -Pattern 'UIApplicationSceneManifest'
     ```
-  - Aula: [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] **Deployment Target definido (mínimo iOS 13 no Flutter 3.47).**
   - 🪟 **Dá para fazer no Windows? Não** (o campo fica no Xcode, em *General → Minimum
     Deployments*).
-  - Aula: [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 ### 1.2 🔴 Ícone e splash
 
@@ -143,8 +143,8 @@
     `40x40`, `50x50`… em `@1x`, `@2x` e `@3x`.
     (`@1x`, `@2x`, `@3x` são as escalas de tela da Apple: tamanho em pontos × escala = pixels.
     iPhone moderno usa `@3x`.)
-  - Aula: [modulos/14-build-android/03-icone.md](../modulos/14-build-android/03-icone.md) ·
-    [modulos/15-build-ios/05-icone-splash-versao-infoplist.md](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+  - Aula: [modulos/15-build-android/03-icone.md](../modulos/15-build-android/03-icone.md) ·
+    [modulos/16-build-ios/05-icone-splash-versao-infoplist.md](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 - [ ] **Imagem de origem correta:** PNG quadrado **1024×1024**, sem transparência.
   - 🪟 **Dá para fazer no Windows? Sim.**
@@ -152,7 +152,7 @@
     ```powershell
     Get-ChildItem .\assets\icone\icone.png | Select-Object Name, Length
     ```
-  - Aula: [modulos/14-build-android/03-icone.md](../modulos/14-build-android/03-icone.md)
+  - Aula: [modulos/15-build-android/03-icone.md](../modulos/15-build-android/03-icone.md)
 
 - [ ] **Splash gerada** (no iOS ela é a `LaunchScreen.storyboard`; o gerador também ajusta a
   barra de status no `Info.plist`).
@@ -162,7 +162,7 @@
     dart run flutter_native_splash:create
     Test-Path .\ios\Runner\Base.lproj\LaunchScreen.storyboard
     ```
-  - Aula: [modulos/14-build-android/04-splash-screen.md](../modulos/14-build-android/04-splash-screen.md)
+  - Aula: [modulos/15-build-android/04-splash-screen.md](../modulos/15-build-android/04-splash-screen.md)
 
 ### 1.3 🔴 Textos de permissão no `Info.plist`
 
@@ -251,35 +251,35 @@ nome.
 
 > 🍎 **SÓ NO MAC.** Esta parte inteira exige macOS + Xcode. No Windows você pode ler e entender
 > o processo, mas não executá-lo. Veja o que fazer enquanto isso em
-> [modulos/15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md).
+> [modulos/16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md).
 
 - [ ] **Apple Developer Program ativo** (o programa **pago**).
   A conta gratuita instala o app no seu próprio iPhone, mas **expira em poucos dias** e não
   serve para TestFlight nem App Store.
   - 🪟 **Dá para fazer no Windows? Sim** (a assinatura do programa é pelo navegador).
-  - Aula: [modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md)
+  - Aula: [modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md)
 
 - [ ] **Team selecionado no alvo `Runner`.**
   Xcode → projeto `Runner` → alvo `Runner` → **Signing & Capabilities** → campo **Team**
   (o seu; este curso escreve `SEU_TEAM_ID`).
   - 🪟 **Dá para fazer no Windows? Não.**
-  - Aula: [modulos/15-build-ios/04-bundle-id-e-xcode.md](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+  - Aula: [modulos/16-build-ios/04-bundle-id-e-xcode.md](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 - [ ] **`Automatically manage signing` marcado.**
   - 🪟 **Dá para fazer no Windows? Não.**
   - Verificar: nenhum triângulo amarelo nem texto vermelho na aba *Signing & Capabilities*.
-  - Aula: [modulos/15-build-ios/07-certificados-e-provisioning.md](../modulos/15-build-ios/07-certificados-e-provisioning.md)
+  - Aula: [modulos/16-build-ios/07-certificados-e-provisioning.md](../modulos/16-build-ios/07-certificados-e-provisioning.md)
 
 - [ ] **Certificado de distribuição válido e não expirado.**
   - 🪟 **Dá para fazer no Windows? Não** (a criação/instalação é no Chaveiro do macOS; a
     consulta do status no portal é pelo navegador).
   - Verificar (no Mac): Xcode → *Settings… → Accounts → Manage Certificates*.
-  - Aula: [modulos/15-build-ios/07-certificados-e-provisioning.md](../modulos/15-build-ios/07-certificados-e-provisioning.md)
+  - Aula: [modulos/16-build-ios/07-certificados-e-provisioning.md](../modulos/16-build-ios/07-certificados-e-provisioning.md)
 
 - [ ] **Provisioning profile válido, casando com o Bundle ID `br.com.estudos.foco`.**
   Erro típico quando não casa: `No profiles for 'br.com.estudos.foco' were found`.
   - 🪟 **Dá para fazer no Windows? Não.**
-  - Aula: [modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
+  - Aula: [modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md)
 
 - [ ] **Dependências nativas resolvidas.**
   Desde o **Flutter 3.44** o **Swift Package Manager é o padrão** e resolve sozinho; o Flutter
@@ -299,7 +299,7 @@ nome.
   - Lembre: o **registro do CocoaPods se torna somente-leitura em 2 de dezembro de 2026** e o
     projeto está em modo de manutenção — por isso SPM é o caminho principal, e CocoaPods é
     conhecimento para projetos existentes e mensagens de erro.
-  - Aula: [modulos/15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+  - Aula: [modulos/16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 ---
 
@@ -313,7 +313,7 @@ nome.
     flutter clean
     flutter pub get
     ```
-  - Aula: [modulos/15-build-ios/08-build-ipa-e-archive.md](../modulos/15-build-ios/08-build-ipa-e-archive.md)
+  - Aula: [modulos/16-build-ios/08-build-ipa-e-archive.md](../modulos/16-build-ios/08-build-ipa-e-archive.md)
 
 - [ ] **`flutter build ipa` concluído.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -327,7 +327,7 @@ nome.
     flutter build ipa --export-options-plist=caminho/ExportOptions.plist
     flutter build ipa --build-name=1.0.0 --build-number=1
     ```
-  - Aula: [modulos/15-build-ios/08-build-ipa-e-archive.md](../modulos/15-build-ios/08-build-ipa-e-archive.md)
+  - Aula: [modulos/16-build-ios/08-build-ipa-e-archive.md](../modulos/16-build-ios/08-build-ipa-e-archive.md)
 
 - [ ] **Archive criado em `build/ios/archive/Runner.xcarchive`.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -335,7 +335,7 @@ nome.
     ```bash
     ls -d build/ios/archive/Runner.xcarchive
     ```
-  - Aula: [modulos/15-build-ios/08-build-ipa-e-archive.md](../modulos/15-build-ios/08-build-ipa-e-archive.md)
+  - Aula: [modulos/16-build-ios/08-build-ipa-e-archive.md](../modulos/16-build-ios/08-build-ipa-e-archive.md)
 
 - [ ] **IPA gerado em `build/ios/ipa/`.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -344,7 +344,7 @@ nome.
     ls -lh build/ios/ipa/
     ```
     Esperado: um arquivo `<nome>.ipa`.
-  - Aula: [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md)
+  - Aula: [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md)
 
 - [ ] **Tamanho do IPA conferido e anotado.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -361,19 +361,19 @@ nome.
   ```
   (sempre o `.xcworkspace`, **nunca** o `.xcodeproj`)
   - 🪟 **Dá para fazer no Windows? Não.**
-  - Aula: [modulos/15-build-ios/08-build-ipa-e-archive.md](../modulos/15-build-ios/08-build-ipa-e-archive.md)
+  - Aula: [modulos/16-build-ios/08-build-ipa-e-archive.md](../modulos/16-build-ios/08-build-ipa-e-archive.md)
 
 - [ ] 🔴 **`Validate App` executado no Organizer, SEM erros.**
   A validação roda as mesmas checagens do envio, mas em segundos. É aqui que aparecem: ícone
   com canal alfa, texto de permissão genérico, build number repetido, perfil errado.
   **Sempre valide antes de enviar.**
   - 🪟 **Dá para fazer no Windows? Não.**
-  - Aula: [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md)
+  - Aula: [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md)
 
 - [ ] **IPA exportado pelo Organizer** (*Distribute App*), ou já obtido pelo
   `flutter build ipa`.
   - 🪟 **Dá para fazer no Windows? Não.**
-  - Aula: [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md)
+  - Aula: [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md)
 
 - [ ] 🔴 **Build number NOVO e MAIOR que o do envio anterior.**
   O App Store Connect **recusa** um `CFBundleVersion` já usado. Cada envio, mesmo corrigindo
@@ -388,7 +388,7 @@ nome.
     ```powershell
     Select-String -Path .\pubspec.yaml -Pattern '^version:'
     ```
-  - Aula: [modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
 
 ---
 
@@ -397,7 +397,7 @@ nome.
 - [ ] **App criado no App Store Connect** com o mesmo Bundle ID.
   - 🪟 **Dá para fazer no Windows? Sim** — o App Store Connect é um site, e abre no navegador do
     Windows. O que não abre é o Xcode.
-  - Aula: [modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md)
 
 - [ ] **IPA enviado por Transporter OU por `altool`.**
   **Transporter:** app gratuito na Mac App Store — arraste o `.ipa`, clique em *Deliver*.
@@ -409,26 +409,26 @@ nome.
   🔴 `SUA_API_KEY` e `SEU_ISSUER_ID` são marcadores. Os valores reais ficam na sua conta e
   **nunca** entram em arquivo versionado.
   - 🪟 **Dá para fazer no Windows? Não** (Transporter e `xcrun` são macOS).
-  - Aula: [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md)
+  - Aula: [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md)
 
 - [ ] **Build processado no App Store Connect** (leva de minutos a algumas horas; o status sai
   de *Processing*).
   - 🪟 **Dá para fazer no Windows? Sim** (acompanhar pelo site).
-  - Aula: [modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md)
 
 - [ ] **Informações de conformidade de exportação respondidas** (a pergunta sobre uso de
   criptografia). Sem responder, o build não fica disponível no TestFlight.
   - 🪟 **Dá para fazer no Windows? Sim** (pelo site).
-  - Aula: [modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md)
 
 - [ ] **TestFlight configurado** com "O que testar" preenchido em português.
   - 🪟 **Dá para fazer no Windows? Sim** (pelo site).
-  - Aula: [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md)
+  - Aula: [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md)
 
 - [ ] **Pelo menos 1 testador convidado, e o convite aceito.**
   - 🪟 **Dá para fazer no Windows? Sim** (convidar pelo site). Instalar o app, só em iPhone.
   - Verificar: o testador instalou pelo app TestFlight e abriu o Foco.
-  - Aula: [modulos/15-build-ios/09-exportando-ipa-e-testflight.md](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md)
+  - Aula: [modulos/16-build-ios/09-exportando-ipa-e-testflight.md](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md)
 
 - [ ] **App testado no iPhone do testador: offline, modo escuro, fonte grande.**
   - 🪟 **Dá para fazer no Windows? Não.**
@@ -456,7 +456,7 @@ nome.
 - [ ] **Testado em TestFlight antes de enviar para revisão.** — 🪟 **Não**
 - [ ] **Nada sensível no Git** (conferido na Parte 1.4). — 🪟 **Sim**
 
-Detalhes: [modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md)
+Detalhes: [modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md)
 
 ---
 
@@ -464,38 +464,38 @@ Detalhes: [modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md](../m
 
 | # | Item | Dá para fazer no Windows? | Verificação | Aula |
 |---|---|---|---|---|
-| 1 | Bundle ID definitivo no projeto | **Sim** | `Select-String ... PRODUCT_BUNDLE_IDENTIFIER` | [15/04](../modulos/15-build-ios/04-bundle-id-e-xcode.md) |
-| 2 | Bundle ID registrado no portal | **Sim** (navegador) | consta em *Identifiers* | [15/07](../modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| 3 | `version: 1.0.0+1` | **Sim** | `Select-String -Path .\pubspec.yaml -Pattern '^version:'` | [15/05](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| 4 | `Info.plist` com variáveis do Flutter | **Sim** | `Select-String ... FLUTTER_BUILD_NAME` | [15/05](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| 5 | `CFBundleDisplayName` = Foco | **Sim** | `Select-String ... CFBundleDisplayName` | [15/05](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| 6 | `SceneDelegate.swift` preservado | **Sim** | `Test-Path .\ios\Runner\SceneDelegate.swift` | [15/05](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| 7 | Deployment Target ≥ iOS 13 | **Não** | campo no Xcode | [15/05](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md) |
-| 8 | Ícone sem canal alfa | **Sim** | `dart run flutter_launcher_icons` | [14/03](../modulos/14-build-android/03-icone.md) |
-| 9 | Splash gerada | **Sim** | `Test-Path ...LaunchScreen.storyboard` | [14/04](../modulos/14-build-android/04-splash-screen.md) |
+| 1 | Bundle ID definitivo no projeto | **Sim** | `Select-String ... PRODUCT_BUNDLE_IDENTIFIER` | [16/04](../modulos/16-build-ios/04-bundle-id-e-xcode.md) |
+| 2 | Bundle ID registrado no portal | **Sim** (navegador) | consta em *Identifiers* | [16/07](../modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| 3 | `version: 1.0.0+1` | **Sim** | `Select-String -Path .\pubspec.yaml -Pattern '^version:'` | [16/05](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| 4 | `Info.plist` com variáveis do Flutter | **Sim** | `Select-String ... FLUTTER_BUILD_NAME` | [16/05](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| 5 | `CFBundleDisplayName` = Foco | **Sim** | `Select-String ... CFBundleDisplayName` | [16/05](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| 6 | `SceneDelegate.swift` preservado | **Sim** | `Test-Path .\ios\Runner\SceneDelegate.swift` | [16/05](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| 7 | Deployment Target ≥ iOS 13 | **Não** | campo no Xcode | [16/05](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md) |
+| 8 | Ícone sem canal alfa | **Sim** | `dart run flutter_launcher_icons` | [15/03](../modulos/15-build-android/03-icone.md) |
+| 9 | Splash gerada | **Sim** | `Test-Path ...LaunchScreen.storyboard` | [15/04](../modulos/15-build-android/04-splash-screen.md) |
 | 10 | Textos de permissão em português | **Sim** | `Select-String ... UsageDescription` | [11/01](../modulos/11-recursos-nativos/01-permissoes.md) |
 | 11 | Segredos fora do Git | **Sim** | `git check-ignore -v ...` | [00/05](../modulos/00-git-e-terminal/05-desfazendo-erros-e-segredos.md) |
 | 12 | `flutter analyze` + `flutter test` | **Sim** | os dois comandos | [12/05](../modulos/12-testes-e-debug/05-testes-unitarios.md) |
-| 13 | Apple Developer Program pago | **Sim** (site) | conta ativa | [15/06](../modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md) |
-| 14 | Team selecionado | **Não** | Signing & Capabilities | [15/04](../modulos/15-build-ios/04-bundle-id-e-xcode.md) |
-| 15 | Automatic signing | **Não** | sem aviso no Xcode | [15/07](../modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| 16 | Certificado válido | **Não** | Manage Certificates | [15/07](../modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| 17 | Provisioning profile válido | **Não** | sem erro `No profiles for ...` | [15/10](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
-| 18 | SPM conferido | **Sim** | `flutter config --list` | [15/02](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 19 | `pod install` (quando necessário) | **Não** | existe `ios/Podfile.lock` | [15/02](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| 20 | `flutter clean` | **Sim** | comando conclui | [15/08](../modulos/15-build-ios/08-build-ipa-e-archive.md) |
-| 21 | `flutter build ipa` | **Não** | build conclui no Mac | [15/08](../modulos/15-build-ios/08-build-ipa-e-archive.md) |
-| 22 | Archive em `build/ios/archive/` | **Não** | `ls -d build/ios/archive/Runner.xcarchive` | [15/08](../modulos/15-build-ios/08-build-ipa-e-archive.md) |
-| 23 | IPA em `build/ios/ipa/` | **Não** | `ls -lh build/ios/ipa/` | [15/09](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 24 | `Validate App` no Organizer | **Não** | validação sem erros | [15/09](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 25 | Exportar IPA | **Não** | *Distribute App* | [15/09](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 26 | Build number novo e maior | **Sim** (editar) / **Não** (enviar) | `Select-String ... '^version:'` | [16/03](../modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md) |
-| 27 | Upload por Transporter ou `altool` | **Não** | build aparece no ASC | [15/09](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 28 | App criado no App Store Connect | **Sim** (site) | app listado | [16/02](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md) |
-| 29 | TestFlight configurado | **Sim** (site) | build disponível para teste | [15/09](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 30 | Testador convidado | **Sim** (convite) / **Não** (instalar) | convite aceito | [15/09](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
-| 31 | Capturas de tela para a loja | **Não** | imagens nos tamanhos da Apple | [16/02](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md) |
-| 32 | Ficha da loja (textos, privacidade) | **Sim** (site) | campos preenchidos | [16/02](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md) |
+| 13 | Apple Developer Program pago | **Sim** (site) | conta ativa | [16/06](../modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md) |
+| 14 | Team selecionado | **Não** | Signing & Capabilities | [16/04](../modulos/16-build-ios/04-bundle-id-e-xcode.md) |
+| 16 | Automatic signing | **Não** | sem aviso no Xcode | [16/07](../modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| 16 | Certificado válido | **Não** | Manage Certificates | [16/07](../modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| 17 | Provisioning profile válido | **Não** | sem erro `No profiles for ...` | [16/10](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| 18 | SPM conferido | **Sim** | `flutter config --list` | [16/02](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 19 | `pod install` (quando necessário) | **Não** | existe `ios/Podfile.lock` | [16/02](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| 20 | `flutter clean` | **Sim** | comando conclui | [16/08](../modulos/16-build-ios/08-build-ipa-e-archive.md) |
+| 21 | `flutter build ipa` | **Não** | build conclui no Mac | [16/08](../modulos/16-build-ios/08-build-ipa-e-archive.md) |
+| 22 | Archive em `build/ios/archive/` | **Não** | `ls -d build/ios/archive/Runner.xcarchive` | [16/08](../modulos/16-build-ios/08-build-ipa-e-archive.md) |
+| 23 | IPA em `build/ios/ipa/` | **Não** | `ls -lh build/ios/ipa/` | [16/09](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
+| 24 | `Validate App` no Organizer | **Não** | validação sem erros | [16/09](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
+| 25 | Exportar IPA | **Não** | *Distribute App* | [16/09](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
+| 26 | Build number novo e maior | **Sim** (editar) / **Não** (enviar) | `Select-String ... '^version:'` | [17/03](../modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md) |
+| 27 | Upload por Transporter ou `altool` | **Não** | build aparece no ASC | [16/09](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
+| 28 | App criado no App Store Connect | **Sim** (site) | app listado | [17/02](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md) |
+| 29 | TestFlight configurado | **Sim** (site) | build disponível para teste | [16/09](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
+| 30 | Testador convidado | **Sim** (convite) / **Não** (instalar) | convite aceito | [16/09](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
+| 31 | Capturas de tela para a loja | **Não** | imagens nos tamanhos da Apple | [17/02](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md) |
+| 32 | Ficha da loja (textos, privacidade) | **Sim** (site) | campos preenchidos | [17/02](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md) |
 
 **Placar:** **17 de 32 itens você faz no Windows.** Os outros 15 são a parte de máquina Apple.
 
@@ -552,12 +552,12 @@ open ios/Runner.xcworkspace     # Window -> Organizer -> Validate App -> Distrib
 
 | Mensagem / sintoma | Causa provável | Onde resolver |
 |---|---|---|
-| `No profiles for 'br.com.estudos.foco' were found` | Bundle ID não registrado ou Team errado | Parte 2 · [15/10](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| `No profiles for 'br.com.estudos.foco' were found` | Bundle ID não registrado ou Team errado | Parte 2 · [16/10](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
 | Validação reclama de canal alfa no ícone | faltou `remove_alpha_ios: true` | Item 1.2 |
 | Recusa por texto de permissão genérico | `UsageDescription` vago | Item 1.3 |
 | `The bundle version must be higher than...` | build number repetido | Parte 4 |
 | `xcodebuild` não encontrado / Xcode não detectado | `xcode-select` apontando para as Command Line Tools | [checklists/ambiente-ios.md](ambiente-ios.md), item 2 |
-| Erro de CocoaPods ao resolver dependências | repositório desatualizado | `pod repo update` · [15/10](../modulos/15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| Erro de CocoaPods ao resolver dependências | repositório desatualizado | `pod repo update` · [16/10](../modulos/16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
 | Ícone antigo no IPA | faltou `flutter clean` | Parte 3 |
 | Build sumiu do TestFlight | conformidade de exportação não respondida | Parte 5 |
 
@@ -576,7 +576,7 @@ Você **não** fica parado. O caminho honesto e produtivo:
    trabalho restante é de horas, não de dias.
 3. **Estude a automação** — um serviço de integração contínua com runner macOS faz o build iOS
    sem você ter um Mac na mesa:
-   [modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](../modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
+   [modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](../modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
 4. **Continue testando tudo o que é independente de plataforma** — lógica, banco (com
    `sqflite_common_ffi`, no Windows), widgets e integração rodam sem iPhone nenhum:
    [modulos/12-testes-e-debug/08-testes-de-integracao.md](../modulos/12-testes-e-debug/08-testes-de-integracao.md).

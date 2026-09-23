@@ -30,9 +30,10 @@ Não marque o progresso do curso apenas por ter lido este material.
 | [Módulo 11 — Recursos nativos](11-recursos-nativos.md) | M11-E01 a M11-E14 |
 | [Módulo 12 — Testes e debug](12-testes-e-debug.md) | M12-E01 a M12-E14 |
 | [Módulo 13 — Desempenho e segurança](13-desempenho-e-seguranca.md) | M13-E01 a M13-E14 |
-| [Módulo 14 — Build Android](14-build-android.md) | M14-E01 a M14-E14 |
-| [Módulo 15 — Build iOS](15-build-ios.md) | M15-E01 a M15-E14 |
-| [Módulo 16 — Publicação e próximos passos](16-publicacao-e-proximos-passos.md) | M16-E01 a M16-E14 |
+| [Módulo 14 — Build Web (PWA)](14-build-web-pwa.md) | M14-E01 a M14-E14 |
+| [Módulo 15 — Build Android](15-build-android.md) | M15-E01 a M15-E14 |
+| [Módulo 16 — Build iOS](16-build-ios.md) | M16-E01 a M16-E14 |
+| [Módulo 17 — Publicação e próximos passos](17-publicacao-e-proximos-passos.md) | M17-E01 a M17-E14 |
 
 ## 🛠️ Desafios dos projetos
 
@@ -46,7 +47,7 @@ Não marque o progresso do curso apenas por ter lido este material.
 
 | Gabarito | Cobre |
 |---|---|
-| [Respostas das avaliações](avaliacoes.md) | Os 17 módulos, as 5 cumulativas e a avaliação final |
+| [Respostas das avaliações](avaliacoes.md) | Os 18 módulos, as 5 cumulativas e a avaliação final |
 
 ## 🧭 Se a sua solução ficou diferente
 

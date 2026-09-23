@@ -41,9 +41,9 @@ Os arquivos [05-decisoes-tecnicas.md](05-decisoes-tecnicas.md) e
 [06-relatorio-de-validacao.md](06-relatorio-de-validacao.md) são de consulta: leia quando
 quiser saber **por que** o curso escolheu uma tecnologia ou **como** um dado foi verificado.
 
-### 2.2 Os 17 módulos — sempre em ordem numérica
+### 2.2 Os 18 módulos — sempre em ordem numérica
 
-`00` → `01` → `02` → … → `16`.
+`00` → `01` → `02` → … → `17`.
 
 Dentro de cada módulo:
 
@@ -157,7 +157,7 @@ As respostas ficam todas em
 [avaliacoes/gabarito-das-avaliacoes.md](gabaritos/avaliacoes.md).
 **Responda tudo antes de abrir esse arquivo.**
 
-Além das 17 avaliações de módulo, há 5 cumulativas e 1 final:
+Além das 18 avaliações de módulo, há 5 cumulativas e 1 final:
 
 | Avaliação | Cobre |
 |---|---|
@@ -165,7 +165,7 @@ Além das 17 avaliações de módulo, há 5 cumulativas e 1 final:
 | [Cumulativa 02 — Flutter UI](avaliacoes/cumulativa-02-flutter-ui.md) | Módulos 05 a 07 |
 | [Cumulativa 03 — Estado e dados](avaliacoes/cumulativa-03-estado-e-dados.md) | Módulos 08 a 10 |
 | [Cumulativa 04 — Qualidade e plataforma](avaliacoes/cumulativa-04-qualidade-e-plataforma.md) | Módulos 11 a 13 |
-| [Cumulativa 05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | Módulos 14 a 16 |
+| [Cumulativa 05 — Build e distribuição](avaliacoes/cumulativa-05-build-e-distribuicao.md) | Módulos 14 a 17 |
 | [Avaliação final](avaliacoes/avaliacao-final.md) | Curso inteiro + projeto "Foco" |
 
 ---
@@ -337,7 +337,7 @@ comunidades brasileiras de Flutter.
 
 | Item | Status | Observação |
 |---|---|---|
-| Ler todas as aulas dos módulos 00 a 16 | **Obrigatório** | Inclusive as seções ⚠️ e 🔍 |
+| Ler todas as aulas dos módulos 00 a 17 | **Obrigatório** | Inclusive as seções ⚠️ e 🔍 |
 | Digitar e rodar o "💻 Código completo" de cada aula | **Obrigatório** | Digitar, não colar |
 | 🛠️ Exercício guiado de cada aula | **Obrigatório** | É curto e faz parte da aula |
 | Exercícios marcados "Obrigatório? Sim" | **Obrigatório** | Mínimo de 8 por módulo |
@@ -348,9 +348,9 @@ comunidades brasileiras de Flutter.
 | Avaliação final | **Obrigatório** | Fecha o curso |
 | Projeto 1 e Projeto 2 | **Obrigatório** | Preparam o projeto final |
 | Projeto final "Foco" | **Obrigatório** | É a entrega do curso |
-| Desafios dos projetos (`05-desafios.md`, `12-desafios.md`) | Opcional | Com gabarito próprio |
+| Desafios dos projetos (`05-desafios.md`, `13-desafios.md`) | Opcional | Com gabarito próprio |
 | [Aula de go_router](modulos/07-navegacao-e-formularios/09-go-router-opcional.md) | Opcional | O curso ensina `Navigator` 1.0 |
-| Módulo 15 (iOS) executado na prática | Depende de Mac | Ler e preparar é **obrigatório**; executar exige macOS |
+| Módulo 16 (iOS) executado na prática | Depende de Mac | Ler e preparar é **obrigatório**; executar exige macOS |
 | Checklists em `checklists/` | **Obrigatório** nos pontos indicados | São conferência, não conteúdo novo |
 
 No ritmo **muito intensivo** (15 dias) faça, entre os opcionais, apenas os marcados com ⭐.
@@ -374,7 +374,7 @@ Quando um passo exige um Mac, você verá um aviso destacado como este:
 
 > 🍎 **SÓ NO MAC.** Este passo exige macOS + Xcode. No Windows você pode ler e entender
 > o processo, mas não executá-lo. Veja o que fazer enquanto isso em
-> [modulos/15-build-ios/01-por-que-exige-macos.md](modulos/15-build-ios/01-por-que-exige-macos.md).
+> [modulos/16-build-ios/01-por-que-exige-macos.md](modulos/16-build-ios/01-por-que-exige-macos.md).
 
 Quando um comando muda conforme o sistema, o curso mostra os dois blocos, rotulados:
 
@@ -396,7 +396,7 @@ Outros emojis que você vai ver nas aulas são apenas marcadores de seção
 ## 10. Higiene de segredos — regras inegociáveis
 
 Um *segredo* é qualquer dado que dá a alguém o poder de agir como você: senha, token de API,
-chave privada, arquivo de assinatura. A partir do módulo 14 você vai **criar segredos de
+chave privada, arquivo de assinatura. A partir do módulo 15 você vai **criar segredos de
 verdade** (sua keystore Android). Estas regras valem desde hoje.
 
 ### 10.1 O que nunca entra em um repositório
@@ -433,7 +433,7 @@ ios/Runner/*.mobileprovision
 O passo a passo completo está em
 [modulos/00-git-e-terminal/05-desfazendo-erros-e-segredos.md](modulos/00-git-e-terminal/05-desfazendo-erros-e-segredos.md)
 e a aplicação prática em
-[modulos/14-build-android/06-keystore.md](modulos/14-build-android/06-keystore.md).
+[modulos/15-build-android/06-keystore.md](modulos/15-build-android/06-keystore.md).
 
 ### 10.3 Como o próprio curso escreve segredos
 

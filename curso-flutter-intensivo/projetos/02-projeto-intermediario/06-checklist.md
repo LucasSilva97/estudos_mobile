@@ -77,7 +77,7 @@
 - [ ] O gesto de borda esquerda com rascunho também é barrado pelo `PopScope`.
 - [ ] Os `IconButton` da `AppBar` seguem confortáveis com o título do iOS.
 
-> ⚠️ Simulador e `.ipa` exigem **macOS** — física ou CI ([M15](../../modulos/15-build-ios/README.md)).
+> ⚠️ Simulador e `.ipa` exigem **macOS** — física ou CI ([M16](../../modulos/16-build-ios/README.md)).
 > No Windows 11 valide em Android ou `-d chrome`; marque os 🍎 com o Mac em mãos.
 
 ---

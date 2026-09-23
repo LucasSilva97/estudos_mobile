@@ -39,9 +39,10 @@ resultado.
 | [Módulo 11 — Recursos nativos](modulo-11-recursos-nativos.md) | [Gabarito M11](../gabaritos/avaliacoes.md#modulo-11) |
 | [Módulo 12 — Testes e debug](modulo-12-testes-e-debug.md) | [Gabarito M12](../gabaritos/avaliacoes.md#modulo-12) |
 | [Módulo 13 — Desempenho e segurança](modulo-13-desempenho-e-seguranca.md) | [Gabarito M13](../gabaritos/avaliacoes.md#modulo-13) |
-| [Módulo 14 — Build Android](modulo-14-build-android.md) | [Gabarito M14](../gabaritos/avaliacoes.md#modulo-14) |
-| [Módulo 15 — Build iOS](modulo-15-build-ios.md) | [Gabarito M15](../gabaritos/avaliacoes.md#modulo-15) |
-| [Módulo 16 — Publicação e próximos passos](modulo-16-publicacao-e-proximos-passos.md) | [Gabarito M16](../gabaritos/avaliacoes.md#modulo-16) |
+| [Módulo 14 — Build Web (PWA)](modulo-14-build-web-pwa.md) | [Gabarito M14](../gabaritos/avaliacoes.md#modulo-14) |
+| [Módulo 15 — Build Android](modulo-15-build-android.md) | [Gabarito M15](../gabaritos/avaliacoes.md#modulo-15) |
+| [Módulo 16 — Build iOS](modulo-16-build-ios.md) | [Gabarito M16](../gabaritos/avaliacoes.md#modulo-16) |
+| [Módulo 17 — Publicação e próximos passos](modulo-17-publicacao-e-proximos-passos.md) | [Gabarito M17](../gabaritos/avaliacoes.md#modulo-17) |
 
 ## 🔗 Avaliações cumulativas
 
@@ -55,7 +56,7 @@ diferentes, o erro que só surge na junção.
 | [Cumulativa 02 — Flutter UI](cumulativa-02-flutter-ui.md) | Módulos 05 a 07 | [Gabarito](../gabaritos/avaliacoes.md#cumulativa-02) |
 | [Cumulativa 03 — Estado e dados](cumulativa-03-estado-e-dados.md) | Módulos 08 a 10 | [Gabarito](../gabaritos/avaliacoes.md#cumulativa-03) |
 | [Cumulativa 04 — Qualidade e plataforma](cumulativa-04-qualidade-e-plataforma.md) | Módulos 11 a 13 | [Gabarito](../gabaritos/avaliacoes.md#cumulativa-04) |
-| [Cumulativa 05 — Build e distribuição](cumulativa-05-build-e-distribuicao.md) | Módulos 14 a 16 | [Gabarito](../gabaritos/avaliacoes.md#cumulativa-05) |
+| [Cumulativa 05 — Build e distribuição](cumulativa-05-build-e-distribuicao.md) | Módulos 14 a 17 | [Gabarito](../gabaritos/avaliacoes.md#cumulativa-05) |
 
 ## 🎓 Avaliação final
 

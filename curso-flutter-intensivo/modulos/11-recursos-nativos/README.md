@@ -42,7 +42,7 @@ aprender, mas é preciso ser honesto sobre cada aula:
 > 🍎 **SÓ NO MAC.** Em nenhuma aula deste módulo você vai compilar para iPhone. O que você **pode**
 > fazer no Windows: ler e editar os arquivos da pasta `ios/`, escrever os textos de permissão do
 > `Info.plist`, entender o que a Apple exige e por quê. O passo de compilar está no
-> [Módulo 15 — Build iOS](../15-build-ios/README.md).
+> [Módulo 16 — Build iOS](../16-build-ios/README.md).
 
 Se você ainda não tem o Android SDK instalado (o `flutter doctor` mostra
 `[X] Android toolchain`), instale antes de começar a aula 1 seguindo
@@ -198,9 +198,9 @@ inteiro cai no **dia 22**, logo depois da avaliação cumulativa 03.
 
 | Conceito deste módulo | Onde reaparece |
 |---|---|
-| Permissões declaradas no `AndroidManifest.xml` | [14 — Permissões Android](../14-build-android/05-permissoes-android.md) |
-| Textos do `Info.plist` | [15 — Ícone, splash, versão e Info.plist](../15-build-ios/05-icone-splash-versao-infoplist.md) |
-| Pastas `android/` e `ios/` | [14 — Diagnóstico de build](../14-build-android/10-diagnostico-de-build.md) · [15 — Diagnóstico CocoaPods](../15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| Permissões declaradas no `AndroidManifest.xml` | [15 — Permissões Android](../15-build-android/05-permissoes-android.md) |
+| Textos do `Info.plist` | [15 — Ícone, splash, versão e Info.plist](../16-build-ios/05-icone-splash-versao-infoplist.md) |
+| Pastas `android/` e `ios/` | [15 — Diagnóstico de build](../15-build-android/10-diagnostico-de-build.md) · [16 — Diagnóstico CocoaPods](../16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
 | Ciclo de vida e cronômetro | [projeto final — etapa 3](../../projetos/03-projeto-final-multiplataforma/05-etapa-3-estado-com-riverpod.md) |
 | Conectividade e cache offline | [10 — Cache e offline](../10-persistencia-de-dados/08-cache-e-offline.md) |
 | Depurar plugin que falha só no aparelho | [12 — Depurando Android e iOS](../12-testes-e-debug/09-depurando-android-e-ios.md) |

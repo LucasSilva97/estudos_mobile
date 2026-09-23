@@ -335,12 +335,12 @@ Apple, e emulação de Xcode não existe.
 - IPA exportado (quando aplicável)
 - versão preparada para TestFlight
 
-**O que você faz mesmo assim:** o [módulo 15](modulos/15-build-ios/README.md) foi escrito para
+**O que você faz mesmo assim:** o [módulo 16](modulos/16-build-ios/README.md) foi escrito para
 ser **compreendido sem executar**. Você aprende a diferença entre certificado e perfil de
 provisionamento, o que é um archive, o que o TestFlight faz, e sai sabendo executar o processo
 no dia em que tiver o equipamento. As alternativas de acesso a um Mac (emprestado, Mac na nuvem,
-compra) são discutidas em [15/01](modulos/15-build-ios/01-por-que-exige-macos.md), com prós e
-contras — o curso não recomenda gastar dinheiro antes de você ter concluído o módulo 14.
+compra) são discutidas em [16/01](modulos/16-build-ios/01-por-que-exige-macos.md), com prós e
+contras — o curso não recomenda gastar dinheiro antes de você ter concluído o módulo 15.
 
 **Consequência de projeto:** todo o código do app "Foco" é escrito para funcionar nas duas
 plataformas (os pacotes escolhidos no ADR-05 suportam Android e iOS), e as diferenças de
@@ -361,7 +361,7 @@ Android Studio não está instalado e `ANDROID_HOME` está vazio.
 **Impacto:** até resolver isso, você não roda o app em emulador nem em aparelho Android, e
 nenhum comando `flutter build apk` funciona. Dá para estudar os módulos 01 a 04 (Dart puro) e
 até rodar Flutter em `-d windows` para ver a interface, mas os marcos "emulador Android
-funcionando", "aplicativo executado em Android" e todos os do módulo 14 dependem disso.
+funcionando", "aplicativo executado em Android" e todos os do módulo 15 dependem disso.
 
 **Quando resolver:** no **Dia 1**, junto com
 [02-configuracao-do-ambiente.md](02-configuracao-do-ambiente.md). O passo a passo termina com
@@ -420,9 +420,9 @@ Para os marcos de iOS existe um custo e uma decisão que **não** são técnicos
 
 O curso **não cita valor de anuidade**, porque preço muda e material com preço desatualizado
 engana. A comparação completa está em
-[15/06](modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md).
+[16/06](modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md).
 
-**Recomendação do curso:** não pague nada antes de concluir o módulo 14 e ter um APK release
+**Recomendação do curso:** não pague nada antes de concluir o módulo 15 e ter um APK release
 assinado funcionando. A anuidade só se justifica quando existe um app pronto para distribuir.
 
 ### 6.6 Hardware para emulador

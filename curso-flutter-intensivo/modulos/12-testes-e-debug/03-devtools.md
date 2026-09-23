@@ -258,7 +258,7 @@ Ser honesto aqui evita frustração:
 | Não resolve | Use |
 |---|---|
 | Bug de lógica | Breakpoints (aula 2) e **testes** (aulas 5 a 7) |
-| Crash em release | Relatório de erro (Módulo 16) |
+| Crash em release | Relatório de erro (Módulo 17) |
 | Problema só em um aparelho específico | `adb logcat` / Xcode (aula 9) |
 | Erro de build | A mensagem do Gradle/Xcode (aula 9) |
 | Bug que não se reproduz | Log estruturado (aula 2) |

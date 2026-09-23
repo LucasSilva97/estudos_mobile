@@ -1,11 +1,11 @@
 # Etapa 8 — Ícone, splash e versão — Projeto Final: Foco: Organizador de Estudos
 
 > **Tempo estimado:** 90 min · **Depende de:** [Etapa 7 — Testes](09-etapa-7-testes.md) ·
-> **Aulas:** [14.2 Identidade do app](../../modulos/14-build-android/02-identidade-do-app.md) ·
-> [14.3 Ícone](../../modulos/14-build-android/03-icone.md) ·
-> [14.4 Splash screen](../../modulos/14-build-android/04-splash-screen.md) ·
-> [14.5 Permissões Android](../../modulos/14-build-android/05-permissoes-android.md) ·
-> [15.5 Ícone, splash, versão e Info.plist](../../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+> **Aulas:** [14.2 Identidade do app](../../modulos/15-build-android/02-identidade-do-app.md) ·
+> [14.3 Ícone](../../modulos/15-build-android/03-icone.md) ·
+> [14.4 Splash screen](../../modulos/15-build-android/04-splash-screen.md) ·
+> [14.5 Permissões Android](../../modulos/15-build-android/05-permissoes-android.md) ·
+> [15.5 Ícone, splash, versão e Info.plist](../../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
 
 ---
 
@@ -70,7 +70,7 @@ drawable, `colors.xml`, `styles.xml`), `ios/Runner/Assets.xcassets/AppIcon.appic
 | `assets/icone/splash.png` | 512×512 | transparente | a cor vem da config, não da imagem |
 
 Desenhe no editor que preferir (passo a passo na
-[aula 14.3](../../modulos/14-build-android/03-icone.md)) e confirme antes de gerar:
+[aula 14.3](../../modulos/15-build-android/03-icone.md)) e confirme antes de gerar:
 
 ```powershell
 Add-Type -AssemblyName System.Drawing
@@ -211,7 +211,7 @@ android {
 
     buildTypes {
         release {
-            // TODO: a assinatura de release entra no módulo 14, aula 7.
+            // TODO: a assinatura de release entra no módulo 15, aula 7.
             signingConfig = signingConfigs.getByName("debug")
         }
     }
@@ -418,7 +418,7 @@ a splash azul; e então o Painel. Ligue o tema escuro do sistema e abra de novo:
 
 > 🍎 Os dois geradores **escrevem os arquivos do iOS no Windows** — é só PNG, JSON e storyboard;
 > commite tudo. Exige Mac apenas **ver** o resultado e gerar o `.ipa`
-> ([15.8](../../modulos/15-build-ios/08-build-ipa-e-archive.md)).
+> ([15.8](../../modulos/16-build-ios/08-build-ipa-e-archive.md)).
 
 ---
 
@@ -457,4 +457,4 @@ a splash azul; e então o Painel. Ligue o tema escuro do sistema e abra de novo:
 
 | ⬅️ Etapa anterior | 🏠 Projeto | ➡️ Próxima etapa |
 |---|---|---|
-| [09 — Etapa 7: Testes](09-etapa-7-testes.md) | [README do projeto](README.md) | [11 — Critérios de aceite](11-criterios-de-aceite.md) |
+| [09 — Etapa 7: Testes](09-etapa-7-testes.md) | [README do projeto](README.md) | [11 — Etapa 9: PWA e publicação](11-etapa-9-pwa-e-publicacao.md) |

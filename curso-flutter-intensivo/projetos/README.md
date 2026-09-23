@@ -17,7 +17,7 @@ e é isso que precisa estar firme antes de acrescentar qualquer coisa.
 |---|---|---|---:|---|
 | [**1 — Meu Primeiro App**](01-projeto-iniciante/README.md) | Contador de sessões de estudo com tema claro/escuro. Sem nenhum pacote externo | Após o módulo 05 | 2 h | M05, parte do M06 |
 | [**2 — Bloco de Notas de Estudo**](02-projeto-intermediario/README.md) | Notas com título, conteúdo e etiqueta. Várias telas, formulário validado, dados que sobrevivem ao fechamento | Após o módulo 07 | 7 h | M05, M06, M07, M10 (aula 2), M12 (aulas 5 e 6) |
-| [**3 — Foco: Organizador de Estudos**](03-projeto-final-multiplataforma/README.md) | O app final: 5 telas, sqflite, API, Riverpod, testes e build assinado | Após o módulo 16 | 12–16 h | M05 a M16 |
+| [**3 — Foco: Organizador de Estudos**](03-projeto-final-multiplataforma/README.md) | O app final: 5 telas, sqflite, API, Riverpod, testes e build assinado | Após o módulo 17 | 12–16 h | M05 a M17 |
 
 ---
 
@@ -106,7 +106,7 @@ O mesmo vale para os gabaritos dos desafios: eles comparam, não substituem a te
 
 Os três projetos rodam por completo no **Windows 11**, em emulador ou aparelho Android. A única
 parte que exige um Mac é gerar o `.ipa` do Projeto 3 — e mesmo essa tem alternativa por CI com
-runner macOS, tratada no [módulo 16, aula 4](../modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
+runner macOS, tratada no [módulo 17, aula 4](../modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md).
 
 ---
 

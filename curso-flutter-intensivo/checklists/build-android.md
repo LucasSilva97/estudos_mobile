@@ -4,7 +4,7 @@
 > publicável, assinado com a **sua** chave.
 > **Quando usar:** no Dia 28 do plano intensivo, depois que o
 > [checklist do projeto final](projeto-final.md) estiver todo marcado.
-> **Módulo que ensina tudo isto:** [modulos/14-build-android/README.md](../modulos/14-build-android/README.md)
+> **Módulo que ensina tudo isto:** [modulos/15-build-android/README.md](../modulos/15-build-android/README.md)
 > **Onde você está:** 🪟 Windows 11. **Tudo nesta página roda no Windows.** Build Android não
 > precisa de Mac. (O equivalente iOS, que **precisa**, está em [build-ios.md](build-ios.md).)
 
@@ -62,14 +62,14 @@
     Select-String -Path .\android\app\build.gradle.kts -Pattern 'applicationId|namespace'
     ```
     Esperado: nenhuma ocorrência de `com.example`.
-  - Aula: [modulos/14-build-android/02-identidade-do-app.md](../modulos/14-build-android/02-identidade-do-app.md)
+  - Aula: [modulos/15-build-android/02-identidade-do-app.md](../modulos/15-build-android/02-identidade-do-app.md)
 
 - [ ] **Nome exibido "Foco" em `android:label`.**
   - Verificar:
     ```powershell
     Select-String -Path .\android\app\src\main\AndroidManifest.xml -Pattern 'android:label'
     ```
-  - Aula: [modulos/14-build-android/02-identidade-do-app.md](../modulos/14-build-android/02-identidade-do-app.md)
+  - Aula: [modulos/15-build-android/02-identidade-do-app.md](../modulos/15-build-android/02-identidade-do-app.md)
 
 - [ ] **`version:` atualizada no `pubspec.yaml`** no formato `1.0.0+1`.
   `1.0.0` vira o `versionName` (o que o usuário vê); `1` vira o `versionCode` (o número inteiro
@@ -78,7 +78,7 @@
     ```powershell
     Select-String -Path .\pubspec.yaml -Pattern '^version:'
     ```
-  - Aula: [modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
 
 - [ ] **Configuração do Gradle conferida** (são os valores que o Flutter 3.47 gera):
   `compileSdk = 36`, `minSdk = 24` (Android 7.0), `targetSdk = 36`, Java `VERSION_17` e
@@ -87,7 +87,7 @@
     ```powershell
     Select-String -Path .\android\app\build.gradle.kts -Pattern 'compileSdk|minSdk|targetSdk|JVM_17|VERSION_17'
     ```
-  - Aula: [modulos/14-build-android/01-debug-profile-release.md](../modulos/14-build-android/01-debug-profile-release.md)
+  - Aula: [modulos/15-build-android/01-debug-profile-release.md](../modulos/15-build-android/01-debug-profile-release.md)
 
 > ⚠️ **Atenção a tutoriais antigos.** Muitos mandam editar `android/app/build.gradle` **sem** o
 > `.kts`. Isso está desatualizado: o Flutter 3.47 gera **Kotlin DSL** — `build.gradle.kts` e
@@ -112,7 +112,7 @@
     ```
     Esperado: `ic_launcher.png` nas pastas `mipmap-*` e os dois `True`.
   - A linha `No platform provided` na saída do gerador é **normal** e não é erro.
-  - Aula: [modulos/14-build-android/03-icone.md](../modulos/14-build-android/03-icone.md)
+  - Aula: [modulos/15-build-android/03-icone.md](../modulos/15-build-android/03-icone.md)
 
 - [ ] **Splash gerada, inclusive modo escuro e Android 12+.**
   - Executar:
@@ -128,7 +128,7 @@
     ```
     Esperado: quatro `True`. O `values-v31` é o mecanismo novo de splash do Android 12+, que
     mostra só o ícone centralizado — por isso existe a seção `android_12:` na configuração.
-  - Aula: [modulos/14-build-android/04-splash-screen.md](../modulos/14-build-android/04-splash-screen.md)
+  - Aula: [modulos/15-build-android/04-splash-screen.md](../modulos/15-build-android/04-splash-screen.md)
 
 - [ ] **Os blocos `flutter_launcher_icons:` e `flutter_native_splash:` estão no nível superior
   do `pubspec.yaml`** — alinhados com `dependencies:` e `flutter:`, **não dentro** de
@@ -137,7 +137,7 @@
     ```powershell
     Select-String -Path .\pubspec.yaml -Pattern '^flutter_launcher_icons:|^flutter_native_splash:'
     ```
-  - Aula: [modulos/14-build-android/03-icone.md](../modulos/14-build-android/03-icone.md)
+  - Aula: [modulos/15-build-android/03-icone.md](../modulos/15-build-android/03-icone.md)
 
 ### 1.3 Permissões
 
@@ -153,7 +153,7 @@
     ```powershell
     Select-String -Path .\android\app\src\main\AndroidManifest.xml -Pattern 'uses-permission'
     ```
-  - Aula: [modulos/14-build-android/05-permissoes-android.md](../modulos/14-build-android/05-permissoes-android.md)
+  - Aula: [modulos/15-build-android/05-permissoes-android.md](../modulos/15-build-android/05-permissoes-android.md)
 
 - [ ] 🔴 **`android.permission.INTERNET` declarada no manifesto principal.**
   O Flutter adiciona essa permissão automaticamente nos builds de **debug**, mas o **release**
@@ -163,7 +163,7 @@
     ```powershell
     Select-String -Path .\android\app\src\main\AndroidManifest.xml -Pattern 'android.permission.INTERNET'
     ```
-  - Aula: [modulos/14-build-android/05-permissoes-android.md](../modulos/14-build-android/05-permissoes-android.md)
+  - Aula: [modulos/15-build-android/05-permissoes-android.md](../modulos/15-build-android/05-permissoes-android.md)
 
 ### 1.4 🔴 Keystore
 
@@ -184,7 +184,7 @@
     Test-Path "$env:USERPROFILE\upload-keystore.jks"
     ```
     Esperado: `True`.
-  - Aula: [modulos/14-build-android/06-keystore.md](../modulos/14-build-android/06-keystore.md)
+  - Aula: [modulos/15-build-android/06-keystore.md](../modulos/15-build-android/06-keystore.md)
 
 - [ ] 🔴 **Backup do keystore feito em pelo menos 2 lugares fora do computador.**
   **Perder o keystore = perder o app.** Sem ele você não consegue publicar nenhuma atualização
@@ -192,14 +192,14 @@
   todos os usuários que reinstalem.
   Guarde: (1) o arquivo `.jks`; (2) a senha do keystore; (3) a senha da chave; (4) o alias.
   - Verificar: você consegue localizar as duas cópias **agora**, sem procurar.
-  - Aula: [modulos/14-build-android/06-keystore.md](../modulos/14-build-android/06-keystore.md)
+  - Aula: [modulos/15-build-android/06-keystore.md](../modulos/15-build-android/06-keystore.md)
 
 - [ ] **Você sabe listar o conteúdo do keystore** (útil para conferir o alias mais tarde).
   - Executar:
     ```powershell
     keytool -list -v -keystore $env:USERPROFILE\upload-keystore.jks -alias upload
     ```
-  - Aula: [modulos/14-build-android/06-keystore.md](../modulos/14-build-android/06-keystore.md)
+  - Aula: [modulos/15-build-android/06-keystore.md](../modulos/15-build-android/06-keystore.md)
 
 ### 1.5 🔴 `key.properties`
 
@@ -216,7 +216,7 @@
     ```powershell
     Select-String -Path .\android\key.properties -Pattern 'storePassword|keyPassword|keyAlias|storeFile'
     ```
-  - Aula: [modulos/14-build-android/07-assinatura-no-gradle.md](../modulos/14-build-android/07-assinatura-no-gradle.md)
+  - Aula: [modulos/15-build-android/07-assinatura-no-gradle.md](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 ### 1.6 🔴 Segredos fora do Git — e PROVADO
 
@@ -301,7 +301,7 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
     ```powershell
     Select-String -Path .\android\app\build.gradle.kts -Pattern 'signingConfigs.getByName\("debug"\)|TODO: Add your own signing config'
     ```
-  - Aula: [modulos/14-build-android/07-assinatura-no-gradle.md](../modulos/14-build-android/07-assinatura-no-gradle.md)
+  - Aula: [modulos/15-build-android/07-assinatura-no-gradle.md](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 - [ ] 🔴 **`build.gradle.kts` lê o `key.properties` e usa a assinatura de release.**
   O arquivo precisa ter, no topo, a leitura das propriedades:
@@ -336,7 +336,7 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
     Select-String -Path .\android\app\build.gradle.kts -Pattern 'keystoreProperties|signingConfigs|getByName\("release"\)'
     ```
     Esperado: as três ocorrências presentes.
-  - Aula: [modulos/14-build-android/07-assinatura-no-gradle.md](../modulos/14-build-android/07-assinatura-no-gradle.md)
+  - Aula: [modulos/15-build-android/07-assinatura-no-gradle.md](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 ### 1.8 Qualidade antes de compilar
 
@@ -363,7 +363,7 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
     flutter clean
     flutter pub get
     ```
-  - Aula: [modulos/14-build-android/10-diagnostico-de-build.md](../modulos/14-build-android/10-diagnostico-de-build.md)
+  - Aula: [modulos/15-build-android/10-diagnostico-de-build.md](../modulos/15-build-android/10-diagnostico-de-build.md)
 
 - [ ] **APK de release gerado.** ⏱️ (a primeira vez baixa dependências do Gradle)
   - Executar:
@@ -376,7 +376,7 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
     ```
     Esperado: `True`. Caminho de saída oficial:
     `build/app/outputs/flutter-apk/app-release.apk`
-  - Aula: [modulos/14-build-android/08-gerando-apk-e-aab.md](../modulos/14-build-android/08-gerando-apk-e-aab.md)
+  - Aula: [modulos/15-build-android/08-gerando-apk-e-aab.md](../modulos/15-build-android/08-gerando-apk-e-aab.md)
 
 - [ ] **APKs por ABI gerados** (arquivos bem menores, úteis para distribuir fora da Play).
   - Executar:
@@ -390,7 +390,7 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
     Esperado: `app-arm64-v8a-release.apk`, `app-armeabi-v7a-release.apk` e
     `app-x86_64-release.apk`.
     Para um celular moderno, o que interessa é o **`arm64-v8a`**.
-  - Aula: [modulos/14-build-android/08-gerando-apk-e-aab.md](../modulos/14-build-android/08-gerando-apk-e-aab.md)
+  - Aula: [modulos/15-build-android/08-gerando-apk-e-aab.md](../modulos/15-build-android/08-gerando-apk-e-aab.md)
 
 - [ ] **AAB gerado** (é o formato exigido pela Google Play).
   - Executar:
@@ -402,7 +402,7 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
     Test-Path .\build\app\outputs\bundle\release\app-release.aab
     ```
     Esperado: `True`. Caminho oficial: `build/app/outputs/bundle/release/app-release.aab`
-  - Aula: [modulos/14-build-android/08-gerando-apk-e-aab.md](../modulos/14-build-android/08-gerando-apk-e-aab.md)
+  - Aula: [modulos/15-build-android/08-gerando-apk-e-aab.md](../modulos/15-build-android/08-gerando-apk-e-aab.md)
 
 - [ ] **Os três caminhos de saída conferidos de uma vez.**
   - Executar:
@@ -410,11 +410,11 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
     Get-ChildItem .\build\app\outputs\flutter-apk\ , .\build\app\outputs\bundle\release\ |
       Select-Object FullName, @{Name='MB';Expression={[math]::Round($_.Length/1MB,2)}}
     ```
-  - Aula: [modulos/14-build-android/08-gerando-apk-e-aab.md](../modulos/14-build-android/08-gerando-apk-e-aab.md)
+  - Aula: [modulos/15-build-android/08-gerando-apk-e-aab.md](../modulos/15-build-android/08-gerando-apk-e-aab.md)
 
 - [ ] **Nenhum aviso de assinatura na saída do build** (nada dizendo que o app está assinado
   com chave de debug).
-  - Aula: [modulos/14-build-android/07-assinatura-no-gradle.md](../modulos/14-build-android/07-assinatura-no-gradle.md)
+  - Aula: [modulos/15-build-android/07-assinatura-no-gradle.md](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 ---
 
@@ -432,14 +432,14 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
     adb install -r .\build\app\outputs\flutter-apk\app-arm64-v8a-release.apk
     ```
   - Verificar: o ícone do **Foco** aparece na gaveta de apps.
-  - Aula: [modulos/14-build-android/09-instalando-e-validando.md](../modulos/14-build-android/09-instalando-e-validando.md)
+  - Aula: [modulos/15-build-android/09-instalando-e-validando.md](../modulos/15-build-android/09-instalando-e-validando.md)
 
 - [ ] **Ícone e nome corretos na tela inicial** (não o robô padrão do Flutter, não "foco" em
   minúsculo, não "flutter_app").
-  - Aula: [modulos/14-build-android/03-icone.md](../modulos/14-build-android/03-icone.md)
+  - Aula: [modulos/15-build-android/03-icone.md](../modulos/15-build-android/03-icone.md)
 
 - [ ] **Splash aparece com a cor e a imagem certas** — e também no modo escuro.
-  - Aula: [modulos/14-build-android/04-splash-screen.md](../modulos/14-build-android/04-splash-screen.md)
+  - Aula: [modulos/15-build-android/04-splash-screen.md](../modulos/15-build-android/04-splash-screen.md)
 
 ### 3.2 Testes de comportamento
 
@@ -447,7 +447,7 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
   Desconecte o cabo USB, feche o app, reabra pelo ícone. É a prova de que o pacote é autônomo:
   em release não existe conexão com o *debugger* nem carregamento de código pela máquina.
   - Verificar: o app abre e funciona normalmente, desconectado.
-  - Aula: [modulos/14-build-android/09-instalando-e-validando.md](../modulos/14-build-android/09-instalando-e-validando.md)
+  - Aula: [modulos/15-build-android/09-instalando-e-validando.md](../modulos/15-build-android/09-instalando-e-validando.md)
 
 - [ ] **App testado OFFLINE** (modo avião ligado).
   Esperado: as funções locais (matérias, sessões, meta, estatísticas) continuam funcionando; a
@@ -504,27 +504,27 @@ segurança: qualquer pessoa passa a poder assinar pacotes no seu nome.
 Não envie nada antes de todas estas linhas estarem marcadas.
 
 - [ ] **Conta de desenvolvedor da Google Play criada e paga** (taxa única).
-  - Aula: [modulos/16-publicacao-e-proximos-passos/01-google-play.md](../modulos/16-publicacao-e-proximos-passos/01-google-play.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/01-google-play.md](../modulos/17-publicacao-e-proximos-passos/01-google-play.md)
 
 - [ ] **`applicationId` sem `com.example`** (conferido na Parte 1.1).
 - [ ] **AAB assinado com a chave de release** (e não com a de debug).
 - [ ] **`versionCode` maior que o da versão anterior** — a Play recusa upload com `versionCode`
   igual ou menor.
   - Verificar: o `+N` do `version:` no `pubspec.yaml` foi incrementado.
-  - Aula: [modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/16-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md](../modulos/17-publicacao-e-proximos-passos/03-versionamento-e-releases.md)
 - [ ] **Backup do keystore confirmado** (item 1.4 — sem ele não existe atualização futura).
 - [ ] **Ícone de alta resolução 512×512** preparado para a ficha da loja.
 - [ ] **Capturas de tela** do app (pelo menos 2, de aparelho real).
 - [ ] **Descrição curta e descrição completa** escritas em português.
 - [ ] **Política de privacidade** publicada em uma URL acessível — obrigatória mesmo para apps
   simples, e mais ainda se houver qualquer permissão sensível.
-  - Aula: [modulos/16-publicacao-e-proximos-passos/01-google-play.md](../modulos/16-publicacao-e-proximos-passos/01-google-play.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/01-google-play.md](../modulos/17-publicacao-e-proximos-passos/01-google-play.md)
 - [ ] **Questionário de classificação indicativa** respondido.
 - [ ] **Seção "Segurança dos dados"** preenchida com honestidade (o Foco guarda dados só no
   aparelho; diga exatamente isso).
 - [ ] **Teste interno ou fechado feito antes da produção** (a Play permite faixas de teste; use
   uma).
-  - Aula: [modulos/16-publicacao-e-proximos-passos/01-google-play.md](../modulos/16-publicacao-e-proximos-passos/01-google-play.md)
+  - Aula: [modulos/17-publicacao-e-proximos-passos/01-google-play.md](../modulos/17-publicacao-e-proximos-passos/01-google-play.md)
 - [ ] **Nada sensível no repositório** (conferido na Parte 1.6, com `git check-ignore`).
 
 ---
@@ -594,12 +594,12 @@ flutter install
 |---|---|---|
 | `Unsupported class file major version` | Java diferente do 17 | [checklists/ambiente-android.md](ambiente-android.md), item 6 |
 | `Keystore file not found` | caminho errado no `key.properties` (falta `\\`) | Item 1.5 |
-| `Failed to read key ... from store` | senha ou alias errado | Item 1.5 · [modulos/14-build-android/06-keystore.md](../modulos/14-build-android/06-keystore.md) |
+| `Failed to read key ... from store` | senha ou alias errado | Item 1.5 · [modulos/15-build-android/06-keystore.md](../modulos/15-build-android/06-keystore.md) |
 | APK instala mas a Play recusa o upload | assinado com a chave de debug | Item 1.7 |
 | Ícone antigo continua aparecendo | faltou `flutter clean` | Parte 2 |
 | `Some Android licenses not accepted` | licenças do SDK | [checklists/ambiente-android.md](ambiente-android.md), item 8 |
 | App funciona em debug e falha na rede em release | falta `INTERNET` no manifesto | Item 1.3 |
-| Erro de Gradle genérico, sem pista | cache sujo | `flutter clean` · [modulos/14-build-android/10-diagnostico-de-build.md](../modulos/14-build-android/10-diagnostico-de-build.md) |
+| Erro de Gradle genérico, sem pista | cache sujo | `flutter clean` · [modulos/15-build-android/10-diagnostico-de-build.md](../modulos/15-build-android/10-diagnostico-de-build.md) |
 | `Building with plugins requires symlink support` | Modo de Desenvolvedor do Windows desligado | [checklists/ambiente-android.md](ambiente-android.md), item 5 |
 
 Catálogo completo de erros: [referencias/erros-comuns.md](../referencias/erros-comuns.md)
@@ -608,4 +608,4 @@ Catálogo completo de erros: [referencias/erros-comuns.md](../referencias/erros-
 
 | ⬅️ Anterior | 🏠 Curso | ➡️ Próxima |
 |---|---|---|
-| [Checklist — Projeto final](projeto-final.md) | [Índice geral](../README.md) | [Checklist — Build iOS](build-ios.md) |
+| [Checklist — Build Web (PWA)](build-web.md) | [Índice geral](../README.md) | [Checklist — Build iOS](build-ios.md) |

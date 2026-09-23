@@ -10,7 +10,7 @@ São 16 arquivos em `lib/` mais o `pubspec.yaml`. Todos aparecem **inteiros**: n
 
 > 🪟 Tudo roda no Windows 11: `flutter run -d chrome`, `flutter run -d windows` ou um emulador
 > Android. Gerar o `.ipa` para iPhone exige macOS — máquina física ou *runner* macOS em CI — e isso
-> é assunto do [módulo 15](../../modulos/15-build-ios/README.md).
+> é assunto do [módulo 16](../../modulos/16-build-ios/README.md).
 
 ---
 

@@ -24,7 +24,7 @@ Todo o curso foi escrito e verificado nesta máquina:
 | 🍎 macOS | **Não disponível** |
 
 > ⚠️ **A ausência de Mac é a limitação mais importante deste relatório**, e o curso é explícito
-> sobre ela. Todo o conteúdo iOS (módulo 15 e parte do 16) foi escrito a partir da documentação
+> sobre ela. Todo o conteúdo iOS (módulo 16 e parte do 16) foi escrito a partir da documentação
 > oficial da Apple e **não foi executado**. As páginas marcam isso com 🍎 SÓ NO MAC e indicam a
 > alternativa por CI com runner macOS. Se você tiver um Mac e algum passo divergir, o material
 > está errado — e o relatório é onde você descobre que ele nunca foi testado ali.
@@ -38,7 +38,7 @@ Contagem obtida por varredura do repositório, não por estimativa.
 | Categoria | Quantidade |
 |---|---:|
 | Arquivos Markdown | **281** |
-| Aulas nos 17 módulos | **152** |
+| Aulas nos 18 módulos | **162** |
 | Listas de exercícios | 17 |
 | Exercícios, no total | 228 (136 obrigatórios) |
 | Gabaritos de exercícios | 17 |
@@ -57,9 +57,9 @@ Contagem obtida por varredura do repositório, não por estimativa.
 | 02 — Dart básico | 10 | 11 — Recursos nativos | 10 |
 | 03 — Dart intermediário | 10 | 12 — Testes e debug | 9 |
 | 04 — Dart avançado | 8 | 13 — Desempenho e segurança | 7 |
-| 05 — Introdução ao Flutter | 9 | 14 — Build Android | 10 |
-| 06 — Widgets e layouts | 12 | 15 — Build iOS | 10 |
-| 07 — Navegação e formulários | 9 | 16 — Publicação | 6 |
+| 05 — Introdução ao Flutter | 9 | 15 — Build Android | 10 |
+| 06 — Widgets e layouts | 12 | 16 — Build iOS | 10 |
+| 07 — Navegação e formulários | 9 | 17 — Publicação | 6 |
 | 08 — Estado e arquitetura | 10 | | |
 
 ---
@@ -130,7 +130,7 @@ deixou de fora convida a confiança que ele não sustenta.
 | Não validado | Por quê | O que isso significa para você |
 |---|---|---|
 | **Compilação do código das aulas** | Nenhum trecho foi colado num projeto e compilado | Erro de digitação ou import faltando é possível. Trate-os como aprendizado: ler a mensagem e corrigir é o assunto do módulo 12 |
-| **Todo o conteúdo iOS** | Sem Mac disponível | Módulo 15 e a parte iOS do 16 vêm da documentação oficial, não de execução |
+| **Todo o conteúdo iOS** | Sem Mac disponível | Módulo 16 e a parte iOS do 16 vêm da documentação oficial, não de execução |
 | **Os 3 projetos construídos de ponta a ponta** | Tempo | Especificações, código e passos foram escritos de forma consistente entre si, mas não montados num projeto Flutter real |
 | **URLs externas** | O verificador não acessa a rede | Link para a documentação oficial pode ter mudado |
 | **Os tempos estimados das aulas** | São estimativas | Ritmo pessoal varia muito. Use como proporção, não como promessa |
@@ -144,8 +144,8 @@ Além dos links, estas checagens foram feitas por script sobre o conteúdo:
 
 | Verificação | Método | Resultado |
 |---|---|---|
-| Toda aula declarada no README do módulo existe | Comparação README × arquivos | ✅ 152/152 |
-| Todo exercício tem gabarito com o mesmo id | Contagem de `## MNN-ENN` nos dois arquivos | ✅ pares batem nos 17 módulos |
+| Toda aula declarada no README do módulo existe | Comparação README × arquivos | ✅ 162/162 |
+| Todo exercício tem gabarito com o mesmo id | Contagem de `## MNN-ENN` nos dois arquivos | ✅ pares batem nos 18 módulos |
 | As categorias de exercício prometidas pelas aulas existem | Extração da seção "Exercícios independentes" de cada aula × categorias entregues | ✅ 13/13 módulos |
 | Toda avaliação tem seção no gabarito | Âncoras em `gabaritos/avaliacoes.md` | ✅ 23/23 |
 
@@ -162,7 +162,7 @@ Registro do que a validação pegou, para que você saiba que ela funciona:
 | Defeito | Onde | Correção |
 |---|---|---|
 | Artefato de ferramenta (`</invoke>`) no fim do arquivo | `gabaritos/13-desempenho-e-seguranca.md` | Removido |
-| Nome de arquivo de exercícios errado em 4 aulas | Módulo 16, aulas 3 a 6 | `16-publicacao.md` → `16-publicacao-e-proximos-passos.md` |
+| Nome de arquivo de exercícios errado em 4 aulas | Módulo 17, aulas 3 a 6 | `16-publicacao.md` → `17-publicacao-e-proximos-passos.md` |
 | Link para módulo inexistente | `modulos/12-testes-e-debug/09-...md` | Apontava para `04-ambiente-e-ferramentas`, corrigido para o módulo 05 |
 | Nome de aula inexistente | `modulos/13-.../03-assincrono-sem-travar.md` | `05-assincrono-em-dart.md` → `02-futures-e-async-await.md` |
 | Âncora não resolvida pelo slug | `02-configuracao-do-ambiente.md`, Parte 6 | Âncora HTML explícita acrescentada |

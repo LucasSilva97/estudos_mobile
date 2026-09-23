@@ -469,7 +469,7 @@ Se quiser o mesmo alinhamento nas duas plataformas, force com `centerTitle: true
 > 🍎 **No Windows você consegue ler e entender tudo isso, mas não consegue ver o resultado num
 > iPhone.** Compilar e rodar em iOS exige macOS com Xcode. O que você **pode** fazer agora: rodar em
 > Android ou em `-d windows` e conferir a aparência. O processo completo de iOS está em
-> [15 — Por que exige macOS](../15-build-ios/01-por-que-exige-macos.md).
+> [16 — Por que exige macOS](../16-build-ios/01-por-que-exige-macos.md).
 
 ---
 

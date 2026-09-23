@@ -480,7 +480,7 @@ Esta aula tem uma diferença de plataforma que vale registrar desde já:
 > Xcode. 🪟 No Windows você **pode**: escrever 100 % do código, testar no Chrome, testar em Android
 > (depois de instalar o Android Studio) e entender todo o processo iOS. Você **não pode**: compilar,
 > rodar ou publicar o app iOS. O caminho completo e as alternativas estão em
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md).
 
 Uma consequência prática para o seu dia a dia neste curso: como o app é desenhado pelo Flutter,
 **o layout que você vê no Chrome é o mesmo que vai aparecer no iPhone**. O que muda entre
@@ -582,7 +582,7 @@ gerente de produto que não programa:
 
 Regras: cite **pelo menos uma desvantagem** do Flutter (senão vira propaganda), e não use nenhuma
 palavra técnica sem explicar entre parênteses. Guarde o texto — ele volta em
-[16 — Próximos passos](../16-publicacao-e-proximos-passos/06-proximos-passos.md).
+[17 — Próximos passos](../17-publicacao-e-proximos-passos/06-proximos-passos.md).
 
 ---
 

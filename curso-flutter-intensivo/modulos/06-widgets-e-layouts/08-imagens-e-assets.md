@@ -244,8 +244,8 @@ que aparece enquanto o app abre) **não** são imagens dentro do `pubspec.yaml`:
 plataformas nativas, em `android/app/src/main/res/` e em
 `ios/Runner/Assets.xcassets/AppIcon.appiconset`. Eles são gerados pelos pacotes
 `flutter_launcher_icons` e `flutter_native_splash`, no
-[Módulo 14 — Ícone](../14-build-android/03-icone.md) e
-[Módulo 14 — Splash screen](../14-build-android/04-splash-screen.md).
+[Módulo 15 — Ícone](../15-build-android/03-icone.md) e
+[Módulo 15 — Splash screen](../15-build-android/04-splash-screen.md).
 
 ---
 
@@ -664,7 +664,7 @@ exceção no console.
 - `cacheWidth` decodifica a imagem já reduzida e economiza memória — essencial em listas.
 - Fontes vão no bloco `fonts:` com um arquivo por peso, e o `family` deve bater com o `fontFamily` do
   tema.
-- Ícone do app e splash screen **não** são assets: são configuração nativa, no Módulo 14.
+- Ícone do app e splash screen **não** são assets: são configuração nativa, no Módulo 15.
 
 ---
 
@@ -678,7 +678,7 @@ exceção no console.
 - [ ] Reservo altura antes de a imagem chegar, para evitar salto de layout.
 - [ ] Uso `cacheWidth` quando a imagem original é muito maior que o espaço de exibição.
 - [ ] Declarei uma fonte customizada e ela aparece (ou removi o bloco corretamente).
-- [ ] Sei que ícone e splash ficam para o Módulo 14 e por quê.
+- [ ] Sei que ícone e splash ficam para o Módulo 15 e por quê.
 - [ ] `flutter analyze` passa sem avisos.
 
 ---

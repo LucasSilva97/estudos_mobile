@@ -70,7 +70,7 @@ Cada item é **verificável**: abra o app e responda "sim" ou "não".
 | API, JSON, rede | [M09](../../modulos/09-consumo-de-api/README.md) |
 | `shared_preferences`, `sqflite`, disco (ver RF20) | [M10](../../modulos/10-persistencia-de-dados/README.md) |
 | `AlertDialog`, bottom sheet, `Dismissible`, "desfazer" | [M06 · 10 — Gestos](../../modulos/06-widgets-e-layouts/10-gestos-e-feedback.md) |
-| Ícone do app, splash, APK assinado | [M14](../../modulos/14-build-android/README.md) |
+| Ícone do app, splash, APK assinado | [M15](../../modulos/15-build-android/README.md) |
 
 > 🍎 Rode com `flutter run -d chrome` ou `-d windows`. iPhone exigiria Mac com Xcode ou runner macOS
 > em CI — nenhum passo daqui depende disso.

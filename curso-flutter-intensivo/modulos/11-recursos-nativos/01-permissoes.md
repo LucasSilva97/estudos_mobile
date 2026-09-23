@@ -193,7 +193,7 @@ chaves `NSCameraUsageDescription` e `NSPhotoLibraryUsageDescription` mostradas n
 
 > 🍎 **SÓ NO MAC.** Compilar e ver essa caixa aparecer exige macOS + Xcode; no Windows você escreve
 > e versiona o arquivo agora, já correto para quem compilar. Veja
-> [15-build-ios/01-por-que-exige-macos.md](../15-build-ios/01-por-que-exige-macos.md). Além disso, o
+> [16-build-ios/01-por-que-exige-macos.md](../16-build-ios/01-por-que-exige-macos.md). Além disso, o
 > `permission_handler` exige no iOS ligar macros (`PERMISSION_CAMERA=1` e afins) no `ios/Podfile`,
 > para o app não carregar código de permissões que você **não** usa — a Apple rejeita apps assim.
 > O passo está na página do pacote no pub.dev e só roda em um Mac.

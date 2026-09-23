@@ -6,7 +6,7 @@ o arquivo foi criado.
 
 ## Plano de continuação
 
-- Estrutura: 17 módulos, aulas individuais, exercícios, gabaritos, avaliações, três projetos e referências.
+- Estrutura: 18 módulos, aulas individuais, exercícios, gabaritos, avaliações, três projetos e referências.
 - Ritmo ativo do aluno: muito intensivo, 15 dias de 8 horas, com 4 horas aplicadas ao trabalho e
   4 horas intermitentes; conferir a soma das aulas e da prática antes de publicar o cronograma final.
 - Projeto final: **Foco**, organizador de matérias, sessões de estudo, meta semanal e trilhas.
@@ -77,14 +77,14 @@ O exemplo de deduplicação foi ajustado após o analisador apontar um literal c
 
 ### Módulos 04 a 16, projetos e avaliações — concluídos em 2026-09-15
 
-**Aulas.** As 27 aulas que faltavam foram escritas: módulo 12 (4), módulo 13 (6), módulo 14 (6),
-módulo 15 (7) e módulo 16 (4). O curso passa a ter **152 aulas**, e não as 148 previstas no plano
+**Aulas.** As 27 aulas que faltavam foram escritas: módulo 12 (4), módulo 13 (6), módulo 15 (6),
+módulo 16 (7) e módulo 17 (4). O curso passa a ter **162 aulas**, e não as 148 previstas no plano
 original — a diferença veio de módulos que precisaram de mais aulas do que o esboço supunha
 (o 06 fechou com 12, o 14 e o 15 com 10 cada).
 
 **Exercícios e gabaritos.** 13 listas novas (módulos 04 a 16), somando 228 exercícios no curso,
 com gabarito correspondente para cada um. A correspondência de identificadores foi conferida por
-script nos 17 módulos.
+script nos 18 módulos.
 
 **Avaliações.** 13 de módulo, 5 cumulativas e a final. As 23 seções de resposta foram montadas em
 `gabaritos/avaliacoes.md`, em ordem.
@@ -100,8 +100,8 @@ de cada projeto seguiram, para que passo a passo, código completo e testes não
 | Verificação | Método | Resultado |
 |---|---|---|
 | Links e âncoras | `scripts/validar_links.py` | **0 problemas em 6.004 links** |
-| Aulas declaradas × existentes | README de cada módulo × arquivos | 152/152 |
-| Exercícios × gabaritos | contagem de `## MNN-ENN` nos dois arquivos | pares batem nos 17 módulos |
+| Aulas declaradas × existentes | README de cada módulo × arquivos | 162/162 |
+| Exercícios × gabaritos | contagem de `## MNN-ENN` nos dois arquivos | pares batem nos 18 módulos |
 | Categorias prometidas pelas aulas × entregues | seção "Exercícios independentes" × títulos da lista | 13/13 módulos |
 | Blocos de código fechados | contagem de cercas por arquivo | todos pares |
 | Artefatos de ferramenta vazados | varredura por `</invoke>`, `</content>` | 1 encontrado e removido |
@@ -111,7 +111,7 @@ de cada projeto seguiram, para que passo a passo, código completo e testes não
 | Defeito | Onde |
 |---|---|
 | Artefato `</invoke>` no fim do arquivo | `gabaritos/13-desempenho-e-seguranca.md` |
-| Nome de arquivo de exercícios errado | módulo 16, aulas 3 a 6 |
+| Nome de arquivo de exercícios errado | módulo 17, aulas 3 a 6 |
 | Link para módulo inexistente | `modulos/12-testes-e-debug/09-...` |
 | Nome de aula inexistente | `modulos/13-.../03-assincrono-sem-travar.md` |
 | Link para aula errada de null safety | `referencias/erros-comuns.md` |

@@ -35,7 +35,7 @@ um **pacote com todas as variações** do app (idiomas, densidades de tela, arqu
 própria loja monta na hora o APK enxuto para cada aparelho. É o formato **obrigatório** para
 apps novos na Play.
 **Exemplo:** `build/app/outputs/bundle/release/app-release.aab`
-**Aula:** [14.08 — Gerando APK e AAB](../modulos/14-build-android/08-gerando-apk-e-aab.md)
+**Aula:** [15.08 — Gerando APK e AAB](../modulos/15-build-android/08-gerando-apk-e-aab.md)
 
 ### ABI
 *Application Binary Interface — "interface binária de aplicação".*
@@ -43,7 +43,7 @@ O "dialeto" de instruções que o processador do celular entende. Celulares mode
 `arm64-v8a`; modelos antigos usam `armeabi-v7a`; emuladores costumam usar `x86_64`. Um APK
 pode conter todas as ABIs (fica grande) ou uma por arquivo (fica pequeno).
 **Exemplo:** `flutter build apk --split-per-abi` gera `app-arm64-v8a-release.apk`
-**Aula:** [14.08 — Gerando APK e AAB](../modulos/14-build-android/08-gerando-apk-e-aab.md)
+**Aula:** [15.08 — Gerando APK e AAB](../modulos/15-build-android/08-gerando-apk-e-aab.md)
 
 ### Acessibilidade
 *Do inglês* accessibility. Conjunto de práticas que permite que pessoas com deficiência usem
@@ -66,7 +66,7 @@ recorta as duas juntas no formato que o fabricante do celular escolheu (círculo
 arredondado, gota). Por isso o desenho precisa caber nos ~66% centrais da imagem: as bordas
 podem ser cortadas.
 **Exemplo:** `android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml`
-**Aula:** [14.03 — Ícone](../modulos/14-build-android/03-icone.md)
+**Aula:** [15.03 — Ícone](../modulos/15-build-android/03-icone.md)
 
 ### AGP
 *Android Gradle Plugin — "plugin Gradle do Android".*
@@ -75,7 +75,7 @@ Extensão que ensina o Gradle a construir apps Android. É ele que define `compi
 Cada versão do AGP exige uma versão mínima de Gradle e de JDK — brigas entre esses três são a
 causa nº 1 de erro de build.
 **Exemplo:** declarado em `android/settings.gradle.kts`
-**Aula:** [14.10 — Diagnóstico de build](../modulos/14-build-android/10-diagnostico-de-build.md)
+**Aula:** [15.10 — Diagnóstico de build](../modulos/15-build-android/10-diagnostico-de-build.md)
 
 ### Algoritmo
 Sequência **finita** e **sem ambiguidade** de passos que resolve um problema. Programar é,
@@ -89,7 +89,7 @@ Nome curto que identifica **uma chave específica** dentro de um arquivo de chav
 Um keystore é como um chaveiro: pode guardar várias chaves, e o alias é a etiqueta de cada uma.
 Você precisa lembrar do alias para assinar o app.
 **Exemplo:** `keyAlias=SEU_ALIAS` no arquivo `android/key.properties`
-**Aula:** [14.06 — Keystore](../modulos/14-build-android/06-keystore.md)
+**Aula:** [15.06 — Keystore](../modulos/15-build-android/06-keystore.md)
 
 ### Análise estática
 Verificação do seu código **sem executá-lo**. A ferramenta lê o texto do programa e aponta
@@ -119,13 +119,13 @@ HTTP que devolvem dados).
 Arquivo único que o Android instala. É o que você manda para um amigo testar ou instala à mão
 no seu celular. Serve para teste e distribuição fora da loja; para a Google Play use AAB.
 **Exemplo:** `build/app/outputs/flutter-apk/app-release.apk`
-**Aula:** [14.08 — Gerando APK e AAB](../modulos/14-build-android/08-gerando-apk-e-aab.md)
+**Aula:** [15.08 — Gerando APK e AAB](../modulos/15-build-android/08-gerando-apk-e-aab.md)
 
 ### App Store Connect 🍎
 Painel web da Apple onde você cadastra o app, envia builds, escreve a descrição, gerencia
 testadores do TestFlight e submete para revisão. É o equivalente do Google Play Console.
 **Exemplo:** o build enviado por `xcrun altool --upload-app` aparece lá
-**Aula:** [16.02 — App Store Connect](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md)
+**Aula:** [17.02 — App Store Connect](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md)
 
 ### Árvore de widgets
 *Widget tree.* Estrutura em forma de árvore que o Flutter monta com os widgets: um widget pai
@@ -140,7 +140,7 @@ Selo criptográfico que prova quem produziu aquele APK/AAB/IPA. Sem assinatura v
 loja aceita o arquivo. Se você perder a chave que assinou a primeira versão, **não consegue
 mais publicar atualizações** com aquele mesmo app.
 **Exemplo:** bloco `signingConfigs { create("release") { ... } }`
-**Aula:** [14.07 — Assinatura no Gradle](../modulos/14-build-android/07-assinatura-no-gradle.md)
+**Aula:** [15.07 — Assinatura no Gradle](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 ### Asset
 *Do inglês: "recurso", "ativo".* Arquivo que acompanha o app e não é código: imagem, fonte,
@@ -225,7 +225,7 @@ de ouro: o contexto só enxerga o que está **acima** dele na árvore.
 de domínio invertido. É o equivalente exato do `applicationId` do Android. Depois de publicar,
 **não pode ser mudado**.
 **Exemplo:** `br.com.estudos.foco`
-**Aula:** [15.04 — Bundle ID e Xcode](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+**Aula:** [16.04 — Bundle ID e Xcode](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 ### Bytecode
 Código intermediário, entre o que você escreve e o que o processador executa. Não é texto nem
@@ -239,6 +239,15 @@ representações intermediárias parecidas no modo JIT.
 ---
 
 ## C
+
+### Base href 🌐
+*"endereço base".*
+A linha `<base href="...">` do `index.html`, a partir da qual o navegador procura **todos** os
+outros arquivos do app. Quando o app não está na raiz do domínio, ela precisa apontar para a
+subpasta — e o build cuida disso com `--base-href`. Errada, todos os arquivos dão 404 e a
+página fica **branca**, sem nenhuma mensagem de erro visível.
+**Exemplo:** `flutter build web --release --base-href /foco/`
+**Aula:** [14.08 — Gerando o build web](../modulos/14-build-web-pwa/08-gerando-o-build-web.md)
 
 ### Cache
 *"Esconderijo", em francês.* Cópia local de um dado que custou caro para obter, guardada para
@@ -258,14 +267,14 @@ Arquivo emitido pela Apple que atesta a identidade de quem assina o app. Existem
 desenvolvimento (rodar no seu iPhone) e o de distribuição (enviar para a App Store). Ele se
 combina com o *provisioning profile* para formar a assinatura.
 **Exemplo:** marcadores como `SEU_TEAM_ID` sempre substituem o valor real nos exemplos do curso
-**Aula:** [15.07 — Certificados e provisioning](../modulos/15-build-ios/07-certificados-e-provisioning.md)
+**Aula:** [16.07 — Certificados e provisioning](../modulos/16-build-ios/07-certificados-e-provisioning.md)
 
 ### CI/CD
 *Continuous Integration / Continuous Delivery — "integração contínua / entrega contínua".*
 Máquina na nuvem que, a cada `git push`, roda análise, testes e build automaticamente. Evita o
 clássico "na minha máquina funciona".
 **Exemplo:** um fluxo que executa `flutter analyze` e `flutter test` a cada push
-**Aula:** [16.04 — CI/CD introdutório](../modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md)
+**Aula:** [17.04 — CI/CD introdutório](../modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md)
 
 ### Classe
 Molde a partir do qual objetos são criados. Define os dados (campos) e os comportamentos
@@ -274,6 +283,14 @@ construída.
 **Exemplo:** `class Materia { final String nome; const Materia(this.nome); }`
 **Aula:** [03.01 — Classes e objetos](../modulos/03-dart-intermediario/01-classes-e-objetos.md)
 
+### CanvasKit 🌐
+O motor gráfico **Skia** — o mesmo que o Flutter usa no Android e no iOS — compilado para
+WebAssembly. É ele que permite ao Flutter desenhar a interface inteira dentro de um único
+`<canvas>` no navegador, em vez de traduzir widgets para HTML. Custa ~1,5 MB no primeiro
+carregamento e entrega fidelidade visual idêntica nos três alvos.
+**Exemplo:** `build/web/canvaskit/canvaskit.wasm`
+**Aula:** [14.02 — Como o Flutter compila para web](../modulos/14-build-web-pwa/02-como-o-flutter-compila-para-web.md)
+
 ### CocoaPods 🍎
 Gerenciador de dependências nativas para projetos Apple, escrito em Ruby. Até pouco tempo era
 a única forma de o Flutter instalar código nativo de plugins no iOS.
@@ -281,7 +298,7 @@ a única forma de o Flutter instalar código nativo de plugins no iOS.
 2026**. Hoje o padrão do Flutter é o Swift Package Manager, mas o CocoaPods continua sendo
 usado como alternativa quando algum plugin ainda não suporta SPM.
 **Exemplo:** `pod install` dentro da pasta `ios/`
-**Aula:** [15.02 — Xcode e CocoaPods](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+**Aula:** [16.02 — Xcode e CocoaPods](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 ### Cobertura de testes
 *Code coverage.* Porcentagem das linhas do seu código que foram executadas pelos testes. É um
@@ -289,6 +306,15 @@ termômetro, não uma nota: 100% de cobertura com testes ruins não garante nada
 que quase nada está protegido.
 **Exemplo:** `flutter test --coverage` gera `coverage/lcov.info`
 **Aula:** [12.05 — Testes unitários](../modulos/12-testes-e-debug/05-testes-unitarios.md)
+
+### CORS 🌐
+*Cross-Origin Resource Sharing — "compartilhamento de recursos entre origens".*
+Regra **do navegador**: ao pedir dados de outra origem, ele faz a requisição mas **esconde a
+resposta** do seu código, a menos que o servidor autorize por cabeçalho. Não existe no Android
+nem no iOS — por isso o mesmo código funciona no celular e falha no Chrome. Nenhuma
+configuração no lado Flutter resolve: ou o servidor manda o cabeçalho, ou você usa um proxy.
+**Exemplo:** `Access-Control-Allow-Origin: *`
+**Aula:** [14.03 — O que não funciona na web](../modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md)
 
 ### Coleção
 Termo guarda-chuva para estruturas que guardam vários valores: `List` (ordenada, aceita
@@ -308,7 +334,7 @@ métodos do sistema você pode escrever. No Flutter 3.47 o valor gerado é **36*
 com `minSdk` (o mais antigo que roda) nem com `targetSdk` (aquele para o qual você declara ter
 testado).
 **Exemplo:** `compileSdk = flutter.compileSdkVersion` em `android/app/build.gradle.kts`
-**Aula:** [14.02 — Identidade do app](../modulos/14-build-android/02-identidade-do-app.md)
+**Aula:** [15.02 — Identidade do app](../modulos/15-build-android/02-identidade-do-app.md)
 
 ### Compilação
 Tradução do código que você escreveu para uma forma que a máquina executa. O Dart faz isso de
@@ -383,14 +409,14 @@ Modo de build voltado ao desenvolvimento: compila rápido, aceita hot reload, mo
 "DEBUG" e inclui verificações extras. É lento de propósito — **nunca meça desempenho em
 debug**.
 **Exemplo:** `flutter run` usa debug por padrão
-**Aula:** [14.01 — Debug, profile e release](../modulos/14-build-android/01-debug-profile-release.md)
+**Aula:** [15.01 — Debug, profile e release](../modulos/15-build-android/01-debug-profile-release.md)
 
 ### Densidade de tela 🤖
 Quantidade de pixels por polegada de um aparelho. O Android agrupa em faixas: `mdpi`, `hdpi`,
 `xhdpi`, `xxhdpi`, `xxxhdpi`. É por isso que uma única imagem de 1024×1024 vira cinco arquivos
 de ícone: o sistema escolhe a pasta certa para cada celular.
 **Exemplo:** `android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png`
-**Aula:** [14.03 — Ícone](../modulos/14-build-android/03-icone.md)
+**Aula:** [15.03 — Ícone](../modulos/15-build-android/03-icone.md)
 
 ### Dependência
 Pacote de terceiros que seu projeto usa. Declarada em `pubspec.yaml`, baixada por
@@ -403,7 +429,7 @@ precisa mantê-la viva.
 Versão **mínima** do iOS em que seu app se instala. O Flutter 3.47 exige iOS 13 ou superior.
 Quanto mais baixo, mais aparelhos você alcança e mais casos antigos precisa suportar.
 **Exemplo:** `IPHONEOS_DEPLOYMENT_TARGET = 13.0` no projeto do Xcode
-**Aula:** [15.04 — Bundle ID e Xcode](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+**Aula:** [16.04 — Bundle ID e Xcode](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 ### DevTools
 Conjunto de ferramentas web do Flutter para inspecionar o app rodando: árvore de widgets,
@@ -578,7 +604,7 @@ Ferramenta de build usada pelo Android. Lê arquivos de script, resolve dependê
 empacota. No Flutter 3.47 o wrapper gerado é o **Gradle 9.3.1**, e os scripts estão em **Kotlin
 DSL** (`.kts`), não mais em Groovy.
 **Exemplo:** `android/app/build.gradle.kts`
-**Aula:** [14.07 — Assinatura no Gradle](../modulos/14-build-android/07-assinatura-no-gradle.md)
+**Aula:** [15.07 — Assinatura no Gradle](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 ⬆️ [Voltar ao índice](#-índice-de-letras)
 
@@ -652,7 +678,14 @@ livro. Acelera consulta e ordenação; custa espaço e torna a escrita um pouco 
 nome exibido, Bundle ID, versão, build e os textos das permissões. Fica em
 `ios/Runner/Info.plist`.
 **Exemplo:** `<key>NSCameraUsageDescription</key><string>...</string>`
-**Aula:** [15.05 — Ícone, splash, versão e Info.plist](../modulos/15-build-ios/05-icone-splash-versao-infoplist.md)
+**Aula:** [16.05 — Ícone, splash, versão e Info.plist](../modulos/16-build-ios/05-icone-splash-versao-infoplist.md)
+
+### IndexedDB 🌐
+Banco de dados chave-valor do navegador. É onde o SQLite compilado para WebAssembly grava os
+blocos do arquivo do banco. O armazenamento é **por origem** (protocolo + domínio + caminho):
+mudar a URL do app equivale a começar com um banco vazio.
+**Exemplo:** `Application → IndexedDB → sqflite_databases`
+**Aula:** [14.04 — Banco de dados na web](../modulos/14-build-web-pwa/04-banco-de-dados-na-web.md)
 
 ### InheritedWidget
 Widget da própria biblioteca do Flutter que expõe dados para **todos os descendentes** sem
@@ -681,7 +714,7 @@ equivalente do APK.
 > 🍎 **SÓ NO MAC.** Gerar um `.ipa` exige macOS com Xcode. No Windows você aprende todo o
 > processo, mas não o executa.
 **Exemplo:** `build/ios/ipa/Foco.ipa`
-**Aula:** [15.08 — Build IPA e archive](../modulos/15-build-ios/08-build-ipa-e-archive.md)
+**Aula:** [16.08 — Build IPA e archive](../modulos/16-build-ios/08-build-ipa-e-archive.md)
 
 ### Isolate
 Unidade de execução independente do Dart, com **memória própria**. Como não compartilha
@@ -748,12 +781,12 @@ app Android. Se você perdê-lo, perde a capacidade de publicar atualizações.
 ⚠️ Guarde-o **fora** do repositório e dentro de um backup. Nos exemplos do curso as senhas são
 sempre `SUA_SENHA_AQUI`.
 **Exemplo:** `upload-keystore.jks`
-**Aula:** [14.06 — Keystore](../modulos/14-build-android/06-keystore.md)
+**Aula:** [15.06 — Keystore](../modulos/15-build-android/06-keystore.md)
 
 ### keytool
 Programa de linha de comando que vem com o JDK e cria/gerencia keystores e chaves.
 **Exemplo:** `keytool -genkey -v -keystore $env:USERPROFILE\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias SEU_ALIAS`
-**Aula:** [14.06 — Keystore](../modulos/14-build-android/06-keystore.md)
+**Aula:** [15.06 — Keystore](../modulos/15-build-android/06-keystore.md)
 
 ### Kotlin DSL (.kts) 🤖
 *Domain Specific Language — "linguagem específica de domínio".* Forma de escrever scripts de
@@ -761,7 +794,7 @@ build do Gradle usando a linguagem Kotlin, com autocompletar e checagem de tipos
 3.47 o `flutter create` gera `.kts`**, não mais o Groovy. Tutoriais que mandam editar
 `android/app/build.gradle` (sem `.kts`) estão desatualizados.
 **Exemplo:** `android/app/build.gradle.kts` e `android/settings.gradle.kts`
-**Aula:** [14.07 — Assinatura no Gradle](../modulos/14-build-android/07-assinatura-no-gradle.md)
+**Aula:** [15.07 — Assinatura no Gradle](../modulos/15-build-android/07-assinatura-no-gradle.md)
 
 ⬆️ [Voltar ao índice](#-índice-de-letras)
 
@@ -806,6 +839,20 @@ valor. As chaves não se repetem.
 **Exemplo:** `final minutosPorMateria = <String, int>{'Álgebra': 120, 'Física': 90};`
 **Aula:** [02.09 — Sets e Maps](../modulos/02-dart-basico/09-sets-e-maps.md)
 
+### Manifest (web) 🌐
+O arquivo `web/manifest.json`: a identidade do app na web. Define nome, nome curto, ícones,
+cores, orientação e modo de exibição quando instalado. Faz, sozinho, o papel do
+`applicationId` + `android:label` + `res/mipmap-*` do Android.
+**Exemplo:** `"short_name": "Foco"` — o texto que aparece embaixo do ícone
+**Aula:** [14.05 — Manifest e ícones](../modulos/14-build-web-pwa/05-manifest-e-icones.md)
+
+### Maskable (ícone) 🌐
+Ícone desenhado para ser **recortado** pela máscara do sistema (círculo, *squircle*, gota) sem
+perder conteúdo. O conteúdo importante precisa caber nos **80 % centrais**. Sem um ícone
+`maskable`, o Android desenha uma moldura branca em volta do seu ícone.
+**Exemplo:** `{ "src": "icons/Icon-maskable-512.png", "purpose": "maskable" }`
+**Aula:** [14.05 — Manifest e ícones](../modulos/14-build-web-pwa/05-manifest-e-icones.md)
+
 ### Material 3
 Terceira geração do sistema de design do Google, também chamada Material You. Traz paletas
 derivadas de uma cor semente, cantos mais arredondados e a nova família de botões. No Flutter
@@ -835,13 +882,13 @@ Versão **mais antiga** do Android em que seu app se instala. No Flutter 3.47 o 
 **24**, que corresponde ao Android 7.0. Esse número precisa bater com o `min_sdk_android` do
 gerador de ícones.
 **Exemplo:** `minSdk = flutter.minSdkVersion` em `android/app/build.gradle.kts`
-**Aula:** [14.02 — Identidade do app](../modulos/14-build-android/02-identidade-do-app.md)
+**Aula:** [15.02 — Identidade do app](../modulos/15-build-android/02-identidade-do-app.md)
 
 ### mipmap 🤖
 Pasta de recursos do Android reservada aos **ícones do lançador**. Existe uma por densidade de
 tela. Ícones ficam em `mipmap/`; outras imagens ficam em `drawable/`.
 **Exemplo:** `android:icon="@mipmap/ic_launcher"` no `AndroidManifest.xml`
-**Aula:** [14.03 — Ícone](../modulos/14-build-android/03-icone.md)
+**Aula:** [15.03 — Ícone](../modulos/15-build-android/03-icone.md)
 
 ### Mixin
 Bloco de comportamento reutilizável que você "mistura" numa classe com `with`, sem herança.
@@ -875,7 +922,7 @@ Identificador do pacote Java/Kotlin usado internamente pelo build do Android par
 classe `R` de recursos. No projeto gerado vale `com.example.<nome_do_projeto>` e normalmente
 acompanha o `applicationId`.
 **Exemplo:** `namespace = "br.com.estudos.foco"`
-**Aula:** [14.02 — Identidade do app](../modulos/14-build-android/02-identidade-do-app.md)
+**Aula:** [15.02 — Identidade do app](../modulos/15-build-android/02-identidade-do-app.md)
 
 ### Navigator
 Widget do Flutter que mantém a **pilha de telas**. `push` empilha uma tela nova em cima;
@@ -1013,7 +1060,15 @@ do iOS) para você confirmar o descarte de um formulário, por exemplo.
 Modo de build intermediário: compila AOT como o release, mas mantém as ferramentas de medição
 ligadas. É o **único** modo correto para medir desempenho.
 **Exemplo:** usado ao investigar jank com o DevTools
-**Aula:** [14.01 — Debug, profile e release](../modulos/14-build-android/01-debug-profile-release.md)
+**Aula:** [15.01 — Debug, profile e release](../modulos/15-build-android/01-debug-profile-release.md)
+
+### Progressive Web App (PWA) 🌐
+Um site que cumpre três requisitos — **HTTPS**, **`manifest.json` válido** e **service worker
+com handler de `fetch`** — e por isso ganha do navegador o direito de ser instalado na tela
+inicial, abrir sem barra de endereços e funcionar offline. Não há loja, aprovação nem selo: o
+navegador confere sozinho. É o **canal principal de distribuição** deste curso.
+**Exemplo:** `https://usuario.github.io/foco/` instalado na tela inicial
+**Aula:** [14.01 — Por que PWA é o canal principal](../modulos/14-build-web-pwa/01-por-que-pwa.md)
 
 ### Provider (Riverpod)
 Objeto que **descreve como criar** um valor e o entrega a quem pedir, mantendo cache e
@@ -1034,7 +1089,7 @@ falsa.
 certificado do desenvolvedor e a lista de aparelhos autorizados. Sem ele, o iPhone recusa
 instalar o app.
 **Exemplo:** arquivos `.mobileprovision` — sempre no `.gitignore`
-**Aula:** [15.07 — Certificados e provisioning](../modulos/15-build-ios/07-certificados-e-provisioning.md)
+**Aula:** [16.07 — Certificados e provisioning](../modulos/16-build-ios/07-certificados-e-provisioning.md)
 
 ### pub / pub.dev
 `pub` é o gerenciador de pacotes do Dart (você o usa por `flutter pub` / `dart pub`); pub.dev é
@@ -1102,7 +1157,7 @@ vai para as lojas — e é o único que precisa de assinatura própria.
 ⚠️ O `flutter create` deixa o `buildTypes.release` assinado com a **chave de debug** e um
 comentário `TODO`. Enquanto esse trecho estiver lá, o arquivo **não pode** ser publicado.
 **Exemplo:** `flutter build appbundle`
-**Aula:** [14.01 — Debug, profile e release](../modulos/14-build-android/01-debug-profile-release.md)
+**Aula:** [15.01 — Debug, profile e release](../modulos/15-build-android/01-debug-profile-release.md)
 
 ### RenderObject
 Objeto da camada de renderização do Flutter. É ele que efetivamente mede, posiciona e pinta.
@@ -1178,7 +1233,7 @@ Arquivo Swift gerado pelo `flutter create` do Flutter 3.47 (`ios/Runner/SceneDel
 acompanhado do bloco `UIApplicationSceneManifest` no `Info.plist`. Faz parte do modelo moderno
 de janelas do iOS. **Não remova.**
 **Exemplo:** `UISceneDelegateClassName` = `$(PRODUCT_MODULE_NAME).SceneDelegate`
-**Aula:** [15.04 — Bundle ID e Xcode](../modulos/15-build-ios/04-bundle-id-e-xcode.md)
+**Aula:** [16.04 — Bundle ID e Xcode](../modulos/16-build-ios/04-bundle-id-e-xcode.md)
 
 ### Sealed class
 *"Classe selada".* Classe cujas subclasses são **todas** conhecidas e ficam no mesmo arquivo.
@@ -1194,6 +1249,21 @@ Dart SDK (embutido) e o Android SDK.
 ⚠️ O caminho do Flutter SDK **não pode ter acento nem espaço** no Windows. Use `C:\src\flutter`.
 **Exemplo:** `C:\src\flutter\bin\flutter`
 **Aula:** [02 — Configuração do ambiente](../02-configuracao-do-ambiente.md)
+
+### Scope (manifest) 🌐
+O campo do `manifest.json` que define **até onde** o app se considera ele mesmo. Navegar para
+fora do escopo faz o app instalado exibir uma **barra de navegador**. Precisa ser igual ao
+`--base-href` do build — divergir não quebra o build nem o deploy, só a experiência instalada.
+**Exemplo:** `"scope": "/foco/"`
+**Aula:** [14.05 — Manifest e ícones](../modulos/14-build-web-pwa/05-manifest-e-icones.md)
+
+### Service worker 🌐
+Script que roda **fora da página**, sobrevive ao fechamento da aba e intercepta **toda
+requisição** antes de ela ir à rede. É o que permite um app web abrir offline — e o que faz o
+usuário ver a versão antiga na primeira abertura após um deploy, porque ele serve o cache e
+baixa a versão nova em paralelo.
+**Exemplo:** `build/web/flutter_service_worker.js`
+**Aula:** [14.06 — Service worker e offline](../modulos/14-build-web-pwa/06-service-worker-e-offline.md)
 
 ### Semântica (Semantics)
 Camada de informação que o Flutter oferece aos leitores de tela: o que aquele elemento é, como
@@ -1242,7 +1312,7 @@ código compilado para o Mac. Por isso é rápido — e por isso alguns bugs só
 aparelho de verdade.
 > 🍎 **SÓ NO MAC.** O simulador iOS não existe para Windows.
 **Exemplo:** aparece em `flutter devices` quando o Xcode está instalado no Mac
-**Aula:** [15.03 — Simulador e iPhone físico](../modulos/15-build-ios/03-simulador-e-iphone-fisico.md)
+**Aula:** [16.03 — Simulador e iPhone físico](../modulos/16-build-ios/03-simulador-e-iphone-fisico.md)
 
 ### Sliver
 *"Lasca", "fatia".* Pedaço rolável de baixo nível. `CustomScrollView` combina slivers para
@@ -1268,7 +1338,7 @@ Tela mostrada no instante entre tocar no ícone e o app estar pronto. 🤖 No An
 `launch_background.xml` (e de `values-v31/styles.xml` no Android 12+, que mudou de mecanismo e
 só mostra o ícone centralizado). 🍎 No iOS vem de `LaunchScreen.storyboard`.
 **Exemplo:** `dart run flutter_native_splash:create`
-**Aula:** [14.04 — Splash screen](../modulos/14-build-android/04-splash-screen.md)
+**Aula:** [15.04 — Splash screen](../modulos/15-build-android/04-splash-screen.md)
 
 ### SQL
 *Structured Query Language — "linguagem estruturada de consulta".* Idioma dos bancos
@@ -1342,7 +1412,7 @@ Gerenciador de dependências nativo da Apple. **É o padrão do Flutter desde a 
 `flutter create` já gera `ios/Flutter/ephemeral/Packages`. Se algum plugin do projeto ainda não
 o suportar, o Flutter volta automaticamente para o CocoaPods; os dois convivem.
 **Exemplo:** `flutter config --enable-swift-package-manager`
-**Aula:** [15.02 — Xcode e CocoaPods](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+**Aula:** [16.02 — Xcode e CocoaPods](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 ⬆️ [Voltar ao índice](#-índice-de-letras)
 
@@ -1355,7 +1425,7 @@ Versão do Android para a qual você declara ter testado o app. O sistema usa es
 decidir quais mudanças de comportamento aplicar. No Flutter 3.47 o valor gerado é **36**. A
 Google Play exige um `targetSdk` recente para aceitar envios.
 **Exemplo:** `targetSdk = flutter.targetSdkVersion`
-**Aula:** [14.02 — Identidade do app](../modulos/14-build-android/02-identidade-do-app.md)
+**Aula:** [15.02 — Identidade do app](../modulos/15-build-android/02-identidade-do-app.md)
 
 ### Tema (ThemeData)
 Conjunto de cores, tipografia e formas aplicado a toda a árvore. Definir o tema uma vez evita
@@ -1395,7 +1465,7 @@ Serviço da Apple para distribuir versões de teste a convidados antes da public
 Store. O build enviado ao App Store Connect aparece lá.
 > 🍎 **SÓ NO MAC.** Enviar um build exige um `.ipa`, que exige macOS + Xcode.
 **Exemplo:** até 100 testadores internos por app
-**Aula:** [15.09 — Exportando IPA e TestFlight](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md)
+**Aula:** [16.09 — Exportando IPA e TestFlight](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md)
 
 ### Timeout
 *"Tempo esgotado".* Limite de espera por uma resposta. Sem ele, uma rede ruim deixa a tela
@@ -1479,7 +1549,7 @@ loja usa para saber o que é mais novo (`1`). Os dois vêm do **mesmo** campo do
 `pubspec.yaml`: `version: 1.0.0+1`.
 🍎 No iOS os equivalentes são `CFBundleShortVersionString` e `CFBundleVersion`.
 **Exemplo:** `version: 1.0.0+1`
-**Aula:** [14.02 — Identidade do app](../modulos/14-build-android/02-identidade-do-app.md)
+**Aula:** [15.02 — Identidade do app](../modulos/15-build-android/02-identidade-do-app.md)
 
 ### Viewport
 *"Janela de visão".* A parte visível de um conteúdo rolável. A lista pode ter mil itens; o
@@ -1493,6 +1563,13 @@ sem altura definida dá erro.
 ---
 
 ## W
+
+### WebAssembly (WASM) 🌐
+Formato binário que o navegador executa perto da velocidade nativa. No Flutter web ele aparece
+em três lugares: o **CanvasKit** (o motor gráfico), o **SQLite** do banco na web, e — quando
+você compila com `--wasm` — o seu próprio código Dart.
+**Exemplo:** `flutter build web --release --wasm`
+**Aula:** [14.02 — Como o Flutter compila para web](../modulos/14-build-web-pwa/02-como-o-flutter-compila-para-web.md)
 
 ### Widget
 Peça de construção da interface no Flutter — e **tudo** é widget: texto, botão, margem, cor,
@@ -1514,7 +1591,7 @@ Arquivo `.xcworkspace` que reúne o projeto do app e as dependências nativas.
 ⚠️ **Sempre abra `ios/Runner.xcworkspace`, nunca `ios/Runner.xcodeproj`** — abrir o `.xcodeproj`
 faz o build falhar por não enxergar as dependências.
 **Exemplo:** `open ios/Runner.xcworkspace`
-**Aula:** [15.02 — Xcode e CocoaPods](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+**Aula:** [16.02 — Xcode e CocoaPods](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 ⬆️ [Voltar ao índice](#-índice-de-letras)
 
@@ -1527,21 +1604,21 @@ Pacote intermediário produzido antes do IPA: contém o app compilado mais os s�
 depuração. É a partir dele que você exporta o `.ipa` para TestFlight ou App Store.
 > 🍎 **SÓ NO MAC.**
 **Exemplo:** `build/ios/archive/Runner.xcarchive`
-**Aula:** [15.08 — Build IPA e archive](../modulos/15-build-ios/08-build-ipa-e-archive.md)
+**Aula:** [16.08 — Build IPA e archive](../modulos/16-build-ios/08-build-ipa-e-archive.md)
 
 ### Xcode 🍎
 IDE oficial da Apple, disponível **apenas para macOS**. É ela que compila, assina e envia apps
 iOS. Sem Mac, não há Xcode; sem Xcode, não há IPA.
 > 🍎 **SÓ NO MAC.** No Windows você estuda todo o processo em
-> [15.01 — Por que exige macOS](../modulos/15-build-ios/01-por-que-exige-macos.md), mas não o executa.
+> [16.01 — Por que exige macOS](../modulos/16-build-ios/01-por-que-exige-macos.md), mas não o executa.
 **Exemplo:** `sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer`
-**Aula:** [15.02 — Xcode e CocoaPods](../modulos/15-build-ios/02-xcode-e-cocoapods.md)
+**Aula:** [16.02 — Xcode e CocoaPods](../modulos/16-build-ios/02-xcode-e-cocoapods.md)
 
 ### XML
 *eXtensible Markup Language — "linguagem de marcação extensível".* Formato de texto com marcas
 entre `<` e `>`. 🤖 O Android o usa para manifesto, ícones adaptativos, cores e estilos.
 **Exemplo:** `<uses-permission android:name="android.permission.INTERNET"/>`
-**Aula:** [14.05 — Permissões Android](../modulos/14-build-android/05-permissoes-android.md)
+**Aula:** [15.05 — Permissões Android](../modulos/15-build-android/05-permissoes-android.md)
 
 ⬆️ [Voltar ao índice](#-índice-de-letras)
 

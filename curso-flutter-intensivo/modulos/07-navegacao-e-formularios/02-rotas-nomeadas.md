@@ -176,7 +176,7 @@ Agora vamos reorganizar o `foco_navegacao`. Duas mudanças acontecem juntas:
 
 A `AberturaScreen` da aula 1 sai do app: ela existia só para demonstrar `pushReplacement`. Splash de
 verdade em Flutter é **nativa**, feita com `flutter_native_splash`, e é assunto do
-[módulo 14, aula 4](../14-build-android/04-splash-screen.md).
+[módulo 15, aula 4](../15-build-android/04-splash-screen.md).
 
 Crie as pastas e mova os arquivos:
 

@@ -185,16 +185,20 @@ Com isso você consegue ler quase qualquer assinatura do Flutter sem depender de
 
 | Link | O que você encontra | Quando consultar |
 |---|---|---|
-| <https://docs.flutter.dev/deployment/android> | 🤖 **Deployment Android**: `applicationId`, ícone, assinatura com keystore, APK × AAB, `flutter build appbundle` | Módulo [14 — Build Android](../modulos/14-build-android/README.md), do começo ao fim |
-| <https://docs.flutter.dev/deployment/ios> | 🍎 **Deployment iOS**: Bundle ID, registro no App Store Connect, `flutter build ipa`, arquivamento no Xcode | Módulo [15 — Build iOS](../modulos/15-build-ios/README.md) |
-| <https://docs.flutter.dev/packages-and-plugins/swift-package-manager/for-app-developers> | 🍎 **Swift Package Manager for app developers**: como ligar/desligar o SPM, como o Flutter volta ao CocoaPods, `pod deintegrate` | Aula [15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
+| <https://docs.flutter.dev/deployment/web> | 🌐 **Deployment web**: `flutter build web`, `--base-href`, onde hospedar | Módulo [14 — Build Web (PWA)](../modulos/14-build-web-pwa/README.md), do começo ao fim |
+| <https://docs.flutter.dev/platform-integration/web/renderers> | 🌐 Como o Flutter desenha no navegador: CanvasKit, skwasm, o que cada um custa | Aula [14.02](../modulos/14-build-web-pwa/02-como-o-flutter-compila-para-web.md) |
+| <https://docs.flutter.dev/platform-integration/web/faq> | 🌐 O que funciona e o que não funciona na web, com as limitações listadas | Aula [14.03](../modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md) |
+| <https://docs.flutter.dev/ui/navigation/url-strategies> | 🌐 Estratégia de hash × de caminho, e o que cada uma exige do servidor | Aula [14.09](../modulos/14-build-web-pwa/09-publicando-no-github-pages.md) |
+| <https://docs.flutter.dev/deployment/android> | 🤖 **Deployment Android**: `applicationId`, ícone, assinatura com keystore, APK × AAB, `flutter build appbundle` | Módulo [15 — Build Android](../modulos/15-build-android/README.md), do começo ao fim |
+| <https://docs.flutter.dev/deployment/ios> | 🍎 **Deployment iOS**: Bundle ID, registro no App Store Connect, `flutter build ipa`, arquivamento no Xcode | Módulo [16 — Build iOS](../modulos/16-build-ios/README.md) |
+| <https://docs.flutter.dev/packages-and-plugins/swift-package-manager/for-app-developers> | 🍎 **Swift Package Manager for app developers**: como ligar/desligar o SPM, como o Flutter volta ao CocoaPods, `pod deintegrate` | Aula [16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
 | <https://docs.flutter.dev/deployment/flavors> | Como criar variantes do app (desenvolvimento, homologação, produção) | Depois do curso, quando precisar de ambientes separados |
 | <https://docs.flutter.dev/deployment/obfuscate> | Ofuscação do código Dart no release e o que ela protege (e o que não) | Aula [13-desempenho-e-seguranca/07-ofuscacao-e-o-que-evitar.md](../modulos/13-desempenho-e-seguranca/07-ofuscacao-e-o-que-evitar.md) |
 
 > 🍎 **SÓ NO MAC.** As páginas de deployment iOS descrevem passos que exigem macOS + Xcode.
 > No Windows você lê para entender o processo e preparar o projeto; a execução fica para quando
 > você tiver acesso a um Mac. Veja
-> [15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md).
 
 ---
 
@@ -265,6 +269,9 @@ mesmas abas: **Readme**, **Changelog**, **Example**, **Installing**, **Versions*
 | <https://pub.dev/packages/uuid> | `^4.6.0` | Gerar identificadores únicos para as entidades | [10](../modulos/10-persistencia-de-dados/05-sqflite-crud.md) |
 | <https://pub.dev/packages/flutter_secure_storage> | `^11.1.1` | Guardar dado sensível no Keystore (🤖) / Keychain (🍎) | [10](../modulos/10-persistencia-de-dados/07-dados-sensiveis.md) |
 | <https://pub.dev/packages/connectivity_plus> | `^7.3.1` | Saber se há conexão de rede | [11](../modulos/11-recursos-nativos/05-conectividade.md) |
+| <https://pub.dev/packages/sqflite_common> | `^2.5.5` | Os tipos de banco (`Database`) comuns ao plugin nativo e à web | [14](../modulos/14-build-web-pwa/04-banco-de-dados-na-web.md) |
+| <https://pub.dev/packages/sqflite_common_ffi_web> | `^1.0.0` | 🌐 SQLite em WebAssembly, persistido em IndexedDB | [14](../modulos/14-build-web-pwa/04-banco-de-dados-na-web.md) |
+| <https://pub.dev/packages/web> | `^1.1.1` | 🌐 Acesso tipado às APIs do navegador (substitui `dart:html`) | [14](../modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md) |
 
 ### Dependências de desenvolvimento
 
@@ -273,8 +280,8 @@ mesmas abas: **Readme**, **Changelog**, **Example**, **Installing**, **Versions*
 | <https://pub.dev/packages/flutter_lints> | `^6.0.0` | O conjunto oficial de regras de lint | [04](../modulos/04-dart-avancado/07-analise-estatica-e-lints.md) |
 | <https://pub.dev/packages/mocktail> | `^1.0.5` | Criar dublês de teste **sem** geração de código | [12](../modulos/12-testes-e-debug/07-mocks-e-fakes.md) |
 | <https://pub.dev/packages/sqflite_common_ffi> | `^2.4.3` | 🪟 Rodar SQLite no desktop para testar o banco **sem emulador** | [12](../modulos/12-testes-e-debug/05-testes-unitarios.md) |
-| <https://pub.dev/packages/flutter_launcher_icons> | `^0.14.4` | Gerar o ícone do app para Android e iOS a partir de um PNG | [14](../modulos/14-build-android/03-icone.md) |
-| <https://pub.dev/packages/flutter_native_splash> | `^2.4.8` | Gerar a splash screen nativa das duas plataformas | [14](../modulos/14-build-android/04-splash-screen.md) |
+| <https://pub.dev/packages/flutter_launcher_icons> | `^0.14.4` | Gerar o ícone do app para Android e iOS a partir de um PNG | [14](../modulos/15-build-android/03-icone.md) |
+| <https://pub.dev/packages/flutter_native_splash> | `^2.4.8` | Gerar a splash screen nativa das duas plataformas | [14](../modulos/15-build-android/04-splash-screen.md) |
 
 ### Pacotes citados em módulos específicos
 
@@ -299,7 +306,36 @@ e as razões de cada escolha em [05-decisoes-tecnicas.md](../05-decisoes-tecnica
 
 ---
 
-## 6. 🤖 Android — documentação oficial
+## 6. 🌐 Web e PWA — documentação oficial
+
+> Estas são as fontes do **canal principal de distribuição** do curso. O MDN e o web.dev são
+> mantidos, respectivamente, pela Mozilla e pelo Google, e são as referências que os próprios
+> navegadores usam.
+
+| Link | O que você encontra | Quando consultar |
+|---|---|---|
+| <https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Manifest> | O `manifest.json` campo a campo, com o efeito de cada um | Aula [14.05](../modulos/14-build-web-pwa/05-manifest-e-icones.md) |
+| <https://web.dev/articles/install-criteria> | Os critérios que fazem o navegador oferecer instalação | Aula [14.07](../modulos/14-build-web-pwa/07-instalabilidade.md) |
+| <https://web.dev/articles/maskable-icon> | Ícone `maskable`, a zona segura de 80 % e por que sem ele sai moldura branca | Aula [14.05](../modulos/14-build-web-pwa/05-manifest-e-icones.md) |
+| <https://web.dev/articles/promote-install> | Quando e como convidar o usuário a instalar, sem queimar a chance | Aula [14.07](../modulos/14-build-web-pwa/07-instalabilidade.md) |
+| <https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API> | O que é um service worker e o que ele pode interceptar | Aula [14.06](../modulos/14-build-web-pwa/06-service-worker-e-offline.md) |
+| <https://web.dev/articles/service-worker-lifecycle> | `install`, `activate`, `fetch` — e por que o usuário vê a versão antiga | Aula [14.06](../modulos/14-build-web-pwa/06-service-worker-e-offline.md) |
+| <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS> | CORS explicado pela fonte: por que existe e por que o cliente não desliga | Aula [14.03](../modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md) |
+| <https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API> | O armazenamento onde o SQLite em WASM grava o banco | Aula [14.04](../modulos/14-build-web-pwa/04-banco-de-dados-na-web.md) |
+| <https://web.dev/articles/persistent-storage> | `best-effort` × `persistent`, e como pedir que o navegador não despeje | Aula [14.04](../modulos/14-build-web-pwa/04-banco-de-dados-na-web.md) |
+| <https://dart.dev/interop/js-interop> | `dart:js_interop` e `package:web`: o jeito atual de falar com o navegador | Aula [14.03](../modulos/14-build-web-pwa/03-o-que-nao-funciona-na-web.md) |
+| <https://docs.github.com/en/pages> | GitHub Pages: fontes de publicação, domínio próprio, HTTPS, limites | Aula [14.09](../modulos/14-build-web-pwa/09-publicando-no-github-pages.md) |
+| <https://github.com/actions/deploy-pages> | A action de deploy e as permissões que ela exige (inclusive o OIDC) | Aula [14.09](../modulos/14-build-web-pwa/09-publicando-no-github-pages.md) |
+| <https://developer.chrome.com/docs/devtools/application> | O painel Application: manifest, service workers, armazenamento | Aula [14.10](../modulos/14-build-web-pwa/10-diagnostico-web.md) |
+| <https://developer.chrome.com/docs/lighthouse/overview> | Lighthouse: o que ele audita e como ler o relatório | Aula [14.10](../modulos/14-build-web-pwa/10-diagnostico-web.md) |
+
+> ⚠️ **Cuidado com material de PWA anterior a 2023.** Muita coisa mudou: `dart:html` foi
+> substituída por `package:web`, o renderizador HTML do Flutter foi removido, e os critérios de
+> instalabilidade do Chrome mudaram. Confira a data antes de seguir um tutorial.
+
+---
+
+## 7. 🤖 Android — documentação oficial
 
 | Link | O que você encontra | Quando consultar |
 |---|---|---|
@@ -307,15 +343,15 @@ e as razões de cada escolha em [05-decisoes-tecnicas.md](../05-decisoes-tecnica
 | <https://developer.android.com/studio> | Download do Android Studio, requisitos de sistema, notas de versão | Aula [02-configuracao-do-ambiente.md](../02-configuracao-do-ambiente.md) — você **precisa** dele para ter o Android SDK |
 | <https://developer.android.com/studio/run/emulator> | Como criar, configurar e acelerar o emulador | Quando o emulador estiver lento ou não abrir |
 | <https://developer.android.com/tools/adb> | `adb`: listar aparelhos, instalar APK, ver logs (`adb logcat`) | Aula [12-testes-e-debug/09-depurando-android-e-ios.md](../modulos/12-testes-e-debug/09-depurando-android-e-ios.md) |
-| <https://developer.android.com/guide/topics/manifest/manifest-intro> | Tudo sobre o `AndroidManifest.xml`: `<application>`, `<activity>`, `<uses-permission>`, `<queries>` | Aula [14-build-android/05-permissoes-android.md](../modulos/14-build-android/05-permissoes-android.md) |
+| <https://developer.android.com/guide/topics/manifest/manifest-intro> | Tudo sobre o `AndroidManifest.xml`: `<application>`, `<activity>`, `<uses-permission>`, `<queries>` | Aula [15-build-android/05-permissoes-android.md](../modulos/15-build-android/05-permissoes-android.md) |
 | <https://developer.android.com/guide/topics/permissions/overview> | O modelo de permissões: normais × perigosas, pedido em tempo de execução, "não perguntar novamente" | Aula [11-recursos-nativos/01-permissoes.md](../modulos/11-recursos-nativos/01-permissoes.md) |
-| <https://developer.android.com/build> | Como o Gradle constrói um app Android: `build.gradle.kts`, `buildTypes`, `defaultConfig`, `compileSdk` | Aulas [14-build-android/01](../modulos/14-build-android/01-debug-profile-release.md) e [02](../modulos/14-build-android/02-identidade-do-app.md) |
-| <https://developer.android.com/studio/publish/app-signing> | Assinatura de app: keystore, alias, Play App Signing, o que acontece se você perder a chave | Aulas [14-build-android/06](../modulos/14-build-android/06-keystore.md) e [07](../modulos/14-build-android/07-assinatura-no-gradle.md) |
-| <https://developer.android.com/guide/app-bundle> | O que é um AAB e por que a Google Play exige esse formato | Aula [14-build-android/08-gerando-apk-e-aab.md](../modulos/14-build-android/08-gerando-apk-e-aab.md) |
+| <https://developer.android.com/build> | Como o Gradle constrói um app Android: `build.gradle.kts`, `buildTypes`, `defaultConfig`, `compileSdk` | Aulas [15-build-android/01](../modulos/15-build-android/01-debug-profile-release.md) e [02](../modulos/15-build-android/02-identidade-do-app.md) |
+| <https://developer.android.com/studio/publish/app-signing> | Assinatura de app: keystore, alias, Play App Signing, o que acontece se você perder a chave | Aulas [15-build-android/06](../modulos/15-build-android/06-keystore.md) e [07](../modulos/15-build-android/07-assinatura-no-gradle.md) |
+| <https://developer.android.com/guide/app-bundle> | O que é um AAB e por que a Google Play exige esse formato | Aula [15-build-android/08-gerando-apk-e-aab.md](../modulos/15-build-android/08-gerando-apk-e-aab.md) |
 | <https://developer.android.com/guide/components/activities/activity-lifecycle> | O ciclo de vida de uma `Activity` — o que está por trás do `AppLifecycleState` do Flutter | Aula [11-recursos-nativos/06-ciclo-de-vida-do-app.md](../modulos/11-recursos-nativos/06-ciclo-de-vida-do-app.md) |
 | <https://developer.android.com/guide/topics/data/autobackup> | Auto Backup: o que é salvo na nuvem por padrão e como excluir arquivos sensíveis | Aula [10-persistencia-de-dados/07-dados-sensiveis.md](../modulos/10-persistencia-de-dados/07-dados-sensiveis.md) |
 | <https://developer.android.com/about/versions> | O que muda em cada versão do Android, por nível de API | Ao decidir `minSdk` e ao tratar comportamento novo |
-| <https://developer.android.com/distribute> | Distribuição na Google Play: preparar, publicar, faixas de teste | Aula [16-publicacao-e-proximos-passos/01-google-play.md](../modulos/16-publicacao-e-proximos-passos/01-google-play.md) |
+| <https://developer.android.com/distribute> | Distribuição na Google Play: preparar, publicar, faixas de teste | Aula [17-publicacao-e-proximos-passos/01-google-play.md](../modulos/17-publicacao-e-proximos-passos/01-google-play.md) |
 
 > 🤖 Referência do curso, medida nesta máquina: Flutter 3.47 gera **AGP 9.1.0**,
 > **Kotlin 2.4.0**, **Gradle 9.3.1**, `compileSdk`/`targetSdk` **36**, `minSdk` **24**,
@@ -324,7 +360,7 @@ e as razões de cada escolha em [05-decisoes-tecnicas.md](../05-decisoes-tecnica
 
 ---
 
-## 7. 🍎 Apple / iOS — documentação oficial
+## 8. 🍎 Apple / iOS — documentação oficial
 
 > 🍎 **SÓ NO MAC.** Praticamente tudo desta seção descreve tarefas que exigem macOS + Xcode.
 > Leia agora para **entender e preparar**; execute quando tiver um Mac.
@@ -333,13 +369,13 @@ e as razões de cada escolha em [05-decisoes-tecnicas.md](../05-decisoes-tecnica
 |---|---|---|
 | <https://developer.apple.com> | Porta de entrada da documentação e das ferramentas da Apple | Qualquer dúvida de plataforma |
 | <https://developer.apple.com/design/human-interface-guidelines> | **Human Interface Guidelines (HIG)** — as diretrizes de design da Apple: navegação, tipografia, ícones, gestos, modo escuro | Aula [11-recursos-nativos/09-material-x-cupertino.md](../modulos/11-recursos-nativos/09-material-x-cupertino.md) |
-| <https://developer.apple.com/xcode/> | O que é o Xcode, requisitos e como obter | Aula [15-build-ios/02-xcode-e-cocoapods.md](../modulos/15-build-ios/02-xcode-e-cocoapods.md) |
-| <https://developer.apple.com/documentation/xcode> | Documentação do Xcode: alvos, esquemas, arquivamento, assinatura automática | Aula [15-build-ios/08-build-ipa-e-archive.md](../modulos/15-build-ios/08-build-ipa-e-archive.md) |
+| <https://developer.apple.com/xcode/> | O que é o Xcode, requisitos e como obter | Aula [16-build-ios/02-xcode-e-cocoapods.md](../modulos/16-build-ios/02-xcode-e-cocoapods.md) |
+| <https://developer.apple.com/documentation/xcode> | Documentação do Xcode: alvos, esquemas, arquivamento, assinatura automática | Aula [16-build-ios/08-build-ipa-e-archive.md](../modulos/16-build-ios/08-build-ipa-e-archive.md) |
 | <https://developer.apple.com/documentation> | A referência completa das APIs da Apple (UIKit, Foundation, Security/Keychain) | Quando um erro nativo citar uma classe que você não conhece |
-| <https://developer.apple.com/account> | Onde ficam **Certificates, Identifiers & Profiles** — certificados, App IDs e provisioning profiles | Aula [15-build-ios/07-certificados-e-provisioning.md](../modulos/15-build-ios/07-certificados-e-provisioning.md) |
-| <https://developer.apple.com/programs/> | O **Apple Developer Program**: o que inclui, quem pode assinar, custo anual | Aula [15-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/15-build-ios/06-conta-apple-gratuita-x-paga.md) |
-| <https://developer.apple.com/app-store-connect/> | O painel onde você cria o app, envia builds e gerencia versões | Aula [16-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/16-publicacao-e-proximos-passos/02-app-store-connect.md) |
-| <https://developer.apple.com/testflight/> | **TestFlight**: distribuir builds para testadores internos e externos | Aula [15-build-ios/09-exportando-ipa-e-testflight.md](../modulos/15-build-ios/09-exportando-ipa-e-testflight.md) |
+| <https://developer.apple.com/account> | Onde ficam **Certificates, Identifiers & Profiles** — certificados, App IDs e provisioning profiles | Aula [16-build-ios/07-certificados-e-provisioning.md](../modulos/16-build-ios/07-certificados-e-provisioning.md) |
+| <https://developer.apple.com/programs/> | O **Apple Developer Program**: o que inclui, quem pode assinar, custo anual | Aula [16-build-ios/06-conta-apple-gratuita-x-paga.md](../modulos/16-build-ios/06-conta-apple-gratuita-x-paga.md) |
+| <https://developer.apple.com/app-store-connect/> | O painel onde você cria o app, envia builds e gerencia versões | Aula [17-publicacao-e-proximos-passos/02-app-store-connect.md](../modulos/17-publicacao-e-proximos-passos/02-app-store-connect.md) |
+| <https://developer.apple.com/testflight/> | **TestFlight**: distribuir builds para testadores internos e externos | Aula [16-build-ios/09-exportando-ipa-e-testflight.md](../modulos/16-build-ios/09-exportando-ipa-e-testflight.md) |
 | <https://developer.apple.com/app-store/review/guidelines/> | As **App Review Guidelines** — os critérios pelos quais um app é aprovado ou recusado | Antes de qualquer envio. Leia as seções de privacidade e de funcionalidade mínima |
 | <https://developer.apple.com/documentation/swift> | A linguagem Swift — útil para entender `AppDelegate.swift` e `SceneDelegate.swift` | Quando precisar tocar no código nativo |
 
@@ -351,7 +387,7 @@ e as razões de cada escolha em [05-decisoes-tecnicas.md](../05-decisoes-tecnica
 
 ---
 
-## 8. Material 3 — o sistema de design
+## 9. Material 3 — o sistema de design
 
 | Link | O que você encontra | Quando consultar |
 |---|---|---|
@@ -368,7 +404,7 @@ e as razões de cada escolha em [05-decisoes-tecnicas.md](../05-decisoes-tecnica
 
 ---
 
-## 9. Git e GitHub
+## 10. Git e GitHub
 
 | Link | O que você encontra | Quando consultar |
 |---|---|---|
@@ -382,7 +418,7 @@ e as razões de cada escolha em [05-decisoes-tecnicas.md](../05-decisoes-tecnica
 | <https://docs.github.com/en/get-started> | Criar conta, criar repositório, primeiro push | Aula [00-git-e-terminal/03-git-o-que-e.md](../modulos/00-git-e-terminal/03-git-o-que-e.md) |
 | <https://docs.github.com/en/authentication> | Autenticação: token de acesso pessoal, chave SSH | Quando o `git push` pedir senha e recusar a sua |
 | <https://docs.github.com/en/pull-requests> | *Pull requests*, revisão de código, resolução de conflitos | Quando for contribuir com código aberto |
-| <https://docs.github.com/en/actions> | **GitHub Actions**: automatizar `flutter analyze`, `flutter test` e builds | Aula [16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](../modulos/16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
+| <https://docs.github.com/en/actions> | **GitHub Actions**: automatizar `flutter analyze`, `flutter test` e builds | Aula [17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md](../modulos/17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
 
 > 🔴 Antes do primeiro `git push`, confira que `android/key.properties`, `*.jks`, `*.keystore`,
 > `ios/Runner/*.mobileprovision`, `*.p12`, `*.cer` e `.env` estão no `.gitignore`. Um segredo
@@ -392,7 +428,7 @@ e as razões de cada escolha em [05-decisoes-tecnicas.md](../05-decisoes-tecnica
 
 ---
 
-## 10. SQLite — o banco local
+## 11. SQLite — o banco local
 
 O `sqflite` é um invólucro Dart em volta do **SQLite**, que é o banco de dados de verdade. Toda
 dúvida de SQL vai para o site do SQLite, não para o do pacote.
@@ -418,7 +454,7 @@ dúvida de SQL vai para o site do SQLite, não para o do pacote.
 
 ---
 
-## 11. API pública usada no curso
+## 12. API pública usada no curso
 
 | Link | O que é | Como o curso usa |
 |---|---|---|
@@ -439,7 +475,7 @@ Requisições confirmadas em 2026-09-14:
 
 ---
 
-## 12. Mapa rápido: "eu tenho esta dúvida, abro qual link?"
+## 13. Mapa rápido: "eu tenho esta dúvida, abro qual link?"
 
 | Sua dúvida | Abra |
 |---|---|
@@ -453,6 +489,10 @@ Requisições confirmadas em 2026-09-14:
 | "Meu app está travando/lento" | <https://docs.flutter.dev/perf> e <https://docs.flutter.dev/tools/devtools> |
 | "Como usar esse provider do Riverpod?" | <https://riverpod.dev> |
 | "Esse pacote é confiável?" | <https://pub.dev> (Pub Points, Likes, Publisher, Changelog) |
+| "Como publico o app na web?" | <https://docs.flutter.dev/deployment/web> e <https://docs.github.com/en/pages> |
+| "Por que meu PWA não oferece instalação?" | <https://web.dev/articles/install-criteria> |
+| "O usuário está preso na versão antiga" | <https://web.dev/articles/service-worker-lifecycle> |
+| "Funciona no celular e falha no Chrome" | <https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS> |
 | "Como assino o APK?" | <https://docs.flutter.dev/deployment/android> |
 | "Onde declaro essa permissão Android?" | <https://developer.android.com/guide/topics/permissions/overview> |
 | "Como publico na App Store?" | <https://docs.flutter.dev/deployment/ios> |
@@ -465,7 +505,7 @@ Requisições confirmadas em 2026-09-14:
 
 ---
 
-## 13. O que NÃO usar como fonte primária
+## 14. O que NÃO usar como fonte primária
 
 Nada disto está proibido — todos ajudam. Mas nenhum substitui a documentação oficial, e todos
 envelhecem mais rápido que ela.

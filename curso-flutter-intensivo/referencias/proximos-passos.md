@@ -278,7 +278,7 @@ flutter build appbundle
 > (US$ 99/ano). Não prometa a ninguém — nem a você — um IPA gerado no Windows: isso não
 > existe. O que você consegue hoje é deixar o projeto **pronto para o dia do Mac**, e isso é
 > um diferencial real. Veja
-> [15-build-ios/01-por-que-exige-macos.md](../modulos/15-build-ios/01-por-que-exige-macos.md).
+> [16-build-ios/01-por-que-exige-macos.md](../modulos/16-build-ios/01-por-que-exige-macos.md).
 
 ---
 
@@ -480,43 +480,57 @@ em cache) e sincroniza sozinho quando a conexão volta.
 
 ---
 
-### Trilha E — Flutter web e desktop
+### Trilha E — Flutter desktop (e o que a web ainda não cobriu)
 
 | | |
 |---|---|
-| **Quando vale** | Você quer aproveitar o mesmo código para navegador, Windows, macOS ou Linux |
-| **Tempo** | 10 a 16 h |
+| **Quando vale** | Você quer aproveitar o mesmo código para Windows, macOS ou Linux — ou levar o PWA do curso além do que o [Módulo 14](../modulos/14-build-web-pwa/README.md) cobriu |
+| **Tempo** | 8 a 12 h |
 
-**O que muda de verdade**
+> 🌐 **A web já não é "próximo passo": ela é o canal principal do curso.** O
+> [Módulo 14 — Build e Distribuição Web (PWA)](../modulos/14-build-web-pwa/README.md) cobre compilação, o que quebra na
+> web, banco em IndexedDB, manifest, service worker, instalabilidade, build e deploy. O que segue
+> aqui é o que ficou **de fora** dele.
 
-| Tema | Mobile | Web | Desktop |
+**O que o Módulo 14 não cobriu, e vale estudar**
+
+| Tema | Por que ficou de fora | Onde começar |
+|---|---|---|
+| **Notificações push na web** | Exige servidor e chaves VAPID; foge do "custo zero" do módulo | Push API e Web Push Protocol |
+| **Sincronização em segundo plano** | Suporte desigual entre navegadores | Background Sync API |
+| **Layout adaptativo para telas largas** | O Foco é mobile-first | Retome o [Módulo 06, aula 11](../modulos/06-widgets-e-layouts/11-responsividade.md) |
+| **Atalhos de teclado e foco** | Só importa de verdade no desktop e em telas largas | `Shortcuts`, `Actions`, `Focus` |
+| **`go_router` e rotas complexas** | O curso usa `Navigator` 1.0 | Aula opcional [07.09](../modulos/07-navegacao-e-formularios/09-go-router-opcional.md) |
+| **Compilar com `--wasm` em produção** | O módulo ensina a medir, não decide por você | [14.02](../modulos/14-build-web-pwa/02-como-o-flutter-compila-para-web.md) e [14.08](../modulos/14-build-web-pwa/08-gerando-o-build-web.md) |
+
+**O que muda no desktop**
+
+| Tema | Mobile | 🌐 Web (Módulo 14) | Desktop |
 |---|---|---|---|
 | Entrada | Toque | Mouse, teclado, toque | Mouse e teclado |
-| Tela | Estreita, uma coisa por vez | Larga, redimensionável | Larga, janela redimensionável |
-| Navegação | Pilha | **URL na barra de endereços** | Pilha, com atalhos de teclado |
-| `dart:io` | Funciona | ❌ **Não funciona** | Funciona |
-| `sqflite` | Funciona | ❌ Precisa de alternativa | Precisa de `sqflite_common_ffi` |
-| Primeiro carregamento | Instantâneo | Baixa o app inteiro; cuide do tamanho | Instantâneo |
+| Tela | Estreita | Larga, redimensionável | Janela redimensionável |
+| Navegação | Pilha | **URL na barra de endereços** | Pilha + atalhos |
+| `dart:io` | Funciona | ❌ Não funciona | Funciona |
+| `sqflite` | Funciona | `sqflite_common_ffi_web` | `sqflite_common_ffi` |
+| Distribuição | Loja | **URL** | Instalador (`.msix`, `.dmg`, `.deb`) |
 
-**O que estudar**
+**O que estudar, na ordem**
 
 1. **Layout adaptativo** — `LayoutBuilder`, `MediaQuery`, pontos de quebra; painel mestre +
-   detalhe em telas largas.
+   detalhe em telas largas. Vale para web e desktop ao mesmo tempo.
 2. **Atalhos e foco** — `Shortcuts`, `Actions`, `Focus`, navegação por Tab.
-3. **Rotas ligadas à URL** — no web, o usuário espera que o botão voltar do navegador
-   funcione e que a URL possa ser colada. É aqui que o `go_router` (aula opcional
-   [07-navegacao-e-formularios/09-go-router-opcional.md](../modulos/07-navegacao-e-formularios/09-go-router-opcional.md))
-   passa a valer muito mais que o `Navigator` 1.0.
-4. **Condicionais de plataforma** — `kIsWeb` do `package:flutter/foundation.dart` antes de
-   qualquer coisa que toque em `dart:io`.
+3. **`sqflite_common_ffi`** no desktop — é o irmão do `sqflite_common_ffi_web` que você já
+   configurou na [aula 14.04](../modulos/14-build-web-pwa/04-banco-de-dados-na-web.md); a factory condicional que você
+   escreveu lá **já cobre o desktop**, porque ele cai no ramo `dart.library.io`.
+4. **Empacotamento** — `.msix` no Windows, `.dmg` no macOS, `.deb`/`.rpm` no Linux.
 
 ```powershell
-flutter run -d chrome
 flutter run -d windows
+flutter build windows --release
 ```
 
-**Você sabe que aprendeu quando** o mesmo código roda no celular e no navegador, e no
-navegador a URL muda ao navegar e o botão voltar funciona.
+**Você sabe que aprendeu quando** o mesmo código roda no celular, no navegador e numa janela do
+Windows, e em cada um deles o layout se adapta à largura em vez de apenas esticar.
 
 ---
 
@@ -1084,7 +1098,7 @@ flutter build apk --debug
 | Resolver um erro | [referencias/erros-comuns.md](erros-comuns.md) |
 | Comparar as plataformas | [referencias/diferencas-android-ios.md](diferencas-android-ios.md) |
 | Encontrar a documentação oficial | [referencias/referencias-oficiais.md](referencias-oficiais.md) |
-| Revisar a versão curta deste plano | [16-publicacao-e-proximos-passos/06-proximos-passos.md](../modulos/16-publicacao-e-proximos-passos/06-proximos-passos.md) |
+| Revisar a versão curta deste plano | [17-publicacao-e-proximos-passos/06-proximos-passos.md](../modulos/17-publicacao-e-proximos-passos/06-proximos-passos.md) |
 | Testar o que eu realmente sei | [avaliacoes/avaliacao-final.md](../avaliacoes/avaliacao-final.md) |
 | Refazer o projeto final | [projetos/03-projeto-final-multiplataforma/README.md](../projetos/03-projeto-final-multiplataforma/README.md) |
 
@@ -1092,4 +1106,4 @@ flutter build apk --debug
 
 | ⬅️ Anterior | 🏠 Curso | ➡️ Próxima |
 |---|---|---|
-| [Referências oficiais](referencias-oficiais.md) | [README do curso](../README.md) | [Módulo 16 — Próximos passos](../modulos/16-publicacao-e-proximos-passos/06-proximos-passos.md) |
+| [Referências oficiais](referencias-oficiais.md) | [README do curso](../README.md) | [Módulo 17 — Próximos passos](../modulos/17-publicacao-e-proximos-passos/06-proximos-passos.md) |

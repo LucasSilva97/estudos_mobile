@@ -162,12 +162,12 @@ Nada aqui é teoria solta. Este é o mapa de reaproveitamento:
 |---|---|
 | Ler stack trace e erros de layout | [06 — Constraints](../06-widgets-e-layouts/06-constraints.md) e [referencias/erros-comuns.md](../../referencias/erros-comuns.md) |
 | DevTools e Performance | [13 — Medindo desempenho](../13-desempenho-e-seguranca/04-medindo-desempenho.md) |
-| `analysis_options.yaml` e lints | [16 — CI/CD introdutório](../16-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
+| `analysis_options.yaml` e lints | [16 — CI/CD introdutório](../17-publicacao-e-proximos-passos/04-ci-cd-introdutorio.md) |
 | Testes de unidade e de widget | [projetos/03 — Etapa 7: testes](../../projetos/03-projeto-final-multiplataforma/09-etapa-7-testes.md) |
 | Mocks da camada HTTP | [09 — Camada de dados testável](../09-consumo-de-api/07-camada-de-dados-testavel.md) |
 | Testes de banco com FFI | [10 — Migrações](../10-persistencia-de-dados/06-migracoes.md) |
-| Diagnóstico de Gradle | [14 — Diagnóstico de build](../14-build-android/10-diagnostico-de-build.md) |
-| Diagnóstico de CocoaPods/assinatura | [15 — Diagnóstico de CocoaPods e assinatura](../15-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
+| Diagnóstico de Gradle | [15 — Diagnóstico de build](../15-build-android/10-diagnostico-de-build.md) |
+| Diagnóstico de CocoaPods/assinatura | [16 — Diagnóstico de CocoaPods e assinatura](../16-build-ios/10-diagnostico-cocoapods-e-assinatura.md) |
 
 ---
 

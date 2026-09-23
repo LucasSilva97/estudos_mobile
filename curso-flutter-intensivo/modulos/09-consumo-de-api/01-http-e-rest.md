@@ -642,7 +642,7 @@ real que já vale registrar, porque ela vai aparecer em código na aula 3:
 > 🪟 Você está no **Windows** e não tem Mac. Sobre esta aula: você consegue fazer **tudo**.
 > `curl.exe`, navegador e PowerShell rodam normalmente, e o comportamento do HTTP não depende do
 > sistema operacional. A parte de iOS que você **não** consegue fazer é rodar o app num
-> iPhone/simulador — mas isso só entra no módulo 15, e a aula 3 explica exatamente o que muda.
+> iPhone/simulador — mas isso só entra no módulo 16, e a aula 3 explica exatamente o que muda.
 
 ---
 
