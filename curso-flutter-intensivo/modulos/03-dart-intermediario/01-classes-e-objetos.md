@@ -607,14 +607,14 @@ pensando em funções soltas em vez de objetos.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Explico a diferença entre classe, objeto e instância sem consultar a aula.
-- [ ] Declaro uma classe com campos e métodos de memória.
-- [ ] Sei dizer por que `Materia()` funciona quando não há construtor declarado.
-- [ ] Sei quando `this` é obrigatório e quando é ruído.
-- [ ] Reconheço o erro "Non-nullable instance field must be initialized" e sei corrigi-lo.
-- [ ] Entendo por que alterar um objeto dentro de uma função altera o original.
-- [ ] Rodei `bin/01_classes_e_objetos.dart` e obtive exatamente a saída esperada.
-- [ ] Fiz o exercício guiado e `dart analyze` não apontou nada.
+- [x] Explico a diferença entre classe, objeto e instância sem consultar a aula.
+- [x] Declaro uma classe com campos e métodos de memória.
+- [x] Sei dizer por que `Materia()` funciona quando não há construtor declarado.
+- [x] Sei quando `this` é obrigatório e quando é ruído.
+- [x] Reconheço o erro "Non-nullable instance field must be initialized" e sei corrigi-lo.
+- [x] Entendo por que alterar um objeto dentro de uma função altera o original.
+- [x] Rodei `bin/01_classes_e_objetos.dart` e obtive exatamente a saída esperada.
+- [x] Fiz o exercício guiado e `dart analyze` não apontou nada.
 
 ---
 
