@@ -186,11 +186,11 @@ ao processo chamador.
 
 ## ☑️ Checklist de domínio
 
-- [ ] Leio uma linha sem usar `!`.
-- [ ] Repito a pergunta para texto inválido e encerro em fim de entrada.
-- [ ] Diferencio linha vazia de `null`.
-- [ ] Uso stderr e um código diferente de zero para falha.
-- [ ] Testo nenhuma sessão, sessão inválida, meta exata e meta superada.
+- [X] Leio uma linha sem usar `!`.
+- [X] Repito a pergunta para texto inválido e encerro em fim de entrada.
+- [X] Diferencio linha vazia de `null`.
+- [X] Uso stderr e um código diferente de zero para falha.
+- [X] Testo nenhuma sessão, sessão inválida, meta exata e meta superada.
 
 ## 📚 Referências oficiais
 
@@ -199,6 +199,6 @@ ao processo chamador.
 - [stdout](https://api.dart.dev/dart-io/stdout.html)
 - [exitCode](https://api.dart.dev/dart-io/exitCode.html)
 
-| Anterior | Módulo | Próxima etapa |
-|---|---|---|
+| Anterior                        | Módulo            | Próxima etapa                                   |
+| ------------------------------- | ------------------ | ------------------------------------------------ |
 | [Sets e Maps](09-sets-e-maps.md) | [README](README.md) | [Exercícios](../../exercicios/02-dart-basico.md) |
