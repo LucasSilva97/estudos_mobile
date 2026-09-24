@@ -1,0 +1,8 @@
+import 'package:dart_intermediario/dart_intermediario.dart';
+import 'package:test/test.dart';
+
+void main() {
+  test('calculate', () {
+    expect(calculate(), 42);
+  });
+}
