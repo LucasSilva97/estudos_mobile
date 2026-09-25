@@ -737,15 +737,15 @@ Crie a classe `Meta` com:
 
 ## ☑️ Checklist de domínio
 
-- [ ] Escrevo `Materia({required this.nome, this.minutos = 0})` sem consultar nada.
-- [ ] Explico por que um campo `final` não pode ser atribuído no corpo do construtor.
-- [ ] Sei citar duas regras da initializer list, inclusive a ausência de `this`.
-- [ ] Digo os dois requisitos obrigatórios de um construtor `const`.
-- [ ] Sei explicar canonicalização com o resultado de `identical`.
-- [ ] Sei citar duas situações em que `factory` é obrigatório.
-- [ ] Escrevo um construtor redirecionador com `this(...)`.
-- [ ] Explico por que `assert` não serve para validar entrada do usuário.
-- [ ] Rodei `bin/02_construtores.dart` e obtive exatamente a saída esperada.
+- [x] Escrevo `Materia({required this.nome, this.minutos = 0})` sem consultar nada.
+- [x] Explico por que um campo `final` não pode ser atribuído no corpo do construtor.
+- [x] Sei citar duas regras da initializer list, inclusive a ausência de `this`.
+- [x] Digo os dois requisitos obrigatórios de um construtor `const`.
+- [x] Sei explicar canonicalização com o resultado de `identical`.
+- [x] Sei citar duas situações em que `factory` é obrigatório.
+- [x] Escrevo um construtor redirecionador com `this(...)`.
+- [x] Explico por que `assert` não serve para validar entrada do usuário.
+- [x] Rodei `bin/02_construtores.dart` e obtive exatamente a saída esperada.
 
 ---
 
