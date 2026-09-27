@@ -4,6 +4,8 @@ void main() {
   double numeroUm = 0;
   double numeroDois = 0;
   String operacao = "";
+  String? entrada = "";
+  List<String> operacoes = <String>["+", "-", "*", "/"]; //declarando uma lista
 
   void soma() {
     print(numeroUm + numeroDois);
@@ -38,29 +40,38 @@ void main() {
     }
   }
 
-  print("Digite o primeiro valor");
+  void getOPeracao(){
+    print("Digite uma operação ${operacoes.toString()}");
+    entrada = stdin.readLineSync();
+    if (entrada != null) {
+      if(operacoes.contains(entrada)) {
+        operacao = entrada!;
+      } else {
+        print("Operação inválida");
+        getOPeracao(); // Técnica de recursão
+        // vai gerar um loop para tentar executar a função novamente, em caso de cair no else, nesse caso
 
-  String? entrada = stdin.readLineSync();
-
-  if (entrada != null) {
-    if (entrada != "") {
-      numeroUm = double.parse(entrada);
+      }
     }
   }
 
-  print("Digite uma operação");
-
+  print("Digite o primeiro valor");
   entrada = stdin.readLineSync();
+
   if (entrada != null) {
-    operacao = entrada;
+    if (entrada != "") {
+      numeroUm = double.parse(entrada!);
+    }
   }
+
+  getOPeracao();
 
   print("Digite o segundo valor");
 
   entrada = stdin.readLineSync();
   if (entrada != null) {
     if (entrada != "") {
-      numeroDois = double.parse(entrada);
+      numeroDois = double.parse(entrada!);
     }
   }
 
